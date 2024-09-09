@@ -31,7 +31,7 @@
         const map = L.map('map', {
             crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
             minZoom: 0,
-            maxZoom: 4, // Adjust this to your max zoom level
+            maxZoom: 6, // Adjust this to your max zoom level
             zoom: 0, // Start zoom level
             center: [mapHeight / 2, mapWidth / 2], // Center map
             maxBoundsViscosity: 1.0 // Static bounds
@@ -48,6 +48,8 @@
             errorTileUrl: 'error.png', // Error image for missing tiles
             bounds: hardBounds // Define bounds to restrict tile loading
         }).addTo(map);
+
+        
 
         // Log tile errors for debugging
         map.on('tileerror', function (error) {
