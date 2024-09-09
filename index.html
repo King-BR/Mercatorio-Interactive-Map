@@ -1,60 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <style>
-        #map {
-            height: 100vh;
-            width: 100%;
-        }
+      body {
+        display: flex;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Sidebar */
+      .w3-sidebar {
+        z-index: 1000; /* Ensure sidebar is on top */
+        height: 100vh; /* Full height */
+      }
+
+      /* Map container */
+      #map {
+        flex-grow: 1; /* Allow map to take remaining space */
+        height: 100vh; /* Full height */
+        width: calc(100% - 200px); /* Adjust width to account for the sidebar */
+      }
+
+      .leaflet-control-zoom {
+        position: absolute;
+        left: 80.4vmax; /* Adjusted using vmax for positioning */
+      }
+
+      .sidebar-item {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+      }
+
+      .sidebar-item input {
+        margin-right: 8px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div
+      class="w3-sidebar w3-bar-block w3-collapse w3-card"
+      style="width: 200px"
+      id="mySidebar"
+    >
+      <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">
+        Close &times;
+      </button>
+      <div class="sidebar-item">
+        <label for="seasonSelect">Select Season:</label>
+        <select id="seasonSelect" class="w3-select">
+          <option value="s1">Season 1</option>
+          <option value="s2" selected>Season 2</option>
+          <option value="s3">Season 3</option>
+        </select>
+      </div> 
+      <div class="sidebar-item">
+        <input type="checkbox" id="toggleMarker" checked />
+        <label for="toggleMarker">Toggle Marker</label>
+      </div>
+      <div class="sidebar-item">
+        <input type="checkbox" id="toggleRange1" checked />
+        <label for="toggleRange1">Toggle Range 1</label>
+      </div>
+      <div class="sidebar-item">
+        <input type="checkbox" id="toggleRange2" checked />
+        <label for="toggleRange2">Toggle Range 2</label>
+      </div>
+      <div class="sidebar-item">
+        <input type="checkbox" id="toggleRange3" checked />
+        <label for="toggleRange3">Toggle Range 3</label>
+      </div>
+    </div>
+
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Map dimensions
-        const mapWidth = 256 * 4; // Adjust this based on your map size
-        const mapHeight = 256 * 4;
+      let season = "s2";
 
-        // Define bounds with a slight padding
-        const padding = 32; // Adjust padding to allow near-edge panning
-        const elasticBounds = [[-padding, -padding], [mapHeight + padding, mapWidth + padding]];
-        const hardBounds = [[0, 0], [mapHeight, mapWidth]]; // Hard bounds
+      // Map dimensions
+      const mapWidth = 256 * 4; // Adjust this based on your map size
+      const mapHeight = 256 * 4;
 
-        // Initialize the map
-        const map = L.map('map', {
-            crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
-            minZoom: 0,
-            maxZoom: 6, // Adjust this to your max zoom level
-            zoom: 0, // Start zoom level
-            center: [mapHeight / 2, mapWidth / 2], // Center map
-            maxBoundsViscosity: 1.0 // Static bounds
-        }).fitBounds(hardBounds);
+      // Define bounds with a slight padding
+      const padding = 32; // Adjust padding to allow near-edge panning
+      const elasticBounds = [
+        [-padding, -padding],
+        [mapHeight + padding, mapWidth + padding],
+      ];
+      const hardBounds = [
+        [0, 0],
+        [mapHeight, mapWidth],
+      ]; // Hard bounds
 
-        // Set elastic bounds to restrict panning
-        map.setMaxBounds(elasticBounds);
+      // Initialize the map
+      const map = L.map("map", {
+        crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
+        minZoom: 0,
+        maxZoom: 6, // Adjust this to your max zoom level
+        zoom: 0, // Start zoom level
+        center: [mapHeight / 2, mapWidth / 2], // Center map
+        maxBoundsViscosity: 1.0, // Static bounds
+      }).fitBounds(hardBounds);
 
-        // Add tile layer with correct path
-        L.tileLayer('./tiles/{z}/{x}/{y}.png', {
-            tileSize: 256, // Tile size in pixels
-            noWrap: true, // Prevent wrapping
-            continuousWorld: false, // No horizontal wrapping
-            errorTileUrl: 'error.png', // Error image for missing tiles
-            bounds: hardBounds // Define bounds to restrict tile loading
-        }).addTo(map);
+      // Set elastic bounds to restrict panning
+      map.setMaxBounds(elasticBounds);
 
-        
+      // Add tile layer with correct path
+      let tileLayer = L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
+        tileSize: 256, // Tile size in pixels
+        noWrap: true, // Prevent wrapping
+        continuousWorld: false, // No horizontal wrapping
+        errorTileUrl: "error.png", // Error image for missing tiles
+        bounds: hardBounds, // Define bounds to restrict tile loading
+      }).addTo(map);
 
-        // Log tile errors for debugging
-        map.on('tileerror', function (error) {
-            console.error('Tile not found:', error.tile.src);
-        });
+      // Test marker and range circles
+      let markerSize = 25;
+      var marker = L.icon({
+        iconUrl: "marker.png",
+
+        iconSize: [markerSize, markerSize], // size of the icon
+        iconAnchor: [markerSize / 2, markerSize], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, markerSize * -1 - 5], // point from which the popup should open relative to the iconAnchor
+      });
+
+      const mapMarker = L.marker([92.9, 159.2], { icon: marker })
+        .addTo(map)
+        .bindPopup("random town");
+      const range1 = L.circle([92.9, 159.2], { radius: 50 / 4, fill: false }).addTo(map);
+      const range2 = L.circle([92.9, 159.2], {
+        radius: 80 / 4,
+        fill: false,
+        color: "#FF0000",
+      }).addTo(map);
+      const range3 = L.circle([92.9, 159.2], {
+        radius: 110 / 4,
+        fill: false,
+        color: "#FF0000",
+      }).addTo(map);
+
+      // Function to update tile layer based on selected season
+      function updateSeason(selectedSeason) {
+        season = selectedSeason;
+        tileLayer.setUrl(`./assets/${season}/tiles/{z}/{x}/{y}.png`);
+      }
+
+      // Event listener for the season dropdown
+      document.getElementById('seasonSelect').addEventListener('change', function () {
+        updateSeason(this.value);
+      });
+
+      // Toggle elements based on checkbox status
+      document.getElementById('toggleMarker').addEventListener('change', function () {
+        this.checked ? map.addLayer(mapMarker) : map.removeLayer(mapMarker);
+      });
+
+      document.getElementById('toggleRange1').addEventListener('change', function () {
+        this.checked ? map.addLayer(range1) : map.removeLayer(range1);
+      });
+
+      document.getElementById('toggleRange2').addEventListener('change', function () {
+        this.checked ? map.addLayer(range2) : map.removeLayer(range2);
+      });
+
+      document.getElementById('toggleRange3').addEventListener('change', function () {
+        this.checked ? map.addLayer(range3) : map.removeLayer(range3);
+      });
+
+      // Log tile errors for debugging
+      map.on("tileerror", function (error) {
+        console.error("Tile not found:", error.tile.src);
+      });
+
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
