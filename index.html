@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Map dimensions (example: 16384x16384 pixels)
+        const mapWidth = 256*4;
+        const mapHeight = 256*4;
+
+        // Define bounds of the map
+        const bounds = [[0, 0], [mapHeight, mapWidth]];
+
+        // Initialize the map
+        const map = L.map('map', {
+            crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
+            minZoom: 0,
+            maxZoom: 5, // Adjust this to your max zoom level
+            zoom: 0, // Start zoom level
+            center: [0, 0] // Center map
+        }).fitBounds(bounds);
+
+        // Set max bounds to restrict panning
+        map.setMaxBounds(bounds);
+
+        // Add tile layer with correct path
+        L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+            tileSize: 256, // Tile size in pixels
+            noWrap: true, // Prevent wrapping
+            continuousWorld: false, // No horizontal wrapping
+            bounds: bounds, // Define bounds to restrict tile loading
+            errorTileUrl: 'error.png' // Error image for missing tiles
+        }).addTo(map);
+
+        // Log tile errors for debugging
+        map.on('tileerror', function (error) {
+            console.error('Tile not found:', error.tile.src);
+        });
+
+        // Correctly fit map bounds to avoid negative Y values
+        map.on('moveend', () => {
+            const boundsNW = map.containerPointToLatLng([0, 0]);
+            const boundsSE = map.containerPointToLatLng([map.getSize().x, map.getSize().y]);
+
+            if (boundsNW.lat < 0 || boundsSE.lat > mapHeight ||
+                boundsNW.lng < 0 || boundsSE.lng > mapWidth) {
+                map.setView([Math.min(Math.max(boundsNW.lat, 0), mapHeight),
+                             Math.min(Math.max(boundsNW.lng, 0), mapWidth)], map.getZoom(), { animate: false });
+            }
+        });
+
+        // Ensure zoom levels are within bounds
+        map.on('zoomend', () => {
+            const zoom = map.getZoom();
+            if (zoom < map.getMinZoom()) {
+                map.setZoom(map.getMinZoom());
+            } else if (zoom > map.getMaxZoom()) {
+                map.setZoom(map.getMaxZoom());
+            }
+        });
+    </script>
+</body>
+</html>
