@@ -18,59 +18,40 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Map dimensions (example: 16384x16384 pixels)
-        const mapWidth = 256*4;
-        const mapHeight = 256*4;
+        // Map dimensions
+        const mapWidth = 256 * 4; // Adjust this based on your map size
+        const mapHeight = 256 * 4;
 
-        // Define bounds of the map
-        const bounds = [[0, 0], [mapHeight, mapWidth]];
+        // Define bounds with a slight padding
+        const padding = 32; // Adjust padding to allow near-edge panning
+        const elasticBounds = [[-padding, -padding], [mapHeight + padding, mapWidth + padding]];
+        const hardBounds = [[0, 0], [mapHeight, mapWidth]]; // Hard bounds
 
         // Initialize the map
         const map = L.map('map', {
             crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
             minZoom: 0,
-            maxZoom: 5, // Adjust this to your max zoom level
+            maxZoom: 4, // Adjust this to your max zoom level
             zoom: 0, // Start zoom level
-            center: [0, 0] // Center map
-        }).fitBounds(bounds);
+            center: [mapHeight / 2, mapWidth / 2], // Center map
+            maxBoundsViscosity: 1.0 // Static bounds
+        }).fitBounds(hardBounds);
 
-        // Set max bounds to restrict panning
-        map.setMaxBounds(bounds);
+        // Set elastic bounds to restrict panning
+        map.setMaxBounds(elasticBounds);
 
         // Add tile layer with correct path
         L.tileLayer('./tiles/{z}/{x}/{y}.png', {
             tileSize: 256, // Tile size in pixels
             noWrap: true, // Prevent wrapping
             continuousWorld: false, // No horizontal wrapping
-            bounds: bounds, // Define bounds to restrict tile loading
-            errorTileUrl: 'error.png' // Error image for missing tiles
+            errorTileUrl: 'error.png', // Error image for missing tiles
+            bounds: hardBounds // Define bounds to restrict tile loading
         }).addTo(map);
 
         // Log tile errors for debugging
         map.on('tileerror', function (error) {
             console.error('Tile not found:', error.tile.src);
-        });
-
-        // Correctly fit map bounds to avoid negative Y values
-        map.on('moveend', () => {
-            const boundsNW = map.containerPointToLatLng([0, 0]);
-            const boundsSE = map.containerPointToLatLng([map.getSize().x, map.getSize().y]);
-
-            if (boundsNW.lat < 0 || boundsSE.lat > mapHeight ||
-                boundsNW.lng < 0 || boundsSE.lng > mapWidth) {
-                map.setView([Math.min(Math.max(boundsNW.lat, 0), mapHeight),
-                             Math.min(Math.max(boundsNW.lng, 0), mapWidth)], map.getZoom(), { animate: false });
-            }
-        });
-
-        // Ensure zoom levels are within bounds
-        map.on('zoomend', () => {
-            const zoom = map.getZoom();
-            if (zoom < map.getMinZoom()) {
-                map.setZoom(map.getMinZoom());
-            } else if (zoom > map.getMaxZoom()) {
-                map.setZoom(map.getMaxZoom());
-            }
         });
     </script>
 </body>
