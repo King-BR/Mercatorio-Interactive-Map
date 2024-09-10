@@ -1,314 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-      body {
-        display: flex;
-        margin: 0;
-        height: 100vh;
-        overflow: hidden;
-        font-family: Arial, sans-serif; /* Custom font */
-      }
-
-      .w3-hide-large {
-        z-index: 1000; /* Ensure sidebar is on top */
-      }
-
-      /* Sidebar */
-      .w3-sidebar {
-        z-index: 1000; /* Ensure sidebar is on top */
-        height: 100vh; /* Full height */
-      }
-
-      /* Sidebar items */
-      .sidebar-item {
-        margin: 10px;
-      }
-
-      .sidebar-item label {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-      }
-
-      .sidebar-item input[type="checkbox"] {
-        margin-right: 10px;
-      }
-
-      /* Map container */
-      #map {
-        flex-grow: 1; /* Allow map to take remaining space */
-        height: 100vh; /* Full height */
-        width: calc(100% - 200px); /* Adjust width to account for the sidebar */
-      }
-
-      /* Adjust position for different screen sizes */
-      .leaflet-control-zoom {
-        position: relative; /* or 'fixed' if needed */
-        top: 5px; /* Adjust for desired position */
-        left: 205px; /* Adjust for desired position */
-      }
-
-      /* Media Query for Small Screens */
-      @media (max-width: 768px) {
-        .leaflet-control-zoom {
-          top: 55px; /* Adjust top position on smaller devices */
-          left: 0px; /* Adjust left position on smaller devices */
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
-      }
 
-      .leaflet-control-zoom-in,
-      .leaflet-control-zoom-out {
-        background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
-      }
+        .w3-hide-large {
+            z-index: 1000;
+        }
 
-      .top-left-container {
-        width: 55px; /* Set the desired width */
-        height: 55px; /* Set the desired height */
-        position: absolute; /* Position it absolutely */
-        top: 0; /* Align to top */
-        left: 0; /* Align to left */
-        background-color: #f0f0f0; /* Background color for visibility */
-        border: 1px solid #ccc; /* Optional border for clarity */
-        z-index: 900; /* Ensure it's on top */
-      }
+        .w3-sidebar {
+            z-index: 1000;
+            height: 100vh;
+        }
+
+        .sidebar-item {
+            margin: 10px;
+        }
+
+        .sidebar-item label {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .sidebar-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        #map {
+            flex-grow: 1;
+            height: 100vh;
+            width: calc(100% - 200px);
+        }
+
+        .leaflet-control-zoom {
+            position: relative;
+            top: 5px;
+            left: 205px;
+        }
+
+        @media (max-width: 768px) {
+            .leaflet-control-zoom {
+                top: 55px;
+                left: 0px;
+            }
+        }
+
+        .leaflet-control-zoom-in,
+        .leaflet-control-zoom-out {
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .top-left-container {
+            width: 55px;
+            height: 55px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            z-index: 900;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width: 200px" id="mySidebar">
-      <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
-      <div class="sidebar-item">
-        <label for="seasonSelect">Select Season:</label>
-        <select id="seasonSelect" class="w3-select">
-          <option value="s1" selected>Season 1</option>
-          <option value="s2">Season 2</option>
-        </select>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleMarkers" checked /> Show Town Markers</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange1" /> Show Town Range</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range</label>
-      </div>
+        <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <div class="sidebar-item">
+            <label for="seasonSelect">Select Season:</label>
+            <select id="seasonSelect" class="w3-select">
+                <option value="s1" selected>Season 1</option>
+                <option value="s2">Season 2</option>
+            </select>
+        </div>
+        <div class="sidebar-item">
+            <label><input type="checkbox" id="toggleMarkers" checked /> Show Town Markers</label>
+        </div>
+        <div class="sidebar-item">
+            <label><input type="checkbox" id="toggleRange1" /> Show Town Range</label>
+        </div>
+        <div class="sidebar-item">
+            <label><input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range</label>
+        </div>
+        <div class="sidebar-item">
+            <label><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range</label>
+        </div>
     </div>
 
     <div class="top-left-container w3-main">
-      <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+        <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
     </div>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-      // Initialize map variables
-      let currentSeason = "s1";
-      let map;
-      let towns = [];
-      let plots = [];
+        // Initialize map variables
+        let currentSeason = "s1";
+        let map;
 
-      // Map dimensions
-      const mapWidth = 256 * 4; // Adjust this based on your map size
-      const mapHeight = 256 * 4;
+        // Define bounds for the map
+        const mapWidth = 256 * 4;
+        const mapHeight = 256 * 4;
 
-      // Define bounds with a slight padding
-      const padding = 256; // Adjust padding to allow near-edge panning
-      const elasticBounds = [
-        [-padding, -padding],
-        [mapHeight + padding, mapWidth + padding],
-      ];
-      const hardBounds = [
-        [0, 0],
-        [mapHeight, mapWidth],
-      ];
+        const padding = 256;
+        const elasticBounds = [[-padding, -padding], [mapHeight + padding, mapWidth + padding]];
+        const hardBounds = [[0, 0], [mapHeight, mapWidth]];
 
-      // Resource enum
-      const res_enum = {
-        1: "fish",
-        2: "stone",
-        3: "salt",
-        4: "copper",
-        5: "iron",
-        6: "gold",
-        7: "lead",
-        8: "whales",
-      };
+        // Resource enumeration
+        const res_enum = {
+            1: "fish",
+            2: "stone",
+            3: "salt",
+            4: "copper",
+            5: "iron",
+            6: "gold",
+            7: "lead",
+            8: "whales"
+        };
 
-      // Function to initialize the map
-      function initializeMap(season) {
-        // Remove existing map if it exists
-        if (map) {
-          map.remove();
+        // Function to fetch JSON data from GitHub API
+        async function fetchFromGitHub(path) {
+            const url = `https://api.github.com/repos/King-BR/Mercatorio-Interactive-Map/contents/${path}`;
+            const response = await fetch(url, {
+                headers: {
+                    Accept: 'application/vnd.github.v3.raw'
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${path}: ${response.statusText}`);
+            }
+            return response.json();
         }
 
-        // Determine zoom level based on the season
-        const zoomLevels = {
-          s1: 5,
-          s2: 6,
-        };
-        const maxZoom = zoomLevels[season];
+        // Function to initialize the map
+        async function initializeMap(season) {
+            // Remove existing map if it exists
+            if (map) {
+                map.remove();
+            }
 
-        // Initialize the map
-        map = L.map("map", {
-          crs: L.CRS.Simple, // Use Simple CRS for pixel-based maps
-          minZoom: 0,
-          maxZoom: maxZoom, // Adjust this to your max zoom level based on the season
-          zoom: 0, // Start zoom level
-          center: [mapHeight / 2, mapWidth / 2], // Center map
-          maxBoundsViscosity: 1.0, // Static bounds
-        }).fitBounds(hardBounds);
+            const zoomLevels = { s1: 5, s2: 6 };
+            const maxZoom = zoomLevels[season];
 
-        // Set elastic bounds to restrict panning
-        map.setMaxBounds(elasticBounds);
+            map = L.map("map", {
+                crs: L.CRS.Simple,
+                minZoom: 0,
+                maxZoom: maxZoom,
+                zoom: 0,
+                center: [mapHeight / 2, mapWidth / 2],
+                maxBoundsViscosity: 1.0,
+            }).fitBounds(hardBounds);
 
-        // Add tile layer with correct path
-        L.tileLayer(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/tiles/{z}/{x}/{y}.png`, {
-          tileSize: 256, // Tile size in pixels
-          noWrap: true, // Prevent wrapping
-          continuousWorld: false, // No horizontal wrapping
-          errorTileUrl: "error.png", // Error image for missing tiles
-          bounds: hardBounds, // Define bounds to restrict tile loading
-        }).addTo(map);
+            map.setMaxBounds(elasticBounds);
 
-        // Fetch towns and plots data
-        fetch(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/towns.json`)
-          .then(response => response.json())
-          .then(data => {
-            towns = data;
-            loadTowns();
-          });
+            L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
+                tileSize: 256,
+                noWrap: true,
+                continuousWorld: false,
+                errorTileUrl: "error.png",
+                bounds: hardBounds,
+            }).addTo(map);
 
-        fetch(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/plots.json`)
-          .then(response => response.json())
-          .then(data => {
-            plots = data;
-            updateResourceOverlays();
-          });
-      }
+            // Load data for towns and plots
+            await loadTowns(season);
+            await loadPlots(season);
+        }
 
-      // Function to load towns data and add markers
-      function loadTowns() {
-        // Clear existing markers and circles
-        map.eachLayer((layer) => {
-          if (layer instanceof L.Marker || layer instanceof L.Circle) {
-            map.removeLayer(layer);
-          }
+        // Function to load towns and add markers
+        async function loadTowns(season) {
+            try {
+                const towns = await fetchFromGitHub(`assets/${season}/towns.json`);
+
+                map.eachLayer((layer) => {
+                    if (layer instanceof L.Marker || layer instanceof L.Circle) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                towns.forEach((town) => {
+                    const iconUrl = town.capital ? "capital_marker.png" : "town_marker.png";
+                    const marker = L.icon({
+                        iconUrl: iconUrl,
+                        iconSize: [25, 25],
+                        iconAnchor: [12.5, 25],
+                        tooltipAnchor: [12.5, -12.5],
+                    });
+
+                    const markerY = mapHeight - town.location.y / 4;
+                    const markerX = town.location.x / 4;
+
+                    L.marker([markerY, markerX], { icon: marker })
+                        .addTo(map)
+                        .bindTooltip(town.name || "unnamed");
+
+                    // Add range circles based on checkbox states
+                    if (document.getElementById("toggleRange1").checked) {
+                        L.circle([markerY, markerX], {
+                            radius: 50 / 4,
+                            fill: false,
+                            color: "#00DDFFFF",
+                            weight: 1,
+                            opacity: 0.5,
+                        }).addTo(map);
+                    }
+                    if (document.getElementById("toggleRange2").checked) {
+                        L.circle([markerY, markerX], {
+                            radius: 80 / 4,
+                            fill: false,
+                            color: "#FFF200FF",
+                            weight: 1,
+                            opacity: 0.5,
+                        }).addTo(map);
+                    }
+                    if (document.getElementById("toggleRange3").checked) {
+                        L.circle([markerY, markerX], {
+                            radius: 110 / 4,
+                            fill: false,
+                            color: "#FF0000",
+                            weight: 1,
+                            opacity: 0.5,
+                        }).addTo(map);
+                    }
+                });
+            } catch (error) {
+                console.error("Error loading towns:", error);
+            }
+        }
+
+        // Function to load plots and create overlays
+        async function loadPlots(season) {
+            try {
+                const plots = await fetchFromGitHub(`assets/${season}/plots.json`);
+                const overlays = {};
+
+                Object.values(res_enum).forEach((resource) => {
+                    overlays[resource] = L.layerGroup().addTo(map);
+                });
+
+                plots.forEach((plot) => {
+                    const resource = res_enum[plot.data.res];
+                    if (resource) {
+                        const markerY = mapHeight - plot.realY / 4;
+                        const markerX = plot.realX / 4;
+                        const circle = L.circleMarker([markerY, markerX], {
+                            radius: 3,
+                            color: 'red',
+                            fillOpacity: 0.5,
+                        }).bindTooltip(`${resource} (${plot.data.resAmount})`);
+                        overlays[resource].addLayer(circle);
+                    }
+                });
+
+                // Add checkboxes for resource overlays
+                Object.keys(overlays).forEach((resource) => {
+                    const sidebar = document.getElementById("mySidebar");
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.id = `toggle_${resource}`;
+                    checkbox.checked = true;
+
+                    checkbox.addEventListener("change", (e) => {
+                        if (e.target.checked) {
+                            map.addLayer(overlays[resource]);
+                        } else {
+                            map.removeLayer(overlays[resource]);
+                        }
+                    });
+
+                    const label = document.createElement("label");
+                    label.appendChild(checkbox);
+                    label.appendChild(document.createTextNode(resource));
+
+                    const div = document.createElement("div");
+                    div.classList.add("sidebar-item");
+                    div.appendChild(label);
+                    sidebar.appendChild(div);
+                });
+            } catch (error) {
+                console.error("Error loading plots:", error);
+            }
+        }
+
+        // Toggle sidebar visibility
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        // Event listener for season change
+        document.getElementById("seasonSelect").addEventListener("change", async function (e) {
+            currentSeason = e.target.value;
+            await initializeMap(currentSeason);
         });
 
-        // Add towns from the selected season
-        towns.forEach((town) => {
-          const iconUrl = town.capital
-            ? "capital_marker.png"
-            : "town_marker.png";
-          const marker = L.icon({
-            iconUrl: iconUrl,
-            iconSize: [25, 25],
-            iconAnchor: [12.5, 25],
-            tooltipAnchor: [12.5, -12.5],
-          });
-
-          // Invert Y coordinate for correct placement
-          const markerY = mapHeight - town.location.y / 4; // Invert Y to fit map convention
-          const markerX = town.location.x / 4;
-
-          // Add the marker
-          L.marker([markerY, markerX], { icon: marker })
-            .addTo(map)
-            .bindTooltip(town.name);
-
-          // Add range circles based on checkbox states
-          if (document.getElementById("toggleRange1").checked) {
-            L.circle([markerY, markerX], {
-              radius: 50 / 4, // Divide radius by 4 for correct scaling
-              fill: false,
-              color: "#00DDFFFF", // light blue
-              weight: 1,
-              opacity: 0.5,
-            }).addTo(map);
-          }
-          if (document.getElementById("toggleRange2").checked) {
-            L.circle([markerY, markerX], {
-              radius: 80 / 4, // Divide radius by 4 for correct scaling
-              fill: false,
-              color: "#FFF200FF", // yellow
-              weight: 1,
-              opacity: 0.5,
-            }).addTo(map);
-          }
-          if (document.getElementById("toggleRange3").checked) {
-            L.circle([markerY, markerX], {
-              radius: 110 / 4, // Divide radius by 4 for correct scaling
-              fill: false,
-              color: "#FF0000", // red
-              weight: 1,
-              opacity: 0.5,
-            }).addTo(map);
-          }
-        });
-      }
-
-      // Function to update resource overlays based on resource data
-      function updateResourceOverlays() {
-        // Clear existing overlays
-        map.eachLayer((layer) => {
-          if (layer instanceof L.LayerGroup) {
-            map.removeLayer(layer);
-          }
-        });
-
-        // Create overlays for each resource type
-        Object.keys(res_enum).forEach((resId) => {
-          if (document.getElementById(`toggle${res_enum[resId].charAt(0).toUpperCase() + res_enum[resId].slice(1)}`).checked) {
-            const resourceGroup = L.layerGroup().addTo(map);
-
-            plots.forEach((plot) => {
-              if (plot.data.res === parseInt(resId)) {
-                L.circle([mapHeight - plot.realY / 4, plot.realX / 4], {
-                  radius: 20,
-                  color: "#FF0000",
-                  fillColor: "#FF0000",
-                  fillOpacity: 0.5,
-                }).addTo(resourceGroup);
-              }
+        // Event listeners for toggles
+        document.getElementById("toggleMarkers").addEventListener("change", function (e) {
+            // Logic to show/hide town markers based on the checkbox state
+            const showMarkers = e.target.checked;
+            map.eachLayer((layer) => {
+                if (layer instanceof L.Marker) {
+                    if (showMarkers) {
+                        map.addLayer(layer);
+                    } else {
+                        map.removeLayer(layer);
+                    }
+                }
             });
-          }
         });
-      }
 
-      // Event listener for season change
-      document.getElementById("seasonSelect").addEventListener("change", (e) => {
-        currentSeason = e.target.value;
+        document.getElementById("toggleRange1").addEventListener("change", async function () {
+            await loadTowns(currentSeason);
+        });
+
+        document.getElementById("toggleRange2").addEventListener("change", async function () {
+            await loadTowns(currentSeason);
+        });
+
+        document.getElementById("toggleRange3").addEventListener("change", async function () {
+            await loadTowns(currentSeason);
+        });
+
+        // Initialize the map on page load
         initializeMap(currentSeason);
-      });
-
-      // Event listeners for checkbox changes
-      document.querySelectorAll(".sidebar-item input[type='checkbox']").forEach((checkbox) => {
-        checkbox.addEventListener("change", updateResourceOverlays);
-      });
-
-      // Open sidebar function
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
-
-      // Close sidebar function
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-
-      // Initialize map with default season
-      initializeMap(currentSeason);
     </script>
-  </body>
+</body>
 </html>
