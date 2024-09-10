@@ -148,7 +148,6 @@ async function loadTowns(season) {
 async function loadPlots(season) {
   try {
     const plots = await fetchFromGitHub(`assets/${season}/plots.json`);
-    const towns = await fetchFromGitHub(`assets/${season}/towns.json`);
     const overlays = {};
 
     clearResourceCheckboxes(); // Clear existing checkboxes

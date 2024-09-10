@@ -19,10 +19,6 @@
         font-family: Arial, sans-serif;
       }
 
-      .w3-hide-large {
-        z-index: 1000;
-      }
-
       .w3-sidebar {
         z-index: 1000;
         height: 100vh;
@@ -64,17 +60,6 @@
       .leaflet-control-zoom-in,
       .leaflet-control-zoom-out {
         background: rgba(255, 255, 255, 0.7);
-      }
-
-      .top-left-container {
-        width: 55px;
-        height: 55px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        z-index: 900;
       }
     </style>
   </head>
@@ -119,7 +104,7 @@
       </div>
     </div>
 
-    <div class="top-left-container w3-main">
+    <div class="w3-main">
       <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
     </div>
 
