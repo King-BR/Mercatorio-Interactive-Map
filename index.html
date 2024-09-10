@@ -16,6 +16,10 @@
         font-family: Arial, sans-serif; /* Custom font */
       }
 
+      .w3-hide-large {
+        z-index: 1000; /* Ensure sidebar is on top */
+      }
+
       /* Sidebar */
       .w3-sidebar {
         z-index: 1000; /* Ensure sidebar is on top */
@@ -44,32 +48,41 @@
         width: calc(100% - 200px); /* Adjust width to account for the sidebar */
       }
 
+      /* Adjust position for different screen sizes */
       .leaflet-control-zoom {
-        position: absolute;
-        left: 13.5vmax; /* Adjusted using vmax for positioning */
+        position: relative; /* or 'fixed' if needed */
+        top: 5px; /* Adjust for desired position */
+        left: 205px; /* Adjust for desired position */
+      }
+
+      /* Media Query for Small Screens */
+      @media (max-width: 768px) {
+        .leaflet-control-zoom {
+          top: 55px; /* Adjust top position on smaller devices */
+          left: 0px; /* Adjust left position on smaller devices */
+        }
       }
 
       .leaflet-control-zoom-in,
       .leaflet-control-zoom-out {
-        background: rgba(
-          255,
-          255,
-          255,
-          0.7
-        ); /* Slightly transparent background */
-        border-radius: 5px; /* Rounded corners */
+        background: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+      }
+
+      .top-left-container {
+        width: 55px; /* Set the desired width */
+        height: 55px; /* Set the desired height */
+        position: absolute; /* Position it absolutely */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        background-color: #f0f0f0; /* Background color for visibility */
+        border: 1px solid #ccc; /* Optional border for clarity */
+        z-index: 900; /* Ensure it's on top */
       }
     </style>
   </head>
   <body>
-    <div
-      class="w3-sidebar w3-bar-block w3-collapse w3-card"
-      style="width: 200px"
-      id="mySidebar"
-    >
-      <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">
-        Close &times;
-      </button>
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width: 200px" id="mySidebar">
+      <button class="w3-bar-item w3-button w3-hide-large" onclick="w3_close()">Close &times;</button>
       <div class="sidebar-item">
         <label for="seasonSelect">Select Season:</label>
         <select id="seasonSelect" class="w3-select">
@@ -78,25 +91,21 @@
         </select>
       </div>
       <div class="sidebar-item">
-        <label>
-          <input type="checkbox" id="toggleMarkers" checked /> Show Town Markers
-        </label>
+        <label><input type="checkbox" id="toggleMarkers" checked /> Show Town Markers</label>
       </div>
       <div class="sidebar-item">
-        <label>
-          <input type="checkbox" id="toggleRange1" /> Show Town Range
-        </label>
+        <label><input type="checkbox" id="toggleRange1" /> Show Town Range</label>
       </div>
       <div class="sidebar-item">
-        <label>
-          <input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range
-        </label>
+        <label><input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range</label>
       </div>
       <div class="sidebar-item">
-        <label>
-          <input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range
-        </label>
+        <label><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range</label>
       </div>
+    </div>
+
+    <div class="top-left-container w3-main">
+      <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
     </div>
 
     <div id="map"></div>
@@ -106,13 +115,15 @@
       // Initialize map variables
       let currentSeason = "s1";
       let map;
+      let towns = [];
+      let plots = [];
 
       // Map dimensions
       const mapWidth = 256 * 4; // Adjust this based on your map size
       const mapHeight = 256 * 4;
 
       // Define bounds with a slight padding
-      const padding = 32; // Adjust padding to allow near-edge panning
+      const padding = 256; // Adjust padding to allow near-edge panning
       const elasticBounds = [
         [-padding, -padding],
         [mapHeight + padding, mapWidth + padding],
@@ -122,881 +133,16 @@
         [mapHeight, mapWidth],
       ];
 
-      // Define towns data
-      let towns = {
-        s1: [
-          {
-            id: "28401970",
-            name: "Cantershire",
-            location: {
-              x: 284,
-              y: 1970,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "47902714",
-            name: "Calmont",
-            location: {
-              x: 479,
-              y: 2714,
-            },
-            region: 2135,
-            capital: false,
-          },
-          {
-            id: "49102579",
-            name: "Orlebourg",
-            location: {
-              x: 491,
-              y: 2579,
-            },
-            region: 2135,
-            capital: false,
-          },
-          {
-            id: "57802681",
-            name: "Angeand",
-            location: {
-              x: 578,
-              y: 2681,
-            },
-            region: 2135,
-            capital: false,
-          },
-          {
-            id: "59701305",
-            name: "Blackster",
-            location: {
-              x: 597,
-              y: 1305,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "61101188",
-            name: "Swinpool",
-            location: {
-              x: 611,
-              y: 1188,
-            },
-            region: 2111,
-            capital: false,
-          },
-          {
-            id: "63203083",
-            name: "Dunand",
-            location: {
-              x: 632,
-              y: 3083,
-            },
-            region: 2153,
-            capital: true,
-          },
-          {
-            id: "66102485",
-            name: "Angenes",
-            location: {
-              x: 661,
-              y: 2485,
-            },
-            region: 2135,
-            capital: true,
-          },
-          {
-            id: "67500851",
-            name: "Chippingwich",
-            location: {
-              x: 675,
-              y: 851,
-            },
-            region: 2111,
-            capital: true,
-          },
-          {
-            id: "74602391",
-            name: "Laucyr",
-            location: {
-              x: 746,
-              y: 2391,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "76901348",
-            name: "Edinth",
-            location: {
-              x: 769,
-              y: 1348,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "80003220",
-            name: "Verdjon",
-            location: {
-              x: 800,
-              y: 3220,
-            },
-            region: 2155,
-            capital: true,
-          },
-          {
-            id: "81002125",
-            name: "Laucy",
-            location: {
-              x: 810,
-              y: 2125,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "85100492",
-            name: "Blackstead",
-            location: {
-              x: 851,
-              y: 492,
-            },
-            region: 2111,
-            capital: false,
-          },
-          {
-            id: "86300956",
-            name: "Norbury",
-            location: {
-              x: 863,
-              y: 956,
-            },
-            region: 2101,
-            capital: true,
-          },
-          {
-            id: "86500790",
-            name: "Blackton",
-            location: {
-              x: 865,
-              y: 790,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "87900625",
-            name: "Manster",
-            location: {
-              x: 879,
-              y: 625,
-            },
-            region: 2111,
-            capital: false,
-          },
-          {
-            id: "88602344",
-            name: "Poras",
-            location: {
-              x: 886,
-              y: 2344,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "91001049",
-            name: "Bishopth",
-            location: {
-              x: 910,
-              y: 1049,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "92801213",
-            name: "Leeford",
-            location: {
-              x: 928,
-              y: 1213,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "94501917",
-            name: "Stutthen",
-            location: {
-              x: 945,
-              y: 1917,
-            },
-            region: 2143,
-            capital: true,
-          },
-          {
-            id: "94502775",
-            name: "Lauaux",
-            location: {
-              x: 945,
-              y: 2775,
-            },
-            region: 2135,
-            capital: false,
-          },
-          {
-            id: "95300716",
-            name: "Bishopham",
-            location: {
-              x: 953,
-              y: 716,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "99902005",
-            name: "Dremen",
-            location: {
-              x: 999,
-              y: 2005,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "101600592",
-            name: "Cardford",
-            location: {
-              x: 1016,
-              y: 592,
-            },
-            region: 2111,
-            capital: false,
-          },
-          {
-            id: "102801018",
-            name: "Bahead",
-            location: {
-              x: 1028,
-              y: 1018,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "106302348",
-            name: "Angecyr",
-            location: {
-              x: 1063,
-              y: 2348,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "111801558",
-            name: "Hamtal",
-            location: {
-              x: 1118,
-              y: 1558,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "114400596",
-            name: "Aderham",
-            location: {
-              x: 1144,
-              y: 596,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "114701085",
-            name: "Karlbergheim",
-            location: {
-              x: 1147,
-              y: 1085,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "115902269",
-            name: "Verarde",
-            location: {
-              x: 1159,
-              y: 2269,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "116400939",
-            name: "Rogow",
-            location: {
-              x: 1164,
-              y: 939,
-            },
-            region: 2101,
-            capital: false,
-          },
-          {
-            id: "117901415",
-            name: "Dorthowen",
-            location: {
-              x: 1179,
-              y: 1415,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "128102172",
-            name: "Marville",
-            location: {
-              x: 1281,
-              y: 2172,
-            },
-            region: 2143,
-            capital: false,
-          },
-          {
-            id: "129000768",
-            name: "Swinfield",
-            location: {
-              x: 1290,
-              y: 768,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "135100870",
-            name: "Eshagen",
-            location: {
-              x: 1351,
-              y: 870,
-            },
-            region: 2131,
-            capital: true,
-          },
-          {
-            id: "145000975",
-            name: "Livertal",
-            location: {
-              x: 1450,
-              y: 975,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "146301579",
-            name: "Amsdermen",
-            location: {
-              x: 1463,
-              y: 1579,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "147401756",
-            name: "Antmühle",
-            location: {
-              x: 1474,
-              y: 1756,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "147801865",
-            name: "Neubeck",
-            location: {
-              x: 1478,
-              y: 1865,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "155701058",
-            name: "Hambeck",
-            location: {
-              x: 1557,
-              y: 1058,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "157602082",
-            name: "Marilles",
-            location: {
-              x: 1576,
-              y: 2082,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "160600635",
-            name: "Nürnend",
-            location: {
-              x: 1606,
-              y: 635,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "160701761",
-            name: "Antthal",
-            location: {
-              x: 1607,
-              y: 1761,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "161301609",
-            name: "Utthal",
-            location: {
-              x: 1613,
-              y: 1609,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "161801874",
-            name: "Altnieder",
-            location: {
-              x: 1618,
-              y: 1874,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "164000917",
-            name: "Antstock",
-            location: {
-              x: 1640,
-              y: 917,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "166702013",
-            name: "Düsselberg",
-            location: {
-              x: 1667,
-              y: 2013,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "169101675",
-            name: "Mannrecht",
-            location: {
-              x: 1691,
-              y: 1675,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "169200813",
-            name: "Blacknieder",
-            location: {
-              x: 1692,
-              y: 813,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "170401150",
-            name: "Antbrücken",
-            location: {
-              x: 1704,
-              y: 1150,
-            },
-            region: 2131,
-            capital: false,
-          },
-          {
-            id: "179800943",
-            name: "Eindburg",
-            location: {
-              x: 1798,
-              y: 943,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "180401680",
-            name: "Badhagen",
-            location: {
-              x: 1804,
-              y: 1680,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "180701997",
-            name: "Nürnwerp",
-            location: {
-              x: 1807,
-              y: 1997,
-            },
-            region: 2133,
-            capital: false,
-          },
-          {
-            id: "181001062",
-            name: "Magdedorf",
-            location: {
-              x: 1810,
-              y: 1062,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "183801826",
-            name: "Eindweiler",
-            location: {
-              x: 1838,
-              y: 1826,
-            },
-            region: 2133,
-            capital: true,
-          },
-          {
-            id: "192501908",
-            name: "Utbergheim",
-            location: {
-              x: 1925,
-              y: 1908,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "193200203",
-            name: "Oxdorf",
-            location: {
-              x: 1932,
-              y: 203,
-            },
-            region: 2107,
-            capital: false,
-          },
-          {
-            id: "200400279",
-            name: "Aderhampton",
-            location: {
-              x: 2004,
-              y: 279,
-            },
-            region: 2107,
-            capital: true,
-          },
-          {
-            id: "201401041",
-            name: "Lüfeld",
-            location: {
-              x: 2014,
-              y: 1041,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "202901932",
-            name: "Münchden",
-            location: {
-              x: 2029,
-              y: 1932,
-            },
-            region: 2113,
-            capital: true,
-          },
-          {
-            id: "214101138",
-            name: "Utheim",
-            location: {
-              x: 2141,
-              y: 1138,
-            },
-            region: 2139,
-            capital: true,
-          },
-          {
-            id: "214801459",
-            name: "Arnkirchen",
-            location: {
-              x: 2148,
-              y: 1459,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "216500979",
-            name: "Altmen",
-            location: {
-              x: 2165,
-              y: 979,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "224101287",
-            name: "Hannowald",
-            location: {
-              x: 2241,
-              y: 1287,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "228801628",
-            name: "Rottergart",
-            location: {
-              x: 2288,
-              y: 1628,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "229001379",
-            name: "Dortfurt",
-            location: {
-              x: 2290,
-              y: 1379,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "230300936",
-            name: "Haugestadt",
-            location: {
-              x: 2303,
-              y: 936,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "234801545",
-            name: "Hannorecht",
-            location: {
-              x: 2348,
-              y: 1545,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "243301479",
-            name: "Eskirchen",
-            location: {
-              x: 2433,
-              y: 1479,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "243500865",
-            name: "Høgbach",
-            location: {
-              x: 2435,
-              y: 865,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "253301447",
-            name: "Mannburg",
-            location: {
-              x: 2533,
-              y: 1447,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "263600857",
-            name: "Arnping",
-            location: {
-              x: 2636,
-              y: 857,
-            },
-            region: 2139,
-            capital: false,
-          },
-          {
-            id: "269401468",
-            name: "Hannodam",
-            location: {
-              x: 2694,
-              y: 1468,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "271501361",
-            name: "Stuttbrücken",
-            location: {
-              x: 2715,
-              y: 1361,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "280701468",
-            name: "Altrecht",
-            location: {
-              x: 2807,
-              y: 1468,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "287301571",
-            name: "Mannden",
-            location: {
-              x: 2873,
-              y: 1571,
-            },
-            region: 2113,
-            capital: false,
-          },
-          {
-            id: "313800983",
-            name: "Favik",
-            location: {
-              x: 3138,
-              y: 983,
-            },
-            region: 2099,
-            capital: true,
-          },
-          {
-            id: "315801097",
-            name: "Nesdal",
-            location: {
-              x: 3158,
-              y: 1097,
-            },
-            region: 2099,
-            capital: false,
-          },
-          {
-            id: "319801342",
-            name: "Rotterfjord",
-            location: {
-              x: 3198,
-              y: 1342,
-            },
-            region: 2123,
-            capital: false,
-          },
-          {
-            id: "332801781",
-            name: "Jönköhowen",
-            location: {
-              x: 3328,
-              y: 1781,
-            },
-            region: 2123,
-            capital: false,
-          },
-          {
-            id: "337701227",
-            name: "Osle",
-            location: {
-              x: 3377,
-              y: 1227,
-            },
-            region: 2105,
-            capital: false,
-          },
-          {
-            id: "349201294",
-            name: "Haugebro",
-            location: {
-              x: 3492,
-              y: 1294,
-            },
-            region: 2105,
-            capital: false,
-          },
-          {
-            id: "356001880",
-            name: "Uppvik",
-            location: {
-              x: 3560,
-              y: 1880,
-            },
-            region: 2123,
-            capital: false,
-          },
-          {
-            id: "359201366",
-            name: "Sundsning",
-            location: {
-              x: 3592,
-              y: 1366,
-            },
-            region: 2105,
-            capital: true,
-          },
-          {
-            id: "371401422",
-            name: "Stockstad",
-            location: {
-              x: 3714,
-              y: 1422,
-            },
-            region: 2105,
-            capital: false,
-          },
-          {
-            id: "374601840",
-            name: "Norrruhe",
-            location: {
-              x: 3746,
-              y: 1840,
-            },
-            region: 2123,
-            capital: true,
-          },
-        ],
-        s2: [],
+      // Resource enum
+      const res_enum = {
+        1: "fish",
+        2: "stone",
+        3: "salt",
+        4: "copper",
+        5: "iron",
+        6: "gold",
+        7: "lead",
+        8: "whales",
       };
 
       // Function to initialize the map
@@ -1027,7 +173,7 @@
         map.setMaxBounds(elasticBounds);
 
         // Add tile layer with correct path
-        L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
+        L.tileLayer(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/tiles/{z}/{x}/{y}.png`, {
           tileSize: 256, // Tile size in pixels
           noWrap: true, // Prevent wrapping
           continuousWorld: false, // No horizontal wrapping
@@ -1035,12 +181,24 @@
           bounds: hardBounds, // Define bounds to restrict tile loading
         }).addTo(map);
 
-        // Add markers and circles
-        loadTowns(season);
+        // Fetch towns and plots data
+        fetch(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/towns.json`)
+          .then(response => response.json())
+          .then(data => {
+            towns = data;
+            loadTowns();
+          });
+
+        fetch(`https://username.github.io/Mercatorio-Interactive-Map/assets/${season}/plots.json`)
+          .then(response => response.json())
+          .then(data => {
+            plots = data;
+            updateResourceOverlays();
+          });
       }
 
       // Function to load towns data and add markers
-      function loadTowns(season) {
+      function loadTowns() {
         // Clear existing markers and circles
         map.eachLayer((layer) => {
           if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -1049,7 +207,7 @@
         });
 
         // Add towns from the selected season
-        towns[season].forEach((town) => {
+        towns.forEach((town) => {
           const iconUrl = town.capital
             ? "capital_marker.png"
             : "town_marker.png";
@@ -1100,42 +258,57 @@
         });
       }
 
-      // Function to set up checkbox event listeners
-      function setupCheckboxListeners() {
-        document
-          .getElementById("toggleRange1")
-          .addEventListener("change", () => {
-            loadTowns(currentSeason); // Reload towns to apply the checkbox state
-          });
-
-        document
-          .getElementById("toggleRange2")
-          .addEventListener("change", () => {
-            loadTowns(currentSeason); // Reload towns to apply the checkbox state
-          });
-
-        document
-          .getElementById("toggleRange3")
-          .addEventListener("change", () => {
-            loadTowns(currentSeason); // Reload towns to apply the checkbox state
-          });
-      }
-
-      // Event listener for season dropdown change
-      document
-        .getElementById("seasonSelect")
-        .addEventListener("change", (event) => {
-          currentSeason = event.target.value;
-          initializeMap(currentSeason);
+      // Function to update resource overlays based on resource data
+      function updateResourceOverlays() {
+        // Clear existing overlays
+        map.eachLayer((layer) => {
+          if (layer instanceof L.LayerGroup) {
+            map.removeLayer(layer);
+          }
         });
 
-      // Initialize the map and setup checkbox listeners
-      function initialize() {
-        initializeMap(currentSeason);
-        setupCheckboxListeners();
+        // Create overlays for each resource type
+        Object.keys(res_enum).forEach((resId) => {
+          if (document.getElementById(`toggle${res_enum[resId].charAt(0).toUpperCase() + res_enum[resId].slice(1)}`).checked) {
+            const resourceGroup = L.layerGroup().addTo(map);
+
+            plots.forEach((plot) => {
+              if (plot.data.res === parseInt(resId)) {
+                L.circle([mapHeight - plot.realY / 4, plot.realX / 4], {
+                  radius: 20,
+                  color: "#FF0000",
+                  fillColor: "#FF0000",
+                  fillOpacity: 0.5,
+                }).addTo(resourceGroup);
+              }
+            });
+          }
+        });
       }
 
-      initialize();
+      // Event listener for season change
+      document.getElementById("seasonSelect").addEventListener("change", (e) => {
+        currentSeason = e.target.value;
+        initializeMap(currentSeason);
+      });
+
+      // Event listeners for checkbox changes
+      document.querySelectorAll(".sidebar-item input[type='checkbox']").forEach((checkbox) => {
+        checkbox.addEventListener("change", updateResourceOverlays);
+      });
+
+      // Open sidebar function
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      // Close sidebar function
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+
+      // Initialize map with default season
+      initializeMap(currentSeason);
     </script>
   </body>
 </html>
