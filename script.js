@@ -29,6 +29,12 @@ const res_enum = {
   8: { name: "whales", color: "#001f3f" },
 };
 
+function clearResourceCheckboxes() {
+  const sidebar = document.getElementById("mySidebar");
+  const checkboxes = sidebar.querySelectorAll(".resource-checkbox");
+  checkboxes.forEach((checkbox) => checkbox.parentElement.remove());
+}
+
 // Function to fetch JSON data from GitHub API
 async function fetchFromGitHub(path) {
   const url = `https://api.github.com/repos/King-BR/Mercatorio-Interactive-Map/contents/${path}`;
@@ -145,7 +151,8 @@ async function loadPlots(season) {
     const towns = await fetchFromGitHub(`assets/${season}/towns.json`);
     const overlays = {};
 
-    // Initialize layers for each resource type
+    clearResourceCheckboxes(); // Clear existing checkboxes
+
     Object.values(res_enum).forEach((resource) => {
       overlays[resource.name] = L.layerGroup();
     });
@@ -153,32 +160,28 @@ async function loadPlots(season) {
     plots.forEach((plot) => {
       const resource = res_enum[plot.data.res];
       if (resource) {
-        const plotLatLng = L.latLng(mapHeight - plot.realY / 4, plot.realX / 4);
+        const plotLatLng = L.latLng(mapHeight - plot.realY / 4 - 0.2, plot.realX / 4 + 0.2);
 
-        // Create circle marker for the resource
+        // Create a circle marker for the resource
         const circleMarker = L.circleMarker(plotLatLng, {
-          radius: 4,
+          radius: 5,
+          fillColor: resource.color,
           color: resource.color,
-          fillOpacity: 1.0,
-          weight: 0,
-        })
-          .setLatLng([
-            plotLatLng.lat - 0.2, // Offset Y
-            plotLatLng.lng + 0.2, // Offset X
-          ])
-          .bindTooltip(`${resource.name}`);
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 1,
+        }).bindTooltip(`${resource.name}`); // (${plot.data.resAmount})
 
-        // Add circle marker to the appropriate overlay layer
         overlays[resource.name].addLayer(circleMarker);
       }
     });
 
-    // Add checkboxes for resource overlays
     Object.keys(overlays).forEach((resource) => {
       const sidebar = document.getElementById("mySidebar");
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = `toggle_${resource}`;
+      checkbox.className = "resource-checkbox"; // Add class for easy selection
       checkbox.checked = false; // Default to off
 
       checkbox.addEventListener("change", (e) => {
