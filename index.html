@@ -44,19 +44,6 @@
         width: calc(100% - 200px);
       }
 
-      .leaflet-control-zoom {
-        position: relative;
-        top: 5px;
-        left: 205px;
-      }
-
-      @media (max-width: 768px) {
-        .leaflet-control-zoom {
-          top: 55px;
-          left: 0px;
-        }
-      }
-
       .leaflet-control-zoom-in,
       .leaflet-control-zoom-out {
         background: rgba(255, 255, 255, 0.7);
@@ -105,7 +92,7 @@
     </div>
 
     <div class="w3-main">
-      <button class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+      <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
     </div>
 
     <div id="map"></div>
