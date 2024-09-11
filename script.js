@@ -112,7 +112,7 @@ async function loadTowns(season) {
       }
     });
 
-    towns.forEach((town) => {
+    towns.forEach((town, index) => {
       const iconUrl = town.capital ? "capital_marker.png" : "town_marker.png";
       const marker = L.icon({
         iconUrl: iconUrl,
@@ -124,9 +124,11 @@ async function loadTowns(season) {
       const markerY = mapHeight - town.location.y / 4;
       const markerX = town.location.x / 4;
 
+      const tooltipText = town.name || `Town ${index + 1}`; // Use name or index if name is missing
+
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
-        .bindTooltip(town.name);
+        .bindTooltip(tooltipText);
 
       // Add range circles based on checkbox states
       if (document.getElementById("toggleRange1").checked) {
@@ -224,10 +226,10 @@ async function loadPlots(season) {
       }
 
       // Additional styling for readability
-      if (!["salt", "gold", "stone"].includes(resource)) label.style.color = "#FFFFFF"; // Ensure text is readable on colored backgrounds
+      if (!["salt", "gold", "stone"].includes(resource))
+        label.style.color = "#FFFFFF"; // Ensure text is readable on colored backgrounds
       label.style.padding = "5px";
       label.style.borderRadius = "3px";
-      label.style.margin = "5px 0";
       label.style.display = "inline-block"; // Make the label wrap around content
       label.style.border = "1px solid #000"; // Add border line (1px solid black)
 
@@ -259,22 +261,6 @@ document
   .addEventListener("change", async function (e) {
     currentSeason = e.target.value;
     await initializeMap(currentSeason);
-  });
-
-// Event listeners for toggles
-document
-  .getElementById("toggleMarkers")
-  .addEventListener("change", function (e) {
-    const showMarkers = e.target.checked;
-    map.eachLayer((layer) => {
-      if (layer instanceof L.Marker) {
-        if (showMarkers) {
-          map.addLayer(layer);
-        } else {
-          map.removeLayer(layer);
-        }
-      }
-    });
   });
 
 document
