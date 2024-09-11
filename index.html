@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"
-    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <style>
       body {
         display: flex;
@@ -48,6 +46,11 @@
       .leaflet-control-zoom-out {
         background: rgba(255, 255, 255, 0.7);
       }
+
+      .leaflet-control-zoom {
+        display: none;
+      }
+
     </style>
   </head>
   <body>
@@ -92,7 +95,9 @@
     </div>
 
     <div class="w3-main">
-      <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+      <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">
+        &#9776;
+      </button>
     </div>
 
     <div id="map"></div>
