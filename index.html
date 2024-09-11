@@ -81,6 +81,20 @@
         </select>
       </div>
       <div class="sidebar-item">
+        <label for="townSearch">Search Town:</label>
+        <input
+          type="text"
+          id="townSearch"
+          class="w3-input"
+          placeholder="Type town name..."
+        />
+        <div
+          id="suggestions"
+          class="w3-dropdown-content w3-card w3-border"
+          style="display: none; max-height: 150px; overflow-y: auto"
+        ></div>
+      </div>
+      <div class="sidebar-item">
         <label
           ><input type="checkbox" id="toggleRange1" /> Show Town Range
         </label>

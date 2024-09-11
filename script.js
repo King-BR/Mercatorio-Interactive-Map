@@ -1,6 +1,8 @@
 // Initialize map variables
 let currentSeason = "s1";
 let map;
+let towns = []; // Store towns globally for search functionality
+let townMarkers = {}; // Store markers for quick access
 let resourceLayers = {};
 
 // Define bounds for the map
@@ -104,7 +106,10 @@ async function initializeMap(season) {
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
-    const towns = await fetchFromGitHub(`assets/${season}/towns.json`);
+    towns = await fetchFromGitHub(`assets/${season}/towns.json`);
+
+    // Clear existing markers
+    townMarkers = {};
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -126,9 +131,11 @@ async function loadTowns(season) {
 
       const tooltipText = town.name || `Town ${index + 1}`; // Use name or index if name is missing
 
-      L.marker([markerY, markerX], { icon: marker })
+      const markerInstance = L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
         .bindTooltip(tooltipText);
+
+      townMarkers[tooltipText.toLowerCase()] = markerInstance;
 
       // Add range circles based on checkbox states
       if (document.getElementById("toggleRange1").checked) {
@@ -246,40 +253,73 @@ async function loadPlots(season) {
   }
 }
 
-// Toggle sidebar visibility
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
+// Handle season change
+document.getElementById("seasonSelect").addEventListener("change", (event) => {
+  currentSeason = event.target.value;
+  initializeMap(currentSeason);
+});
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
+// Handle search input
+document.getElementById("townSearch").addEventListener("input", (event) => {
+  const query = event.target.value.toLowerCase();
+  const suggestions = document.getElementById("suggestions");
+  suggestions.innerHTML = "";
 
-// Event listener for season change
-document
-  .getElementById("seasonSelect")
-  .addEventListener("change", async function (e) {
-    currentSeason = e.target.value;
-    await initializeMap(currentSeason);
-  });
+  if (query) {
+    const filteredTowns = towns.filter((town, index) => {
+      let townname = town.name || `Town ${index + 1}`;
+      return townname.toLowerCase().includes(query);
+    });
 
-document
-  .getElementById("toggleRange1")
-  .addEventListener("change", async function () {
-    await loadTowns(currentSeason);
-  });
+    filteredTowns.forEach((town, index) => {
+      let townname = town.name || `Town ${index + 1}`;
+      const suggestionItem = document.createElement("a");
+      suggestionItem.href = "#";
+      suggestionItem.className = "w3-bar-item w3-button";
+      suggestionItem.textContent = townname;
 
-document
-  .getElementById("toggleRange2")
-  .addEventListener("change", async function () {
-    await loadTowns(currentSeason);
-  });
+      // Update search input field, map view, and open tooltip when suggestion is clicked
+      suggestionItem.addEventListener("click", (event) => {
+        event.preventDefault();
+        document.getElementById("townSearch").value = townname;
+        const markerLatLng = L.latLng(
+          mapHeight - town.location.y / 4,
+          town.location.x / 4
+        );
+        map.setView(markerLatLng, 2);
 
-document
-  .getElementById("toggleRange3")
-  .addEventListener("change", async function () {
-    await loadTowns(currentSeason);
-  });
+        const marker = townMarkers[townname.toLowerCase()];
+        if (marker) {
+          marker.openTooltip(); // Open the tooltip of the selected town
+        }
 
-// Initialize the map on page load
-initializeMap(currentSeason);
+        suggestions.style.display = "none"; // Hide suggestions after selection
+      });
+
+      suggestions.appendChild(suggestionItem);
+    });
+
+    if (filteredTowns.length > 0) {
+      suggestions.style.display = "block";
+    } else {
+      suggestions.style.display = "none";
+    }
+  } else {
+    suggestions.style.display = "none";
+  }
+});
+
+// Handle closing of suggestions box when clicking outside
+document.addEventListener("click", (event) => {
+  if (!event.target.matches("#townSearch")) {
+    const suggestions = document.getElementById("suggestions");
+    if (suggestions.style.display === "block") {
+      suggestions.style.display = "none";
+    }
+  }
+});
+
+// Initialize map on page load
+document.addEventListener("DOMContentLoaded", () => {
+  initializeMap(currentSeason);
+});
