@@ -20,9 +20,9 @@ const hardBounds = [
 // Resource enumeration with unique colors
 const res_enum = {
   1: { name: "fish", color: "#1f77b4" },
-  2: { name: "stone", color: "#ff6347" },
+  2: { name: "stone", color: "#00FFF7FF" }, //  #046E00FF
   3: { name: "salt", color: "#FFFFFF" },
-  4: { name: "copper", color: "#FF4500" },
+  4: { name: "copper", color: "#ff6347" },
   5: { name: "iron", color: "#9467bd" },
   6: { name: "gold", color: "#FFFF00" },
   7: { name: "lead", color: "#4B4B4B" },
@@ -83,7 +83,7 @@ async function initializeMap(season) {
   await loadPlots(season);
 
   // Add mouse move event listener to display coordinates
-  map.on('mousemove', (event) => {
+  map.on("mousemove", (event) => {
     const latLng = event.latlng;
     const x = latLng.lng * 4;
     const y = (mapHeight - latLng.lat) * 4;
@@ -92,8 +92,11 @@ async function initializeMap(season) {
     const section = `${sectionX}:${sectionY}`;
 
     if (x >= 0 && x <= 4096 && y >= 0 && y <= 4096) {
-      document.getElementById('coordinateDisplay').textContent =
-        `Coordinates: X=${Math.round(x)}, Y=${Math.round(y)} | Section: ${section}`;
+      document.getElementById(
+        "coordinateDisplay"
+      ).textContent = `Coordinates: X=${Math.round(x)}, Y=${Math.round(
+        y
+      )} | Section: ${section}`;
     }
   });
 }
@@ -174,7 +177,10 @@ async function loadPlots(season) {
     plots.forEach((plot) => {
       const resource = res_enum[plot.data.res];
       if (resource) {
-        const plotLatLng = L.latLng(mapHeight - plot.realY / 4 - 0.2, plot.realX / 4 + 0.2);
+        const plotLatLng = L.latLng(
+          mapHeight - plot.realY / 4 - 0.2,
+          plot.realX / 4 + 0.2
+        );
 
         // Create a circle marker for the resource
         const circleMarker = L.circleMarker(plotLatLng, {
@@ -207,6 +213,24 @@ async function loadPlots(season) {
       });
 
       const label = document.createElement("label");
+      label.htmlFor = `toggle_${resource}`;
+
+      // Get the resource color from res_enum
+      const resourceDetails = Object.values(res_enum).find(
+        (r) => r.name === resource
+      );
+      if (resourceDetails) {
+        label.style.backgroundColor = resourceDetails.color; // Set background color
+      }
+
+      // Additional styling for readability
+      if (!["salt", "gold", "stone"].includes(resource)) label.style.color = "#FFFFFF"; // Ensure text is readable on colored backgrounds
+      label.style.padding = "5px";
+      label.style.borderRadius = "3px";
+      label.style.margin = "5px 0";
+      label.style.display = "inline-block"; // Make the label wrap around content
+      label.style.border = "1px solid #000"; // Add border line (1px solid black)
+
       label.appendChild(checkbox);
       label.appendChild(document.createTextNode(resource));
 
