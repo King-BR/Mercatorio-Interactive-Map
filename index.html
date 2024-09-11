@@ -7,7 +7,7 @@
     <title>Interactive Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    
     <style>
       body {
         display: flex;
@@ -51,6 +51,17 @@
         display: none;
       }
 
+      #coordinateDisplay {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        z-index: 1000;
+      }
     </style>
   </head>
   <body>
@@ -101,6 +112,7 @@
     </div>
 
     <div id="map"></div>
+    <div id="coordinateDisplay">Coordinates: X=0, Y=0 | Section: 0:0</div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
