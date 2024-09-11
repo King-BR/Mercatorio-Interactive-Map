@@ -367,6 +367,15 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// Handle sidebar open/close
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
 // Initialize map on page load
 document.addEventListener("DOMContentLoaded", () => {
   initializeMap(currentSeason);

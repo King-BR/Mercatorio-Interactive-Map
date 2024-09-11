@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.w3-sidebar {
+  z-index: 1000;
+  height: 100vh;
+}
+
+.sidebar-item {
+  margin: 10px;
+}
+
+.sidebar-item label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.sidebar-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#map {
+  flex-grow: 1;
+  height: 100vh;
+  width: calc(100% - 200px);
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.leaflet-control-zoom {
+  display: none;
+}
+
+#coordinateDisplay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1000;
+}
