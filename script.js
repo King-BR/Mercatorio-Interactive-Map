@@ -2,7 +2,6 @@
 let currentSeason = "s1";
 let map;
 let towns = []; // Store towns globally for search functionality
-let townMarkers = {}; // Store markers for quick access
 let resourceLayers = {};
 
 // Define bounds for the map
@@ -101,15 +100,65 @@ async function initializeMap(season) {
       )} | Section: ${section}`;
     }
   });
+
+  // Add event listeners for range toggle checkboxes
+  document
+    .getElementById("toggleRange1")
+    .addEventListener("change", () => updateRangeCircles());
+  document
+    .getElementById("toggleRange2")
+    .addEventListener("change", () => updateRangeCircles());
+  document
+    .getElementById("toggleRange3")
+    .addEventListener("change", () => updateRangeCircles());
+}
+
+// Function to update range circles
+function updateRangeCircles() {
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Circle) {
+      map.removeLayer(layer);
+    }
+  });
+
+  towns.forEach((town, index) => {
+    const markerY = mapHeight - town.location.y / 4;
+    const markerX = town.location.x / 4;
+
+    if (document.getElementById("toggleRange1").checked) {
+      L.circle([markerY, markerX], {
+        radius: 50 / 4,
+        fill: false,
+        color: "#00DDFFFF",
+        weight: 1,
+        opacity: 0.5,
+      }).addTo(map);
+    }
+    if (document.getElementById("toggleRange2").checked) {
+      L.circle([markerY, markerX], {
+        radius: 80 / 4,
+        fill: false,
+        color: "#FFF200FF",
+        weight: 1,
+        opacity: 0.5,
+      }).addTo(map);
+    }
+    if (document.getElementById("toggleRange3").checked) {
+      L.circle([markerY, markerX], {
+        radius: 110 / 4,
+        fill: false,
+        color: "#FF0000",
+        weight: 1,
+        opacity: 0.5,
+      }).addTo(map);
+    }
+  });
 }
 
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
     towns = await fetchFromGitHub(`assets/${season}/towns.json`);
-
-    // Clear existing markers
-    townMarkers = {};
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -131,11 +180,9 @@ async function loadTowns(season) {
 
       const tooltipText = town.name || `Town ${index + 1}`; // Use name or index if name is missing
 
-      const markerInstance = L.marker([markerY, markerX], { icon: marker })
+      L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
         .bindTooltip(tooltipText);
-
-      townMarkers[tooltipText.toLowerCase()] = markerInstance;
 
       // Add range circles based on checkbox states
       if (document.getElementById("toggleRange1").checked) {
@@ -266,36 +313,37 @@ document.getElementById("townSearch").addEventListener("input", (event) => {
   suggestions.innerHTML = "";
 
   if (query) {
-    const filteredTowns = towns.filter((town, index) => {
-      let townname = town.name || `Town ${index + 1}`;
-      return townname.toLowerCase().includes(query);
-    });
+    const filteredTowns = towns.filter(
+      (town, index) =>
+        (town.name && town.name.toLowerCase().includes(query)) ||
+        (!town.name && `Town ${index + 1}`.toLowerCase().includes(query))
+    );
 
     filteredTowns.forEach((town, index) => {
-      let townname = town.name || `Town ${index + 1}`;
       const suggestionItem = document.createElement("a");
       suggestionItem.href = "#";
       suggestionItem.className = "w3-bar-item w3-button";
-      suggestionItem.textContent = townname;
-
-      // Update search input field, map view, and open tooltip when suggestion is clicked
-      suggestionItem.addEventListener("click", (event) => {
-        event.preventDefault();
-        document.getElementById("townSearch").value = townname;
+      suggestionItem.textContent = town.name || `Town ${index + 1}`;
+      suggestionItem.addEventListener("click", () => {
+        document.getElementById("townSearch").value =
+          town.name || `Town ${index + 1}`;
         const markerLatLng = L.latLng(
           mapHeight - town.location.y / 4,
           town.location.x / 4
         );
-        map.setView(markerLatLng, 2);
+        map.setView(markerLatLng, 1);
 
-        const marker = townMarkers[townname.toLowerCase()];
-        if (marker) {
-          marker.openTooltip(); // Open the tooltip of the selected town
-        }
-
-        suggestions.style.display = "none"; // Hide suggestions after selection
+        // Open the marker tooltip if it exists
+        const marker = map.eachLayer((layer) => {
+          if (
+            layer instanceof L.Marker &&
+            layer.getTooltip().getContent() ===
+              (town.name || `Town ${index + 1}`)
+          ) {
+            layer.openTooltip();
+          }
+        });
       });
-
       suggestions.appendChild(suggestionItem);
     });
 
