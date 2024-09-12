@@ -159,6 +159,7 @@ function updateRangeCircles() {
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
+    towns = []; // Clear existing towns
     towns = await fetchFromLocal(`assets/${season}/towns.json`);
 
     map.eachLayer((layer) => {
@@ -180,7 +181,7 @@ async function loadTowns(season) {
       const markerX = town.location.x / 4;
 
       const tooltipText = town.name || `Town ${index + 1}`;
-      towns.push({ name: tooltipText, location: { x: markerX, y: markerY } });
+      towns.push({ name: tooltipText, location: town.location });
 
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
@@ -351,7 +352,7 @@ document.getElementById("searchBar").addEventListener("input", (event) => {
       suggestionItem.addEventListener("click", () => {
         document.getElementById("searchBar").value = town.name;
 
-        // Open the marker tooltip if it exists
+        // Open the town marker tooltip if it exists
         map.eachLayer((layer) => {
           if (
             layer instanceof L.Marker &&
