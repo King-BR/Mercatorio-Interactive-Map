@@ -321,15 +321,12 @@ document.getElementById("seasonSelect").addEventListener("change", (event) => {
   initializeMap(currentSeason);
 });
 
-// Function to handle sidebar toggling
-function openNav() {
+function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openBtn").style.display = "none";
 }
 
-function closeNav() {
+function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openBtn").style.display = "block";
 }
 
 // Initialize the map for the first time
