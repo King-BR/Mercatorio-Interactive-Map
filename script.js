@@ -301,8 +301,8 @@ function loadFertilityOverlay(season) {
 
   const imageUrl = `./assets/${season}/fertility_overlay.png`;
   const bounds = [
-    [0, 0],
-    [mapHeight, mapWidth],
+    [-1, 0],
+    [mapHeight-1, mapWidth],
   ];
 
   fertilityOverlay = L.imageOverlay(imageUrl, bounds, {
