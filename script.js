@@ -180,7 +180,7 @@ async function loadTowns(season) {
       const markerX = town.location.x / 4;
 
       const tooltipText = town.name || `Town ${index + 1}`;
-      towns.push({ name: tooltipText });
+      towns.push({ name: tooltipText, location: { x: markerX, y: markerY } });
 
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
