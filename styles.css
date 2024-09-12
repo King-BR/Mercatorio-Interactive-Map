@@ -79,17 +79,29 @@ body {
 }
 
 /* Resource checkboxes */
+.trade-checkbox,
 .resource-checkbox {
   margin-right: 8px;
   cursor: pointer;
 }
 
 /* Add a transition effect for the icon rotation */
-#accordionIcon {
+#resourceIcon {
   transition: transform 0.3s ease;
 }
 
 /* Rotate the icon when the accordion is open */
-.w3-show #accordionIcon {
+.w3-show #resourceIcon {
+  transform: rotate(180deg);
+}
+
+
+/* Add a transition effect for the icon rotation */
+#transportIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the icon when the accordion is open */
+.w3-show #transportIcon {
   transform: rotate(180deg);
 }

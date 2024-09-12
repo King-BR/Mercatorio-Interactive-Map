@@ -3,6 +3,7 @@ let currentSeason = "s1";
 let map;
 let towns = []; // Store towns globally for search functionality
 let resourceLayers = {};
+let overlaysTransport = {};
 let fertilityOverlay; // Variable for fertility overlay
 
 // Define bounds for the map
@@ -102,20 +103,26 @@ async function initializeMap(season) {
 
   document
     .getElementById("toggleRange1")
-    .addEventListener("change", () => updateRangeCircles());
+    .addEventListener("change", () => updateRangeCircles(season));
   document
     .getElementById("toggleRange2")
-    .addEventListener("change", () => updateRangeCircles());
+    .addEventListener("change", () => updateRangeCircles(season));
   document
     .getElementById("toggleRange3")
-    .addEventListener("change", () => updateRangeCircles());
+    .addEventListener("change", () => updateRangeCircles(season));
 
   // Load fertility overlay after initializing the map
   loadFertilityOverlay(season);
 }
 
 // Function to update range circles
-function updateRangeCircles() {
+async function updateRangeCircles(season) {
+  const tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
+
+  Object.keys(overlaysTransport).forEach((range) => {
+    map.removeLayer(overlaysTransport[range]);
+  });
+
   map.eachLayer((layer) => {
     if (layer instanceof L.Circle) {
       map.removeLayer(layer);
@@ -153,6 +160,49 @@ function updateRangeCircles() {
         opacity: 0.5,
       }).addTo(map);
     }
+    
+    tradeData.transports.forEach((transport) => {
+      // Manual
+      if (transport.moves > 0) {
+        const manualMarker = L.circle([markerY, markerX], {
+          radius: transport.moves / 4,
+          fill: false,
+          color: "#00FF00",
+          weight: 1,
+          opacity: 1,
+        });
+        overlaysTransport[`${transport.name} manual`].addLayer(manualMarker);
+      }
+      // Autotrade
+      if (transport.autotrade > 0) {
+        const autoMarker = L.circle([markerY, markerX], {
+          radius: transport.autotrade / 4,
+          fill: false,
+          color: "#FF0000",
+          weight: 1,
+          opacity: 1,
+        });
+        overlaysTransport[`${transport.name} autotrade`].addLayer(autoMarker);
+      }
+
+      // Fishing
+      if (transport.fishRange > 0) {
+        const fishingMarker = L.circle([markerY, markerX], {
+          radius: transport.fishRange / 4,
+          fill: false,
+          color: "#0000FF",
+          weight: 1,
+          opacity: 1,
+        });
+        overlaysTransport[`${transport.name} fishing`].addLayer(fishingMarker);
+      }
+    });
+
+    Object.keys(overlaysTransport).forEach((range) => {
+      if (document.getElementById(`toggle_${range.replace(" ", "_")}`).checked) {
+        map.addLayer(overlaysTransport[range]);
+      }
+    });
   });
 }
 
@@ -161,11 +211,18 @@ async function loadTowns(season) {
   try {
     towns = []; // Clear existing towns
     towns = await fetchFromLocal(`assets/${season}/towns.json`);
+    tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
         map.removeLayer(layer);
       }
+    });
+
+    tradeData.transports.forEach((transport) => {
+      overlaysTransport[`${transport.name} manual`] = L.layerGroup();
+      overlaysTransport[`${transport.name} autotrade`] = L.layerGroup();
+      if (transport.fishRange > 0) overlaysTransport[`${transport.name} fishing`] = L.layerGroup();
     });
 
     towns.forEach((town, index) => {
@@ -214,6 +271,72 @@ async function loadTowns(season) {
           opacity: 0.5,
         }).addTo(map);
       }
+
+      tradeData.transports.forEach((transport) => {
+        // Manual
+        if (transport.moves > 0) {
+          const manualMarker = L.circle([markerY, markerX], {
+            radius: transport.moves / 4,
+            fill: false,
+            color: "#00FF00",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} manual`].addLayer(manualMarker);
+        }
+        // Autotrade
+        if (transport.autotrade > 0) {
+          const autoMarker = L.circle([markerY, markerX], {
+            radius: transport.autotrade / 4,
+            fill: false,
+            color: "#FF0000",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} autotrade`].addLayer(autoMarker);
+        }
+
+        // Fishing
+        if (transport.fishRange > 0) {
+          const fishingMarker = L.circle([markerY, markerX], {
+            radius: transport.fishRange / 4,
+            fill: false,
+            color: "#0000FF",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} fishing`].addLayer(fishingMarker);
+        }
+      });
+    });
+
+    
+    Object.keys(overlaysTransport).forEach((range) => {
+      const transportDiv = document.getElementById("transportDiv");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = `toggle_${range.replace(" ", "_")}`;
+      checkbox.className = "trade-checkbox";
+      checkbox.checked = false; // Default to off
+
+      checkbox.addEventListener("change", (e) => {
+        if (e.target.checked) {
+          map.addLayer(overlaysTransport[range]);
+        } else {
+          map.removeLayer(overlaysTransport[range]);
+        }
+      });
+
+      const label = document.createElement("label");
+      label.htmlFor = checkbox.id;
+      label.textContent = range.charAt(0).toUpperCase() + range.slice(1);
+      label.style.color = "black";
+      
+      const container = document.createElement("div");
+      container.classList.add("sidebar-item");
+      container.appendChild(checkbox);
+      container.appendChild(label);
+      transportDiv.appendChild(container);
     });
   } catch (error) {
     console.error("Error loading towns:", error);
@@ -387,8 +510,8 @@ document.addEventListener("click", (event) => {
 });
 
 function toggleAccordion(id) {
-  var element = document.getElementById(id);
-  var icon = document.getElementById('accordionIcon');
+  var element = document.getElementById(`${id}Div`);
+  var icon = document.getElementById(`${id}Icon`);
 
   if (element.classList.contains("w3-show")) {
     element.classList.remove("w3-show");

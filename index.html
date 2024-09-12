@@ -66,10 +66,15 @@
         <label><input type="checkbox" id="toggleFertility" /> Show Fertility Overlay</label>
       </div>
 
-      <button onclick="toggleAccordion('resourceDiv')" class="w3-button" id="accordionBtn">
-        Resources <i id="accordionIcon" class="fa fa-chevron-down"></i>
+      <button onclick="toggleAccordion('resource')" class="w3-button" id="accordionBtn">
+        Resources <i id="resourceIcon" class="fa fa-chevron-down"></i>
       </button>
       <div id="resourceDiv" class="sidebar-item w3-hide" style="width:55%"></div>
+
+      <button onclick="toggleAccordion('transport')" class="w3-button" id="accordionBtn">
+        Transports Ranges <i id="transportIcon" class="fa fa-chevron-down"></i>
+      </button>
+      <div id="transportDiv" class="sidebar-item w3-hide"></div>
     </div>
 
     <div class="w3-main">
