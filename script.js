@@ -222,8 +222,9 @@ async function loadTowns(season) {
     towns = []; // Clear existing towns
     towns = await fetchFromLocal(`assets/${season}/towns.json`);
     tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
-
+    var plots = await fetchFromLocal(`assets/${season}/plots.json`);
     var stats = await fetchFromLocal(`assets/${season}/stats.json`);
+    var fishingRange = 220;
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -258,17 +259,51 @@ async function loadTowns(season) {
 
       let statsStr = "";
 
-      // Assuming townName, location, and section are available from your data
-      const townName = tooltipText; // or the appropriate variable for the town name
-      const location = `X=${town.location.x}, Y=${town.location.y}`; // replace with actual location data if available
-      const section = `Section ${Math.floor(town.location.x / 32)}:${Math.floor(
-        town.location.y / 32
-      )}`; // replace with actual section data if available
+      const townName = tooltipText;
+      const location = `X=${town.location.x}, Y=${town.location.y}`;
+      const section = `Section ${Math.floor(town.location.x / 32) * 32}:${
+        Math.floor(town.location.y / 32) * 32
+      }`;
 
       if (townData) {
         // Display town name as title and location/section below it
         statsStr += `<h3>${townName}</h3>`;
         statsStr += `<p>${location} | ${section}</p>`;
+
+        // Fish/Whales plots at 220 or less of distance
+        const fishPlots = plots.filter(
+          (plot) =>
+            plot.data.res === 1 &&
+            Math.sqrt(
+              Math.pow(plot.realX - town.location.x, 2) +
+                Math.pow(plot.realY - town.location.y, 2)
+            ) <= fishingRange
+        );
+        const whalePlots = plots.filter(
+          (plot) =>
+            plot.data.res === 8 &&
+            Math.sqrt(
+              Math.pow(plot.realX - town.location.x, 2) +
+                Math.pow(plot.realY - town.location.y, 2)
+            ) <= fishingRange
+        );
+
+        if (fishPlots.length > 0 || whalePlots.length > 0) {
+          statsStr += `<h7><b>Sea Resources:</b></h7><br>`;
+          statsStr += `<b>Fishing Range: ${fishingRange} tiles</b><br>`;
+        }
+
+        if (fishPlots.length > 0) {
+          statsStr += `Fish Plots: ${fishPlots.length}<br>`;
+        }
+
+        if (whalePlots.length > 0) {
+          statsStr += `Whale Plots: ${whalePlots.length}<br>`;
+        }
+
+        if (fishPlots.length > 0 || whalePlots.length > 0) statsStr += `<br>`;
+
+        //statsStr += `<h6><b>Land Plots:</b></h6>`
 
         // Define the desired order for fertility categories
         const fertilityOrder = ["clay", "fertile", "grazing", "arid", "forest"];
@@ -276,9 +311,14 @@ async function loadTowns(season) {
         // Iterate through each range and display resources and fertility in two columns
         Object.keys(townData).forEach((range) => {
           if (range.includes("Range")) {
-            const resources = Object.entries(townData[range].resources).filter(
+            var resources = Object.entries(townData[range].resources).filter(
               ([, value]) => value > 0
             );
+
+            resources = resources.filter(
+              ([key]) => !["fish", "whales"].includes(key)
+            );
+
             const fertility = Object.entries(townData[range].fertility)
               .filter(([key, value]) => value > 0)
               .sort(
@@ -288,7 +328,23 @@ async function loadTowns(season) {
 
             // Only show the range title if there's something to display
             if (resources.length || fertility.length) {
-              statsStr += `<b>${range.replace(/Range$/, " Range")}:</b><br>`;
+              let title = "";
+              switch (range) {
+                case "normalRange":
+                  title = "Normal Range";
+                  break;
+                case "outpost1Range":
+                  title = "Outpost 1 Range";
+                  break;
+                case "outpost2Range":
+                  title = "Outpost 2 Range";
+                  break;
+                default:
+                  title = range.replace(/Range$/, " Range");
+                  break;
+              }
+
+              statsStr += `<b>${title}:</b><br>`;
               statsStr += `<div style="display: flex;">`;
 
               // Resources column
