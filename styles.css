@@ -12,20 +12,24 @@ body {
 }
 
 .sidebar-item {
-  position: relative;
   display: flex;
-  align-items: center;
+  align-items: center; /* Center vertically */
   margin: 5px;
 }
 
 .sidebar-item label {
   display: flex;
-  align-items: center;
+  align-items: center; /* Center vertically */
   font-weight: bold;
+  flex: 1; /* Ensure label takes the remaining space */
 }
 
 .sidebar-item input[type="checkbox"] {
   margin-right: 10px;
+}
+
+.w3-button {
+  font-weight: bold;
 }
 
 #map {
@@ -72,4 +76,20 @@ body {
   z-index: 1000; /* Keep it on top */
   border: 1px solid #ccc; /* Optional border */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional shadow */
+}
+
+/* Resource checkboxes */
+.resource-checkbox {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Add a transition effect for the icon rotation */
+#accordionIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the icon when the accordion is open */
+.w3-show #accordionIcon {
+  transform: rotate(180deg);
 }

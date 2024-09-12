@@ -254,7 +254,7 @@ async function loadPlots(season) {
     });
 
     Object.keys(overlays).forEach((resource) => {
-      const sidebar = document.getElementById("mySidebar");
+      const resourceDiv = document.getElementById("resourceDiv");
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = `toggle_${resource}`;
@@ -271,7 +271,7 @@ async function loadPlots(season) {
 
       const label = document.createElement("label");
       label.htmlFor = checkbox.id;
-      label.textContent = resource;
+      label.textContent = resource.charAt(0).toUpperCase() + resource.slice(1);
       label.style.backgroundColor =
         res_enum[
           Object.keys(res_enum).find((key) => res_enum[key].name === resource)
@@ -282,12 +282,12 @@ async function loadPlots(season) {
       label.style.color = ["gold", "salt", "stone"].includes(resource)
         ? "black"
         : "white";
-
+      
       const container = document.createElement("div");
       container.classList.add("sidebar-item");
       container.appendChild(checkbox);
       container.appendChild(label);
-      sidebar.appendChild(container);
+      resourceDiv.appendChild(container);
     });
   } catch (error) {
     console.error("Error loading plots:", error);
@@ -303,7 +303,7 @@ function loadFertilityOverlay(season) {
   const imageUrl = `./assets/${season}/fertility_overlay.png`;
   const bounds = [
     [-1, 0],
-    [mapHeight-1, mapWidth],
+    [mapHeight - 1, mapWidth],
   ];
 
   fertilityOverlay = L.imageOverlay(imageUrl, bounds, {
@@ -385,6 +385,22 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+function toggleAccordion(id) {
+  var element = document.getElementById(id);
+  var icon = document.getElementById('accordionIcon');
+
+  if (element.classList.contains("w3-show")) {
+    element.classList.remove("w3-show");
+    icon.classList.remove("fa-chevron-up");
+    icon.classList.add("fa-chevron-down");
+  } else {
+    element.classList.add("w3-show");
+    icon.classList.remove("fa-chevron-down");
+    icon.classList.add("fa-chevron-up");
+  }
+}
+
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
