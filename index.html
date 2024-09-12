@@ -25,31 +25,55 @@
           <option value="s2">Season 2</option>
         </select>
       </div>
-      <div class="sidebar-item">
+
+      <div class="sidebar-item" style="position: relative">
         <label for="searchBar">Search Town:</label>
         <input
           type="text"
           id="searchBar"
           class="w3-input"
           placeholder="Type town name..."
+          style="width: 100%"
         />
         <div
           id="suggestions"
-          class="w3-dropdown-content w3-card w3-border"
-          style="display: none; max-height: 150px; overflow-y: auto"
+          class="w3-dropdown-content w3-card w3-border suggestion-box"
+          style="
+            display: none;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+          "
         ></div>
       </div>
+
       <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange1" /> Show Town Range</label>
+        <label
+          ><input type="checkbox" id="toggleRange1" /> Show Town Range</label
+        >
       </div>
       <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range</label>
+        <label
+          ><input type="checkbox" id="toggleRange2" /> Show 1st Outpost
+          Range</label
+        >
       </div>
       <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range</label>
+        <label
+          ><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost
+          Range</label
+        >
       </div>
       <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleFertility" /> Show Fertility Overlay</label>
+        <label
+          ><input type="checkbox" id="toggleFertility" /> Show Fertility
+          Overlay</label
+        >
       </div>
       <div id="resourceCheckboxes"></div>
     </div>

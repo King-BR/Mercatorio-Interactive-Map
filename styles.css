@@ -12,7 +12,10 @@ body {
 }
 
 .sidebar-item {
-  margin: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
 
 .sidebar-item label {
@@ -50,4 +53,23 @@ body {
   border-radius: 5px;
   font-size: 14px;
   z-index: 1000;
+}
+
+#searchBar {
+  width: 100%; /* Ensure full width */
+  margin-bottom: 5px; /* Space below the search bar */
+}
+
+#suggestions {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position absolutely within .sidebar-item */
+  top: 100%; /* Position directly below the search bar */
+  left: 0; /* Align to the left */
+  width: 100%; /* Match the width of the search bar */
+  max-height: 150px; /* Set max height */
+  overflow-y: auto; /* Enable scrolling */
+  background-color: white; /* Set background color */
+  z-index: 1000; /* Keep it on top */
+  border: 1px solid #ccc; /* Optional border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional shadow */
 }
