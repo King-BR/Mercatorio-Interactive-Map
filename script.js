@@ -5,6 +5,7 @@ let towns = []; // Store towns globally for search functionality
 let resourceLayers = {};
 let overlaysTransport = {};
 let fertilityOverlay; // Variable for fertility overlay
+let selectedTown = null;
 
 // Define bounds for the map
 const mapWidth = 256 * 4;
@@ -160,7 +161,7 @@ async function updateRangeCircles(season) {
         opacity: 0.5,
       }).addTo(map);
     }
-    
+
     tradeData.transports.forEach((transport) => {
       // Manual
       if (transport.moves > 0) {
@@ -199,7 +200,9 @@ async function updateRangeCircles(season) {
     });
 
     Object.keys(overlaysTransport).forEach((range) => {
-      if (document.getElementById(`toggle_${range.replace(" ", "_")}`).checked) {
+      if (
+        document.getElementById(`toggle_${range.replace(" ", "_")}`).checked
+      ) {
         map.addLayer(overlaysTransport[range]);
       }
     });
@@ -213,6 +216,8 @@ async function loadTowns(season) {
     towns = await fetchFromLocal(`assets/${season}/towns.json`);
     tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
 
+    var stats = await fetchFromLocal(`assets/${season}/stats.json`);
+
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
         map.removeLayer(layer);
@@ -222,7 +227,8 @@ async function loadTowns(season) {
     tradeData.transports.forEach((transport) => {
       overlaysTransport[`${transport.name} manual`] = L.layerGroup();
       overlaysTransport[`${transport.name} autotrade`] = L.layerGroup();
-      if (transport.fishRange > 0) overlaysTransport[`${transport.name} fishing`] = L.layerGroup();
+      if (transport.fishRange > 0)
+        overlaysTransport[`${transport.name} fishing`] = L.layerGroup();
     });
 
     towns.forEach((town, index) => {
@@ -240,9 +246,64 @@ async function loadTowns(season) {
       const tooltipText = town.name || `Town ${index + 1}`;
       towns.push({ name: tooltipText, location: town.location });
 
+      const townData = stats[tooltipText] || null;
+
+      let statsStr = "";
+      
+      // Assuming townName, location, and section are available from your data
+      const townName = tooltipText; // or the appropriate variable for the town name
+      const location = `X=${town.location.x}, Y=${town.location.y}`; // replace with actual location data if available
+      const section = `Section ${Math.floor(town.location.x / 32)}:${Math.floor(town.location.y / 32)}`; // replace with actual section data if available
+      
+      if (townData) {
+        // Display town name as title and location/section below it
+        statsStr += `<h3>${townName}</h3>`;
+        statsStr += `<p>${location} | ${section}</p>`;
+      
+        // Iterate through each range and display resources and fertility in two columns
+        Object.keys(townData).forEach((range) => {
+          if (range.includes("Range")) {
+            const resources = Object.entries(townData[range].resources).filter(
+              ([, value]) => value > 0
+            );
+            const fertility = Object.entries(townData[range].fertility).filter(
+              ([, value]) => value > 0
+            );
+      
+            // Only show the range title if there's something to display
+            if (resources.length || fertility.length) {
+              statsStr += `<b>${range.replace(/Range$/, ' Range')}:</b><br>`;
+              statsStr += `<div style="display: flex;">`;
+      
+              // Resources column
+              if (resources.length) {
+                statsStr += `<div style="flex: 1; padding-right: 10px;"><b>Resources:</b><br>`;
+                resources.forEach(([res, amount]) => {
+                  statsStr += `${res.charAt(0).toUpperCase() + res.slice(1)}: ${amount}<br>`;
+                });
+                statsStr += `</div>`;
+              }
+      
+              // Fertility column
+              if (fertility.length) {
+                statsStr += `<div style="flex: 1; padding-left: 10px;"><b>Fertility:</b><br>`;
+                fertility.forEach(([res, amount]) => {
+                  statsStr += `${res.charAt(0).toUpperCase() + res.slice(1)}: ${amount}<br>`;
+                });
+                statsStr += `</div>`;
+              }
+      
+              statsStr += `</div><br>`; // Close the flex container
+            }
+          }
+        });
+      }
+      
+
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
-        .bindTooltip(tooltipText);
+        .bindTooltip(tooltipText)
+        .bindPopup(statsStr);
 
       if (document.getElementById("toggleRange1").checked) {
         L.circle([markerY, markerX], {
@@ -305,12 +366,13 @@ async function loadTowns(season) {
             weight: 1,
             opacity: 1,
           });
-          overlaysTransport[`${transport.name} fishing`].addLayer(fishingMarker);
+          overlaysTransport[`${transport.name} fishing`].addLayer(
+            fishingMarker
+          );
         }
       });
     });
 
-    
     Object.keys(overlaysTransport).forEach((range) => {
       const transportDiv = document.getElementById("transportDiv");
       const checkbox = document.createElement("input");
@@ -331,7 +393,7 @@ async function loadTowns(season) {
       label.htmlFor = checkbox.id;
       label.textContent = range.charAt(0).toUpperCase() + range.slice(1);
       label.style.color = "black";
-      
+
       const container = document.createElement("div");
       container.classList.add("sidebar-item");
       container.appendChild(checkbox);
@@ -405,7 +467,7 @@ async function loadPlots(season) {
       label.style.color = ["gold", "salt", "stone"].includes(resource)
         ? "black"
         : "white";
-      
+
       const container = document.createElement("div");
       container.classList.add("sidebar-item");
       container.appendChild(checkbox);
@@ -523,7 +585,6 @@ function toggleAccordion(id) {
     icon.classList.add("fa-chevron-up");
   }
 }
-
 
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
