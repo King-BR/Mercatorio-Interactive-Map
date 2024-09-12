@@ -3,6 +3,7 @@ let currentSeason = "s1";
 let map;
 let towns = []; // Store towns globally for search functionality
 let resourceLayers = {};
+let fertilityOverlay; // Variable for fertility overlay
 
 // Define bounds for the map
 const mapWidth = 256 * 4;
@@ -21,7 +22,7 @@ const hardBounds = [
 // Resource enumeration with unique colors
 const res_enum = {
   1: { name: "fish", color: "#1f77b4" },
-  2: { name: "stone", color: "#00FFF7FF" }, //  #046E00FF
+  2: { name: "stone", color: "#00FFF7FF" },
   3: { name: "salt", color: "#FFFFFF" },
   4: { name: "copper", color: "#ff6347" },
   5: { name: "iron", color: "#9467bd" },
@@ -30,6 +31,7 @@ const res_enum = {
   8: { name: "whales", color: "#001f3f" },
 };
 
+// Function to clear resource checkboxes
 function clearResourceCheckboxes() {
   const sidebar = document.getElementById("mySidebar");
   const checkboxes = sidebar.querySelectorAll(".resource-checkbox");
@@ -52,7 +54,6 @@ async function fetchFromGitHub(path) {
 
 // Function to initialize the map
 async function initializeMap(season) {
-  // Remove existing map if it exists
   if (map) {
     map.remove();
   }
@@ -79,11 +80,9 @@ async function initializeMap(season) {
     bounds: hardBounds,
   }).addTo(map);
 
-  // Load data for towns and plots
   await loadTowns(season);
   await loadPlots(season);
 
-  // Add mouse move event listener to display coordinates
   map.on("mousemove", (event) => {
     const latLng = event.latlng;
     const x = latLng.lng * 4;
@@ -101,7 +100,6 @@ async function initializeMap(season) {
     }
   });
 
-  // Add event listeners for range toggle checkboxes
   document
     .getElementById("toggleRange1")
     .addEventListener("change", () => updateRangeCircles());
@@ -111,6 +109,9 @@ async function initializeMap(season) {
   document
     .getElementById("toggleRange3")
     .addEventListener("change", () => updateRangeCircles());
+
+  // Load fertility overlay after initializing the map
+  loadFertilityOverlay(season);
 }
 
 // Function to update range circles
@@ -121,7 +122,7 @@ function updateRangeCircles() {
     }
   });
 
-  towns.forEach((town, index) => {
+  towns.forEach((town) => {
     const markerY = mapHeight - town.location.y / 4;
     const markerX = town.location.x / 4;
 
@@ -178,13 +179,12 @@ async function loadTowns(season) {
       const markerY = mapHeight - town.location.y / 4;
       const markerX = town.location.x / 4;
 
-      const tooltipText = town.name || `Town ${index + 1}`; // Use name or index if name is missing
+      const tooltipText = town.name || `Town ${index + 1}`;
 
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
         .bindTooltip(tooltipText);
 
-      // Add range circles based on checkbox states
       if (document.getElementById("toggleRange1").checked) {
         L.circle([markerY, markerX], {
           radius: 50 / 4,
@@ -238,7 +238,6 @@ async function loadPlots(season) {
           plot.realX / 4 + 0.2
         );
 
-        // Create a circle marker for the resource
         const circleMarker = L.circleMarker(plotLatLng, {
           radius: 5,
           fillColor: resource.color,
@@ -246,7 +245,7 @@ async function loadPlots(season) {
           weight: 1,
           opacity: 1,
           fillOpacity: 1,
-        }).bindTooltip(`${resource.name}`); // (${plot.data.resAmount})
+        }).bindTooltip(`${resource.name}`);
 
         overlays[resource.name].addLayer(circleMarker);
       }
@@ -257,7 +256,7 @@ async function loadPlots(season) {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.id = `toggle_${resource}`;
-      checkbox.className = "resource-checkbox"; // Add class for easy selection
+      checkbox.className = "resource-checkbox";
       checkbox.checked = false; // Default to off
 
       checkbox.addEventListener("change", (e) => {
@@ -269,114 +268,69 @@ async function loadPlots(season) {
       });
 
       const label = document.createElement("label");
-      label.htmlFor = `toggle_${resource}`;
-
-      // Get the resource color from res_enum
-      const resourceDetails = Object.values(res_enum).find(
-        (r) => r.name === resource
-      );
-      if (resourceDetails) {
-        label.style.backgroundColor = resourceDetails.color; // Set background color
-      }
-
-      // Additional styling for readability
-      if (!["salt", "gold", "stone"].includes(resource))
-        label.style.color = "#FFFFFF"; // Ensure text is readable on colored backgrounds
+      label.htmlFor = checkbox.id;
+      label.textContent = resource;
+      label.style.backgroundColor = res_enum[Object.keys(res_enum).find(key => res_enum[key].name === resource)].color;
       label.style.padding = "5px";
-      label.style.borderRadius = "3px";
-      label.style.display = "inline-block"; // Make the label wrap around content
-      label.style.border = "1px solid #000"; // Add border line (1px solid black)
+      label.style.borderRadius = "5px";
+      label.style.border = "1px solid black";
+      label.style.color = ["gold", "salt", "stone"].includes(resource) ? "black" : "white";
 
-      label.appendChild(checkbox);
-      label.appendChild(document.createTextNode(resource));
 
-      const div = document.createElement("div");
-      div.classList.add("sidebar-item");
-      div.appendChild(label);
-      sidebar.appendChild(div);
+      const container = document.createElement("div");
+      container.appendChild(checkbox);
+      container.appendChild(label);
+      sidebar.appendChild(container);
     });
   } catch (error) {
     console.error("Error loading plots:", error);
   }
 }
 
-// Handle season change
+// Function to load fertility overlay as a single image
+function loadFertilityOverlay(season) {
+  if (fertilityOverlay) {
+    map.removeLayer(fertilityOverlay);
+  }
+
+  const imageUrl = `./assets/${season}/fertility_overlay.png`;
+  const bounds = [[0, 0], [mapHeight, mapWidth]];
+
+  fertilityOverlay = L.imageOverlay(imageUrl, bounds, {
+    opacity: 1, // Set the desired opacity for the overlay
+  });
+
+  // Default to off
+  if (document.getElementById("toggleFertility").checked) {
+    fertilityOverlay.addTo(map);
+  }
+}
+
+// Toggle fertility overlay visibility
+document.getElementById("toggleFertility").addEventListener("change", (event) => {
+  if (event.target.checked) {
+    fertilityOverlay.addTo(map);
+  } else {
+    map.removeLayer(fertilityOverlay);
+  }
+});
+
+// Event listeners for season change
 document.getElementById("seasonSelect").addEventListener("change", (event) => {
   currentSeason = event.target.value;
   initializeMap(currentSeason);
 });
 
-// Handle search input
-document.getElementById("townSearch").addEventListener("input", (event) => {
-  const query = event.target.value.toLowerCase();
-  const suggestions = document.getElementById("suggestions");
-  suggestions.innerHTML = "";
-
-  if (query) {
-    const filteredTowns = towns.filter(
-      (town, index) =>
-        (town.name && town.name.toLowerCase().includes(query)) ||
-        (!town.name && `Town ${index + 1}`.toLowerCase().includes(query))
-    );
-
-    filteredTowns.forEach((town, index) => {
-      const suggestionItem = document.createElement("a");
-      suggestionItem.href = "#";
-      suggestionItem.className = "w3-bar-item w3-button";
-      suggestionItem.textContent = town.name || `Town ${index + 1}`;
-      suggestionItem.addEventListener("click", () => {
-        document.getElementById("townSearch").value =
-          town.name || `Town ${index + 1}`;
-        const markerLatLng = L.latLng(
-          mapHeight - town.location.y / 4,
-          town.location.x / 4
-        );
-        map.setView(markerLatLng, 1);
-
-        // Open the marker tooltip if it exists
-        const marker = map.eachLayer((layer) => {
-          if (
-            layer instanceof L.Marker &&
-            layer.getTooltip().getContent() ===
-              (town.name || `Town ${index + 1}`)
-          ) {
-            layer.openTooltip();
-          }
-        });
-      });
-      suggestions.appendChild(suggestionItem);
-    });
-
-    if (filteredTowns.length > 0) {
-      suggestions.style.display = "block";
-    } else {
-      suggestions.style.display = "none";
-    }
-  } else {
-    suggestions.style.display = "none";
-  }
-});
-
-// Handle closing of suggestions box when clicking outside
-document.addEventListener("click", (event) => {
-  if (!event.target.matches("#townSearch")) {
-    const suggestions = document.getElementById("suggestions");
-    if (suggestions.style.display === "block") {
-      suggestions.style.display = "none";
-    }
-  }
-});
-
-// Handle sidebar open/close
-function w3_open() {
+// Function to handle sidebar toggling
+function openNav() {
   document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openBtn").style.display = "none";
 }
 
-function w3_close() {
+function closeNav() {
   document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openBtn").style.display = "block";
 }
 
-// Initialize map on page load
-document.addEventListener("DOMContentLoaded", () => {
-  initializeMap(currentSeason);
-});
+// Initialize the map for the first time
+initializeMap(currentSeason);
