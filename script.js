@@ -254,65 +254,78 @@ async function loadTowns(season) {
 
       const tooltipText = town.name || `Town ${index + 1}`;
       towns.push({ name: tooltipText, location: town.location });
-
       const townData = stats[tooltipText] || null;
 
       let statsStr = "";
-      
+
       // Assuming townName, location, and section are available from your data
       const townName = tooltipText; // or the appropriate variable for the town name
       const location = `X=${town.location.x}, Y=${town.location.y}`; // replace with actual location data if available
-      const section = `Section ${Math.floor(town.location.x / 32)}:${Math.floor(town.location.y / 32)}`; // replace with actual section data if available
-      
+      const section = `Section ${Math.floor(town.location.x / 32)}:${Math.floor(
+        town.location.y / 32
+      )}`; // replace with actual section data if available
+
       if (townData) {
         // Display town name as title and location/section below it
         statsStr += `<h3>${townName}</h3>`;
         statsStr += `<p>${location} | ${section}</p>`;
-      
+
+        // Define the desired order for fertility categories
+        const fertilityOrder = ["clay", "fertile", "grazing", "arid", "forest"];
+
         // Iterate through each range and display resources and fertility in two columns
         Object.keys(townData).forEach((range) => {
           if (range.includes("Range")) {
             const resources = Object.entries(townData[range].resources).filter(
               ([, value]) => value > 0
             );
-            const fertility = Object.entries(townData[range].fertility).filter(
-              ([, value]) => value > 0
-            );
-      
+            const fertility = Object.entries(townData[range].fertility)
+              .filter(([key, value]) => value > 0)
+              .sort(
+                (a, b) =>
+                  fertilityOrder.indexOf(a[0]) - fertilityOrder.indexOf(b[0])
+              ); // Sort fertility based on the defined order
+
             // Only show the range title if there's something to display
             if (resources.length || fertility.length) {
-              statsStr += `<b>${range.replace(/Range$/, ' Range')}:</b><br>`;
+              statsStr += `<b>${range.replace(/Range$/, " Range")}:</b><br>`;
               statsStr += `<div style="display: flex;">`;
-      
+
               // Resources column
               if (resources.length) {
                 statsStr += `<div style="flex: 1; padding-right: 10px;"><b>Resources:</b><br>`;
                 resources.forEach(([res, amount]) => {
-                  statsStr += `${res.charAt(0).toUpperCase() + res.slice(1)}: ${amount}<br>`;
+                  statsStr += `${
+                    res.charAt(0).toUpperCase() + res.slice(1)
+                  }: ${amount}<br>`;
                 });
                 statsStr += `</div>`;
               }
-      
+
               // Fertility column
               if (fertility.length) {
                 statsStr += `<div style="flex: 1; padding-left: 10px;"><b>Fertility:</b><br>`;
                 fertility.forEach(([res, amount]) => {
-                  statsStr += `${res.charAt(0).toUpperCase() + res.slice(1)}: ${amount}<br>`;
+                  statsStr += `${
+                    res.charAt(0).toUpperCase() + res.slice(1)
+                  }: ${amount}<br>`;
                 });
                 statsStr += `</div>`;
               }
-      
+
               statsStr += `</div><br>`; // Close the flex container
             }
           }
         });
       }
-      
 
       L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
         .bindTooltip(tooltipText)
-        .bindPopup(statsStr);
+        .bindPopup(statsStr, {
+          minWidth: 200, // Minimum width of the popup
+          maxWidth: 500, // Maximum width of the popup
+        });
 
       if (document.getElementById("toggleRange1").checked) {
         L.circle([markerY, markerX], {
