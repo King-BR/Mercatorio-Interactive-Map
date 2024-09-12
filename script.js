@@ -11,7 +11,7 @@ let selectedTown = null;
 const mapWidth = 256 * 4;
 const mapHeight = 256 * 4;
 
-const padding = 256;
+const padding = 512;
 const elasticBounds = [
   [-padding, -padding],
   [mapHeight + padding, mapWidth + padding],
@@ -36,8 +36,15 @@ const res_enum = {
 // Function to clear resource checkboxes
 function clearResourceCheckboxes() {
   const sidebar = document.getElementById("mySidebar");
-  const checkboxes = sidebar.querySelectorAll(".resource-checkbox");
-  checkboxes.forEach((checkbox) => checkbox.parentElement.remove());
+  const resCheckboxes = sidebar.querySelectorAll(".resource-checkbox");
+  resCheckboxes.forEach((checkbox) => checkbox.parentElement.remove());
+}
+
+// Function to clear trade checkboxes
+function clearTradeCheckboxes() {
+  const sidebar = document.getElementById("mySidebar");
+  const transportCheckboxes = sidebar.querySelectorAll(".trade-checkbox");
+  transportCheckboxes.forEach((checkbox) => checkbox.parentElement.remove());
 }
 
 // Function to fetch JSON data from local server
@@ -232,6 +239,8 @@ async function loadTowns(season) {
     });
 
     towns.forEach((town, index) => {
+      clearTradeCheckboxes(); // Clear existing checkboxes
+
       const iconUrl = town.capital ? "capital_marker.png" : "town_marker.png";
       const marker = L.icon({
         iconUrl: iconUrl,
