@@ -2,29 +2,29 @@
   "transports": [
     {
       "name": "Snekkja",
-      "moves": 2000,
+      "moves": 3333,
       "autotrade": 666,
       "fishRange": 220,
       "fishRadius": 9
     },
     {
       "name": "Cog",
-      "moves": 2666,
+      "moves": 4444,
       "autotrade": 1333
     },
     {
       "name": "Hulk",
-      "moves": 3555,
+      "moves": 5925,
       "autotrade": 2222
     },
     {
       "name": "Handcart",
-      "moves": 1388,
+      "moves": 2314,
       "autotrade": 444
     },
     {
       "name": "Tumbrel",
-      "moves": 2777,
+      "moves": 4629,
       "autotrade": 1333
     }
   ],
