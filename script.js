@@ -288,25 +288,36 @@ async function loadTowns(season) {
             ) <= fishingRange
         );
 
-        if (fishPlots.length > 0 || whalePlots.length > 0) {
-          statsStr += `<h7><b>Sea Resources:</b></h7><br>`;
-          statsStr += `<b>Fishing Range: ${fishingRange} tiles</b><br>`;
-        }
+        if (!townData.landlocked) {
+          if (fishPlots.length > 0 || whalePlots.length > 0) {
+            statsStr += `<h7><b>Sea Resources:</b></h7><br>`;
+            statsStr += `<b>Fishing Range: ${fishingRange} tiles</b><br>`;
+          }
 
-        if (fishPlots.length > 0) {
-          statsStr += `Fish Plots: ${fishPlots.length}<br>`;
-        }
+          if (fishPlots.length > 0) {
+            statsStr += `Fish Plots: ${fishPlots.length}<br>`;
+          }
 
-        if (whalePlots.length > 0) {
-          statsStr += `Whale Plots: ${whalePlots.length}<br>`;
-        }
+          if (whalePlots.length > 0) {
+            statsStr += `Whale Plots: ${whalePlots.length}<br>`;
+          }
 
-        if (fishPlots.length > 0 || whalePlots.length > 0) statsStr += `<br>`;
+          if (fishPlots.length > 0 || whalePlots.length > 0) statsStr += `<br>`;
+        } else {
+          statsStr += `<h7><b>Landlocked</b></h7><br><br>`;
+        }
 
         //statsStr += `<h6><b>Land Plots:</b></h6>`
 
         // Define the desired order for fertility categories
-        const fertilityOrder = ["clay", "fertile", "grazing", "arid", "forest"];
+        const fertilityOrder = [
+          "clay",
+          "fertile",
+          "grazing",
+          "arid",
+          "forest",
+          "water",
+        ];
 
         // Iterate through each range and display resources and fertility in two columns
         Object.keys(townData).forEach((range) => {
