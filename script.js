@@ -754,10 +754,13 @@ function pinButtonClicked(tmarker) {
 // Function to update the display of the selected town
 function updateSelectedTownDisplay() {
   const displayElement = document.getElementById('selectedTownName');
+  const displayDiv = document.getElementById('selectedTownDisplay');
   if (selectedTown) {
     displayElement.textContent = selectedTown;
+    displayDiv.style.display = 'block';
   } else {
     displayElement.textContent = 'None';
+    displayDiv.style.display = 'none';
   }
 }
 

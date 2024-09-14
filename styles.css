@@ -165,6 +165,7 @@ body {
 }
 
 #selectedTownDisplay {
+  display: none; /* Hidden by default */
   position: fixed; /* Fixes the position relative to the viewport */
   top: 10px; /* Distance from the top edge of the viewport */
   right: 10px; /* Distance from the right edge of the viewport */
