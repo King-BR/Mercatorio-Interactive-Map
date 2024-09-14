@@ -36,6 +36,7 @@ body {
   flex-grow: 1;
   height: 100vh;
   width: calc(100% - 200px);
+  z-index: 1;
 }
 
 .leaflet-control-zoom-in,
@@ -95,7 +96,6 @@ body {
   transform: rotate(180deg);
 }
 
-
 /* Add a transition effect for the icon rotation */
 #transportIcon {
   transition: transform 0.3s ease;
@@ -104,4 +104,74 @@ body {
 /* Rotate the icon when the accordion is open */
 .w3-show #transportIcon {
   transform: rotate(180deg);
+}
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.popup-content {
+  position: relative; /* Ensures the close button is positioned relative to this container */
+}
+
+.popup-close {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000000;
+  font-weight: bold;
+}
+
+.popup-close:hover {
+  color: red; /* Change color on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+#showAdvancedFilterButton {
+  background-color: #e3e3e3; 
+  color: black;
+  padding: 5px 30px;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+#showAdvancedFilterButton:hover {
+  background-color: #323232;
+  color: white;
+  border-color: #000000;
+}
+
+/* Ensure marker popups have a higher z-index than #selectedTownDisplay */
+.leaflet-popup {
+  z-index: 1010; /* Higher than the town display */
+}
+
+#selectedTownDisplay {
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 10px; /* Distance from the top edge of the viewport */
+  right: 10px; /* Distance from the right edge of the viewport */
+  background-color: #fff; /* Background color of the div */
+  padding: 5px 10px; /* Padding inside the div */
+  border: 1px solid #ccc; /* Border around the div */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a subtle 3D effect */
+  z-index: 105; /* Ensures the div is below the popups but above the map */
 }

@@ -11,7 +11,7 @@ let selectedTown = null;
 const mapWidth = 256 * 4;
 const mapHeight = 256 * 4;
 
-const padding = 512;
+const padding = 600; // Padding for the map bounds
 const elasticBounds = [
   [-padding, -padding],
   [mapHeight + padding, mapWidth + padding],
@@ -66,6 +66,8 @@ async function initializeMap(season) {
   if (map) {
     map.remove();
   }
+
+  selectedTown = null;
 
   const zoomLevels = { s1: 5, s2: 6 };
   const maxZoom = zoomLevels[season];
@@ -129,6 +131,7 @@ async function updateRangeCircles(season) {
 
   Object.keys(overlaysTransport).forEach((range) => {
     map.removeLayer(overlaysTransport[range]);
+    overlaysTransport[range].clearLayers();
   });
 
   map.eachLayer((layer) => {
@@ -169,42 +172,46 @@ async function updateRangeCircles(season) {
       }).addTo(map);
     }
 
-    tradeData.transports.forEach((transport) => {
-      // Manual
-      if (transport.moves > 0) {
-        const manualMarker = L.circle([markerY, markerX], {
-          radius: transport.moves / 4,
-          fill: false,
-          color: "#00FF00",
-          weight: 1,
-          opacity: 1,
-        });
-        overlaysTransport[`${transport.name} manual`].addLayer(manualMarker);
-      }
-      // Autotrade
-      if (transport.autotrade > 0) {
-        const autoMarker = L.circle([markerY, markerX], {
-          radius: transport.autotrade / 4,
-          fill: false,
-          color: "#FF0000",
-          weight: 1,
-          opacity: 1,
-        });
-        overlaysTransport[`${transport.name} autotrade`].addLayer(autoMarker);
-      }
+    if (selectedTown == null || selectedTown == town.name) {
+      tradeData.transports.forEach((transport) => {
+        // Manual
+        if (transport.moves > 0) {
+          const manualMarker = L.circle([markerY, markerX], {
+            radius: transport.moves / 4,
+            fill: false,
+            color: "#00FF00",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} manual`].addLayer(manualMarker);
+        }
+        // Autotrade
+        if (transport.autotrade > 0) {
+          const autoMarker = L.circle([markerY, markerX], {
+            radius: transport.autotrade / 4,
+            fill: false,
+            color: "#FF0000",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} autotrade`].addLayer(autoMarker);
+        }
 
-      // Fishing
-      if (transport.fishRange > 0) {
-        const fishingMarker = L.circle([markerY, markerX], {
-          radius: transport.fishRange / 4,
-          fill: false,
-          color: "#0000FF",
-          weight: 1,
-          opacity: 1,
-        });
-        overlaysTransport[`${transport.name} fishing`].addLayer(fishingMarker);
-      }
-    });
+        // Fishing
+        if (transport.fishRange > 0) {
+          const fishingMarker = L.circle([markerY, markerX], {
+            radius: transport.fishRange / 4,
+            fill: false,
+            color: "#0000FF",
+            weight: 1,
+            opacity: 1,
+          });
+          overlaysTransport[`${transport.name} fishing`].addLayer(
+            fishingMarker
+          );
+        }
+      });
+    }
 
     Object.keys(overlaysTransport).forEach((range) => {
       if (
@@ -221,7 +228,7 @@ async function loadTowns(season) {
   try {
     towns = []; // Clear existing towns
     towns = await fetchFromLocal(`assets/${season}/towns.json`);
-    tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
+    var tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
     var plots = await fetchFromLocal(`assets/${season}/plots.json`);
     var stats = await fetchFromLocal(`assets/${season}/stats.json`);
     var fishingRange = 220;
@@ -248,6 +255,7 @@ async function loadTowns(season) {
         iconSize: [25, 25],
         iconAnchor: [12.5, 25],
         tooltipAnchor: [12.5, -12.5],
+        popupAnchor: [0, -20],
       });
 
       const markerY = mapHeight - town.location.y / 4;
@@ -267,7 +275,13 @@ async function loadTowns(season) {
 
       if (townData) {
         // Display town name as title and location/section below it
-        statsStr += `<h3>${townName}</h3>`;
+        statsStr += `
+        <div style="display: flex; align-items: center;">
+          <h3 style="margin: 0;">${townName}</h3>
+          <button id="pinButton" style="background: none; border: none; cursor: pointer; margin-left: 10px;">
+            <i class="fa fa-thumbtack"></i>
+          </button>
+        </div>`;
         statsStr += `<p>${location} | ${section}</p>`;
 
         // Fish/Whales plots at 220 or less of distance
@@ -386,12 +400,30 @@ async function loadTowns(season) {
         });
       }
 
-      L.marker([markerY, markerX], { icon: marker })
+      var tmpmarker = L.marker([markerY, markerX], { icon: marker })
         .addTo(map)
         .bindTooltip(tooltipText)
         .bindPopup(statsStr, {
           minWidth: 200, // Minimum width of the popup
-          maxWidth: 500, // Maximum width of the popup
+          maxWidth: 400, // Maximum width of the popup
+        })
+        .on("popupopen", function () {
+          // Add event listener to the pin button when the popup is opened
+          const pinButton = document.getElementById("pinButton");
+          if (pinButton) {
+            pinButton.addEventListener("click", function () {
+              pinButtonClicked(tmpmarker);
+            });
+          }
+        })
+        .on("popupclose", function () {
+          // Remove event listener from the pin button when the popup is closed
+          const pinButton = document.getElementById("pinButton");
+          if (pinButton) {
+            pinButton.removeEventListener("click", function () {
+              pinButtonClicked(tmpmarker);
+            });
+          }
         });
 
       if (document.getElementById("toggleRange1").checked) {
@@ -422,44 +454,50 @@ async function loadTowns(season) {
         }).addTo(map);
       }
 
-      tradeData.transports.forEach((transport) => {
-        // Manual
-        if (transport.moves > 0) {
-          const manualMarker = L.circle([markerY, markerX], {
-            radius: transport.moves / 4,
-            fill: false,
-            color: "#00FF00",
-            weight: 1,
-            opacity: 1,
-          });
-          overlaysTransport[`${transport.name} manual`].addLayer(manualMarker);
-        }
-        // Autotrade
-        if (transport.autotrade > 0) {
-          const autoMarker = L.circle([markerY, markerX], {
-            radius: transport.autotrade / 4,
-            fill: false,
-            color: "#FF0000",
-            weight: 1,
-            opacity: 1,
-          });
-          overlaysTransport[`${transport.name} autotrade`].addLayer(autoMarker);
-        }
+      if (selectedTown == null || selectedTown == town.name) {
+        tradeData.transports.forEach((transport) => {
+          // Manual
+          if (transport.moves > 0) {
+            const manualMarker = L.circle([markerY, markerX], {
+              radius: transport.moves / 4,
+              fill: false,
+              color: "#00FF00",
+              weight: 1,
+              opacity: 1,
+            });
+            overlaysTransport[`${transport.name} manual`].addLayer(
+              manualMarker
+            );
+          }
+          // Autotrade
+          if (transport.autotrade > 0) {
+            const autoMarker = L.circle([markerY, markerX], {
+              radius: transport.autotrade / 4,
+              fill: false,
+              color: "#FF0000",
+              weight: 1,
+              opacity: 1,
+            });
+            overlaysTransport[`${transport.name} autotrade`].addLayer(
+              autoMarker
+            );
+          }
 
-        // Fishing
-        if (transport.fishRange > 0) {
-          const fishingMarker = L.circle([markerY, markerX], {
-            radius: transport.fishRange / 4,
-            fill: false,
-            color: "#0000FF",
-            weight: 1,
-            opacity: 1,
-          });
-          overlaysTransport[`${transport.name} fishing`].addLayer(
-            fishingMarker
-          );
-        }
-      });
+          // Fishing
+          if (transport.fishRange > 0) {
+            const fishingMarker = L.circle([markerY, markerX], {
+              radius: transport.fishRange / 4,
+              fill: false,
+              color: "#0000FF",
+              weight: 1,
+              opacity: 1,
+            });
+            overlaysTransport[`${transport.name} fishing`].addLayer(
+              fishingMarker
+            );
+          }
+        });
+      }
     });
 
     Object.keys(overlaysTransport).forEach((range) => {
@@ -682,6 +720,56 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+
+// Get the popup and button elements
+const popup = document.getElementById("advancedFilterPopup");
+const showPopupButton = document.getElementById("showAdvancedFilterButton");
+const closePopupButton = document.getElementById("closeAdvancedFilterButton");
+
+// Show the popup when the button is clicked
+showPopupButton.addEventListener("click", function () {
+  popup.style.display = "flex";
+});
+
+// Hide the popup when the close button is clicked
+closePopupButton.addEventListener("click", function () {
+  popup.style.display = "none";
+});
+
+// Optionally close the popup when clicking outside of the content
+window.addEventListener("click", function (event) {
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+});
+
+// Example function to be called when the button is clicked
+function pinButtonClicked(tmarker) {
+  selectedTown = tmarker.getTooltip().getContent();
+
+  updateSelectedTownDisplay();
+  updateRangeCircles(currentSeason);
+}
+
+// Function to update the display of the selected town
+function updateSelectedTownDisplay() {
+  const displayElement = document.getElementById('selectedTownName');
+  if (selectedTown) {
+    displayElement.textContent = selectedTown;
+  } else {
+    displayElement.textContent = 'None';
+  }
+}
+
+// Function to clear the selected town
+function clearSelectedTown() {
+  selectedTown = null;
+  updateSelectedTownDisplay(); // Clear the selected town display
+  updateRangeCircles(currentSeason); // Update the range circles
+}
+
+// Add event listener to the clear selection button
+document.getElementById('clearSelectionButton').addEventListener('click', clearSelectedTown);
 
 // Initialize the map for the first time
 initializeMap(currentSeason);

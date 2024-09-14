@@ -7,10 +7,15 @@
     <title>Interactive Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="selectedTownDisplay">
+      Selected Town: <span id="selectedTownName">None</span>
+      <button id="clearSelectionButton"><i class="fa fa-times"></i></button>
+    </div>
+    
     <div
       class="w3-sidebar w3-bar-block w3-collapse w3-card"
       style="width: 200px"
@@ -53,25 +58,52 @@
         ></div>
       </div>
 
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange1" /> Show Town Range</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange2" /> Show 1st Outpost Range</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost Range</label>
-      </div>
-      <div class="sidebar-item">
-        <label><input type="checkbox" id="toggleFertility" /> Show Fertility Overlay</label>
+      <div class="sidebar-item button-container">
+        <button id="showAdvancedFilterButton">Advanced Filter</button>
       </div>
 
-      <button onclick="toggleAccordion('resource')" class="w3-button" id="accordionBtn">
+      <div class="sidebar-item">
+        <label
+          ><input type="checkbox" id="toggleRange1" /> Show Town Range</label
+        >
+      </div>
+      <div class="sidebar-item">
+        <label
+          ><input type="checkbox" id="toggleRange2" /> Show 1st Outpost
+          Range</label
+        >
+      </div>
+      <div class="sidebar-item">
+        <label
+          ><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost
+          Range</label
+        >
+      </div>
+      <div class="sidebar-item">
+        <label
+          ><input type="checkbox" id="toggleFertility" /> Show Fertility
+          Overlay</label
+        >
+      </div>
+
+      <button
+        onclick="toggleAccordion('resource')"
+        class="w3-button"
+        id="accordionBtn"
+      >
         Resources <i id="resourceIcon" class="fa fa-chevron-down"></i>
       </button>
-      <div id="resourceDiv" class="sidebar-item w3-hide" style="width:55%"></div>
+      <div
+        id="resourceDiv"
+        class="sidebar-item w3-hide"
+        style="width: 55%"
+      ></div>
 
-      <button onclick="toggleAccordion('transport')" class="w3-button" id="accordionBtn">
+      <button
+        onclick="toggleAccordion('transport')"
+        class="w3-button"
+        id="accordionBtn"
+      >
         Transports Ranges <i id="transportIcon" class="fa fa-chevron-down"></i>
       </button>
       <div id="transportDiv" class="sidebar-item w3-hide"></div>
@@ -81,6 +113,14 @@
       <button class="w3-button w3-xlarge w3-hide-large" onclick="w3_open()">
         &#9776;
       </button>
+    </div>
+
+    <div id="advancedFilterPopup" class="popup-container" style="display: none">
+      <span id="closeAdvancedFilterButton" class="popup-close">&times;</span>
+      <div class="popup-content">
+        <h3>Advanced Filter</h3>
+        <div><p>Work In Progress ;)</p></div>
+      </div>
     </div>
 
     <div id="map"></div>
