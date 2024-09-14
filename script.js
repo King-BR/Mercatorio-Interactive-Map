@@ -1,5 +1,5 @@
 // Initialize map variables
-let currentSeason = "s1";
+let currentSeason = "s2";
 let map;
 let towns = []; // Store towns globally for search functionality
 let resourceLayers = {};
