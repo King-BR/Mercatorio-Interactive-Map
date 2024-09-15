@@ -231,7 +231,7 @@ async function loadTowns(season) {
     towns = []; // Clear existing towns
     var townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     var tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
-    var plots = await fetchFromLocal(`assets/${season}/plots.json`);
+    var resourcePlots = await fetchFromLocal(`assets/${season}/resourcePlots.json`);
     var stats = await fetchFromLocal(`assets/${season}/stats.json`);
     var fishingRange = 220;
 
@@ -290,8 +290,8 @@ async function loadTowns(season) {
         </div>`;
         statsStr += `<p>${location} | ${section}</p>`;
 
-        // Fish/Whales plots at 220 or less of distance
-        const fishPlots = plots.filter(
+        // Fish/Whales resourcePlots at 220 or less of distance
+        const fishPlots = resourcePlots.filter(
           (plot) =>
             plot.data.res === 1 &&
             Math.sqrt(
@@ -299,7 +299,7 @@ async function loadTowns(season) {
                 Math.pow(plot.realY - town.location.y, 2)
             ) <= fishingRange
         );
-        const whalePlots = plots.filter(
+        const whalePlots = resourcePlots.filter(
           (plot) =>
             plot.data.res === 8 &&
             Math.sqrt(
@@ -315,11 +315,11 @@ async function loadTowns(season) {
           }
 
           if (fishPlots.length > 0) {
-            statsStr += `Fish Plots: ${fishPlots.length}<br>`;
+            statsStr += `Fish resourcePlots: ${fishPlots.length}<br>`;
           }
 
           if (whalePlots.length > 0) {
-            statsStr += `Whale Plots: ${whalePlots.length}<br>`;
+            statsStr += `Whale resourcePlots: ${whalePlots.length}<br>`;
           }
 
           if (fishPlots.length > 0 || whalePlots.length > 0) statsStr += `<br>`;
@@ -327,7 +327,7 @@ async function loadTowns(season) {
           statsStr += `<h7><b>Landlocked</b></h7><br><br>`;
         }
 
-        //statsStr += `<h6><b>Land Plots:</b></h6>`
+        //statsStr += `<h6><b>Land resourcePlots:</b></h6>`
 
         // Define the desired order for fertility categories
         const fertilityOrder = [
@@ -538,10 +538,10 @@ async function loadTowns(season) {
   }
 }
 
-// Function to load plots and create overlays
+// Function to load resourcePlots and create overlays
 async function loadPlots(season) {
   try {
-    const plots = await fetchFromLocal(`assets/${season}/plots.json`);
+    const resourcePlots = await fetchFromLocal(`assets/${season}/resourcePlots.json`);
     const overlays = {};
 
     clearResourceCheckboxes(); // Clear existing checkboxes
@@ -550,7 +550,7 @@ async function loadPlots(season) {
       overlays[resource.name] = L.layerGroup();
     });
 
-    plots.forEach((plot) => {
+    resourcePlots.forEach((plot) => {
       const resource = res_enum[plot.data.res];
       if (resource) {
         const plotLatLng = L.latLng(
@@ -608,7 +608,7 @@ async function loadPlots(season) {
       resourceDiv.appendChild(container);
     });
   } catch (error) {
-    console.error("Error loading plots:", error);
+    console.error("Error loading resourcePlots:", error);
   }
 }
 
