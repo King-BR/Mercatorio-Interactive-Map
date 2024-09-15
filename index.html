@@ -121,8 +121,275 @@
     <div id="advancedFilterPopup" class="popup-container" style="display: none">
       <span id="closeAdvancedFilterButton" class="popup-close">&times;</span>
       <div class="popup-content">
-        <h3>Advanced Filter</h3>
-        <div><p>Work In Progress ;)</p></div>
+        <!-- Filter form section -->
+        <div id="filterForm">
+          <h3>Advanced Filter</h3>
+          <button id="applyFilterButton">Apply Filter</button>
+
+          <h4>Misc</h4>
+          <label>
+            <input type="checkbox" id="capitalCheckbox" /> Capital
+          </label>
+          <label>
+            <input type="checkbox" id="landlockedCheckbox" /> Landlocked
+          </label>
+          <label>
+            <input type="checkbox" id="seaAccessCheckbox" /> Sea Access
+          </label>
+
+          <h4>Normal Range</h4>
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="salt"
+                value="0"
+                min="0"
+              />
+              Salt
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="stone"
+                value="0"
+                min="0"
+              />
+              Stone
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="iron"
+                value="0"
+                min="0"
+              />
+              Iron
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="copper"
+                value="0"
+                min="0"
+              />
+              Copper
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="lead"
+                value="0"
+                min="0"
+              />
+              Lead
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="gold"
+                value="0"
+                min="0"
+              />
+              Gold
+            </label>
+          </div>
+
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="clay"
+              />
+              Clay
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="fertile"
+              />
+              Fertile land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="grazing"
+              />
+              Grazing land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="arid"
+              />
+              Arid land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="water"
+              />
+              Water
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterNormalFertilityInput"
+                value="forest"
+              />
+              Forest
+            </label>
+          </div>
+
+          <h4>Outpost 1 Range</h4>
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="salt"
+                value="0"
+                min="0"
+              />
+              Salt
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="stone"
+                value="0"
+                min="0"
+              />
+              Stone
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="iron"
+                value="0"
+                min="0"
+              />
+              Iron
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="copper"
+                value="0"
+                min="0"
+              />
+              Copper
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="lead"
+                value="0"
+                min="0"
+              />
+              Lead
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="gold"
+                value="0"
+                min="0"
+              />
+              Gold
+            </label>
+          </div>
+
+          <h4>Outpost 2 Range</h4>
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="salt"
+                value="0"
+                min="0"
+              />
+              Salt
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="stone"
+                value="0"
+                min="0"
+              />
+              Stone
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="iron"
+                value="0"
+                min="0"
+              />
+              Iron
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="copper"
+                value="0"
+                min="0"
+              />
+              Copper
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="lead"
+                value="0"
+                min="0"
+              />
+              Lead
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="gold"
+                value="0"
+                min="0"
+              />
+              Gold
+            </label>
+          </div>
+        </div>
+
+        <!-- Scrollable towns list section -->
+        <div>
+          <h3>Filtered Towns</h3>
+          <div id="townsListContainer">
+            <ul id="townsList">
+              <!-- Filtered towns will be listed here -->
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
 

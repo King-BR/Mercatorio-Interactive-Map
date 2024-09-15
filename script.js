@@ -68,6 +68,7 @@ async function initializeMap(season) {
   }
 
   selectedTown = null;
+  towns = [];
 
   const zoomLevels = { s1: 5, s2: 6 };
   const maxZoom = zoomLevels[season];
@@ -128,6 +129,7 @@ async function initializeMap(season) {
 // Function to update range circles
 async function updateRangeCircles(season) {
   const tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
+  var townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
 
   Object.keys(overlaysTransport).forEach((range) => {
     map.removeLayer(overlaysTransport[range]);
@@ -140,7 +142,7 @@ async function updateRangeCircles(season) {
     }
   });
 
-  towns.forEach((town) => {
+  townsJson.forEach((town) => {
     const markerY = mapHeight - town.location.y / 4;
     const markerX = town.location.x / 4;
 
@@ -227,7 +229,7 @@ async function updateRangeCircles(season) {
 async function loadTowns(season) {
   try {
     towns = []; // Clear existing towns
-    towns = await fetchFromLocal(`assets/${season}/towns.json`);
+    var townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     var tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
     var plots = await fetchFromLocal(`assets/${season}/plots.json`);
     var stats = await fetchFromLocal(`assets/${season}/stats.json`);
@@ -246,7 +248,7 @@ async function loadTowns(season) {
         overlaysTransport[`${transport.name} fishing`] = L.layerGroup();
     });
 
-    towns.forEach((town, index) => {
+    townsJson.forEach((town, index) => {
       clearTradeCheckboxes(); // Clear existing checkboxes
 
       const iconUrl = town.capital ? "capital_marker.png" : "town_marker.png";
@@ -262,7 +264,11 @@ async function loadTowns(season) {
       const markerX = town.location.x / 4;
 
       const tooltipText = town.name || `Town ${index + 1}`;
-      towns.push({ name: tooltipText, location: town.location });
+      towns.push({
+        name: tooltipText,
+        altname: `Town ${index + 1}`,
+        location: town.location,
+      });
       const townData = stats[tooltipText] || null;
 
       let statsStr = "";
@@ -653,7 +659,10 @@ document.getElementById("searchBar").addEventListener("input", (event) => {
 
   if (query) {
     const filteredTowns = towns.filter(
-      (town) => town.name && town.name.toLowerCase().includes(query)
+      (town) =>
+        (town.name || town.altname) &&
+        (town.name.toLowerCase().includes(query) ||
+          town.altname.toLowerCase().includes(query))
     );
 
     filteredTowns.forEach((town) => {
@@ -725,6 +734,7 @@ function w3_close() {
 const popup = document.getElementById("advancedFilterPopup");
 const showPopupButton = document.getElementById("showAdvancedFilterButton");
 const closePopupButton = document.getElementById("closeAdvancedFilterButton");
+const applyFilterButton = document.getElementById("applyFilterButton");
 
 // Show the popup when the button is clicked
 showPopupButton.addEventListener("click", function () {
@@ -738,29 +748,188 @@ closePopupButton.addEventListener("click", function () {
 
 // Optionally close the popup when clicking outside of the content
 window.addEventListener("click", function (event) {
-  if (event.target === popup) {
+  if (event.target.matches("#map") && popup.style.display == "flex") {
     popup.style.display = "none";
   }
 });
 
+// Function to apply the filter when the button is clicked
+applyFilterButton.addEventListener("click", async function () {
+  var stats = await fetchFromLocal(`assets/${currentSeason}/stats.json`);
+  var townsJson = await fetchFromLocal(`assets/${currentSeason}/towns.json`);
+
+  // Make the towns list that the filter applies to
+  const townsList = document.getElementById("townsList");
+
+  // Clear the existing list
+  townsList.innerHTML = "";
+
+  // Get the filter values
+  const filterValues = {
+    capital: document.getElementById("capitalCheckbox").checked,
+    landlocked: document.getElementById("landlockedCheckbox").checked,
+    seaAccess: document.getElementById("seaAccessCheckbox").checked,
+    normalRange: {
+      resources: [],  // Will store resource names
+      fertility: [],   // Will store fertility types
+    },
+    outpost1Range: {
+      resources: [],  // Will store resource names
+      fertility: [],   // Will store fertility types
+    },
+    outpost2Range: {
+      resources: [],  // Will store resource names
+      fertility: [],   // Will store fertility types
+    },
+  };
+
+  // Function to extract resources based on quantity requirements
+  function extractResourceValues(className, filterObj) {
+    const resourceInputs = document.querySelectorAll(`.${className}`);
+    resourceInputs.forEach((input) => {
+      const resourceName = input.getAttribute("data-resource");
+      const resourceValue = parseInt(input.value, 10) || 0;
+      if (resourceValue > 0) {
+        filterObj.push({ name: resourceName, minQuantity: resourceValue });
+      }
+    });
+  }
+
+  // Get the resources and fertility input values
+  extractResourceValues("filterNormalResourceInput", filterValues.normalRange.resources);
+  extractResourceValues("filterOutpost1ResourceInput", filterValues.outpost1Range.resources);
+  extractResourceValues("filterOutpost2ResourceInput", filterValues.outpost2Range.resources);
+
+  // Get fertility values similarly
+  const fertilityInputs = document.querySelectorAll(".filterNormalFertilityInput");
+  fertilityInputs.forEach((input) => {
+    if (input.checked) {
+      filterValues.normalRange.fertility.push(input.value);
+    }
+  });
+
+  // Implement similar extraction for outpost ranges if necessary
+  // (The code for outpost1FertilityInput and outpost2FertilityInput should follow the same pattern)
+
+  // Filter the towns based on the filter values
+  var items = 0;
+  towns.forEach((town) => {
+    const townData = stats[town.name];
+
+    if (townData) {
+      if (
+        (filterValues.capital && !townsJson.find(t => t.name === town.name).capital) ||
+        (filterValues.landlocked && !townData.landlocked) ||
+        (filterValues.seaAccess && townData.landlocked)
+      ) {
+        return;
+      }
+
+      let valid = false;
+
+      // Check resources and fertility for normal range
+      if (
+        filterValues.normalRange.resources.length === 0 &&
+        filterValues.normalRange.fertility.length === 0 &&
+        filterValues.outpost1Range.resources.length === 0 &&
+        filterValues.outpost1Range.fertility.length === 0 &&
+        filterValues.outpost2Range.resources.length === 0
+      ) {
+        valid = true;
+      }
+
+      let previousRange = true;
+      Object.keys(filterValues).forEach((range) => {
+        if (range !== "capital" && range !== "landlocked" && range !== "seaAccess") {
+          const resources = filterValues[range].resources || [];
+          const fertility = filterValues[range].fertility || [];
+
+          if (resources.length > 0 || fertility.length > 0) {
+            const townRangeData = townData[range];
+
+            // Resource match check
+            const resourceMatch = resources.every(({ name, minQuantity }) =>
+              townRangeData.resources[name] >= minQuantity
+            );
+
+            // Fertility match check
+            const fertilityMatch = fertility.every((fert) =>
+              townRangeData.fertility[fert] > 0
+            );
+
+            if (resourceMatch && fertilityMatch) {
+              if (previousRange) { 
+                valid = true;
+              } else valid = false;
+            } else {
+              if (previousRange) valid = false;
+              previousRange = false;
+            }
+          }
+        }
+      });
+
+      if (valid) {
+        const listItem = document.createElement("li");
+        listItem.textContent = town.name;
+
+        const listItemButton = document.createElement("button");
+        listItemButton.classList.add("w3-button", "w3-hover-light-grey");
+
+        const icon = document.createElement("i");
+        icon.classList.add("fa", "fa-location");
+
+        listItemButton.appendChild(icon);
+        listItemButton.addEventListener("click", () => {
+          selectedTown = town.name;
+          updateSelectedTownDisplay();
+          updateRangeCircles(currentSeason);
+          popup.style.display = "none";
+
+          // Go to town marker
+          map.eachLayer((layer) => {
+            if (
+              layer instanceof L.Marker &&
+              layer.getTooltip().getContent() === town.name
+            ) {
+              map.flyTo(layer.getLatLng(), 3);
+              layer.openTooltip();
+            }
+          });
+        });
+
+        listItem.appendChild(listItemButton);
+        townsList.appendChild(listItem);
+        items++;
+      }
+    }
+  });
+
+  if (items === 0) {
+    const listItem = document.createElement("li");
+    listItem.textContent = "No towns found";
+    townsList.appendChild(listItem);
+  }
+});
+
+
 // Example function to be called when the button is clicked
 function pinButtonClicked(tmarker) {
   selectedTown = tmarker.getTooltip().getContent();
-
   updateSelectedTownDisplay();
   updateRangeCircles(currentSeason);
 }
 
 // Function to update the display of the selected town
 function updateSelectedTownDisplay() {
-  const displayElement = document.getElementById('selectedTownName');
-  const displayDiv = document.getElementById('selectedTownDisplay');
+  const displayElement = document.getElementById("selectedTownName");
+  const displayDiv = document.getElementById("selectedTownDisplay");
   if (selectedTown) {
     displayElement.textContent = selectedTown;
-    displayDiv.style.display = 'block';
+    displayDiv.style.display = "block";
   } else {
-    displayElement.textContent = 'None';
-    displayDiv.style.display = 'none';
+    displayElement.textContent = "None";
+    displayDiv.style.display = "none";
   }
 }
 
@@ -772,7 +941,9 @@ function clearSelectedTown() {
 }
 
 // Add event listener to the clear selection button
-document.getElementById('clearSelectionButton').addEventListener('click', clearSelectedTown);
+document
+  .getElementById("clearSelectionButton")
+  .addEventListener("click", clearSelectedTown);
 
 // Initialize the map for the first time
 initializeMap(currentSeason);

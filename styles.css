@@ -7,7 +7,7 @@ body {
 }
 
 .w3-sidebar {
-  z-index: 1000;
+  z-index: 1500;
   height: 100vh;
 }
 
@@ -106,21 +106,60 @@ body {
   transform: rotate(180deg);
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+#showAdvancedFilterButton {
+  background-color: #e3e3e3;
+  color: black;
+  padding: 5px 30px;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+#showAdvancedFilterButton:hover {
+  background-color: #323232;
+  color: white;
+  border-color: #000000;
+}
+
+#selectedTownDisplay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 10px; /* Distance from the top edge of the viewport */
+  right: 10px; /* Distance from the right edge of the viewport */
+  background-color: #fff; /* Background color of the div */
+  padding: 5px 10px; /* Padding inside the div */
+  border: 1px solid #ccc; /* Border around the div */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a subtle 3D effect */
+  z-index: 1010; 
+}
+
 .popup-container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 2000;
   background-color: white;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  width: 300px; /* Adjust width as needed */
+  min-width: 300px;
+  max-width: 600px;
+  max-height: 600px;
+  overflow: auto;
 }
 
 .popup-content {
-  position: relative; /* Ensures the close button is positioned relative to this container */
+  display: flex; /* Use flexbox to arrange the filter and the towns list side by side */
+  gap: 20px; /* Adds space between the two sections */
 }
 
 .popup-close {
@@ -137,42 +176,45 @@ body {
   color: red; /* Change color on hover */
 }
 
-.button-container {
+/* Filter form styling */
+#filterForm {
+  flex: 1;
+}
+
+#filterForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Container for the resource and fertility checkboxes in two rows */
+.checkbox-row {
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start; /* Align items to the left */
+  margin-bottom: 10px;
 }
 
-#showAdvancedFilterButton {
-  background-color: #e3e3e3; 
-  color: black;
-  padding: 5px 30px;
-  border-radius: 10px; /* Rounded corners */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Town list container with scrollable feature */
+#townsListContainer {
+  flex: 1;
+  max-height: 500px; /* Set max height for scrolling */
+  overflow-y: auto; /* Scrollable */
+  border-left: 1px solid #ccc;
+  padding-left: 20px;
 }
 
-/* Hover effect */
-#showAdvancedFilterButton:hover {
-  background-color: #323232;
-  color: white;
-  border-color: #000000;
+#townsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Ensure marker popups have a higher z-index than #selectedTownDisplay */
-.leaflet-popup {
-  z-index: 1010; /* Higher than the town display */
+#townsList li {
+  padding: 5px 0;
 }
 
-#selectedTownDisplay {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixes the position relative to the viewport */
-  top: 10px; /* Distance from the top edge of the viewport */
-  right: 10px; /* Distance from the right edge of the viewport */
-  background-color: #fff; /* Background color of the div */
-  padding: 5px 10px; /* Padding inside the div */
-  border: 1px solid #ccc; /* Border around the div */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a subtle 3D effect */
-  z-index: 105; /* Ensures the div is below the popups but above the map */
+/* Adjust the width of number inputs */
+.filter-input-small {
+  width: 60px; /* Adjust width as needed */
 }
