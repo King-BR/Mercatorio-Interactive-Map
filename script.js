@@ -6,6 +6,8 @@ let resourceLayers = {};
 let overlaysTransport = {};
 let fertilityOverlay; // Variable for fertility overlay
 let selectedTown = null;
+let townsData = null;
+let mapData = null;
 
 // Define bounds for the map
 const mapWidth = 256 * 4;
@@ -17,6 +19,10 @@ const elasticBounds = [
   [mapHeight + padding, mapWidth + padding],
 ];
 const hardBounds = [
+  [0, 0],
+  [mapHeight, mapWidth],
+];
+const fertilityBounds = [
   [0, 0],
   [mapHeight, mapWidth],
 ];
@@ -61,16 +67,46 @@ async function fetchFromLocal(path) {
   return response.json();
 }
 
+function convertArrayToTile(arr) {
+  return {
+    x: arr[0],
+    y: arr[1],
+    data: {
+      alt: arr[2] !== null ? arr[2] : undefined,
+      fertility: arr[3] !== null ? arr[3] : undefined,
+      forest: arr[4] !== null ? arr[4] : undefined,
+      res: arr[5] !== null ? arr[5] : undefined,
+      resAmount: arr[6] !== null ? arr[6] : undefined,
+      region: arr[7] !== null ? arr[7] : undefined,
+      area: arr[8] !== null ? arr[8] : undefined,
+      type: arr[9] !== null ? arr[9] : undefined,
+    },
+  };
+}
+
+async function fetchAndDecompress(url) {
+  const response = await fetch(url);
+  const arrayBuffer = await response.arrayBuffer();
+  const decompressed = pako.inflate(new Uint8Array(arrayBuffer), {
+    to: "string",
+  });
+  const parsed = JSON.parse(decompressed);
+  return parsed.map(convertArrayToTile);
+}
+
 // Function to initialize the map
 async function initializeMap(season) {
-  if (map) {
-    map.remove();
-  }
+  if (map) map.remove();
 
-  selectedTown = null;
   towns = [];
+  resourceLayers = {};
+  overlaysTransport = {};
+  fertilityOverlay = null;
+  selectedTown = null;
+  townsData = null;
+  mapData = null;
 
-  const zoomLevels = { s1: 5, s2: 6 };
+  const zoomLevels = { s1: 5, s2: 5 };
   const maxZoom = zoomLevels[season];
 
   map = L.map("map", {
@@ -88,7 +124,7 @@ async function initializeMap(season) {
     tileSize: 256,
     noWrap: true,
     continuousWorld: false,
-    errorTileUrl: "error.png",
+    errorTileUrl: "assets/error.png",
     bounds: hardBounds,
   }).addTo(map);
 
@@ -122,8 +158,11 @@ async function initializeMap(season) {
     .getElementById("toggleRange3")
     .addEventListener("change", () => updateRangeCircles(season));
 
-  // Load fertility overlay after initializing the map
-  loadFertilityOverlay(season);
+  // Create fertility overlay after initializing the map
+  createFertilityOverlay();
+  if (document.getElementById("toggleFertility").checked) {
+    fertilityOverlay.addTo(map);
+  }
 }
 
 // Function to update range circles
@@ -231,7 +270,9 @@ async function loadTowns(season) {
     towns = []; // Clear existing towns
     var townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     var tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
-    var resourcePlots = await fetchFromLocal(`assets/${season}/resourcePlots.json`);
+    var resourcePlots = await fetchFromLocal(
+      `assets/${season}/resourcePlots.json`
+    );
     var stats = await fetchFromLocal(`assets/${season}/stats.json`);
     var fishingRange = 220;
 
@@ -251,7 +292,9 @@ async function loadTowns(season) {
     townsJson.forEach((town, index) => {
       clearTradeCheckboxes(); // Clear existing checkboxes
 
-      const iconUrl = town.capital ? "capital_marker.png" : "town_marker.png";
+      const iconUrl = town.capital
+        ? "assets/capital_marker.png"
+        : "assets/town_marker.png";
       const marker = L.icon({
         iconUrl: iconUrl,
         iconSize: [25, 25],
@@ -265,11 +308,15 @@ async function loadTowns(season) {
 
       const tooltipText = town.name || `Town ${index + 1}`;
       towns.push({
+        id: town.id,
         name: tooltipText,
         altname: `Town ${index + 1}`,
         location: town.location,
       });
-      const townData = stats[tooltipText] || null;
+      const townStats = stats[tooltipText] || null;
+      const townData = null;
+
+      if (townsData) townData = townsData.find((t) => t.id === town.id);
 
       let statsStr = "";
 
@@ -279,7 +326,7 @@ async function loadTowns(season) {
         Math.floor(town.location.y / 32) * 32
       }`;
 
-      if (townData) {
+      if (townStats) {
         // Display town name as title and location/section below it
         statsStr += `
         <div style="display: flex; align-items: center;">
@@ -289,6 +336,9 @@ async function loadTowns(season) {
           </button>
         </div>`;
         statsStr += `<p>${location} | ${section}</p>`;
+
+        if (townData) {
+        }
 
         // Fish/Whales resourcePlots at 220 or less of distance
         const fishPlots = resourcePlots.filter(
@@ -308,7 +358,7 @@ async function loadTowns(season) {
             ) <= fishingRange
         );
 
-        if (!townData.landlocked) {
+        if (!townStats.landlocked) {
           if (fishPlots.length > 0 || whalePlots.length > 0) {
             statsStr += `<h7><b>Sea Resources:</b></h7><br>`;
             statsStr += `<b>Fishing Range: ${fishingRange} tiles</b><br>`;
@@ -340,9 +390,9 @@ async function loadTowns(season) {
         ];
 
         // Iterate through each range and display resources and fertility in two columns
-        Object.keys(townData).forEach((range) => {
+        Object.keys(townStats).forEach((range) => {
           if (range.includes("Range")) {
-            var resources = Object.entries(townData[range].resources).filter(
+            var resources = Object.entries(townStats[range].resources).filter(
               ([, value]) => value > 0
             );
 
@@ -350,7 +400,7 @@ async function loadTowns(season) {
               ([key]) => !["fish", "whales"].includes(key)
             );
 
-            const fertility = Object.entries(townData[range].fertility)
+            const fertility = Object.entries(townStats[range].fertility)
               .filter(([key, value]) => value > 0)
               .sort(
                 (a, b) =>
@@ -541,7 +591,9 @@ async function loadTowns(season) {
 // Function to load resourcePlots and create overlays
 async function loadPlots(season) {
   try {
-    const resourcePlots = await fetchFromLocal(`assets/${season}/resourcePlots.json`);
+    const resourcePlots = await fetchFromLocal(
+      `assets/${season}/resourcePlots.json`
+    );
     const overlays = {};
 
     clearResourceCheckboxes(); // Clear existing checkboxes
@@ -612,25 +664,24 @@ async function loadPlots(season) {
   }
 }
 
-// Function to load fertility overlay as a single image
-function loadFertilityOverlay(season) {
-  if (fertilityOverlay) {
-    map.removeLayer(fertilityOverlay);
-  }
-
-  const imageUrl = `./assets/${season}/fertility_overlay.png`;
-  const bounds = [
-    [-1, 0],
-    [mapHeight - 1, mapWidth],
-  ];
-
-  fertilityOverlay = L.imageOverlay(imageUrl, bounds, {
-    opacity: 1, // Set the desired opacity for the overlay
+// Function to create fertility overlay
+function createFertilityOverlay() {
+  // Initialize the fertility overlay layer
+  fertilityOverlay = L.tileLayer("assets/fertility/tiles/{z}/{x}/{y}.png", {
+    attribution: "Fertility Overlay",
+    opacity: 1, // Adjust opacity as needed
+    minZoom: 0,
+    maxZoom: 5,
+    noWrap: true,
+    errorTileUrl: "assets/error.png",
+    bounds: fertilityBounds,
   });
+}
 
-  // Default to off
-  if (document.getElementById("toggleFertility").checked) {
-    fertilityOverlay.addTo(map);
+function updateFertilityOverlayOpacity(event) {
+  if (fertilityOverlay) {
+    const newOpacity = parseFloat(event.value);
+    fertilityOverlay.setOpacity(newOpacity);
   }
 }
 
@@ -638,10 +689,33 @@ function loadFertilityOverlay(season) {
 document
   .getElementById("toggleFertility")
   .addEventListener("change", (event) => {
+    let fertilityOpacityLabel = document.getElementById(
+      "fertilityOpacityLabel"
+    );
+    let fertilityOpacitySlider = document.getElementById(
+      "fertilityOpacitySlider"
+    );
     if (event.target.checked) {
+      if (!fertilityOverlay) createFertilityOverlay();
       fertilityOverlay.addTo(map);
+
+      fertilityOpacityLabel.style.display = "block";
+      fertilityOpacitySlider.style.display = "block";
+
+      fertilityOpacitySlider.removeEventListener("input", function () {
+        updateFertilityOverlayOpacity(this);
+      });
+      fertilityOpacitySlider.addEventListener("input", function () {
+        updateFertilityOverlayOpacity(this);
+      });
     } else {
       map.removeLayer(fertilityOverlay);
+      fertilityOpacityLabel.style.display = "none";
+      fertilityOpacitySlider.style.display = "none";
+      
+      fertilityOpacitySlider.removeEventListener("input", function () {
+        updateFertilityOverlayOpacity(this);
+      });
     }
   });
 
@@ -770,16 +844,16 @@ applyFilterButton.addEventListener("click", async function () {
     landlocked: document.getElementById("landlockedCheckbox").checked,
     seaAccess: document.getElementById("seaAccessCheckbox").checked,
     normalRange: {
-      resources: [],  // Will store resource names
-      fertility: [],   // Will store fertility types
+      resources: [], // Will store resource names
+      fertility: [], // Will store fertility types
     },
     outpost1Range: {
-      resources: [],  // Will store resource names
-      fertility: [],   // Will store fertility types
+      resources: [], // Will store resource names
+      fertility: [], // Will store fertility types
     },
     outpost2Range: {
-      resources: [],  // Will store resource names
-      fertility: [],   // Will store fertility types
+      resources: [], // Will store resource names
+      fertility: [], // Will store fertility types
     },
   };
 
@@ -796,12 +870,23 @@ applyFilterButton.addEventListener("click", async function () {
   }
 
   // Get the resources and fertility input values
-  extractResourceValues("filterNormalResourceInput", filterValues.normalRange.resources);
-  extractResourceValues("filterOutpost1ResourceInput", filterValues.outpost1Range.resources);
-  extractResourceValues("filterOutpost2ResourceInput", filterValues.outpost2Range.resources);
+  extractResourceValues(
+    "filterNormalResourceInput",
+    filterValues.normalRange.resources
+  );
+  extractResourceValues(
+    "filterOutpost1ResourceInput",
+    filterValues.outpost1Range.resources
+  );
+  extractResourceValues(
+    "filterOutpost2ResourceInput",
+    filterValues.outpost2Range.resources
+  );
 
   // Get fertility values similarly
-  const fertilityInputs = document.querySelectorAll(".filterNormalFertilityInput");
+  const fertilityInputs = document.querySelectorAll(
+    ".filterNormalFertilityInput"
+  );
   fertilityInputs.forEach((input) => {
     if (input.checked) {
       filterValues.normalRange.fertility.push(input.value);
@@ -814,13 +899,14 @@ applyFilterButton.addEventListener("click", async function () {
   // Filter the towns based on the filter values
   var items = 0;
   towns.forEach((town) => {
-    const townData = stats[town.name];
+    const townStats = stats[town.name];
 
-    if (townData) {
+    if (townStats) {
       if (
-        (filterValues.capital && !townsJson.find(t => t.name === town.name).capital) ||
-        (filterValues.landlocked && !townData.landlocked) ||
-        (filterValues.seaAccess && townData.landlocked)
+        (filterValues.capital &&
+          !townsJson.find((t) => t.name === town.name).capital) ||
+        (filterValues.landlocked && !townStats.landlocked) ||
+        (filterValues.seaAccess && townStats.landlocked)
       ) {
         return;
       }
@@ -840,25 +926,30 @@ applyFilterButton.addEventListener("click", async function () {
 
       let previousRange = true;
       Object.keys(filterValues).forEach((range) => {
-        if (range !== "capital" && range !== "landlocked" && range !== "seaAccess") {
+        if (
+          range !== "capital" &&
+          range !== "landlocked" &&
+          range !== "seaAccess"
+        ) {
           const resources = filterValues[range].resources || [];
           const fertility = filterValues[range].fertility || [];
 
           if (resources.length > 0 || fertility.length > 0) {
-            const townRangeData = townData[range];
+            const townRangeData = townStats[range];
 
             // Resource match check
-            const resourceMatch = resources.every(({ name, minQuantity }) =>
-              townRangeData.resources[name] >= minQuantity
+            const resourceMatch = resources.every(
+              ({ name, minQuantity }) =>
+                townRangeData.resources[name] >= minQuantity
             );
 
             // Fertility match check
-            const fertilityMatch = fertility.every((fert) =>
-              townRangeData.fertility[fert] > 0
+            const fertilityMatch = fertility.every(
+              (fert) => townRangeData.fertility[fert] > 0
             );
 
             if (resourceMatch && fertilityMatch) {
-              if (previousRange) { 
+              if (previousRange) {
                 valid = true;
               } else valid = false;
             } else {
@@ -911,7 +1002,6 @@ applyFilterButton.addEventListener("click", async function () {
     townsList.appendChild(listItem);
   }
 });
-
 
 // Example function to be called when the button is clicked
 function pinButtonClicked(tmarker) {
