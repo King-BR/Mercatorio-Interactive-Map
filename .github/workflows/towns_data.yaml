@@ -1,0 +1,77 @@
+name: API Request and Save to JSON
+
+on:
+  schedule:
+    # Runs every 12 hours at 10 minutes past the hour (00:10, 12:10 UTC)
+    - cron: '10 0,12 * * *'
+
+jobs:
+  api-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up repository
+        uses: actions/checkout@v3
+
+      - name: Install jq (for JSON processing)
+        run: sudo apt-get install jq
+
+      - name: Read towns.json, send API requests with 0.20s delay, and save results only if all succeed
+        run: |
+          # Initialize variables
+          SUCCESS=true
+          echo '[]' > api_responses.json
+
+          # Read the towns.json file and extract town IDs
+          TOWN_IDS=$(jq -r '.[] | .id' assets/s2/towns.json)
+
+          # Iterate over each town ID and send an API request with a 0.25s delay
+          for town_id in $TOWN_IDS; do
+            # Construct the API endpoint dynamically
+            endpoint="https://play.mercatorio.io/api/towns/${town_id}"
+
+            # Send the API request and capture the response status
+            response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" \
+              -H "X-Merc-User: $MERC_USER" \
+              -H "Authorization: Bearer $AUTH_TOKEN")
+
+            # Check if the response was successful (HTTP 200)
+            if [[ "$response" == "200" ]]; then
+              # If successful, append the response body to the JSON file
+              jq ". += [$(cat response_body.txt)]" api_responses.json > tmp.json && mv tmp.json api_responses.json
+            else
+              # If any request fails, log the failure and mark the run as failed
+              echo "Request for town ID $town_id failed with status $response"
+              SUCCESS=false
+            fi
+
+            # Wait for 0.20 seconds before the next request
+            sleep 0.20
+          done
+
+          # Check if all requests were successful
+          if [ "$SUCCESS" = true ]; then
+            # If all requests were successful, move the responses to the final JSON file
+            mv api_responses.json assets/s2/townsData.json
+            echo "All requests were successful. Saved results to assets/s2/townsData.json."
+          else
+            # If any requests failed, do not save the results
+            echo "Some requests failed. No changes saved."
+            rm api_responses.json
+            exit 1
+          fi
+
+      - name: Commit and push the JSON file if all requests succeeded
+        if: always()  # This runs only if the previous step succeeded
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/s2/townsData.json
+          git commit -m "Updated townsData.json for season 2"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Secrets for API authentication
+        env:
+          MERC_USER: ${{ secrets.MERC_USER }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
