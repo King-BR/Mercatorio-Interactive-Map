@@ -73,7 +73,5 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # Secrets for API authentication
-        env:
           MERC_USER: ${{ secrets.MERC_USER }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
