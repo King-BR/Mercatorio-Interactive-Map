@@ -1,4 +1,4 @@
-name: API Request and Save to JSON
+name: Auto import towns data
 
 on:
   schedule:
