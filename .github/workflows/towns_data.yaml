@@ -5,6 +5,8 @@ on:
     # Runs every 12 hours at 10 minutes past the hour (00:10, 12:10 UTC)
     - cron: '10 0,12 * * *'
 
+  workflow_dispatch:  # This enables manual triggering
+
 jobs:
   api-request:
     runs-on: ubuntu-latest
