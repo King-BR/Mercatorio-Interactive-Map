@@ -89,9 +89,22 @@
         >
       </div>
       <div class="sidebar-item">
-        <label for="fertilityOpacitySlider" id="fertilityOpacityLabel" style="display: none;">Fertility Overlay Opacity:</label>
-        <input type="range" id="fertilityOpacitySlider" style="display: none;" min="0" max="1" step="0.1" value="1">
-      </div>   
+        <label
+          for="fertilityOpacitySlider"
+          id="fertilityOpacityLabel"
+          style="display: none"
+          >Fertility Overlay Opacity:</label
+        >
+        <input
+          type="range"
+          id="fertilityOpacitySlider"
+          style="display: none"
+          min="0"
+          max="1"
+          step="0.1"
+          value="1"
+        />
+      </div>
 
       <button
         onclick="toggleAccordion('resource')"
@@ -401,6 +414,16 @@
     <div id="coordinateDisplay">Coordinates: X=0, Y=0 | Section: 0:0</div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pako@latest/dist/pako.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pako"></script>
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/map.js"></script>
+    <script src="scripts/towns.js"></script>
+    <script src="scripts/plots.js"></script>
+    <script src="scripts/fertility.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/initialize.js"></script>
   </body>
 </html>
