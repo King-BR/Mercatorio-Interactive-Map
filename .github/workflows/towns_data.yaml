@@ -33,9 +33,7 @@ jobs:
             endpoint="https://play.mercatorio.io/api/towns/${town_id}"
 
             # Send the API request and capture the response status
-            response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" \
-              -H "X-Merc-User: $MERC_USER" \
-              -H "Authorization: Bearer $AUTH_TOKEN")
+            response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" -H "X-Merc-User: $MERC_USER" -H "Authorization: Bearer $AUTH_TOKEN")
 
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
