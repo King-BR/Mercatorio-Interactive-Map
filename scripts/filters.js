@@ -143,8 +143,9 @@ applyFilterButton.addEventListener("click", async function () {
 
         listItemButton.appendChild(icon);
         listItemButton.addEventListener("click", () => {
-          selectedTown = town.name;
-          updateSelectedTownDisplay();
+          selectedTown.name = town.name;
+          selectedTown.x = town.location.x;
+          selectedTown.y = town.location.y;
           updateRangeCircles(currentSeason);
           popup.style.display = "none";
 
@@ -156,8 +157,11 @@ applyFilterButton.addEventListener("click", async function () {
             ) {
               map.flyTo(layer.getLatLng(), 3);
               layer.openTooltip();
+              selectedTown.marker = layer;
             }
           });
+
+          updateSelectedTownDisplay();
         });
 
         listItem.appendChild(listItemButton);

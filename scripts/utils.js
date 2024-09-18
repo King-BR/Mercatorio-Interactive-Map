@@ -30,7 +30,7 @@ function convertArrayToTile(arr) {
 }
 
 async function fetchAndDecompress(path) {
-  const response = await fetchFromLocal(path);
+  const response = await fetch(`./${path}`);
   const arrayBuffer = await response.arrayBuffer();
   const decompressed = pako.inflate(new Uint8Array(arrayBuffer), {
     to: "string",

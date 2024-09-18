@@ -1,6 +1,6 @@
 var towns = [];
 var overlaysTransport = {};
-var selectedTown = null;
+var selectedTown = {};
 var townsData = null;
 
 // Function to load towns and add markers
@@ -16,6 +16,9 @@ async function loadTowns(season) {
     );
     const stats = await fetchFromLocal(`assets/${season}/stats.json`);
     const fishingRange = 220;
+
+    if (season != "s1")
+      townsData = await fetchFromLocal(`assets/${season}/townsData.json`);
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -55,7 +58,7 @@ async function loadTowns(season) {
         location: town.location,
       });
       const townStats = stats[tooltipText] || null;
-      const townData = null;
+      var townData = null;
 
       if (townsData) townData = townsData.find((t) => t.id === town.id);
 
@@ -251,7 +254,7 @@ async function loadTowns(season) {
         }).addTo(map);
       }
 
-      if (selectedTown == null || selectedTown == town.name) {
+      if (selectedTown.name == null || selectedTown.name == town.name) {
         tradeData.transports.forEach((transport) => {
           // Manual
           if (transport.moves > 0) {
@@ -377,7 +380,7 @@ async function updateRangeCircles(season) {
       }).addTo(map);
     }
 
-    if (selectedTown == null || selectedTown == town.name) {
+    if (selectedTown.name == null || selectedTown.name == town.name) {
       tradeData.transports.forEach((transport) => {
         // Manual
         if (transport.moves > 0) {
@@ -430,7 +433,10 @@ async function updateRangeCircles(season) {
 
 // Example function to be called when the button is clicked
 function pinButtonClicked(tmarker) {
-  selectedTown = tmarker.getTooltip().getContent();
+  selectedTown.name = tmarker.getTooltip().getContent();
+  selectedTown.x = tmarker.getLatLng().lng * 4;
+  selectedTown.y = tmarker.getLatLng().lat * 4;
+  selectedTown.marker = tmarker;
   updateSelectedTownDisplay();
   updateRangeCircles(currentSeason);
 }
@@ -439,8 +445,8 @@ function pinButtonClicked(tmarker) {
 function updateSelectedTownDisplay() {
   const displayElement = document.getElementById("selectedTownName");
   const displayDiv = document.getElementById("selectedTownDisplay");
-  if (selectedTown) {
-    displayElement.textContent = selectedTown;
+  if (selectedTown.name) {
+    displayElement.textContent = selectedTown.name;
     displayDiv.style.display = "block";
   } else {
     displayElement.textContent = "None";
@@ -450,7 +456,7 @@ function updateSelectedTownDisplay() {
 
 // Function to clear the selected town
 function clearSelectedTown() {
-  selectedTown = null;
+  selectedTown = {};
   updateSelectedTownDisplay(); // Clear the selected town display
   updateRangeCircles(currentSeason); // Update the range circles
 }
