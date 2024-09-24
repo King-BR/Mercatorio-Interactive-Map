@@ -5,6 +5,7 @@ async function init(season) {
   await loadTowns(season);
   await loadPlots(season);
   createFertilityOverlay(season);
+  createForestOverlay(season);
 
   document
     .getElementById("toggleRange1")
