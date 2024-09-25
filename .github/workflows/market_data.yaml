@@ -27,7 +27,7 @@ jobs:
         run: |
           # Initialize variables
           SUCCESS=true
-          echo '[]' > api_responses.json
+          responses=()
 
           # Read the towns.json file and extract town IDs, names, and locations
           TOWNS=$(jq -c '.[] | {id: .id, name: .name, location: .location}' assets/s2/towns.json)
@@ -46,9 +46,9 @@ jobs:
 
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
-              # If successful, append the response body to the JSON file with town details
+              # If successful, append the response body to the responses array with town details
               api_response=$(cat response_body.txt | jq --arg id "$town_id" --arg name "$town_name" --arg location "$town_location" '. + {town_id: $id, town_name: $name, town_location: $location}')
-              echo "$api_response" >> api_responses.json
+              responses+=("$api_response")
               echo "Request for town ID $town_id ($town_name) was successful"
             else
               # If any request fails, log the failure and mark the run as failed
@@ -62,13 +62,12 @@ jobs:
 
           # Check if all requests were successful
           if [ "$SUCCESS" = true ]; then
-            # If all requests were successful, move the responses to the final JSON file
-            mv api_responses.json assets/s2/marketData.json
+            # If all requests were successful, save the responses as a JSON array
+            printf '%s\n' "${responses[@]}" | jq -s '.' > assets/s2/marketData.json
             echo "All requests were successful. Saved results to assets/s2/marketData.json."
           else
             # If any requests failed, do not save the results
             echo "Some requests failed. No changes saved."
-            rm api_responses.json
             exit 1
           fi
 
