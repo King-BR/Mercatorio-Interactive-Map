@@ -4,6 +4,7 @@ var marketLayer = null;
 var items = [];
 
 async function loadMarketVisualizer(season) {
+  if (season !== "s2") return;
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
   marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
   marketLayer = L.layerGroup();
