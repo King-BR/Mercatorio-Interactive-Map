@@ -34,12 +34,16 @@ jobs:
 
           # Iterate over each town's data
           for town in $TOWNS; do
-            town_id=$(echo $town | jq -r '.id')
-            town_name=$(echo $town | jq -r '.name')
-            town_location=$(echo $town | jq -r '.location')
+            id=$(echo $town | jq -r '.id')
+            name=$(echo $town | jq -r '.name')
+            location=$(echo $town | jq -r '.location')
+
+            # Extract x and y coordinates from the location
+            x=$(echo $location | jq -r '.x')
+            y=$(echo $location | jq -r '.y')
 
             # Construct the API endpoint dynamically
-            endpoint="https://play.mercatorio.io/api/towns/${town_id}/marketdata"
+            endpoint="https://play.mercatorio.io/api/towns/${id}/marketdata"
 
             # Send the API request and capture the response status
             response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" -H "X-Merc-User: $MERC_USER" -H "Authorization: $AUTH_TOKEN")
@@ -47,12 +51,12 @@ jobs:
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
               # If successful, append the response body to the responses array with town details
-              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --arg location.x "$locationx" --arg location.y "$locationy" '. + {id: $id, name: $name, location: { x: $locationx, y: $locationy}}')
+              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --argjson location "{\"x\": $x, \"y\": $y}" '. + {id: $id, name: $name, location: $location}')
               responses+=("$api_response")
-              echo "Request for town ID $town_id ($town_name) was successful"
+              echo "Request for town ID $id ($name) was successful"
             else
               # If any request fails, log the failure and mark the run as failed
-              echo "Request for town ID $town_id ($town_name) failed with status $response"
+              echo "Request for town ID $id ($name) failed with status $response"
               SUCCESS=false
             fi
 
