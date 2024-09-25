@@ -2,11 +2,13 @@ var towns = [];
 var overlaysTransport = {};
 var selectedTown = {};
 var townsData = null;
+var townsLayer = null;
 
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
     towns = []; // Clear existing towns
+    townsLayer = L.layerGroup()
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     const tradeData = await fetchFromLocal(
       `assets/${season}/trade_ranges.json`
@@ -201,7 +203,6 @@ async function loadTowns(season) {
       }
 
       var tmpmarker = L.marker([markerY, markerX], { icon: marker })
-        .addTo(map)
         .bindTooltip(tooltipText)
         .bindPopup(statsStr, {
           minWidth: 200, // Minimum width of the popup
@@ -225,6 +226,10 @@ async function loadTowns(season) {
             });
           }
         });
+      
+      townsLayer.addLayer(tmpmarker);
+
+      if (!document.getElementById("toggleMarket").checked) map.addLayer(townsLayer);
 
       if (document.getElementById("toggleRange1").checked) {
         L.circle([markerY, markerX], {

@@ -4,6 +4,7 @@ async function init(season) {
   await initializeMap(season);
   await loadTowns(season);
   await loadPlots(season);
+  await loadMarketVisualizer(season);
   createFertilityOverlay(season);
   createForestOverlay(season);
 

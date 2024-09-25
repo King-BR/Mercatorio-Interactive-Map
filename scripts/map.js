@@ -3,8 +3,8 @@ var maxZoom = 5;
 var mapData = null;
 
 const zoomLevels = { s1: 5, s2: 5 };
-const mapWidth = 256 * 4;
-const mapHeight = 256 * 4;
+const mapWidth = 1024;
+const mapHeight = mapWidth;
 const padding = 600;
 const elasticBounds = [
   [-padding, -padding],
