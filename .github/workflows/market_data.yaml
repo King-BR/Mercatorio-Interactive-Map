@@ -47,7 +47,7 @@ jobs:
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
               # If successful, append the response body to the responses array with town details
-              api_response=$(cat response_body.txt | jq --arg id "$town_id" --arg name "$town_name" --arg location "$town_location" '. + {town_id: $id, town_name: $name, town_location: $location}')
+              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --arg location.x "$locationx" --arg location.y "$locationy" '. + {id: $id, name: $name, location: { x: $locationx, y: $locationy}}')
               responses+=("$api_response")
               echo "Request for town ID $town_id ($town_name) was successful"
             else
