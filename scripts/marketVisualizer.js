@@ -107,7 +107,7 @@ function createMarketVisualizer(item) {
           fillOpacity: 1,
         }
       ).bindTooltip(
-        `Town: ${data.name}<br>Price: ${prices[i]}<br>Volume: ${volumes[i]}`,
+        `Town: ${data.name}<br>Price: ${prices[i].toFixed(2)}<br>Volume: ${volumes[i]}`,
         {
           permanent: document.getElementById("toggleMarketTooltip").checked,
         }
