@@ -893,9 +893,12 @@
       }
     },
     "_ts": 1727305802616689,
-    "town_id": "60903487",
-    "town_name": "Suryes",
-    "town_location": "{\n  \"x\": 609,\n  \"y\": 3487\n}"
+    "id": "60903487",
+    "name": "Suryes",
+    "location": {
+      "x": 609,
+      "y": 3487
+    }
   },
   {
     "markets": {
@@ -1782,9 +1785,12 @@
       }
     },
     "_ts": 1727305802967217,
-    "town_id": "63703723",
-    "town_name": "Calille",
-    "town_location": "{\n  \"x\": 637,\n  \"y\": 3723\n}"
+    "id": "63703723",
+    "name": "Calille",
+    "location": {
+      "x": 637,
+      "y": 3723
+    }
   },
   {
     "markets": {
@@ -2648,9 +2654,12 @@
       }
     },
     "_ts": 1727305802844356,
-    "town_id": "65403587",
-    "town_name": "Sottehomme",
-    "town_location": "{\n  \"x\": 654,\n  \"y\": 3587\n}"
+    "id": "65403587",
+    "name": "Sottehomme",
+    "location": {
+      "x": 654,
+      "y": 3587
+    }
   },
   {
     "markets": {
@@ -3475,9 +3484,12 @@
       }
     },
     "_ts": 1727305802041651,
-    "town_id": "68903169",
-    "town_name": "Pareux",
-    "town_location": "{\n  \"x\": 689,\n  \"y\": 3169\n}"
+    "id": "68903169",
+    "name": "Pareux",
+    "location": {
+      "x": 689,
+      "y": 3169
+    }
   },
   {
     "markets": {
@@ -4357,9 +4369,12 @@
       }
     },
     "_ts": 1727305802777491,
-    "town_id": "79503397",
-    "town_name": "Nanand",
-    "town_location": "{\n  \"x\": 795,\n  \"y\": 3397\n}"
+    "id": "79503397",
+    "name": "Nanand",
+    "location": {
+      "x": 795,
+      "y": 3397
+    }
   },
   {
     "markets": {
@@ -5302,9 +5317,12 @@
       }
     },
     "_ts": 1727305802260966,
-    "town_id": "81500435",
-    "town_name": "Nottingding",
-    "town_location": "{\n  \"x\": 815,\n  \"y\": 435\n}"
+    "id": "81500435",
+    "name": "Nottingding",
+    "location": {
+      "x": 815,
+      "y": 435
+    }
   },
   {
     "markets": {
@@ -6275,9 +6293,12 @@
       }
     },
     "_ts": 1727305802723808,
-    "town_id": "83300963",
-    "town_name": "Blackley",
-    "town_location": "{\n  \"x\": 833,\n  \"y\": 963\n}"
+    "id": "83300963",
+    "name": "Blackley",
+    "location": {
+      "x": 833,
+      "y": 963
+    }
   },
   {
     "markets": {
@@ -7228,9 +7249,12 @@
       }
     },
     "_ts": 1727305802313289,
-    "town_id": "88000557",
-    "town_name": "Southfield",
-    "town_location": "{\n  \"x\": 880,\n  \"y\": 557\n}"
+    "id": "88000557",
+    "name": "Southfield",
+    "location": {
+      "x": 880,
+      "y": 557
+    }
   },
   {
     "markets": {
@@ -8112,9 +8136,12 @@
       }
     },
     "_ts": 1727305802465394,
-    "town_id": "90200749",
-    "town_name": "Canterstoft",
-    "town_location": "{\n  \"x\": 902,\n  \"y\": 749\n}"
+    "id": "90200749",
+    "name": "Canterstoft",
+    "location": {
+      "x": 902,
+      "y": 749
+    }
   },
   {
     "markets": {
@@ -9018,9 +9045,12 @@
       }
     },
     "_ts": 1727305802967191,
-    "town_id": "93403404",
-    "town_name": "Mulavy",
-    "town_location": "{\n  \"x\": 934,\n  \"y\": 3404\n}"
+    "id": "93403404",
+    "name": "Mulavy",
+    "location": {
+      "x": 934,
+      "y": 3404
+    }
   },
   {
     "markets": {
@@ -9929,9 +9959,12 @@
       }
     },
     "_ts": 1727305802908219,
-    "town_id": "93501170",
-    "town_name": "Kleinly",
-    "town_location": "{\n  \"x\": 935,\n  \"y\": 1170\n}"
+    "id": "93501170",
+    "name": "Kleinly",
+    "location": {
+      "x": 935,
+      "y": 1170
+    }
   },
   {
     "markets": {
@@ -10773,9 +10806,12 @@
       }
     },
     "_ts": 1727305802670527,
-    "town_id": "94200927",
-    "town_name": "Liverford",
-    "town_location": "{\n  \"x\": 942,\n  \"y\": 927\n}"
+    "id": "94200927",
+    "name": "Liverford",
+    "location": {
+      "x": 942,
+      "y": 927
+    }
   },
   {
     "markets": {
@@ -11663,9 +11699,12 @@
       }
     },
     "_ts": 1727305804749479,
-    "town_id": "101303254",
-    "town_name": "Orlebourg",
-    "town_location": "{\n  \"x\": 1013,\n  \"y\": 3254\n}"
+    "id": "101303254",
+    "name": "Orlebourg",
+    "location": {
+      "x": 1013,
+      "y": 3254
+    }
   },
   {
     "markets": {
@@ -12567,9 +12606,12 @@
       }
     },
     "_ts": 1727305804587897,
-    "town_id": "102301021",
-    "town_name": "Wiltondee",
-    "town_location": "{\n  \"x\": 1023,\n  \"y\": 1021\n}"
+    "id": "102301021",
+    "name": "Wiltondee",
+    "location": {
+      "x": 1023,
+      "y": 1021
+    }
   },
   {
     "markets": {
@@ -13468,9 +13510,12 @@
       }
     },
     "_ts": 1727305803027951,
-    "town_id": "105103362",
-    "town_name": "Lauque",
-    "town_location": "{\n  \"x\": 1051,\n  \"y\": 3362\n}"
+    "id": "105103362",
+    "name": "Lauque",
+    "location": {
+      "x": 1051,
+      "y": 3362
+    }
   },
   {
     "markets": {
@@ -14368,9 +14413,12 @@
       }
     },
     "_ts": 1727305803833220,
-    "town_id": "112900992",
-    "town_name": "Carmarquay",
-    "town_location": "{\n  \"x\": 1129,\n  \"y\": 992\n}"
+    "id": "112900992",
+    "name": "Carmarquay",
+    "location": {
+      "x": 1129,
+      "y": 992
+    }
   },
   {
     "markets": {
@@ -15252,9 +15300,12 @@
       }
     },
     "_ts": 1727305804118046,
-    "town_id": "118000792",
-    "town_name": "Shefquay",
-    "town_location": "{\n  \"x\": 1180,\n  \"y\": 792\n}"
+    "id": "118000792",
+    "name": "Shefquay",
+    "location": {
+      "x": 1180,
+      "y": 792
+    }
   },
   {
     "markets": {
@@ -16167,9 +16218,12 @@
       }
     },
     "_ts": 1727305802777474,
-    "town_id": "118603125",
-    "town_name": "Veraux",
-    "town_location": "{\n  \"x\": 1186,\n  \"y\": 3125\n}"
+    "id": "118603125",
+    "name": "Veraux",
+    "location": {
+      "x": 1186,
+      "y": 3125
+    }
   },
   {
     "markets": {
@@ -17133,9 +17187,12 @@
       }
     },
     "_ts": 1727305803086368,
-    "town_id": "120503824",
-    "town_name": "Dunllier",
-    "town_location": "{\n  \"x\": 1205,\n  \"y\": 3824\n}"
+    "id": "120503824",
+    "name": "Dunllier",
+    "location": {
+      "x": 1205,
+      "y": 3824
+    }
   },
   {
     "markets": {
@@ -18020,9 +18077,12 @@
       }
     },
     "_ts": 1727305803145359,
-    "town_id": "129000768",
-    "town_name": "Brisburh",
-    "town_location": "{\n  \"x\": 1290,\n  \"y\": 768\n}"
+    "id": "129000768",
+    "name": "Brisburh",
+    "location": {
+      "x": 1290,
+      "y": 768
+    }
   },
   {
     "markets": {
@@ -18924,9 +18984,12 @@
       }
     },
     "_ts": 1727305803474928,
-    "town_id": "134903866",
-    "town_name": "Rouges",
-    "town_location": "{\n  \"x\": 1349,\n  \"y\": 3866\n}"
+    "id": "134903866",
+    "name": "Rouges",
+    "location": {
+      "x": 1349,
+      "y": 3866
+    }
   },
   {
     "markets": {
@@ -19888,9 +19951,12 @@
       }
     },
     "_ts": 1727305804303072,
-    "town_id": "136603589",
-    "town_name": "Calmont",
-    "town_location": "{\n  \"x\": 1366,\n  \"y\": 3589\n}"
+    "id": "136603589",
+    "name": "Calmont",
+    "location": {
+      "x": 1366,
+      "y": 3589
+    }
   },
   {
     "markets": {
@@ -20785,9 +20851,12 @@
       }
     },
     "_ts": 1727305803474937,
-    "town_id": "137403767",
-    "town_name": "Poque",
-    "town_location": "{\n  \"x\": 1374,\n  \"y\": 3767\n}"
+    "id": "137403767",
+    "name": "Poque",
+    "location": {
+      "x": 1374,
+      "y": 3767
+    }
   },
   {
     "markets": {
@@ -21693,9 +21762,12 @@
       }
     },
     "_ts": 1727305803736000,
-    "town_id": "142100901",
-    "town_name": "Niederscheid",
-    "town_location": "{\n  \"x\": 1421,\n  \"y\": 901\n}"
+    "id": "142100901",
+    "name": "Niederscheid",
+    "location": {
+      "x": 1421,
+      "y": 901
+    }
   },
   {
     "markets": {
@@ -22567,9 +22639,12 @@
       }
     },
     "_ts": 1727305805445335,
-    "town_id": "147400239",
-    "town_name": "Lonbay",
-    "town_location": "{\n  \"x\": 1474,\n  \"y\": 239\n}"
+    "id": "147400239",
+    "name": "Lonbay",
+    "location": {
+      "x": 1474,
+      "y": 239
+    }
   },
   {
     "markets": {
@@ -23362,9 +23437,12 @@
       }
     },
     "_ts": 1727305803623126,
-    "town_id": "147401758",
-    "town_name": "Eindkirchen",
-    "town_location": "{\n  \"x\": 1474,\n  \"y\": 1758\n}"
+    "id": "147401758",
+    "name": "Eindkirchen",
+    "location": {
+      "x": 1474,
+      "y": 1758
+    }
   },
   {
     "markets": {
@@ -24284,9 +24362,12 @@
       }
     },
     "_ts": 1727305926479402,
-    "town_id": "147700992",
-    "town_name": "Frankfels",
-    "town_location": "{\n  \"x\": 1477,\n  \"y\": 992\n}"
+    "id": "147700992",
+    "name": "Frankfels",
+    "location": {
+      "x": 1477,
+      "y": 992
+    }
   },
   {
     "markets": {
@@ -25186,9 +25267,12 @@
       }
     },
     "_ts": 1727305803474933,
-    "town_id": "148603820",
-    "town_name": "Montans",
-    "town_location": "{\n  \"x\": 1486,\n  \"y\": 3820\n}"
+    "id": "148603820",
+    "name": "Montans",
+    "location": {
+      "x": 1486,
+      "y": 3820
+    }
   },
   {
     "markets": {
@@ -26082,9 +26166,12 @@
       }
     },
     "_ts": 1727305803948487,
-    "town_id": "148803492",
-    "town_name": "Surans",
-    "town_location": "{\n  \"x\": 1488,\n  \"y\": 3492\n}"
+    "id": "148803492",
+    "name": "Surans",
+    "location": {
+      "x": 1488,
+      "y": 3492
+    }
   },
   {
     "markets": {
@@ -26935,9 +27022,12 @@
       }
     },
     "_ts": 1727307006098217,
-    "town_id": "150201864",
-    "town_name": "Braunden",
-    "town_location": "{\n  \"x\": 1502,\n  \"y\": 1864\n}"
+    "id": "150201864",
+    "name": "Braunden",
+    "location": {
+      "x": 1502,
+      "y": 1864
+    }
   },
   {
     "markets": {
@@ -27841,9 +27931,12 @@
       }
     },
     "_ts": 1727305804004625,
-    "town_id": "154900809",
-    "town_name": "Münchburg",
-    "town_location": "{\n  \"x\": 1549,\n  \"y\": 809\n}"
+    "id": "154900809",
+    "name": "Münchburg",
+    "location": {
+      "x": 1549,
+      "y": 809
+    }
   },
   {
     "markets": {
@@ -28709,9 +28802,12 @@
       }
     },
     "_ts": 1727305804533355,
-    "town_id": "161001099",
-    "town_name": "Lichtennieder",
-    "town_location": "{\n  \"x\": 1610,\n  \"y\": 1099\n}"
+    "id": "161001099",
+    "name": "Lichtennieder",
+    "location": {
+      "x": 1610,
+      "y": 1099
+    }
   },
   {
     "markets": {
@@ -29618,9 +29714,12 @@
       }
     },
     "_ts": 1727305806090205,
-    "town_id": "161300612",
-    "town_name": "Wiltoneem",
-    "town_location": "{\n  \"x\": 1613,\n  \"y\": 612\n}"
+    "id": "161300612",
+    "name": "Wiltoneem",
+    "location": {
+      "x": 1613,
+      "y": 612
+    }
   },
   {
     "markets": {
@@ -30554,9 +30653,12 @@
       }
     },
     "_ts": 1727305804587977,
-    "town_id": "163000920",
-    "town_name": "Berwiese",
-    "town_location": "{\n  \"x\": 1630,\n  \"y\": 920\n}"
+    "id": "163000920",
+    "name": "Berwiese",
+    "location": {
+      "x": 1630,
+      "y": 920
+    }
   },
   {
     "markets": {
@@ -31460,9 +31562,12 @@
       }
     },
     "_ts": 1727305805332025,
-    "town_id": "163203463",
-    "town_name": "Laugnan",
-    "town_location": "{\n  \"x\": 1632,\n  \"y\": 3463\n}"
+    "id": "163203463",
+    "name": "Laugnan",
+    "location": {
+      "x": 1632,
+      "y": 3463
+    }
   },
   {
     "markets": {
@@ -32320,9 +32425,12 @@
       }
     },
     "_ts": 1727305805819832,
-    "town_id": "164500737",
-    "town_name": "Frankaue",
-    "town_location": "{\n  \"x\": 1645,\n  \"y\": 737\n}"
+    "id": "164500737",
+    "name": "Frankaue",
+    "location": {
+      "x": 1645,
+      "y": 737
+    }
   },
   {
     "markets": {
@@ -33231,9 +33339,12 @@
       }
     },
     "_ts": 1727305804987417,
-    "town_id": "166703806",
-    "town_name": "Etaiqueilles",
-    "town_location": "{\n  \"x\": 1667,\n  \"y\": 3806\n}"
+    "id": "166703806",
+    "name": "Etaiqueilles",
+    "location": {
+      "x": 1667,
+      "y": 3806
+    }
   },
   {
     "markets": {
@@ -34168,9 +34279,12 @@
       }
     },
     "_ts": 1727305805446355,
-    "town_id": "167900398",
-    "town_name": "Kleinkirchen",
-    "town_location": "{\n  \"x\": 1679,\n  \"y\": 398\n}"
+    "id": "167900398",
+    "name": "Kleinkirchen",
+    "location": {
+      "x": 1679,
+      "y": 398
+    }
   },
   {
     "markets": {
@@ -35079,9 +35193,12 @@
       }
     },
     "_ts": 1727305804587968,
-    "town_id": "169001022",
-    "town_name": "Großdon",
-    "town_location": "{\n  \"x\": 1690,\n  \"y\": 1022\n}"
+    "id": "169001022",
+    "name": "Großdon",
+    "location": {
+      "x": 1690,
+      "y": 1022
+    }
   },
   {
     "markets": {
@@ -35997,9 +36114,12 @@
       }
     },
     "_ts": 1727305804693739,
-    "town_id": "170603659",
-    "town_name": "Etallyes",
-    "town_location": "{\n  \"x\": 1706,\n  \"y\": 3659\n}"
+    "id": "170603659",
+    "name": "Etallyes",
+    "location": {
+      "x": 1706,
+      "y": 3659
+    }
   },
   {
     "markets": {
@@ -36955,9 +37075,12 @@
       }
     },
     "_ts": 1727305804587939,
-    "town_id": "171301142",
-    "town_name": "Unterhufe",
-    "town_location": "{\n  \"x\": 1713,\n  \"y\": 1142\n}"
+    "id": "171301142",
+    "name": "Unterhufe",
+    "location": {
+      "x": 1713,
+      "y": 1142
+    }
   },
   {
     "markets": {
@@ -37880,9 +38003,12 @@
       }
     },
     "_ts": 1727305804804185,
-    "town_id": "175200265",
-    "town_name": "Tatcham",
-    "town_location": "{\n  \"x\": 1752,\n  \"y\": 265\n}"
+    "id": "175200265",
+    "name": "Tatcham",
+    "location": {
+      "x": 1752,
+      "y": 265
+    }
   },
   {
     "markets": {
@@ -38739,9 +38865,12 @@
       }
     },
     "_ts": 1727305804693770,
-    "town_id": "178403841",
-    "town_name": "Varamiens",
-    "town_location": "{\n  \"x\": 1784,\n  \"y\": 3841\n}"
+    "id": "178403841",
+    "name": "Varamiens",
+    "location": {
+      "x": 1784,
+      "y": 3841
+    }
   },
   {
     "markets": {
@@ -39638,9 +39767,12 @@
       }
     },
     "_ts": 1727305804587963,
-    "town_id": "179601073",
-    "town_name": "Münchaue",
-    "town_location": "{\n  \"x\": 1796,\n  \"y\": 1073\n}"
+    "id": "179601073",
+    "name": "Münchaue",
+    "location": {
+      "x": 1796,
+      "y": 1073
+    }
   },
   {
     "markets": {
@@ -40557,9 +40689,12 @@
       }
     },
     "_ts": 1727305805819842,
-    "town_id": "180500954",
-    "town_name": "Hamfurt",
-    "town_location": "{\n  \"x\": 1805,\n  \"y\": 954\n}"
+    "id": "180500954",
+    "name": "Hamfurt",
+    "location": {
+      "x": 1805,
+      "y": 954
+    }
   },
   {
     "markets": {
@@ -41444,9 +41579,12 @@
       }
     },
     "_ts": 1727307106917122,
-    "town_id": "182403642",
-    "town_name": "Avitot",
-    "town_location": "{\n  \"x\": 1824,\n  \"y\": 3642\n}"
+    "id": "182403642",
+    "name": "Avitot",
+    "location": {
+      "x": 1824,
+      "y": 3642
+    }
   },
   {
     "markets": {
@@ -42343,9 +42481,12 @@
       }
     },
     "_ts": 1727305805571448,
-    "town_id": "187603748",
-    "town_name": "Dunfort",
-    "town_location": "{\n  \"x\": 1876,\n  \"y\": 3748\n}"
+    "id": "187603748",
+    "name": "Dunfort",
+    "location": {
+      "x": 1876,
+      "y": 3748
+    }
   },
   {
     "markets": {
@@ -43262,9 +43403,12 @@
       }
     },
     "_ts": 1727305805391553,
-    "town_id": "190003520",
-    "town_name": "Bordenes",
-    "town_location": "{\n  \"x\": 1900,\n  \"y\": 3520\n}"
+    "id": "190003520",
+    "name": "Bordenes",
+    "location": {
+      "x": 1900,
+      "y": 3520
+    }
   },
   {
     "markets": {
@@ -44169,9 +44313,12 @@
       }
     },
     "_ts": 1727305805446366,
-    "town_id": "190600320",
-    "town_name": "Salisruhe",
-    "town_location": "{\n  \"x\": 1906,\n  \"y\": 320\n}"
+    "id": "190600320",
+    "name": "Salisruhe",
+    "location": {
+      "x": 1906,
+      "y": 320
+    }
   },
   {
     "markets": {
@@ -44977,9 +45124,12 @@
       }
     },
     "_ts": 1727305806148886,
-    "town_id": "195202174",
-    "town_name": "Bouruen",
-    "town_location": "{\n  \"x\": 1952,\n  \"y\": 2174\n}"
+    "id": "195202174",
+    "name": "Bouruen",
+    "location": {
+      "x": 1952,
+      "y": 2174
+    }
   },
   {
     "markets": {
@@ -45886,9 +46036,12 @@
       }
     },
     "_ts": 1727305805571431,
-    "town_id": "195903184",
-    "town_name": "Liegues",
-    "town_location": "{\n  \"x\": 1959,\n  \"y\": 3184\n}"
+    "id": "195903184",
+    "name": "Liegues",
+    "location": {
+      "x": 1959,
+      "y": 3184
+    }
   },
   {
     "markets": {
@@ -46786,9 +46939,12 @@
       }
     },
     "_ts": 1727305805571402,
-    "town_id": "196303401",
-    "town_name": "Toqueaen",
-    "town_location": "{\n  \"x\": 1963,\n  \"y\": 3401\n}"
+    "id": "196303401",
+    "name": "Toqueaen",
+    "location": {
+      "x": 1963,
+      "y": 3401
+    }
   },
   {
     "markets": {
@@ -47656,9 +47812,12 @@
       }
     },
     "_ts": 1727305805571406,
-    "town_id": "200003081",
-    "town_name": "Monton",
-    "town_location": "{\n  \"x\": 2000,\n  \"y\": 3081\n}"
+    "id": "200003081",
+    "name": "Monton",
+    "location": {
+      "x": 2000,
+      "y": 3081
+    }
   },
   {
     "markets": {
@@ -48555,9 +48714,12 @@
       }
     },
     "_ts": 1727305805650152,
-    "town_id": "201103682",
-    "town_name": "Octeon",
-    "town_location": "{\n  \"x\": 2011,\n  \"y\": 3682\n}"
+    "id": "201103682",
+    "name": "Octeon",
+    "location": {
+      "x": 2011,
+      "y": 3682
+    }
   },
   {
     "markets": {
@@ -49419,9 +49581,12 @@
       }
     },
     "_ts": 1727305805446345,
-    "town_id": "203900286",
-    "town_name": "Niederroth",
-    "town_location": "{\n  \"x\": 2039,\n  \"y\": 286\n}"
+    "id": "203900286",
+    "name": "Niederroth",
+    "location": {
+      "x": 2039,
+      "y": 286
+    }
   },
   {
     "markets": {
@@ -50316,9 +50481,12 @@
       }
     },
     "_ts": 1727305806090153,
-    "town_id": "203901166",
-    "town_name": "Altmünde",
-    "town_location": "{\n  \"x\": 2039,\n  \"y\": 1166\n}"
+    "id": "203901166",
+    "name": "Altmünde",
+    "location": {
+      "x": 2039,
+      "y": 1166
+    }
   },
   {
     "markets": {
@@ -51207,9 +51375,12 @@
       }
     },
     "_ts": 1727305805819824,
-    "town_id": "204301021",
-    "town_name": "Neudorf",
-    "town_location": "{\n  \"x\": 2043,\n  \"y\": 1021\n}"
+    "id": "204301021",
+    "name": "Neudorf",
+    "location": {
+      "x": 2043,
+      "y": 1021
+    }
   },
   {
     "markets": {
@@ -52179,9 +52350,12 @@
       }
     },
     "_ts": 1727305805571440,
-    "town_id": "204302988",
-    "town_name": "Touland",
-    "town_location": "{\n  \"x\": 2043,\n  \"y\": 2988\n}"
+    "id": "204302988",
+    "name": "Touland",
+    "location": {
+      "x": 2043,
+      "y": 2988
+    }
   },
   {
     "markets": {
@@ -53066,9 +53240,12 @@
       }
     },
     "_ts": 1727305805650143,
-    "town_id": "206603523",
-    "town_name": "Verilles",
-    "town_location": "{\n  \"x\": 2066,\n  \"y\": 3523\n}"
+    "id": "206603523",
+    "name": "Verilles",
+    "location": {
+      "x": 2066,
+      "y": 3523
+    }
   },
   {
     "markets": {
@@ -53962,9 +54139,12 @@
       }
     },
     "_ts": 1727305806652635,
-    "town_id": "210900198",
-    "town_name": "Luddon",
-    "town_location": "{\n  \"x\": 2109,\n  \"y\": 198\n}"
+    "id": "210900198",
+    "name": "Luddon",
+    "location": {
+      "x": 2109,
+      "y": 198
+    }
   },
   {
     "markets": {
@@ -54847,9 +55027,12 @@
       }
     },
     "_ts": 1727305805819814,
-    "town_id": "213601134",
-    "town_name": "Wolfsbergheim",
-    "town_location": "{\n  \"x\": 2136,\n  \"y\": 1134\n}"
+    "id": "213601134",
+    "name": "Wolfsbergheim",
+    "location": {
+      "x": 2136,
+      "y": 1134
+    }
   },
   {
     "markets": {
@@ -55736,9 +55919,12 @@
       }
     },
     "_ts": 1727305805571421,
-    "town_id": "214603140",
-    "town_name": "Vacquedalle",
-    "town_location": "{\n  \"x\": 2146,\n  \"y\": 3140\n}"
+    "id": "214603140",
+    "name": "Vacquedalle",
+    "location": {
+      "x": 2146,
+      "y": 3140
+    }
   },
   {
     "markets": {
@@ -56749,9 +56935,12 @@
       }
     },
     "_ts": 1727305805900250,
-    "town_id": "214603657",
-    "town_name": "Bordefort",
-    "town_location": "{\n  \"x\": 2146,\n  \"y\": 3657\n}"
+    "id": "214603657",
+    "name": "Bordefort",
+    "location": {
+      "x": 2146,
+      "y": 3657
+    }
   },
   {
     "markets": {
@@ -57751,9 +57940,12 @@
       }
     },
     "_ts": 1727305806854757,
-    "town_id": "219301043",
-    "town_name": "Dortruhe",
-    "town_location": "{\n  \"x\": 2193,\n  \"y\": 1043\n}"
+    "id": "219301043",
+    "name": "Dortruhe",
+    "location": {
+      "x": 2193,
+      "y": 1043
+    }
   },
   {
     "markets": {
@@ -58696,9 +58888,12 @@
       }
     },
     "_ts": 1727305806090051,
-    "town_id": "228200962",
-    "town_name": "Münchnger",
-    "town_location": "{\n  \"x\": 2282,\n  \"y\": 962\n}"
+    "id": "228200962",
+    "name": "Münchnger",
+    "location": {
+      "x": 2282,
+      "y": 962
+    }
   },
   {
     "markets": {
@@ -59750,9 +59945,12 @@
       }
     },
     "_ts": 1727306959283818,
-    "town_id": "231203566",
-    "town_name": "Muladjon",
-    "town_location": "{\n  \"x\": 2312,\n  \"y\": 3566\n}"
+    "id": "231203566",
+    "name": "Muladjon",
+    "location": {
+      "x": 2312,
+      "y": 3566
+    }
   },
   {
     "markets": {
@@ -60644,9 +60842,12 @@
       }
     },
     "_ts": 1727305806090169,
-    "town_id": "238101011",
-    "town_name": "Uppvella",
-    "town_location": "{\n  \"x\": 2381,\n  \"y\": 1011\n}"
+    "id": "238101011",
+    "name": "Uppvella",
+    "location": {
+      "x": 2381,
+      "y": 1011
+    }
   },
   {
     "markets": {
@@ -61591,9 +61792,12 @@
       }
     },
     "_ts": 1727306959283867,
-    "town_id": "243903571",
-    "town_name": "Angetot",
-    "town_location": "{\n  \"x\": 2439,\n  \"y\": 3571\n}"
+    "id": "243903571",
+    "name": "Angetot",
+    "location": {
+      "x": 2439,
+      "y": 3571
+    }
   },
   {
     "markets": {
@@ -62509,9 +62713,12 @@
       }
     },
     "_ts": 1727305806362226,
-    "town_id": "245900869",
-    "town_name": "Gävden",
-    "town_location": "{\n  \"x\": 2459,\n  \"y\": 869\n}"
+    "id": "245900869",
+    "name": "Gävden",
+    "location": {
+      "x": 2459,
+      "y": 869
+    }
   },
   {
     "markets": {
@@ -63359,9 +63566,12 @@
       }
     },
     "_ts": 1727305806148905,
-    "town_id": "248102079",
-    "town_name": "Verque",
-    "town_location": "{\n  \"x\": 2481,\n  \"y\": 2079\n}"
+    "id": "248102079",
+    "name": "Verque",
+    "location": {
+      "x": 2481,
+      "y": 2079
+    }
   },
   {
     "markets": {
@@ -64269,9 +64479,12 @@
       }
     },
     "_ts": 1727305809006022,
-    "town_id": "262300855",
-    "town_name": "Niederruhe",
-    "town_location": "{\n  \"x\": 2623,\n  \"y\": 855\n}"
+    "id": "262300855",
+    "name": "Niederruhe",
+    "location": {
+      "x": 2623,
+      "y": 855
+    }
   },
   {
     "markets": {
@@ -65158,9 +65371,12 @@
       }
     },
     "_ts": 1727305806855036,
-    "town_id": "264100692",
-    "town_name": "Jönkövella",
-    "town_location": "{\n  \"x\": 2641,\n  \"y\": 692\n}"
+    "id": "264100692",
+    "name": "Jönkövella",
+    "location": {
+      "x": 2641,
+      "y": 692
+    }
   },
   {
     "markets": {
@@ -66078,9 +66294,12 @@
       }
     },
     "_ts": 1727305807194838,
-    "town_id": "264600988",
-    "town_name": "Trondde",
-    "town_location": "{\n  \"x\": 2646,\n  \"y\": 988\n}"
+    "id": "264600988",
+    "name": "Trondde",
+    "location": {
+      "x": 2646,
+      "y": 988
+    }
   },
   {
     "markets": {
@@ -66987,9 +67206,12 @@
       }
     },
     "_ts": 1727305808467703,
-    "town_id": "266600508",
-    "town_name": "Gerile",
-    "town_location": "{\n  \"x\": 2666,\n  \"y\": 508\n}"
+    "id": "266600508",
+    "name": "Gerile",
+    "location": {
+      "x": 2666,
+      "y": 508
+    }
   },
   {
     "markets": {
@@ -67949,9 +68171,12 @@
       }
     },
     "_ts": 1727306959283844,
-    "town_id": "267303592",
-    "town_name": "Daugavalinn",
-    "town_location": "{\n  \"x\": 2673,\n  \"y\": 3592\n}"
+    "id": "267303592",
+    "name": "Daugavalinn",
+    "location": {
+      "x": 2673,
+      "y": 3592
+    }
   },
   {
     "markets": {
@@ -68845,9 +69070,12 @@
       }
     },
     "_ts": 1727306401204377,
-    "town_id": "269201155",
-    "town_name": "Unterbrücken",
-    "town_location": "{\n  \"x\": 2692,\n  \"y\": 1155\n}"
+    "id": "269201155",
+    "name": "Unterbrücken",
+    "location": {
+      "x": 2692,
+      "y": 1155
+    }
   },
   {
     "markets": {
@@ -69735,9 +69963,12 @@
       }
     },
     "_ts": 1727305806723551,
-    "town_id": "271900210",
-    "town_name": "Karlmoki",
-    "town_location": "{\n  \"x\": 2719,\n  \"y\": 210\n}"
+    "id": "271900210",
+    "name": "Karlmoki",
+    "location": {
+      "x": 2719,
+      "y": 210
+    }
   },
   {
     "markets": {
@@ -70655,9 +70886,12 @@
       }
     },
     "_ts": 1727305809006077,
-    "town_id": "271900380",
-    "town_name": "Gerivall",
-    "town_location": "{\n  \"x\": 2719,\n  \"y\": 380\n}"
+    "id": "271900380",
+    "name": "Gerivall",
+    "location": {
+      "x": 2719,
+      "y": 380
+    }
   },
   {
     "markets": {
@@ -71564,9 +71798,12 @@
       }
     },
     "_ts": 1727305809006083,
-    "town_id": "276300836",
-    "town_name": "Neuvella",
-    "town_location": "{\n  \"x\": 2763,\n  \"y\": 836\n}"
+    "id": "276300836",
+    "name": "Neuvella",
+    "location": {
+      "x": 2763,
+      "y": 836
+    }
   },
   {
     "markets": {
@@ -72498,9 +72735,12 @@
       }
     },
     "_ts": 1727305808833753,
-    "town_id": "276600470",
-    "town_name": "Norrman",
-    "town_location": "{\n  \"x\": 2766,\n  \"y\": 470\n}"
+    "id": "276600470",
+    "name": "Norrman",
+    "location": {
+      "x": 2766,
+      "y": 470
+    }
   },
   {
     "markets": {
@@ -73401,9 +73641,12 @@
       }
     },
     "_ts": 1727305807747041,
-    "town_id": "280301044",
-    "town_name": "Kirchrecht",
-    "town_location": "{\n  \"x\": 2803,\n  \"y\": 1044\n}"
+    "id": "280301044",
+    "name": "Kirchrecht",
+    "location": {
+      "x": 2803,
+      "y": 1044
+    }
   },
   {
     "markets": {
@@ -74338,9 +74581,12 @@
       }
     },
     "_ts": 1727305808833699,
-    "town_id": "280701146",
-    "town_name": "Potsmühle",
-    "town_location": "{\n  \"x\": 2807,\n  \"y\": 1146\n}"
+    "id": "280701146",
+    "name": "Potsmühle",
+    "location": {
+      "x": 2807,
+      "y": 1146
+    }
   },
   {
     "markets": {
@@ -75260,9 +75506,12 @@
       }
     },
     "_ts": 1727305808833691,
-    "town_id": "286500413",
-    "town_name": "Koldhaga",
-    "town_location": "{\n  \"x\": 2865,\n  \"y\": 413\n}"
+    "id": "286500413",
+    "name": "Koldhaga",
+    "location": {
+      "x": 2865,
+      "y": 413
+    }
   },
   {
     "markets": {
@@ -76227,9 +76476,12 @@
       }
     },
     "_ts": 1727305809006072,
-    "town_id": "287300643",
-    "town_name": "Stale",
-    "town_location": "{\n  \"x\": 2873,\n  \"y\": 643\n}"
+    "id": "287300643",
+    "name": "Stale",
+    "location": {
+      "x": 2873,
+      "y": 643
+    }
   },
   {
     "markets": {
@@ -77124,9 +77376,12 @@
       }
     },
     "_ts": 1727305809222968,
-    "town_id": "287900523",
-    "town_name": "Thorhaga",
-    "town_location": "{\n  \"x\": 2879,\n  \"y\": 523\n}"
+    "id": "287900523",
+    "name": "Thorhaga",
+    "location": {
+      "x": 2879,
+      "y": 523
+    }
   },
   {
     "markets": {
@@ -78078,9 +78333,12 @@
       }
     },
     "_ts": 1727305808467744,
-    "town_id": "289400965",
-    "town_name": "Arnborg",
-    "town_location": "{\n  \"x\": 2894,\n  \"y\": 965\n}"
+    "id": "289400965",
+    "name": "Arnborg",
+    "location": {
+      "x": 2894,
+      "y": 965
+    }
   },
   {
     "markets": {
@@ -79009,9 +79267,12 @@
       }
     },
     "_ts": 1727305807747106,
-    "town_id": "293001097",
-    "town_name": "Großmühle",
-    "town_location": "{\n  \"x\": 2930,\n  \"y\": 1097\n}"
+    "id": "293001097",
+    "name": "Großmühle",
+    "location": {
+      "x": 2930,
+      "y": 1097
+    }
   },
   {
     "markets": {
@@ -79942,9 +80203,12 @@
       }
     },
     "_ts": 1727305809006049,
-    "town_id": "295400862",
-    "town_name": "Karlbro",
-    "town_location": "{\n  \"x\": 2954,\n  \"y\": 862\n}"
+    "id": "295400862",
+    "name": "Karlbro",
+    "location": {
+      "x": 2954,
+      "y": 862
+    }
   },
   {
     "markets": {
@@ -80983,10 +81247,13 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727307400933857,
-    "town_id": "295900588",
-    "town_name": "Örestad",
-    "town_location": "{\n  \"x\": 2959,\n  \"y\": 588\n}"
+    "_ts": 1727307897276655,
+    "id": "295900588",
+    "name": "Örestad",
+    "location": {
+      "x": 2959,
+      "y": 588
+    }
   },
   {
     "markets": {
@@ -81971,9 +82238,12 @@
       }
     },
     "_ts": 1727306959283787,
-    "town_id": "296003490",
-    "town_name": "Kärdovo",
-    "town_location": "{\n  \"x\": 2960,\n  \"y\": 3490\n}"
+    "id": "296003490",
+    "name": "Kärdovo",
+    "location": {
+      "x": 2960,
+      "y": 3490
+    }
   },
   {
     "markets": {
@@ -83019,9 +83289,12 @@
       }
     },
     "_ts": 1727305810871420,
-    "town_id": "300900749",
-    "town_name": "Esholm",
-    "town_location": "{\n  \"x\": 3009,\n  \"y\": 749\n}"
+    "id": "300900749",
+    "name": "Esholm",
+    "location": {
+      "x": 3009,
+      "y": 749
+    }
   },
   {
     "markets": {
@@ -83875,9 +84148,12 @@
       }
     },
     "_ts": 1727305811219707,
-    "town_id": "301703335",
-    "town_name": "Gulnewo",
-    "town_location": "{\n  \"x\": 3017,\n  \"y\": 3335\n}"
+    "id": "301703335",
+    "name": "Gulnewo",
+    "location": {
+      "x": 3017,
+      "y": 3335
+    }
   },
   {
     "markets": {
@@ -84785,9 +85061,12 @@
       }
     },
     "_ts": 1727307100655282,
-    "town_id": "302403588",
-    "town_name": "Ukanga",
-    "town_location": "{\n  \"x\": 3024,\n  \"y\": 3588\n}"
+    "id": "302403588",
+    "name": "Ukanga",
+    "location": {
+      "x": 3024,
+      "y": 3588
+    }
   },
   {
     "markets": {
@@ -85672,9 +85951,12 @@
       }
     },
     "_ts": 1727305809223037,
-    "town_id": "302500488",
-    "town_name": "Stade",
-    "town_location": "{\n  \"x\": 3025,\n  \"y\": 488\n}"
+    "id": "302500488",
+    "name": "Stade",
+    "location": {
+      "x": 3025,
+      "y": 488
+    }
   },
   {
     "markets": {
@@ -86614,9 +86896,12 @@
       }
     },
     "_ts": 1727305809223042,
-    "town_id": "309500565",
-    "town_name": "Esen",
-    "town_location": "{\n  \"x\": 3095,\n  \"y\": 565\n}"
+    "id": "309500565",
+    "name": "Esen",
+    "location": {
+      "x": 3095,
+      "y": 565
+    }
   },
   {
     "markets": {
@@ -87528,9 +87813,12 @@
       }
     },
     "_ts": 1727307100655330,
-    "town_id": "311603677",
-    "town_name": "Varsalu",
-    "town_location": "{\n  \"x\": 3116,\n  \"y\": 3677\n}"
+    "id": "311603677",
+    "name": "Varsalu",
+    "location": {
+      "x": 3116,
+      "y": 3677
+    }
   },
   {
     "markets": {
@@ -88397,9 +88685,12 @@
       }
     },
     "_ts": 1727305810871611,
-    "town_id": "313301060",
-    "town_name": "Gerisund",
-    "town_location": "{\n  \"x\": 3133,\n  \"y\": 1060\n}"
+    "id": "313301060",
+    "name": "Gerisund",
+    "location": {
+      "x": 3133,
+      "y": 1060
+    }
   },
   {
     "markets": {
@@ -89283,9 +89574,12 @@
       }
     },
     "_ts": 1727305811219687,
-    "town_id": "314203467",
-    "town_name": "Vilva",
-    "town_location": "{\n  \"x\": 3142,\n  \"y\": 3467\n}"
+    "id": "314203467",
+    "name": "Vilva",
+    "location": {
+      "x": 3142,
+      "y": 3467
+    }
   },
   {
     "markets": {
@@ -90207,9 +90501,12 @@
       }
     },
     "_ts": 1727307087398040,
-    "town_id": "324403790",
-    "town_name": "Novova",
-    "town_location": "{\n  \"x\": 3244,\n  \"y\": 3790\n}"
+    "id": "324403790",
+    "name": "Novova",
+    "location": {
+      "x": 3244,
+      "y": 3790
+    }
   },
   {
     "markets": {
@@ -91113,9 +91410,12 @@
       }
     },
     "_ts": 1727305811322923,
-    "town_id": "325000982",
-    "town_name": "Öremalm",
-    "town_location": "{\n  \"x\": 3250,\n  \"y\": 982\n}"
+    "id": "325000982",
+    "name": "Öremalm",
+    "location": {
+      "x": 3250,
+      "y": 982
+    }
   },
   {
     "markets": {
@@ -92050,9 +92350,12 @@
       }
     },
     "_ts": 1727305811037006,
-    "town_id": "327703576",
-    "town_name": "Marijamlinn",
-    "town_location": "{\n  \"x\": 3277,\n  \"y\": 3576\n}"
+    "id": "327703576",
+    "name": "Marijamlinn",
+    "location": {
+      "x": 3277,
+      "y": 3576
+    }
   },
   {
     "markets": {
@@ -92974,9 +93277,12 @@
       }
     },
     "_ts": 1727305811752785,
-    "town_id": "329503409",
-    "town_name": "Duboviga",
-    "town_location": "{\n  \"x\": 3295,\n  \"y\": 3409\n}"
+    "id": "329503409",
+    "name": "Duboviga",
+    "location": {
+      "x": 3295,
+      "y": 3409
+    }
   },
   {
     "markets": {
@@ -93988,9 +94294,12 @@
       }
     },
     "_ts": 1727307220748137,
-    "town_id": "336703642",
-    "town_name": "Kamennlinn",
-    "town_location": "{\n  \"x\": 3367,\n  \"y\": 3642\n}"
+    "id": "336703642",
+    "name": "Kamennlinn",
+    "location": {
+      "x": 3367,
+      "y": 3642
+    }
   },
   {
     "markets": {
@@ -94871,9 +95180,12 @@
       }
     },
     "_ts": 1727305811419966,
-    "town_id": "343000884",
-    "town_name": "Dramnger",
-    "town_location": "{\n  \"x\": 3430,\n  \"y\": 884\n}"
+    "id": "343000884",
+    "name": "Dramnger",
+    "location": {
+      "x": 3430,
+      "y": 884
+    }
   },
   {
     "markets": {
@@ -95832,9 +96144,12 @@
       }
     },
     "_ts": 1727305811635510,
-    "town_id": "344100590",
-    "town_name": "Bergron",
-    "town_location": "{\n  \"x\": 3441,\n  \"y\": 590\n}"
+    "id": "344100590",
+    "name": "Bergron",
+    "location": {
+      "x": 3441,
+      "y": 590
+    }
   },
   {
     "markets": {
@@ -96731,9 +97046,12 @@
       }
     },
     "_ts": 1727305811935684,
-    "town_id": "344803409",
-    "town_name": "Sigulinka",
-    "town_location": "{\n  \"x\": 3448,\n  \"y\": 3409\n}"
+    "id": "344803409",
+    "name": "Sigulinka",
+    "location": {
+      "x": 3448,
+      "y": 3409
+    }
   },
   {
     "markets": {
@@ -97650,9 +97968,12 @@
       }
     },
     "_ts": 1727305811635627,
-    "town_id": "351500748",
-    "town_name": "Jordau",
-    "town_location": "{\n  \"x\": 3515,\n  \"y\": 748\n}"
+    "id": "351500748",
+    "name": "Jordau",
+    "location": {
+      "x": 3515,
+      "y": 748
+    }
   },
   {
     "markets": {
@@ -98618,9 +98939,12 @@
       }
     },
     "_ts": 1727305811683761,
-    "town_id": "353801294",
-    "town_name": "Sundsgard",
-    "town_location": "{\n  \"x\": 3538,\n  \"y\": 1294\n}"
+    "id": "353801294",
+    "name": "Sundsgard",
+    "location": {
+      "x": 3538,
+      "y": 1294
+    }
   },
   {
     "markets": {
@@ -99525,9 +99849,12 @@
       }
     },
     "_ts": 1727305811752802,
-    "town_id": "354603853",
-    "town_name": "Gdanvere",
-    "town_location": "{\n  \"x\": 3546,\n  \"y\": 3853\n}"
+    "id": "354603853",
+    "name": "Gdanvere",
+    "location": {
+      "x": 3546,
+      "y": 3853
+    }
   },
   {
     "markets": {
@@ -100407,9 +100734,12 @@
       }
     },
     "_ts": 1727305811635623,
-    "town_id": "358600850",
-    "town_name": "Stavare",
-    "town_location": "{\n  \"x\": 3586,\n  \"y\": 850\n}"
+    "id": "358600850",
+    "name": "Stavare",
+    "location": {
+      "x": 3586,
+      "y": 850
+    }
   },
   {
     "markets": {
@@ -101304,9 +101634,12 @@
       }
     },
     "_ts": 1727306223789479,
-    "town_id": "360803403",
-    "town_name": "Kedeanga",
-    "town_location": "{\n  \"x\": 3608,\n  \"y\": 3403\n}"
+    "id": "360803403",
+    "name": "Kedeanga",
+    "location": {
+      "x": 3608,
+      "y": 3403
+    }
   },
   {
     "markets": {
@@ -102160,9 +102493,12 @@
       }
     },
     "_ts": 1727305811578217,
-    "town_id": "363101072",
-    "town_name": "Breiklif",
-    "town_location": "{\n  \"x\": 3631,\n  \"y\": 1072\n}"
+    "id": "363101072",
+    "name": "Breiklif",
+    "location": {
+      "x": 3631,
+      "y": 1072
+    }
   },
   {
     "markets": {
@@ -103078,9 +103414,12 @@
       }
     },
     "_ts": 1727305811635606,
-    "town_id": "366600778",
-    "town_name": "Vikidalle",
-    "town_location": "{\n  \"x\": 3666,\n  \"y\": 778\n}"
+    "id": "366600778",
+    "name": "Vikidalle",
+    "location": {
+      "x": 3666,
+      "y": 778
+    }
   },
   {
     "markets": {
@@ -103958,9 +104297,12 @@
       }
     },
     "_ts": 1727305811683756,
-    "town_id": "374301313",
-    "town_name": "Jönköjaur",
-    "town_location": "{\n  \"x\": 3743,\n  \"y\": 1313\n}"
+    "id": "374301313",
+    "name": "Jönköjaur",
+    "location": {
+      "x": 3743,
+      "y": 1313
+    }
   },
   {
     "markets": {
@@ -104951,9 +105293,12 @@
       }
     },
     "_ts": 1727306533481753,
-    "town_id": "374603342",
-    "town_name": "Bornai",
-    "town_location": "{\n  \"x\": 3746,\n  \"y\": 3342\n}"
+    "id": "374603342",
+    "name": "Bornai",
+    "location": {
+      "x": 3746,
+      "y": 3342
+    }
   },
   {
     "markets": {
@@ -105677,9 +106022,12 @@
       }
     },
     "_ts": 1727305812042973,
-    "town_id": "381202415",
-    "town_name": "Novozie",
-    "town_location": "{\n  \"x\": 3812,\n  \"y\": 2415\n}"
+    "id": "381202415",
+    "name": "Novozie",
+    "location": {
+      "x": 3812,
+      "y": 2415
+    }
   },
   {
     "markets": {
@@ -106589,9 +106937,12 @@
       }
     },
     "_ts": 1727305811981395,
-    "town_id": "384503815",
-    "town_name": "Varnai",
-    "town_location": "{\n  \"x\": 3845,\n  \"y\": 3815\n}"
+    "id": "384503815",
+    "name": "Varnai",
+    "location": {
+      "x": 3845,
+      "y": 3815
+    }
   },
   {
     "markets": {
@@ -107302,9 +107653,12 @@
       }
     },
     "_ts": 1727305811886373,
-    "town_id": "389102250",
-    "town_name": "Marclives",
-    "town_location": "{\n  \"x\": 3891,\n  \"y\": 2250\n}"
+    "id": "389102250",
+    "name": "Marclives",
+    "location": {
+      "x": 3891,
+      "y": 2250
+    }
   },
   {
     "markets": {
@@ -108225,9 +108579,12 @@
       }
     },
     "_ts": 1727305811981406,
-    "town_id": "389303488",
-    "town_name": "Liepol",
-    "town_location": "{\n  \"x\": 3893,\n  \"y\": 3488\n}"
+    "id": "389303488",
+    "name": "Liepol",
+    "location": {
+      "x": 3893,
+      "y": 3488
+    }
   },
   {
     "markets": {
@@ -109129,9 +109486,12 @@
       }
     },
     "_ts": 1727305811981401,
-    "town_id": "391003627",
-    "town_name": "Elka",
-    "town_location": "{\n  \"x\": 3910,\n  \"y\": 3627\n}"
+    "id": "391003627",
+    "name": "Elka",
+    "location": {
+      "x": 3910,
+      "y": 3627
+    }
   },
   {
     "markets": {
@@ -109839,9 +110199,12 @@
       }
     },
     "_ts": 1727306343677921,
-    "town_id": "397903067",
-    "town_name": "Borinka",
-    "town_location": "{\n  \"x\": 3979,\n  \"y\": 3067\n}"
+    "id": "397903067",
+    "name": "Borinka",
+    "location": {
+      "x": 3979,
+      "y": 3067
+    }
   },
   {
     "markets": {
@@ -110570,8 +110933,11 @@
       }
     },
     "_ts": 1727307204087780,
-    "town_id": "403702798",
-    "town_name": "Võzie",
-    "town_location": "{\n  \"x\": 4037,\n  \"y\": 2798\n}"
+    "id": "403702798",
+    "name": "Võzie",
+    "location": {
+      "x": 4037,
+      "y": 2798
+    }
   }
 ]
