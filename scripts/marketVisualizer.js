@@ -107,7 +107,7 @@ function createMarketVisualizer(item) {
           fillOpacity: 1,
         }
       ).bindTooltip(
-        `Town: ${data.name}<br>Price: ${prices[i].toFixed(2)}<br>Volume: ${volumes[i]}`,
+        `Town: ${data.name}<br>Price: ${prices[i]}<br>Volume: ${volumes[i]}`,
         {
           permanent: document.getElementById("toggleMarketTooltip").checked,
         }
@@ -170,6 +170,6 @@ function getColor(pricesFinal, colormap, i) {
 }
 
 // Get marker size for price at index i
-function getMarkerSize(volumesFinal, i, minSize = 7, maxIncrease = 15) {
+function getMarkerSize(volumesFinal, i, minSize = 5, maxIncrease = 15) {
   return minSize + volumesFinal[i] * maxIncrease;
 }
