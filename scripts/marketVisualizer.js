@@ -78,7 +78,7 @@ document
 function createMarketVisualizer(item) {
   if (!marketData) return;
   const prices = marketData.map((data) => {
-    if (data.markets[item]) return data.markets[item].last_price || 0;
+    if (data.markets[item]) return data.markets[item].open_price || data.markets[item].last_price || 0;
   });
   const volumes = marketData.map((data) => {
     if (data.markets[item]) return data.markets[item].volume || 0;
@@ -113,10 +113,10 @@ function createMarketVisualizer(item) {
         }
       );
 
-      marketLayer.addLayer(tmp);
+      if (volumes[i] != undefined) marketLayer.addLayer(tmp);
     } else {
       console.log(
-        `Invalid marker size on town ${data.name} for item ${item} - Marker Size: ${markerSize} | Volume final ${volumesFinal[i]} | Index: ${i}`
+        `Invalid marker size on town ${data.name} for item ${item} - Marker Size: ${markerSize} | Price: ${prices[i]} | Price final: ${pricesFinal[i]} | Volume: ${volumes[i]} | Volume final ${volumesFinal[i]} | Index: ${i}`
       );
     }
   });
@@ -171,5 +171,5 @@ function getColor(pricesFinal, colormap, i) {
 
 // Get marker size for price at index i
 function getMarkerSize(volumesFinal, i, minSize = 3, maxIncrease = 15) {
-  return minSize + volumesFinal[i] * maxIncrease;
+  return (minSize + volumesFinal[i] * maxIncrease) || minSize;
 }
