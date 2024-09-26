@@ -5,6 +5,7 @@ var items = [];
 
 async function loadMarketVisualizer(season) {
   marketData = null;
+  marketLayer = null;
   if (season !== "s2") return;
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
   marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
@@ -21,28 +22,6 @@ async function loadMarketVisualizer(season) {
   });
 
   items.sort();
-
-  if(document.getElementById("toggleMarket").checked) {
-    // Hide towns and show market visualizer
-    map.removeLayer(townsLayer);
-    marketLayer.addTo(map);
-
-    // Show the market visualizer dropdown
-    document.getElementById("labelToggleMarketTooltip").style.display = "flex";
-    document.getElementById("toggleMarketTooltip").style.display = "flex";
-    document.getElementById("marketLabel").style.display = "flex";
-    document.getElementById("marketSelect").style.display = "flex";
-  } else {
-    // Show towns and hide market visualizer
-    map.removeLayer(marketLayer);
-    townsLayer.addTo(map);
-
-    // Hide the market visualizer dropdown
-    document.getElementById("labelToggleMarketTooltip").style.display = "none";
-    document.getElementById("toggleMarketTooltip").style.display = "none";
-    document.getElementById("marketLabel").style.display = "none";
-    document.getElementById("marketSelect").style.display = "none";
-  }
 
   // Create market visualizer for the first item
   createMarketVisualizer("bread");
