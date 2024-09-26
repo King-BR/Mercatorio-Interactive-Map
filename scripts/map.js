@@ -1,6 +1,7 @@
 var map = null;
 var maxZoom = 5;
 var mapData = null;
+var grayscale = false;
 
 const zoomLevels = { s1: 5, s2: 5 };
 const mapWidth = 1024;
@@ -32,7 +33,7 @@ async function initializeMap(season) {
 
   map.setMaxBounds(elasticBounds);
 
-  L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
+  var tileLayer = L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
     tileSize: 256,
     noWrap: true,
     continuousWorld: false,
@@ -54,6 +55,22 @@ async function initializeMap(season) {
       ).textContent = `Coordinates: X=${Math.round(x)}, Y=${Math.round(
         y
       )} | Section: ${section}`;
+    }
+  });
+
+  tileLayer.on("tileload", function () {
+    if (grayscale) updateTileGrayscale();
+  });
+}
+
+// Apply or remove grayscale to the tiles based on the current state
+function updateTileGrayscale() {
+  var tiles = document.querySelectorAll(".leaflet-tile");
+  tiles.forEach(function (tile) {
+    if (grayscale) {
+      tile.classList.add("grayscale");
+    } else {
+      tile.classList.remove("grayscale");
     }
   });
 }

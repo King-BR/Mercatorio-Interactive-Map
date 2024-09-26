@@ -13,8 +13,8 @@ async function loadMarketVisualizer(season) {
   items = [];
 
   // Populate items
-  marketData.forEach((data) => {
-    Object.keys(data.markets).forEach((item) => {
+  marketData.forEach((town) => {
+    Object.keys(town.markets).forEach((item) => {
       if (!items.includes(item)) {
         items.push(item);
       }
@@ -50,6 +50,9 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
     map.removeLayer(townsLayer);
     marketLayer.addTo(map);
 
+    // Add grayscale
+    grayscale = true;
+
     // Show the market visualizer dropdown
     document.getElementById("labelToggleMarketTooltip").style.display = "flex";
     document.getElementById("toggleMarketTooltip").style.display = "flex";
@@ -60,12 +63,17 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
     map.removeLayer(marketLayer);
     townsLayer.addTo(map);
 
+    // Remove grayscale
+    grayscale = false;
+
     // Hide the market visualizer dropdown
     document.getElementById("labelToggleMarketTooltip").style.display = "none";
     document.getElementById("toggleMarketTooltip").style.display = "none";
     document.getElementById("marketLabel").style.display = "none";
     document.getElementById("marketSelect").style.display = "none";
   }
+
+  updateTileGrayscale();
 });
 
 // Event listener for market visualizer tooltip toggle
@@ -78,12 +86,25 @@ document
 // Function to create the market visualizer layer
 function createMarketVisualizer(item) {
   if (!marketData) return;
-  const prices = marketData.map((data) => {
-    if (data.markets[item]) return data.markets[item].open_price || data.markets[item].last_price || 0;
+  const towns = marketData.map((town) => {
+    if (town.markets[item])
+      return {
+        price:
+          town.markets[item].open_price || town.markets[item].last_price || 0,
+        volume: town.markets[item].volume || 0,
+        name: town.name,
+      };
   });
-  const volumes = marketData.map((data) => {
-    if (data.markets[item]) return data.markets[item].volume || 0;
-  });
+
+  var filteredTowns = towns.filter(
+    (town) => town.price != undefined && town.price != 0
+  );
+  var prices = towns
+    .filter((town) => town.price != undefined && town.price != 0)
+    .map((town) => town.price);
+  var volumes = towns
+    .filter((town) => town.price != undefined && town.price != 0)
+    .map((town) => town.volume);
 
   const pricesFinal = processPrices(prices).map((p) =>
     parseFloat(p.toFixed(3))
@@ -92,15 +113,24 @@ function createMarketVisualizer(item) {
 
   map.removeLayer(marketLayer);
   marketLayer = L.layerGroup();
-  marketData.forEach((data, i) => {
-    var color = getColor(pricesFinal, colormap, i);
-    const markerSize = getMarkerSize(volumesFinal, i);
+  marketData.forEach((town) => {
+    const i = filteredTowns.findIndex((t) => t.name === town.name);
+    var color;
+    var markerSize;
+    if (i === -1) {
+      color = [0.18995, 0.07176, 0.23217].map((val) => Math.floor(val * 255));
+      markerSize = 3;
+    } else {
+      color = getColor(pricesFinal, colormap, i);
+      markerSize = getMarkerSize(volumesFinal, i);
+    }
+
     if (!isNaN(markerSize)) {
       // Parse color to rgb
       color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 
       var tmp = L.circle(
-        [mapHeight - data.location.y / 4, data.location.x / 4],
+        [mapHeight - town.location.y / 4, town.location.x / 4],
         {
           radius: markerSize,
           color: color,
@@ -108,17 +138,33 @@ function createMarketVisualizer(item) {
           fillOpacity: 1,
         }
       ).bindTooltip(
-        `Town: ${data.name}<br>Price: ${parseFloat(parseFloat(prices[i]).toFixed(2))}<br>Volume: ${volumes[i]}`,
+        `Town: ${town.name}<br>Price: ${formatPrice(prices[i])}<br>Volume: ${
+          volumes[i] || 0
+        }`,
         {
           permanent: document.getElementById("toggleMarketTooltip").checked,
         }
-      );
+      ).bindPopup(`
+        <b>${town.name}</b><br>
+        <b>Open Price:</b> ${formatPrice(town.markets[item].open_price)}<br>
+        <b>Last Price:</b> ${formatPrice(town.markets[item].last_price)}<br>
+        <b>Average Price:</b> ${formatPrice(
+          town.markets[item].average_price
+        )}<br>
+        <b>Moving Average:</b> ${formatPrice(
+          town.markets[item].moving_average
+        )}<br>
+        <b>Highest Bid:</b> ${formatPrice(town.markets[item].highest_bid)}<br>
+        <b>Lowest Ask:</b> ${formatPrice(town.markets[item].lowest_ask)}<br>
+        <b>High Price:</b> ${formatPrice(town.markets[item].high_price)}<br>
+        <b>Low Price:</b> ${formatPrice(town.markets[item].low_price)}<br>
+        <b>Volume:</b> ${volumes[i] || 0}<br>
+        <b>Volume 12 Turns:</b> ${town.markets[item].volume_prev_12 || 0}<br>
+        <b>Bid Volume 10%:</b> ${town.markets[item].bid_volume_10 || 0}<br>
+        <b>Ask Volume 10%:</b> ${town.markets[item].ask_volume_10 || 0}
+        `);
 
-      if (volumes[i] != undefined) marketLayer.addLayer(tmp);
-    } else {
-      console.log(
-        `Invalid marker size on town ${data.name} for item ${item} - Marker Size: ${markerSize} | Price: ${prices[i]} | Price final: ${pricesFinal[i]} | Volume: ${volumes[i]} | Volume final ${volumesFinal[i]} | Index: ${i}`
-      );
+      marketLayer.addLayer(tmp);
     }
   });
 
@@ -166,11 +212,17 @@ function processPrices(prices) {
 
 // Get color for price at index i
 function getColor(pricesFinal, colormap, i) {
-  const index = Math.floor(pricesFinal[i] * 255) || 0;
+  const index = Math.floor(pricesFinal[i] * 245) + 10 || 0;
   return colormap[index].map((val) => Math.floor(val * 255));
 }
 
 // Get marker size for price at index i
 function getMarkerSize(volumesFinal, i, minSize = 3, maxIncrease = 15) {
-  return (minSize + volumesFinal[i] * maxIncrease) || minSize;
+  return minSize + volumesFinal[i] * maxIncrease || minSize;
+}
+
+// Format price to 2 decimals places, return 0 if price is NaN
+function formatPrice(price) {
+  if (price === undefined) return 0;
+  return isNaN(parseFloat(price)) ? 0 : parseFloat(price).toFixed(2);
 }
