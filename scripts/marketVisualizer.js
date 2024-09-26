@@ -170,6 +170,6 @@ function getColor(pricesFinal, colormap, i) {
 }
 
 // Get marker size for price at index i
-function getMarkerSize(volumesFinal, i, minSize = 5, maxIncrease = 15) {
+function getMarkerSize(volumesFinal, i, minSize = 3, maxIncrease = 15) {
   return minSize + volumesFinal[i] * maxIncrease;
 }
