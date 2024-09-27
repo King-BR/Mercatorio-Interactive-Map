@@ -129,29 +129,40 @@
           value="1"
         />
       </div>
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleMarket" /> Show Market
-          Visualizer</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label id="labelToggleMarketTooltip" style="display: none"
-          ><input
-            type="checkbox"
-            id="toggleMarketTooltip"
-            style="display: none"
-          />
-          Show All Market Tooltips</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label id="marketLabel" for="marketSelect" style="display: none"
-          >Select item:</label
-        >
-        <select id="marketSelect" class="w3-select" style="display: none">
-          <!-- Item will be added here dynamically -->
-        </select>
+
+      <button
+        onclick="toggleAccordion('market')"
+        class="w3-button"
+        id="accordionBtn"
+      >
+        Market Visualizer <i id="marketIcon" class="fa fa-chevron-down"></i>
+      </button>
+      <div id="marketDiv" class="sidebar-item w3-hide">
+        <div id="marketLastUpdate" class="sidebar-item"><b>Last Update:</b> N/A</div>
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleMarket" /> Show Market
+            Visualizer</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label id="labelToggleMarketTooltip" style="display: none"
+            ><input
+              type="checkbox"
+              id="toggleMarketTooltip"
+              style="display: none"
+            />
+            Show All Market Tooltips</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label id="marketLabel" for="marketSelect"
+            >Select item:</label
+          >
+          <select id="marketSelect" class="w3-select">
+            <!-- Item will be added here dynamically -->
+          </select>
+        </div>
       </div>
 
       <button
@@ -161,11 +172,7 @@
       >
         Resources <i id="resourceIcon" class="fa fa-chevron-down"></i>
       </button>
-      <div
-        id="resourceDiv"
-        class="sidebar-item w3-hide"
-        style="width: 55%"
-      ></div>
+      <div id="resourceDiv" class="sidebar-item w3-hide"></div>
 
       <button
         onclick="toggleAccordion('transport')"

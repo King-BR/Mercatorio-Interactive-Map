@@ -11,4 +11,9 @@ async function fetchFromLocal(path) {
   }
   return response.json();
 }
- 
+
+// Format milliseconds to time string (format DD:MM:YY HH:MM:SS)
+function formatTime(milliseconds) {
+  const date = new Date(milliseconds);
+  return date.toUTCString();
+}

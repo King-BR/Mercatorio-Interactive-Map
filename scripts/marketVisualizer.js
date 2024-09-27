@@ -1,16 +1,22 @@
 var colormap = [];
 var marketData = null;
 var marketLayer = null;
+var lastUpdate = null;
 var items = [];
 
 async function loadMarketVisualizer(season) {
   marketData = null;
   marketLayer = null;
+  lastUpdate = null;
+  document.getElementById("marketLastUpdate").innerHTML = "<b>Last Update:</b> N/A";
   if (season !== "s2") return;
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
   marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
   marketLayer = L.layerGroup();
   items = [];
+
+  lastUpdate = formatTime(marketData[0].last_update);
+  document.getElementById("marketLastUpdate").innerHTML = `<b>Last Update:</b> ${lastUpdate}`;
 
   // Populate items
   marketData.forEach((town) => {
@@ -52,12 +58,6 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
 
     // Add grayscale
     grayscale = true;
-
-    // Show the market visualizer dropdown
-    document.getElementById("labelToggleMarketTooltip").style.display = "flex";
-    document.getElementById("toggleMarketTooltip").style.display = "flex";
-    document.getElementById("marketLabel").style.display = "flex";
-    document.getElementById("marketSelect").style.display = "flex";
   } else {
     // Show towns and hide market visualizer
     map.removeLayer(marketLayer);
@@ -65,12 +65,6 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
 
     // Remove grayscale
     grayscale = false;
-
-    // Hide the market visualizer dropdown
-    document.getElementById("labelToggleMarketTooltip").style.display = "none";
-    document.getElementById("toggleMarketTooltip").style.display = "none";
-    document.getElementById("marketLabel").style.display = "none";
-    document.getElementById("marketSelect").style.display = "none";
   }
 
   updateTileGrayscale();
@@ -117,6 +111,13 @@ function createMarketVisualizer(item) {
     const i = filteredTowns.findIndex((t) => t.name === town.name);
     var color;
     var markerSize;
+
+    if (
+      ["snekkja", "cog", "hulk", "handcart", "tumbrel"].includes(item) &&
+      !town.capital
+    )
+      return;
+
     if (i === -1) {
       color = [0.18995, 0.07176, 0.23217].map((val) => Math.floor(val * 255));
       markerSize = 3;

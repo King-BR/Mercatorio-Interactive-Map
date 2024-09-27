@@ -102,6 +102,15 @@ body {
 }
 
 /* Rotate the icon when the accordion is open */
+.w3-show #marketIcon {
+  transform: rotate(180deg);
+}
+/* Add a transition effect for the icon rotation */
+#marketIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the icon when the accordion is open */
 .w3-show #transportIcon {
   transform: rotate(180deg);
 }
