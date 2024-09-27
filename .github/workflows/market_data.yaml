@@ -45,13 +45,16 @@ jobs:
             # Construct the API endpoint dynamically
             endpoint="https://play.mercatorio.io/api/towns/${id}/marketdata"
 
+            # Get the current timestamp in milliseconds
+            last_update=$(date +%s%3N)
+
             # Send the API request and capture the response status
             response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" -H "X-Merc-User: $MERC_USER" -H "Authorization: $AUTH_TOKEN")
 
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
-              # If successful, append the response body to the responses array with town details
-              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --argjson location "{\"x\": $x, \"y\": $y}" '. + {id: $id, name: $name, location: $location}')
+              # If successful, append the response body to the responses array with town details and timestamp
+              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --argjson location "{\"x\": $x, \"y\": $y}" --argjson last_update "$last_update" '. + {id: $id, name: $name, location: $location, last_update: $last_update}')
               responses+=("$api_response")
               echo "Request for town ID $id ($name) was successful"
             else
