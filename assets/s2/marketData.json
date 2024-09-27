@@ -897,13 +897,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837161,
+    "_ts": 1727446202836013,
     "id": "60903487",
     "name": "Suryes",
     "location": {
       "x": 609,
       "y": 3487
-    }
+    },
+    "last_update": 1727447567601
   },
   {
     "markets": {
@@ -1812,13 +1813,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837804,
+    "_ts": 1727446203727586,
     "id": "63703723",
     "name": "Calille",
     "location": {
       "x": 637,
       "y": 3723
-    }
+    },
+    "last_update": 1727447568330
   },
   {
     "markets": {
@@ -2135,13 +2137,11 @@
         "last_price": "5.796",
         "average_price": "5.796",
         "moving_average": "5.418",
-        "highest_bid": "5.245",
         "lowest_ask": "5.796",
         "high_price": "5.796",
         "low_price": "5.796",
         "volume": 4,
         "volume_prev_12": 50,
-        "bid_volume_10": 1,
         "ask_volume_10": 3
       },
       "flax plants": {
@@ -2430,7 +2430,7 @@
         "volume": 0,
         "volume_prev_12": 10,
         "bid_volume_10": 2,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "nets": {
         "price": "30.61",
@@ -2711,13 +2711,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837667,
+    "_ts": 1727446204190561,
     "id": "65403587",
     "name": "Sottehomme",
     "location": {
       "x": 654,
       "y": 3587
-    }
+    },
+    "last_update": 1727447568858
   },
   {
     "markets": {
@@ -3561,13 +3562,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837870,
+    "_ts": 1727446204190516,
     "id": "68903169",
     "name": "Pareux",
     "location": {
       "x": 689,
       "y": 3169
-    }
+    },
+    "last_update": 1727447569393
   },
   {
     "markets": {
@@ -3602,18 +3604,18 @@
         "bid_volume_10": 2
       },
       "beer": {
-        "price": "3.448",
+        "price": "3.355",
         "open_price": "3.448",
-        "last_price": "3.448",
-        "average_price": "3.448",
+        "last_price": "3.355",
+        "average_price": "3.441",
         "moving_average": "3.473",
         "highest_bid": "3.355",
         "lowest_ask": "3.494",
         "high_price": "3.448",
-        "low_price": "3.448",
-        "volume": 28,
+        "low_price": "3.355",
+        "volume": 30,
         "volume_prev_12": 348,
-        "bid_volume_10": 3,
+        "bid_volume_10": 1,
         "ask_volume_10": 6
       },
       "bellows": {
@@ -4458,13 +4460,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837919,
+    "_ts": 1727446950116823,
     "id": "79503397",
     "name": "Nanand",
     "location": {
       "x": 795,
       "y": 3397
-    }
+    },
+    "last_update": 1727447569922
   },
   {
     "markets": {
@@ -4479,13 +4482,11 @@
         "last_price": "19.419",
         "average_price": "19.419",
         "moving_average": "19.027",
-        "highest_bid": "18.457",
         "lowest_ask": "20.802",
         "high_price": "19.419",
         "low_price": "19.419",
         "volume": 1,
         "volume_prev_12": 29,
-        "bid_volume_10": 1,
         "ask_volume_10": 6
       },
       "axes": {
@@ -4746,14 +4747,12 @@
         "ask_volume_10": 100000
       },
       "dye": {
-        "price": "69.688",
+        "price": "0",
         "open_price": "69.688",
-        "lowest_ask": "69.688",
         "high_price": "69.688",
         "low_price": "69.688",
         "volume": 0,
-        "volume_prev_12": 0,
-        "ask_volume_10": 1
+        "volume_prev_12": 0
       },
       "dyed cloth": {
         "price": "40",
@@ -5429,13 +5428,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837615,
+    "_ts": 1727446203199416,
     "id": "81500435",
     "name": "Nottingding",
     "location": {
       "x": 815,
       "y": 435
-    }
+    },
+    "last_update": 1727447570535
   },
   {
     "markets": {
@@ -5635,14 +5635,14 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "2889.02",
+        "price": "3402.38",
         "open_price": "2889.02",
-        "highest_bid": "2889.02",
+        "highest_bid": "3402.38",
         "high_price": "2889.02",
         "low_price": "2889.02",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 2
+        "bid_volume_10": 1
       },
       "cookware": {
         "price": "0",
@@ -5917,9 +5917,11 @@
         "volume_prev_12": 0
       },
       "hulk": {
-        "price": "0",
+        "price": "5925.748",
+        "highest_bid": "5925.748",
         "volume": 0,
-        "volume_prev_12": 0
+        "volume_prev_12": 0,
+        "bid_volume_10": 1
       },
       "iron ore": {
         "price": "3.099",
@@ -6220,17 +6222,17 @@
         "volume_prev_12": 0
       },
       "snekkja": {
-        "price": "4000",
+        "price": "3370.162",
         "open_price": "4000",
         "last_price": "3370.162",
         "moving_average": "3370.162",
-        "highest_bid": "4000",
+        "highest_bid": "2652.603",
         "lowest_ask": "4475",
         "high_price": "4000",
         "low_price": "4000",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 2,
+        "bid_volume_10": 3,
         "ask_volume_10": 6
       },
       "spinning wheels": {
@@ -6415,13 +6417,14 @@
         "ask_volume_10": 12
       }
     },
-    "_ts": 1727445606836632,
+    "_ts": 1727446203912485,
     "id": "83300963",
     "name": "Blackley",
     "location": {
       "x": 833,
       "y": 963
-    }
+    },
+    "last_update": 1727447571063
   },
   {
     "markets": {
@@ -7381,13 +7384,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836313,
+    "_ts": 1727446203259615,
     "id": "88000557",
     "name": "Southfield",
     "location": {
       "x": 880,
       "y": 557
-    }
+    },
+    "last_update": 1727447571590
   },
   {
     "markets": {
@@ -7591,17 +7595,15 @@
         "volume_prev_12": 0
       },
       "copper ingots": {
-        "price": "5.169",
+        "price": "4.23",
         "open_price": "5.169",
         "last_price": "4.23",
         "moving_average": "7.246",
-        "highest_bid": "5.169",
         "lowest_ask": "8.61",
         "high_price": "5.169",
         "low_price": "5.169",
         "volume": 0,
         "volume_prev_12": 7,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "copper ore": {
@@ -7873,9 +7875,9 @@
         "lowest_ask": "1.478",
         "high_price": "1.478",
         "low_price": "1.478",
-        "volume": 984,
+        "volume": 1114,
         "volume_prev_12": 11109,
-        "ask_volume_10": 160
+        "ask_volume_10": 30
       },
       "lead bars": {
         "price": "0",
@@ -8174,18 +8176,18 @@
         "bid_volume_10": 1
       },
       "thread": {
-        "price": "6.889",
+        "price": "6.351",
         "open_price": "6.889",
-        "last_price": "6.889",
-        "average_price": "6.889",
+        "last_price": "6.351",
+        "average_price": "6.735",
         "moving_average": "5.571",
-        "highest_bid": "6.351",
+        "highest_bid": "4.48",
         "lowest_ask": "6.889",
         "high_price": "6.889",
-        "low_price": "6.889",
-        "volume": 5,
+        "low_price": "6.351",
+        "volume": 7,
         "volume_prev_12": 48,
-        "bid_volume_10": 2,
+        "bid_volume_10": 4,
         "ask_volume_10": 1
       },
       "tiles": {
@@ -8261,13 +8263,11 @@
         "last_price": "7.8",
         "average_price": "7.8",
         "moving_average": "8.418",
-        "highest_bid": "7.254",
         "lowest_ask": "7.8",
         "high_price": "7.8",
         "low_price": "7.8",
         "volume": 21,
         "volume_prev_12": 250,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "wrought iron": {
@@ -8296,13 +8296,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606836206,
+    "_ts": 1727446998833584,
     "id": "90200749",
     "name": "Canterstoft",
     "location": {
       "x": 902,
       "y": 749
-    }
+    },
+    "last_update": 1727447572124
   },
   {
     "markets": {
@@ -8418,9 +8419,9 @@
         "lowest_ask": "0.326",
         "high_price": "0.326",
         "low_price": "0.326",
-        "volume": 54,
+        "volume": 62,
         "volume_prev_12": 642,
-        "ask_volume_10": 16
+        "ask_volume_10": 8
       },
       "casks": {
         "price": "2.223",
@@ -8618,13 +8619,11 @@
         "last_price": "9.04",
         "average_price": "9.04",
         "moving_average": "7.339",
-        "highest_bid": "9.04",
         "lowest_ask": "12.004",
         "high_price": "9.04",
         "low_price": "9.04",
         "volume": 4,
         "volume_prev_12": 26,
-        "bid_volume_10": 2,
         "ask_volume_10": 1
       },
       "flax plants": {
@@ -8653,17 +8652,17 @@
         "bid_volume_10": 1
       },
       "furniture": {
-        "price": "7.988",
+        "price": "8.595",
         "open_price": "7.988",
-        "last_price": "7.988",
-        "average_price": "7.988",
+        "last_price": "8.595",
+        "average_price": "8.19",
         "moving_average": "8.019",
-        "lowest_ask": "8.595",
-        "high_price": "7.988",
+        "lowest_ask": "12.337",
+        "high_price": "8.595",
         "low_price": "7.988",
-        "volume": 2,
+        "volume": 3,
         "volume_prev_12": 27,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "garments": {
         "price": "22.544",
@@ -8710,18 +8709,18 @@
         "ask_volume_10": 1
       },
       "grain": {
-        "price": "2.248",
+        "price": "2.11",
         "open_price": "2.248",
-        "last_price": "2.248",
-        "average_price": "2.248",
+        "last_price": "2.11",
+        "average_price": "2.242",
         "moving_average": "2.253",
-        "highest_bid": "2.243",
+        "highest_bid": "2.057",
         "lowest_ask": "2.248",
         "high_price": "2.248",
-        "low_price": "2.248",
-        "volume": 132,
+        "low_price": "2.11",
+        "volume": 139,
         "volume_prev_12": 1666,
-        "bid_volume_10": 14,
+        "bid_volume_10": 7,
         "ask_volume_10": 5
       },
       "grindstones": {
@@ -8750,14 +8749,12 @@
         "volume_prev_12": 0
       },
       "hides": {
-        "price": "13.298",
+        "price": "0",
         "open_price": "13.298",
-        "lowest_ask": "13.298",
         "high_price": "13.298",
         "low_price": "13.298",
         "volume": 0,
-        "volume_prev_12": 0,
-        "ask_volume_10": 1
+        "volume_prev_12": 0
       },
       "honey": {
         "price": "0",
@@ -8793,17 +8790,17 @@
         "volume_prev_12": 0
       },
       "labour": {
-        "price": "1.336",
+        "price": "1.354",
         "open_price": "1.336",
-        "last_price": "1.336",
-        "average_price": "1.336",
+        "last_price": "1.354",
+        "average_price": "1.338",
         "moving_average": "1.328",
-        "lowest_ask": "1.336",
-        "high_price": "1.336",
+        "lowest_ask": "1.354",
+        "high_price": "1.354",
         "low_price": "1.336",
-        "volume": 638,
+        "volume": 903,
         "volume_prev_12": 10340,
-        "ask_volume_10": 482
+        "ask_volume_10": 217
       },
       "lead bars": {
         "price": "0",
@@ -8924,12 +8921,10 @@
         "last_price": "16.385",
         "average_price": "16.385",
         "moving_average": "34.164",
-        "lowest_ask": "16.385",
         "high_price": "16.385",
         "low_price": "16.385",
-        "volume": 1,
-        "volume_prev_12": 2,
-        "ask_volume_10": 1
+        "volume": 2,
+        "volume_prev_12": 2
       },
       "ox power": {
         "price": "0",
@@ -9104,15 +9099,15 @@
         "ask_volume_10": 1
       },
       "timber": {
-        "price": "4.682",
+        "price": "5.653",
         "open_price": "4.682",
-        "last_price": "4.682",
-        "average_price": "4.682",
+        "last_price": "5.653",
+        "average_price": "4.948",
         "moving_average": "6.071",
-        "lowest_ask": "4.682",
-        "high_price": "4.682",
+        "lowest_ask": "6.963",
+        "high_price": "5.653",
         "low_price": "4.682",
-        "volume": 1,
+        "volume": 4,
         "volume_prev_12": 87,
         "ask_volume_10": 2
       },
@@ -9182,18 +9177,18 @@
         "ask_volume_10": 3
       },
       "wrought iron": {
-        "price": "9.433",
+        "price": "8.36",
         "open_price": "9.433",
-        "last_price": "9.433",
-        "average_price": "9.433",
+        "last_price": "8.36",
+        "average_price": "9.158",
         "moving_average": "10.138",
-        "highest_bid": "9.421",
+        "highest_bid": "6.92",
         "lowest_ask": "10.771",
         "high_price": "9.433",
-        "low_price": "9.433",
-        "volume": 3,
+        "low_price": "8.36",
+        "volume": 7,
         "volume_prev_12": 92,
-        "bid_volume_10": 3,
+        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "yarn": {
@@ -9202,13 +9197,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836806,
+    "_ts": 1727446950116798,
     "id": "93403404",
     "name": "Mulavy",
     "location": {
       "x": 934,
       "y": 3404
-    }
+    },
+    "last_update": 1727447572657
   },
   {
     "markets": {
@@ -10111,13 +10107,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606835580,
+    "_ts": 1727446204267295,
     "id": "93501170",
     "name": "Kleinly",
     "location": {
       "x": 935,
       "y": 1170
-    }
+    },
+    "last_update": 1727447573154
   },
   {
     "markets": {
@@ -10943,13 +10940,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837430,
+    "_ts": 1727446203798041,
     "id": "94200927",
     "name": "Liverford",
     "location": {
       "x": 942,
       "y": 927
-    }
+    },
+    "last_update": 1727447573680
   },
   {
     "markets": {
@@ -11748,19 +11746,17 @@
         "ask_volume_10": 8
       },
       "tools": {
-        "price": "5.215",
+        "price": "5.365",
         "open_price": "5.215",
-        "last_price": "5.215",
-        "average_price": "5.215",
+        "last_price": "5.365",
+        "average_price": "5.247",
         "moving_average": "4.856",
         "highest_bid": "4.914",
-        "lowest_ask": "5.355",
-        "high_price": "5.215",
+        "high_price": "5.365",
         "low_price": "5.215",
-        "volume": 7,
+        "volume": 9,
         "volume_prev_12": 77,
-        "bid_volume_10": 1,
-        "ask_volume_10": 2
+        "bid_volume_10": 1
       },
       "wax": {
         "price": "0",
@@ -11832,13 +11828,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445869882421,
+    "_ts": 1727447543728383,
     "id": "101303254",
     "name": "Orlebourg",
     "location": {
       "x": 1013,
       "y": 3254
-    }
+    },
+    "last_update": 1727447574207
   },
   {
     "markets": {
@@ -12740,13 +12737,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606836483,
+    "_ts": 1727446203797881,
     "id": "102301021",
     "name": "Wiltondee",
     "location": {
       "x": 1023,
       "y": 1021
-    }
+    },
+    "last_update": 1727447574741
   },
   {
     "markets": {
@@ -12784,13 +12782,11 @@
         "last_price": "2.505",
         "average_price": "2.505",
         "moving_average": "2.549",
-        "highest_bid": "2.505",
         "lowest_ask": "2.94",
         "high_price": "2.505",
         "low_price": "2.505",
-        "volume": 67,
+        "volume": 68,
         "volume_prev_12": 811,
-        "bid_volume_10": 1,
         "ask_volume_10": 11
       },
       "bellows": {
@@ -12832,13 +12828,13 @@
         "last_price": "7.021",
         "average_price": "7.021",
         "moving_average": "6.422",
-        "highest_bid": "7.021",
+        "highest_bid": "6.01",
         "lowest_ask": "7.344",
         "high_price": "7.021",
         "low_price": "7.021",
-        "volume": 4,
+        "volume": 5,
         "volume_prev_12": 49,
-        "bid_volume_10": 1,
+        "bid_volume_10": 2,
         "ask_volume_10": 2
       },
       "butter": {
@@ -13034,19 +13030,17 @@
         "bid_volume_10": 1
       },
       "firewood": {
-        "price": "1.464",
+        "price": "1.923",
         "open_price": "1.464",
-        "last_price": "1.464",
-        "average_price": "1.464",
+        "last_price": "1.923",
+        "average_price": "1.484",
         "moving_average": "1.441",
         "highest_bid": "1.464",
-        "lowest_ask": "1.788",
-        "high_price": "1.464",
+        "high_price": "1.923",
         "low_price": "1.464",
-        "volume": 36,
+        "volume": 38,
         "volume_prev_12": 461,
-        "bid_volume_10": 3,
-        "ask_volume_10": 2
+        "bid_volume_10": 3
       },
       "fish": {
         "price": "1.762",
@@ -13374,13 +13368,11 @@
         "last_price": "52.533",
         "average_price": "52.533",
         "moving_average": "33.562",
-        "highest_bid": "14.482",
         "lowest_ask": "53.903",
         "high_price": "52.533",
         "low_price": "52.533",
         "volume": 1,
         "volume_prev_12": 7,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "ox power": {
@@ -13547,31 +13539,30 @@
         "ask_volume_10": 5
       },
       "tiles": {
-        "price": "14.821",
+        "price": "14.694",
         "open_price": "14.694",
-        "last_price": "14.821",
+        "last_price": "14.694",
+        "average_price": "14.694",
         "moving_average": "15.175",
-        "highest_bid": "14.694",
         "lowest_ask": "16.5",
         "high_price": "14.694",
         "low_price": "14.694",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 9,
-        "bid_volume_10": 1,
         "ask_volume_10": 5
       },
       "timber": {
-        "price": "4.941",
+        "price": "5.141",
         "open_price": "4.941",
-        "last_price": "4.941",
-        "average_price": "4.941",
+        "last_price": "5.141",
+        "average_price": "4.988",
         "moving_average": "6.016",
-        "lowest_ask": "4.941",
-        "high_price": "4.941",
+        "lowest_ask": "5.141",
+        "high_price": "5.141",
         "low_price": "4.941",
-        "volume": 6,
+        "volume": 12,
         "volume_prev_12": 219,
-        "ask_volume_10": 14
+        "ask_volume_10": 9
       },
       "tools": {
         "price": "4.018",
@@ -13664,13 +13655,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606837382,
+    "_ts": 1727446950116811,
     "id": "105103362",
     "name": "Lauque",
     "location": {
       "x": 1051,
       "y": 3362
-    }
+    },
+    "last_update": 1727447575286
   },
   {
     "markets": {
@@ -14515,7 +14507,7 @@
         "low_price": "5.254",
         "volume": 12,
         "volume_prev_12": 129,
-        "bid_volume_10": 10,
+        "bid_volume_10": 9,
         "ask_volume_10": 7
       },
       "wax": {
@@ -14593,13 +14585,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837713,
+    "_ts": 1727446204656927,
     "id": "112900992",
     "name": "Carmarquay",
     "location": {
       "x": 1129,
       "y": 992
-    }
+    },
+    "last_update": 1727447575813
   },
   {
     "markets": {
@@ -14667,13 +14660,11 @@
         "last_price": "2.307",
         "average_price": "2.307",
         "moving_average": "2.313",
-        "highest_bid": "1.926",
         "lowest_ask": "2.307",
         "high_price": "2.307",
         "low_price": "2.307",
         "volume": 211,
         "volume_prev_12": 2457,
-        "bid_volume_10": 1,
         "ask_volume_10": 11
       },
       "bricks": {
@@ -15489,13 +15480,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837834,
+    "_ts": 1727446797324473,
     "id": "118000792",
     "name": "Shefquay",
     "location": {
       "x": 1180,
       "y": 792
-    }
+    },
+    "last_update": 1727447576328
   },
   {
     "markets": {
@@ -16425,13 +16417,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837876,
+    "_ts": 1727446204065315,
     "id": "118603125",
     "name": "Veraux",
     "location": {
       "x": 1186,
       "y": 3125
-    }
+    },
+    "last_update": 1727447576857
   },
   {
     "markets": {
@@ -16641,14 +16634,14 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "5217.52",
+        "price": "11185.884",
         "open_price": "5217.52",
-        "highest_bid": "5217.52",
+        "highest_bid": "11185.884",
         "high_price": "5217.52",
         "low_price": "5217.52",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "bid_volume_10": 2
       },
       "cookware": {
         "price": "0",
@@ -17236,12 +17229,10 @@
         "open_price": "4000",
         "last_price": "4000",
         "moving_average": "4000",
-        "highest_bid": "4000",
         "high_price": "4000",
         "low_price": "4000",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "spinning wheels": {
         "price": "133.93",
@@ -17444,13 +17435,14 @@
         "ask_volume_10": 20
       }
     },
-    "_ts": 1727445606836050,
+    "_ts": 1727446205876647,
     "id": "120503824",
     "name": "Dunllier",
     "location": {
       "x": 1205,
       "y": 3824
-    }
+    },
+    "last_update": 1727447577394
   },
   {
     "markets": {
@@ -18264,7 +18256,7 @@
         "low_price": "5.612",
         "volume": 6,
         "volume_prev_12": 46,
-        "bid_volume_10": 5,
+        "bid_volume_10": 4,
         "ask_volume_10": 5
       },
       "wax": {
@@ -18345,13 +18337,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606835854,
+    "_ts": 1727446204656911,
     "id": "129000768",
     "name": "Brisburh",
     "location": {
       "x": 1290,
       "y": 768
-    }
+    },
+    "last_update": 1727447577923
   },
   {
     "markets": {
@@ -19052,7 +19045,7 @@
         "low_price": "65.383",
         "volume": 0,
         "volume_prev_12": 3,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "sails": {
         "price": "0",
@@ -19272,13 +19265,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606836925,
+    "_ts": 1727446205173502,
     "id": "134903866",
     "name": "Rouges",
     "location": {
       "x": 1349,
       "y": 3866
-    }
+    },
+    "last_update": 1727447578467
   },
   {
     "markets": {
@@ -19475,9 +19469,9 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "5161.458",
+        "price": "4726.246",
         "open_price": "5161.458",
-        "highest_bid": "5161.458",
+        "highest_bid": "4726.246",
         "high_price": "5161.458",
         "low_price": "5161.458",
         "volume": 0,
@@ -19590,13 +19584,11 @@
         "average_price": "2.166",
         "moving_average": "2.042",
         "highest_bid": "2.157",
-        "lowest_ask": "2.166",
         "high_price": "2.166",
         "low_price": "2.166",
         "volume": 32,
         "volume_prev_12": 417,
-        "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "bid_volume_10": 1
       },
       "flax fibres": {
         "price": "4.467",
@@ -19619,7 +19611,7 @@
         "last_price": "3.156",
         "average_price": "3.156",
         "moving_average": "3.427",
-        "lowest_ask": "3.442",
+        "lowest_ask": "5.946",
         "high_price": "3.156",
         "low_price": "3.156",
         "volume": 1,
@@ -20063,7 +20055,7 @@
         "low_price": "4000",
         "volume": 0,
         "volume_prev_12": 2,
-        "bid_volume_10": 1,
+        "bid_volume_10": 2,
         "ask_volume_10": 3
       },
       "spinning wheels": {
@@ -20248,13 +20240,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1727445606837337,
+    "_ts": 1727446206110320,
     "id": "136603589",
     "name": "Calmont",
     "location": {
       "x": 1366,
       "y": 3589
-    }
+    },
+    "last_update": 1727447578993
   },
   {
     "markets": {
@@ -20269,12 +20262,10 @@
         "last_price": "16.933",
         "average_price": "16.933",
         "moving_average": "14.482",
-        "highest_bid": "14.473",
         "high_price": "16.933",
         "low_price": "16.933",
         "volume": 2,
-        "volume_prev_12": 12,
-        "bid_volume_10": 1
+        "volume_prev_12": 12
       },
       "axes": {
         "price": "64",
@@ -21182,22 +21173,23 @@
         "average_price": "4.782",
         "moving_average": "9.626",
         "highest_bid": "4.366",
-        "lowest_ask": "4.782",
+        "lowest_ask": "5.788",
         "high_price": "4.782",
         "low_price": "4.782",
         "volume": 9,
         "volume_prev_12": 129,
         "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "ask_volume_10": 5
       }
     },
-    "_ts": 1727445606837748,
+    "_ts": 1727446206559685,
     "id": "137403767",
     "name": "Poque",
     "location": {
       "x": 1374,
       "y": 3767
-    }
+    },
+    "last_update": 1727447579522
   },
   {
     "markets": {
@@ -22112,13 +22104,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606832250,
+    "_ts": 1727446205396253,
     "id": "142100901",
     "name": "Niederscheid",
     "location": {
       "x": 1421,
       "y": 901
-    }
+    },
+    "last_update": 1727447580056
   },
   {
     "markets": {
@@ -22985,13 +22978,14 @@
         "ask_volume_10": 10
       }
     },
-    "_ts": 1727445606837005,
+    "_ts": 1727446801941505,
     "id": "147400239",
     "name": "Lonbay",
     "location": {
       "x": 1474,
       "y": 239
-    }
+    },
+    "last_update": 1727447580593
   },
   {
     "markets": {
@@ -23708,18 +23702,18 @@
         "bid_volume_10": 1
       },
       "timber": {
-        "price": "8.387",
+        "price": "8.268",
         "open_price": "16.028",
-        "last_price": "8.387",
-        "average_price": "15.454",
+        "last_price": "8.268",
+        "average_price": "14.609",
         "moving_average": "10.819",
         "highest_bid": "8.268",
         "lowest_ask": "16.028",
         "high_price": "16.028",
-        "low_price": "8.387",
-        "volume": 15,
+        "low_price": "8.268",
+        "volume": 17,
         "volume_prev_12": 127,
-        "bid_volume_10": 7,
+        "bid_volume_10": 5,
         "ask_volume_10": 2
       },
       "tools": {
@@ -23802,13 +23796,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727446086729012,
+    "_ts": 1727446214150262,
     "id": "147401758",
     "name": "Eindkirchen",
     "location": {
       "x": 1474,
       "y": 1758
-    }
+    },
+    "last_update": 1727447581113
   },
   {
     "markets": {
@@ -24719,13 +24714,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1727445606836428,
+    "_ts": 1727446206396437,
     "id": "147700992",
     "name": "Frankfels",
     "location": {
       "x": 1477,
       "y": 992
-    }
+    },
+    "last_update": 1727447581640
   },
   {
     "markets": {
@@ -25076,7 +25072,7 @@
         "average_price": "11.312",
         "moving_average": "13.002",
         "highest_bid": "10.93",
-        "lowest_ask": "11.312",
+        "lowest_ask": "13.91",
         "high_price": "11.312",
         "low_price": "11.312",
         "volume": 2,
@@ -25640,13 +25636,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837925,
+    "_ts": 1727446207799028,
     "id": "148603820",
     "name": "Montans",
     "location": {
       "x": 1486,
       "y": 3820
-    }
+    },
+    "last_update": 1727447582158
   },
   {
     "markets": {
@@ -26236,12 +26233,10 @@
         "last_price": "0.865",
         "average_price": "0.865",
         "moving_average": "0.793",
-        "lowest_ask": "0.865",
         "high_price": "0.865",
         "low_price": "0.865",
         "volume": 4,
-        "volume_prev_12": 48,
-        "ask_volume_10": 6
+        "volume_prev_12": 48
       },
       "mouldboards": {
         "price": "0",
@@ -26562,13 +26557,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1727445606837971,
+    "_ts": 1727446205876575,
     "id": "148803492",
     "name": "Surans",
     "location": {
       "x": 1488,
       "y": 3492
-    }
+    },
+    "last_update": 1727447582688
   },
   {
     "markets": {
@@ -27421,13 +27417,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727446004064253,
+    "_ts": 1727447084757800,
     "id": "150201864",
     "name": "Braunden",
     "location": {
       "x": 1502,
       "y": 1864
-    }
+    },
+    "last_update": 1727447583233
   },
   {
     "markets": {
@@ -27734,13 +27731,11 @@
         "last_price": "4.114",
         "average_price": "4.114",
         "moving_average": "4.72",
-        "highest_bid": "4.114",
         "lowest_ask": "5.723",
         "high_price": "4.114",
         "low_price": "4.114",
         "volume": 1,
         "volume_prev_12": 11,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "flax plants": {
@@ -28323,13 +28318,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837439,
+    "_ts": 1727446206027013,
     "id": "154900809",
     "name": "Münchburg",
     "location": {
       "x": 1549,
       "y": 809
-    }
+    },
+    "last_update": 1727447583762
   },
   {
     "markets": {
@@ -29181,13 +29177,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837543,
+    "_ts": 1727446206690658,
     "id": "161001099",
     "name": "Lichtennieder",
     "location": {
       "x": 1610,
       "y": 1099
-    }
+    },
+    "last_update": 1727447584297
   },
   {
     "markets": {
@@ -30126,13 +30123,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837694,
+    "_ts": 1727446207219045,
     "id": "161300612",
     "name": "Wiltoneem",
     "location": {
       "x": 1613,
       "y": 612
-    }
+    },
+    "last_update": 1727447584836
   },
   {
     "markets": {
@@ -30302,13 +30300,13 @@
         "last_price": "5.673",
         "average_price": "5.673",
         "moving_average": "6.559",
-        "highest_bid": "5.16",
+        "highest_bid": "4.774",
         "lowest_ask": "6.657",
         "high_price": "5.673",
         "low_price": "5.673",
         "volume": 6,
         "volume_prev_12": 74,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 7
       },
       "chisels": {
@@ -30337,7 +30335,7 @@
         "low_price": "9.043",
         "volume": 17,
         "volume_prev_12": 131,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "coats": {
         "price": "0",
@@ -30492,7 +30490,7 @@
         "low_price": "0.608",
         "volume": 0,
         "volume_prev_12": 26,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "flour": {
         "price": "50",
@@ -30763,7 +30761,7 @@
         "last_price": "4.376",
         "average_price": "4.376",
         "moving_average": "5.005",
-        "highest_bid": "1.039",
+        "highest_bid": "0.357",
         "lowest_ask": "4.376",
         "high_price": "4.376",
         "low_price": "4.376",
@@ -31065,13 +31063,14 @@
         "ask_volume_10": 8
       }
     },
-    "_ts": 1727445606836779,
+    "_ts": 1727446208651407,
     "id": "163000920",
     "name": "Berwiese",
     "location": {
       "x": 1630,
       "y": 920
-    }
+    },
+    "last_update": 1727447585372
   },
   {
     "markets": {
@@ -32000,13 +31999,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837719,
+    "_ts": 1727446208203939,
     "id": "163203463",
     "name": "Laugnan",
     "location": {
       "x": 1632,
       "y": 3463
-    }
+    },
+    "last_update": 1727447585908
   },
   {
     "markets": {
@@ -32870,13 +32870,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837105,
+    "_ts": 1727446207219069,
     "id": "164500737",
     "name": "Frankaue",
     "location": {
       "x": 1645,
       "y": 737
-    }
+    },
+    "last_update": 1727447586436
   },
   {
     "markets": {
@@ -32989,9 +32990,9 @@
         "lowest_ask": "0.332",
         "high_price": "0.332",
         "low_price": "0.322",
-        "volume": 90,
+        "volume": 94,
         "volume_prev_12": 931,
-        "ask_volume_10": 14
+        "ask_volume_10": 10
       },
       "casks": {
         "price": "0.231",
@@ -33057,12 +33058,12 @@
       "clay": {
         "price": "12",
         "open_price": "12",
-        "highest_bid": "12",
+        "last_price": "12",
+        "average_price": "12",
         "high_price": "12",
         "low_price": "12",
-        "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume": 1,
+        "volume_prev_12": 0
       },
       "cloth": {
         "price": "9.287",
@@ -33381,9 +33382,9 @@
         "lowest_ask": "1.551",
         "high_price": "1.551",
         "low_price": "1.551",
-        "volume": 1421,
+        "volume": 1428,
         "volume_prev_12": 17313,
-        "ask_volume_10": 260
+        "ask_volume_10": 253
       },
       "lead bars": {
         "price": "0",
@@ -33789,13 +33790,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445969647721,
+    "_ts": 1727447459165350,
     "id": "166703806",
     "name": "Etaiqueilles",
     "location": {
       "x": 1667,
       "y": 3806
-    }
+    },
+    "last_update": 1727447586959
   },
   {
     "markets": {
@@ -34742,13 +34744,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837024,
+    "_ts": 1727446207219055,
     "id": "167900398",
     "name": "Kleinkirchen",
     "location": {
       "x": 1679,
       "y": 398
-    }
+    },
+    "last_update": 1727447587495
   },
   {
     "markets": {
@@ -35659,13 +35662,14 @@
         "ask_volume_10": 8
       }
     },
-    "_ts": 1727445606837630,
+    "_ts": 1727446206782839,
     "id": "169001022",
     "name": "Großdon",
     "location": {
       "x": 1690,
       "y": 1022
-    }
+    },
+    "last_update": 1727447588035
   },
   {
     "markets": {
@@ -35836,7 +35840,7 @@
         "low_price": "8.188",
         "volume": 5,
         "volume_prev_12": 72,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 3
       },
       "chisels": {
@@ -35847,26 +35851,24 @@
       "clay": {
         "price": "0.363",
         "open_price": "0.363",
-        "lowest_ask": "0.363",
+        "last_price": "0.363",
+        "average_price": "0.363",
         "high_price": "0.363",
         "low_price": "0.363",
-        "volume": 0,
-        "volume_prev_12": 0,
-        "ask_volume_10": 1
+        "volume": 1,
+        "volume_prev_12": 0
       },
       "cloth": {
-        "price": "8",
+        "price": "7.261",
         "open_price": "8",
-        "last_price": "8",
-        "average_price": "8",
+        "last_price": "7.261",
+        "average_price": "7.941",
         "moving_average": "7.828",
-        "highest_bid": "7.732",
         "lowest_ask": "8.19",
         "high_price": "8",
-        "low_price": "8",
-        "volume": 23,
+        "low_price": "7.261",
+        "volume": 26,
         "volume_prev_12": 236,
-        "bid_volume_10": 3,
         "ask_volume_10": 2
       },
       "coats": {
@@ -36078,13 +36080,11 @@
         "open_price": "39.582",
         "last_price": "92.435",
         "moving_average": "92.435",
-        "highest_bid": "39.582",
         "lowest_ask": "181.736",
         "high_price": "39.582",
         "low_price": "39.582",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "grain": {
@@ -36603,13 +36603,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445820878379,
+    "_ts": 1727447429762279,
     "id": "170603659",
     "name": "Etallyes",
     "location": {
       "x": 1706,
       "y": 3659
-    }
+    },
+    "last_update": 1727447588572
   },
   {
     "markets": {
@@ -36807,14 +36808,14 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "3850.327",
+        "price": "4079.232",
         "open_price": "3850.327",
-        "highest_bid": "3850.327",
+        "highest_bid": "4079.232",
         "high_price": "3850.327",
         "low_price": "3850.327",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "bid_volume_10": 3
       },
       "cookware": {
         "price": "27.735",
@@ -37380,12 +37381,12 @@
         "open_price": "4200",
         "last_price": "2526.127",
         "moving_average": "3754.354",
-        "lowest_ask": "4200",
+        "lowest_ask": "2833.381",
         "high_price": "4200",
         "low_price": "4200",
         "volume": 0,
         "volume_prev_12": 1,
-        "ask_volume_10": 7
+        "ask_volume_10": 2
       },
       "spinning wheels": {
         "price": "154.114",
@@ -37568,13 +37569,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606837952,
+    "_ts": 1727446206782890,
     "id": "171301142",
     "name": "Unterhufe",
     "location": {
       "x": 1713,
       "y": 1142
-    }
+    },
+    "last_update": 1727447589111
   },
   {
     "markets": {
@@ -38385,7 +38387,7 @@
         "last_price": "7.947",
         "moving_average": "7.947",
         "highest_bid": "8.665",
-        "lowest_ask": "9.208",
+        "lowest_ask": "12.469",
         "high_price": "8.665",
         "low_price": "8.665",
         "volume": 0,
@@ -38522,23 +38524,22 @@
         "last_price": "4.323",
         "average_price": "4.323",
         "moving_average": "4.306",
-        "highest_bid": "2.543",
         "lowest_ask": "4.962",
         "high_price": "4.323",
         "low_price": "4.323",
         "volume": 8,
         "volume_prev_12": 109,
-        "bid_volume_10": 1,
         "ask_volume_10": 3
       }
     },
-    "_ts": 1727445606837171,
+    "_ts": 1727446207219084,
     "id": "175200265",
     "name": "Tatcham",
     "location": {
       "x": 1752,
       "y": 265
-    }
+    },
+    "last_update": 1727447589645
   },
   {
     "markets": {
@@ -39412,13 +39413,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837345,
+    "_ts": 1727446206949519,
     "id": "178403841",
     "name": "Varamiens",
     "location": {
       "x": 1784,
       "y": 3841
-    }
+    },
+    "last_update": 1727447590165
   },
   {
     "markets": {
@@ -40324,13 +40326,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606836179,
+    "_ts": 1727446206782875,
     "id": "179601073",
     "name": "Münchaue",
     "location": {
       "x": 1796,
       "y": 1073
-    }
+    },
+    "last_update": 1727447590697
   },
   {
     "markets": {
@@ -41242,13 +41245,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606835897,
+    "_ts": 1727446208759775,
     "id": "180500954",
     "name": "Hamfurt",
     "location": {
       "x": 1805,
       "y": 954
-    }
+    },
+    "last_update": 1727447591227
   },
   {
     "markets": {
@@ -42134,13 +42138,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837287,
+    "_ts": 1727446207929870,
     "id": "182403642",
     "name": "Avitot",
     "location": {
       "x": 1824,
       "y": 3642
-    }
+    },
+    "last_update": 1727447591745
   },
   {
     "markets": {
@@ -42463,7 +42468,7 @@
         "low_price": "6.072",
         "volume": 5,
         "volume_prev_12": 63,
-        "ask_volume_10": 4
+        "ask_volume_10": 3
       },
       "flax plants": {
         "price": "2.045",
@@ -42752,12 +42757,12 @@
         "last_price": "37.607",
         "average_price": "37.607",
         "moving_average": "47.761",
-        "lowest_ask": "55.958",
+        "lowest_ask": "58.578",
         "high_price": "37.607",
         "low_price": "37.607",
         "volume": 1,
         "volume_prev_12": 5,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "ox power": {
         "price": "1.902",
@@ -43040,13 +43045,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837643,
+    "_ts": 1727446208469708,
     "id": "187603748",
     "name": "Dunfort",
     "location": {
       "x": 1876,
       "y": 3748
-    }
+    },
+    "last_update": 1727447592277
   },
   {
     "markets": {
@@ -43978,13 +43984,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837818,
+    "_ts": 1727446208271789,
     "id": "190003520",
     "name": "Bordenes",
     "location": {
       "x": 1900,
       "y": 3520
-    }
+    },
+    "last_update": 1727447592812
   },
   {
     "markets": {
@@ -44881,13 +44888,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837562,
+    "_ts": 1727446208336975,
     "id": "190600320",
     "name": "Salisruhe",
     "location": {
       "x": 1906,
       "y": 320
-    }
+    },
+    "last_update": 1727447593342
   },
   {
     "markets": {
@@ -44955,9 +44963,9 @@
         "highest_bid": "8",
         "high_price": "8",
         "low_price": "8",
-        "volume": 221,
+        "volume": 231,
         "volume_prev_12": 2612,
-        "bid_volume_10": 21
+        "bid_volume_10": 11
       },
       "bricks": {
         "price": "15.337",
@@ -45018,17 +45026,15 @@
         "ask_volume_10": 2
       },
       "charcoal": {
-        "price": "3.186",
+        "price": "3.037",
         "open_price": "3.186",
-        "last_price": "3.186",
-        "average_price": "3.186",
+        "last_price": "3.037",
+        "average_price": "3.178",
         "moving_average": "2.652",
-        "highest_bid": "3.186",
         "high_price": "3.186",
-        "low_price": "3.186",
-        "volume": 18,
-        "volume_prev_12": 181,
-        "bid_volume_10": 2
+        "low_price": "3.037",
+        "volume": 20,
+        "volume_prev_12": 181
       },
       "cheese": {
         "price": "16",
@@ -45110,16 +45116,15 @@
         "ask_volume_10": 7
       },
       "cured meat": {
-        "price": "54.925",
+        "price": "50",
         "open_price": "54.925",
-        "last_price": "54.925",
+        "last_price": "50",
+        "average_price": "53.283",
         "moving_average": "54.925",
-        "highest_bid": "54.925",
         "high_price": "54.925",
-        "low_price": "54.925",
-        "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 3
+        "low_price": "50",
+        "volume": 3,
+        "volume_prev_12": 0
       },
       "donations": {
         "price": "1",
@@ -45523,18 +45528,17 @@
         "volume_prev_12": 0
       },
       "salt": {
-        "price": "3.067",
+        "price": "3.747",
         "open_price": "3.067",
-        "last_price": "3.035",
+        "last_price": "3.747",
+        "average_price": "3.715",
         "moving_average": "3.029",
         "highest_bid": "3.067",
-        "lowest_ask": "3.683",
-        "high_price": "3.067",
-        "low_price": "3.067",
-        "volume": 0,
+        "high_price": "3.747",
+        "low_price": "3.683",
+        "volume": 2,
         "volume_prev_12": 3,
-        "bid_volume_10": 12,
-        "ask_volume_10": 2
+        "bid_volume_10": 12
       },
       "sculptures": {
         "price": "0",
@@ -45599,15 +45603,14 @@
       "tiles": {
         "price": "17.448",
         "open_price": "17.448",
-        "last_price": "15",
+        "last_price": "17.448",
+        "average_price": "17.448",
         "moving_average": "15",
-        "highest_bid": "17.448",
         "lowest_ask": "25.108",
         "high_price": "17.448",
         "low_price": "17.448",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 0,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "timber": {
@@ -45626,18 +45629,16 @@
         "ask_volume_10": 11
       },
       "tools": {
-        "price": "40.339",
+        "price": "32.932",
         "open_price": "40.339",
-        "last_price": "40.339",
-        "average_price": "40.339",
+        "last_price": "32.932",
+        "average_price": "37.757",
         "moving_average": "37.241",
-        "highest_bid": "40",
         "lowest_ask": "41.267",
         "high_price": "40.339",
-        "low_price": "40.339",
-        "volume": 2,
+        "low_price": "32.932",
+        "volume": 6,
         "volume_prev_12": 49,
-        "bid_volume_10": 2,
         "ask_volume_10": 3
       },
       "wax": {
@@ -45693,14 +45694,13 @@
         "price": "45",
         "open_price": "45",
         "last_price": "45",
+        "average_price": "45",
         "moving_average": "45",
-        "highest_bid": "45",
         "lowest_ask": "46.098",
         "high_price": "45",
         "low_price": "45",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 5,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "yarn": {
@@ -45709,13 +45709,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727446060102581,
+    "_ts": 1727446735898483,
     "id": "195202174",
     "name": "Bouruen",
     "location": {
       "x": 1952,
       "y": 2174
-    }
+    },
+    "last_update": 1727447593860
   },
   {
     "markets": {
@@ -46634,13 +46635,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837573,
+    "_ts": 1727446208469704,
     "id": "195903184",
     "name": "Liegues",
     "location": {
       "x": 1959,
       "y": 3184
-    }
+    },
+    "last_update": 1727447594400
   },
   {
     "markets": {
@@ -46941,14 +46943,12 @@
         "bid_volume_10": 1
       },
       "dyed cloth": {
-        "price": "33.134",
+        "price": "0",
         "open_price": "33.134",
-        "highest_bid": "33.134",
         "high_price": "33.134",
         "low_price": "33.134",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "firewood": {
         "price": "2.128",
@@ -47574,13 +47574,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606837775,
+    "_ts": 1727446208469725,
     "id": "196303401",
     "name": "Toqueaen",
     "location": {
       "x": 1963,
       "y": 3401
-    }
+    },
+    "last_update": 1727447594958
   },
   {
     "markets": {
@@ -47913,7 +47914,7 @@
         "open_price": "1.534",
         "last_price": "1.539",
         "moving_average": "1.539",
-        "lowest_ask": "1.534",
+        "lowest_ask": "2.731",
         "high_price": "1.534",
         "low_price": "1.534",
         "volume": 0,
@@ -48471,13 +48472,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606834676,
+    "_ts": 1727446208469694,
     "id": "200003081",
     "name": "Monton",
     "location": {
       "x": 2000,
       "y": 3081
-    }
+    },
+    "last_update": 1727447595527
   },
   {
     "markets": {
@@ -49195,7 +49197,7 @@
         "volume": 0,
         "volume_prev_12": 7,
         "bid_volume_10": 1,
-        "ask_volume_10": 3
+        "ask_volume_10": 2
       },
       "sails": {
         "price": "0",
@@ -49293,12 +49295,12 @@
         "open_price": "4.157",
         "last_price": "6.647",
         "moving_average": "6.647",
-        "lowest_ask": "4.157",
+        "lowest_ask": "9.922",
         "high_price": "4.157",
         "low_price": "4.157",
         "volume": 0,
         "volume_prev_12": 0,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "timber": {
         "price": "6.455",
@@ -49361,7 +49363,7 @@
         "low_price": "5.054",
         "volume": 8,
         "volume_prev_12": 113,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 2
       },
       "wool": {
@@ -49394,13 +49396,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837960,
+    "_ts": 1727446208557325,
     "id": "201103682",
     "name": "Octeon",
     "location": {
       "x": 2011,
       "y": 3682
-    }
+    },
+    "last_update": 1727447596074
   },
   {
     "markets": {
@@ -49726,7 +49729,7 @@
         "open_price": "1.522",
         "last_price": "4.033",
         "moving_average": "4.033",
-        "lowest_ask": "1.522",
+        "lowest_ask": "3.084",
         "high_price": "1.522",
         "low_price": "1.522",
         "volume": 0,
@@ -50279,13 +50282,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837825,
+    "_ts": 1727446208336988,
     "id": "203900286",
     "name": "Niederroth",
     "location": {
       "x": 2039,
       "y": 286
-    }
+    },
+    "last_update": 1727447596607
   },
   {
     "markets": {
@@ -50865,12 +50869,12 @@
         "last_price": "3.027",
         "average_price": "3.027",
         "moving_average": "1.962",
-        "highest_bid": "3.027",
+        "highest_bid": "2.67",
         "high_price": "3.027",
         "low_price": "3.027",
         "volume": 16,
         "volume_prev_12": 170,
-        "bid_volume_10": 5
+        "bid_volume_10": 1
       },
       "medicine": {
         "price": "0",
@@ -51194,13 +51198,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837478,
+    "_ts": 1727446209257972,
     "id": "203901166",
     "name": "Altmünde",
     "location": {
       "x": 2039,
       "y": 1166
-    }
+    },
+    "last_update": 1727447597141
   },
   {
     "markets": {
@@ -51519,7 +51524,7 @@
         "volume": 3,
         "volume_prev_12": 37,
         "bid_volume_10": 1,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "flax plants": {
         "price": "1.971",
@@ -52095,13 +52100,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836572,
+    "_ts": 1727446208759827,
     "id": "204301021",
     "name": "Neudorf",
     "location": {
       "x": 2043,
       "y": 1021
-    }
+    },
+    "last_update": 1727447597661
   },
   {
     "markets": {
@@ -52306,9 +52312,9 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "3117.478",
+        "price": "5704.38",
         "open_price": "3117.478",
-        "highest_bid": "3117.478",
+        "highest_bid": "5704.38",
         "high_price": "3117.478",
         "low_price": "3117.478",
         "volume": 0,
@@ -52602,14 +52608,12 @@
         "volume_prev_12": 0
       },
       "hulk": {
-        "price": "4615.96",
+        "price": "0",
         "open_price": "4615.96",
-        "highest_bid": "4615.96",
         "high_price": "4615.96",
         "low_price": "4615.96",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "iron ore": {
         "price": "3.451",
@@ -52893,7 +52897,7 @@
         "low_price": "3508.9",
         "volume": 0,
         "volume_prev_12": 1,
-        "bid_volume_10": 1,
+        "bid_volume_10": 3,
         "ask_volume_10": 1
       },
       "spinning wheels": {
@@ -53086,13 +53090,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837231,
+    "_ts": 1727446208469684,
     "id": "204302988",
     "name": "Touland",
     "location": {
       "x": 2043,
       "y": 2988
-    }
+    },
+    "last_update": 1727447598200
   },
   {
     "markets": {
@@ -54004,13 +54009,11 @@
         "last_price": "12.465",
         "average_price": "12.465",
         "moving_average": "11.403",
-        "highest_bid": "10.794",
         "lowest_ask": "12.465",
         "high_price": "12.465",
         "low_price": "12.465",
         "volume": 2,
         "volume_prev_12": 27,
-        "bid_volume_10": 1,
         "ask_volume_10": 3
       },
       "yarn": {
@@ -54019,13 +54022,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837976,
+    "_ts": 1727446208557344,
     "id": "206603523",
     "name": "Verilles",
     "location": {
       "x": 2066,
       "y": 3523
-    }
+    },
+    "last_update": 1727447598738
   },
   {
     "markets": {
@@ -54930,13 +54934,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837394,
+    "_ts": 1727446210355384,
     "id": "210900198",
     "name": "Luddon",
     "location": {
       "x": 2109,
       "y": 198
-    }
+    },
+    "last_update": 1727447599271
   },
   {
     "markets": {
@@ -55201,7 +55206,7 @@
         "low_price": "26.675",
         "volume": 2,
         "volume_prev_12": 14,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "donations": {
@@ -55839,13 +55844,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837652,
+    "_ts": 1727446208759797,
     "id": "213601134",
     "name": "Wolfsbergheim",
     "location": {
       "x": 2136,
       "y": 1134
-    }
+    },
+    "last_update": 1727447599790
   },
   {
     "markets": {
@@ -55923,16 +55929,18 @@
         "ask_volume_10": 67
       },
       "bricks": {
-        "price": "3.477",
+        "price": "3.48",
         "open_price": "3.477",
         "last_price": "3.477",
         "average_price": "3.477",
         "moving_average": "4.245",
-        "lowest_ask": "3.477",
+        "highest_bid": "3.48",
+        "lowest_ask": "5.133",
         "high_price": "3.477",
         "low_price": "3.477",
-        "volume": 6,
+        "volume": 7,
         "volume_prev_12": 68,
+        "bid_volume_10": 19,
         "ask_volume_10": 1
       },
       "butter": {
@@ -56737,7 +56745,7 @@
         "low_price": "9.519",
         "volume": 1,
         "volume_prev_12": 22,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 1
       },
       "yarn": {
@@ -56752,13 +56760,14 @@
         "volume_prev_12": 12
       }
     },
-    "_ts": 1727445929937886,
+    "_ts": 1727446534620202,
     "id": "214603140",
     "name": "Vacquedalle",
     "location": {
       "x": 2146,
       "y": 3140
-    }
+    },
+    "last_update": 1727447600316
   },
   {
     "markets": {
@@ -56959,14 +56968,14 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "3751.648",
+        "price": "3978.021",
         "open_price": "3751.648",
-        "highest_bid": "3751.648",
+        "highest_bid": "3978.021",
         "high_price": "3751.648",
         "low_price": "3751.648",
         "volume": 0,
         "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "bid_volume_10": 2
       },
       "cookware": {
         "price": "20.526",
@@ -57603,7 +57612,7 @@
         "low_price": "3029.319",
         "volume": 0,
         "volume_prev_12": 3,
-        "bid_volume_10": 1,
+        "bid_volume_10": 2,
         "ask_volume_10": 5
       },
       "spinning wheels": {
@@ -57789,13 +57798,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606835875,
+    "_ts": 1727446208968347,
     "id": "214603657",
     "name": "Bordefort",
     "location": {
       "x": 2146,
       "y": 3657
-    }
+    },
+    "last_update": 1727447600826
   },
   {
     "markets": {
@@ -58607,17 +58617,18 @@
         "volume_prev_12": 0
       },
       "snekkja": {
-        "price": "3816.729",
+        "price": "4000",
         "open_price": "2883.463",
-        "last_price": "3816.729",
+        "last_price": "4000",
+        "average_price": "3627.821",
         "moving_average": "3884.283",
-        "highest_bid": "2883.463",
+        "highest_bid": "2724.22",
         "lowest_ask": "4200",
-        "high_price": "2883.463",
+        "high_price": "4000",
         "low_price": "2883.463",
-        "volume": 0,
+        "volume": 3,
         "volume_prev_12": 6,
-        "bid_volume_10": 1,
+        "bid_volume_10": 2,
         "ask_volume_10": 1
       },
       "spinning wheels": {
@@ -58814,13 +58825,14 @@
         "ask_volume_10": 7
       }
     },
-    "_ts": 1727445606837985,
+    "_ts": 1727446211057030,
     "id": "219301043",
     "name": "Dortruhe",
     "location": {
       "x": 2193,
       "y": 1043
-    }
+    },
+    "last_update": 1727447601354
   },
   {
     "markets": {
@@ -59178,7 +59190,7 @@
         "last_price": "2.7",
         "average_price": "2.7",
         "moving_average": "2.474",
-        "highest_bid": "1.611",
+        "highest_bid": "0.965",
         "lowest_ask": "2.873",
         "high_price": "2.7",
         "low_price": "2.7",
@@ -59678,7 +59690,7 @@
         "low_price": "4.753",
         "volume": 15,
         "volume_prev_12": 242,
-        "bid_volume_10": 9,
+        "bid_volume_10": 8,
         "ask_volume_10": 2
       },
       "tiles": {
@@ -59804,13 +59816,14 @@
         "ask_volume_10": 5
       }
     },
-    "_ts": 1727445606833074,
+    "_ts": 1727446209257954,
     "id": "228200962",
     "name": "Münchnger",
     "location": {
       "x": 2282,
       "y": 962
-    }
+    },
+    "last_update": 1727447601891
   },
   {
     "markets": {
@@ -60020,9 +60033,9 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "11760.07",
+        "price": "10718.741",
         "open_price": "11760.07",
-        "highest_bid": "11760.07",
+        "highest_bid": "10718.741",
         "high_price": "11760.07",
         "low_price": "11760.07",
         "volume": 0,
@@ -60357,9 +60370,9 @@
         "bid_volume_10": 1
       },
       "hulk": {
-        "price": "16351.873",
+        "price": "17092.762",
         "open_price": "16351.873",
-        "highest_bid": "16351.873",
+        "highest_bid": "17092.762",
         "high_price": "16351.873",
         "low_price": "16351.873",
         "volume": 0,
@@ -60892,13 +60905,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606835912,
+    "_ts": 1727446210181749,
     "id": "231203566",
     "name": "Muladjon",
     "location": {
       "x": 2312,
       "y": 3566
-    }
+    },
+    "last_update": 1727447602411
   },
   {
     "markets": {
@@ -61798,13 +61812,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606835099,
+    "_ts": 1727446209257918,
     "id": "238101011",
     "name": "Uppvella",
     "location": {
       "x": 2381,
       "y": 1011
-    }
+    },
+    "last_update": 1727447602942
   },
   {
     "markets": {
@@ -62736,13 +62751,14 @@
         "ask_volume_10": 5
       }
     },
-    "_ts": 1727445606835403,
+    "_ts": 1727446213138080,
     "id": "243903571",
     "name": "Angetot",
     "location": {
       "x": 2439,
       "y": 3571
-    }
+    },
+    "last_update": 1727447603467
   },
   {
     "markets": {
@@ -62792,14 +62808,12 @@
         "ask_volume_10": 2
       },
       "bellows": {
-        "price": "838.541",
+        "price": "0",
         "open_price": "838.541",
-        "highest_bid": "838.541",
         "high_price": "838.541",
         "low_price": "838.541",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "belts": {
         "price": "0",
@@ -63641,13 +63655,11 @@
         "last_price": "8.404",
         "average_price": "8.404",
         "moving_average": "8.41",
-        "highest_bid": "7.104",
         "lowest_ask": "8.409",
         "high_price": "8.404",
         "low_price": "8.404",
         "volume": 21,
         "volume_prev_12": 288,
-        "bid_volume_10": 1,
         "ask_volume_10": 11
       },
       "wrought iron": {
@@ -63679,13 +63691,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1727445606836227,
+    "_ts": 1727446210009371,
     "id": "245900869",
     "name": "Gävden",
     "location": {
       "x": 2459,
       "y": 869
-    }
+    },
+    "last_update": 1727447604009
   },
   {
     "markets": {
@@ -63719,15 +63732,15 @@
       "beer": {
         "price": "10",
         "open_price": "3.777",
-        "last_price": "4.466",
-        "average_price": "3.781",
+        "last_price": "10",
+        "average_price": "3.861",
         "moving_average": "3.823",
-        "highest_bid": "10",
-        "high_price": "4.466",
+        "highest_bid": "3.37",
+        "high_price": "10",
         "low_price": "3.777",
-        "volume": 154,
+        "volume": 156,
         "volume_prev_12": 1783,
-        "bid_volume_10": 2
+        "bid_volume_10": 1
       },
       "bellows": {
         "price": "0",
@@ -63827,25 +63840,26 @@
         "average_price": "1.8",
         "moving_average": "1.793",
         "highest_bid": "1.747",
-        "lowest_ask": "1.8",
+        "lowest_ask": "2.135",
         "high_price": "1.8",
         "low_price": "1.8",
-        "volume": 47,
+        "volume": 75,
         "volume_prev_12": 554,
         "bid_volume_10": 2,
-        "ask_volume_10": 28
+        "ask_volume_10": 1
       },
       "cheese": {
-        "price": "17.576",
+        "price": "16.788",
         "open_price": "17.576",
-        "last_price": "16",
+        "last_price": "16.788",
+        "average_price": "17.379",
         "moving_average": "16",
-        "highest_bid": "17.576",
+        "highest_bid": "16",
         "high_price": "17.576",
-        "low_price": "17.576",
-        "volume": 0,
+        "low_price": "16.788",
+        "volume": 4,
         "volume_prev_12": 0,
-        "bid_volume_10": 9
+        "bid_volume_10": 5
       },
       "chisels": {
         "price": "0",
@@ -63858,17 +63872,16 @@
         "volume_prev_12": 0
       },
       "cloth": {
-        "price": "17.64",
+        "price": "17.136",
         "open_price": "17.136",
-        "last_price": "17.64",
+        "last_price": "17.136",
+        "average_price": "17.136",
         "moving_average": "17.64",
-        "highest_bid": "17.136",
         "lowest_ask": "20.943",
         "high_price": "17.136",
         "low_price": "17.136",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 0,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "coats": {
@@ -63911,17 +63924,15 @@
         "ask_volume_10": 2
       },
       "cured fish": {
-        "price": "52.386",
+        "price": "50",
         "open_price": "52.386",
-        "last_price": "52.386",
-        "average_price": "52.386",
+        "last_price": "50",
+        "average_price": "51.022",
         "moving_average": "54.925",
-        "highest_bid": "50",
         "high_price": "52.386",
-        "low_price": "52.386",
-        "volume": 3,
-        "volume_prev_12": 6,
-        "bid_volume_10": 4
+        "low_price": "50",
+        "volume": 7,
+        "volume_prev_12": 6
       },
       "cured meat": {
         "price": "41.293",
@@ -64418,17 +64429,16 @@
         "volume_prev_12": 0
       },
       "tiles": {
-        "price": "20.6",
+        "price": "16.871",
         "open_price": "16.871",
-        "last_price": "20.6",
+        "last_price": "16.871",
+        "average_price": "16.871",
         "moving_average": "20.6",
-        "highest_bid": "16.871",
         "lowest_ask": "20.619",
         "high_price": "16.871",
         "low_price": "16.871",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 128,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "timber": {
@@ -64447,18 +64457,16 @@
         "ask_volume_10": 4
       },
       "tools": {
-        "price": "28",
+        "price": "13.578",
         "open_price": "15.397",
-        "last_price": "28",
-        "average_price": "23.035",
+        "last_price": "13.578",
+        "average_price": "21.172",
         "moving_average": "15.742",
-        "highest_bid": "15.397",
         "lowest_ask": "28.267",
         "high_price": "28",
-        "low_price": "15.397",
-        "volume": 33,
+        "low_price": "13.578",
+        "volume": 43,
         "volume_prev_12": 169,
-        "bid_volume_10": 9,
         "ask_volume_10": 9
       },
       "tumbrel": {
@@ -64507,18 +64515,16 @@
         "ask_volume_10": 12
       },
       "wrought iron": {
-        "price": "49.603",
+        "price": "37.044",
         "open_price": "49.603",
-        "last_price": "49.603",
-        "average_price": "49.603",
+        "last_price": "37.044",
+        "average_price": "43.867",
         "moving_average": "50.092",
-        "highest_bid": "48.711",
         "lowest_ask": "51.155",
         "high_price": "49.603",
-        "low_price": "49.603",
-        "volume": 1,
+        "low_price": "37.044",
+        "volume": 7,
         "volume_prev_12": 119,
-        "bid_volume_10": 3,
         "ask_volume_10": 2
       },
       "yarn": {
@@ -64527,13 +64533,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727446149008447,
+    "_ts": 1727446639170607,
     "id": "248102079",
     "name": "Verque",
     "location": {
       "x": 2481,
       "y": 2079
-    }
+    },
+    "last_update": 1727447604543
   },
   {
     "markets": {
@@ -65470,13 +65477,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837993,
+    "_ts": 1727446210488092,
     "id": "262300855",
     "name": "Niederruhe",
     "location": {
       "x": 2623,
       "y": 855
-    }
+    },
+    "last_update": 1727447605054
   },
   {
     "markets": {
@@ -66389,13 +66397,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837724,
+    "_ts": 1727446212130118,
     "id": "264100692",
     "name": "Jönkövella",
     "location": {
       "x": 2641,
       "y": 692
-    }
+    },
+    "last_update": 1727447605594
   },
   {
     "markets": {
@@ -67297,13 +67306,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837579,
+    "_ts": 1727446210686449,
     "id": "264600988",
     "name": "Trondde",
     "location": {
       "x": 2646,
       "y": 988
-    }
+    },
+    "last_update": 1727447606131
   },
   {
     "markets": {
@@ -67415,7 +67425,7 @@
         "low_price": "0.703",
         "volume": 55,
         "volume_prev_12": 688,
-        "bid_volume_10": 15,
+        "bid_volume_10": 12,
         "ask_volume_10": 10000000
       },
       "casks": {
@@ -67694,7 +67704,7 @@
         "low_price": "21.015",
         "volume": 19,
         "volume_prev_12": 220,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "glass": {
@@ -68248,13 +68258,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606838000,
+    "_ts": 1727446212130139,
     "id": "266600508",
     "name": "Gerile",
     "location": {
       "x": 2666,
       "y": 508
-    }
+    },
+    "last_update": 1727447606646
   },
   {
     "markets": {
@@ -69246,13 +69257,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837700,
+    "_ts": 1727446210181793,
     "id": "267303592",
     "name": "Daugavalinn",
     "location": {
       "x": 2673,
       "y": 3592
-    }
+    },
+    "last_update": 1727447607164
   },
   {
     "markets": {
@@ -69587,7 +69599,7 @@
         "open_price": "1.307",
         "last_price": "4.519",
         "moving_average": "4.519",
-        "lowest_ask": "1.307",
+        "lowest_ask": "1.779",
         "high_price": "1.307",
         "low_price": "1.307",
         "volume": 0,
@@ -70168,13 +70180,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445755848906,
+    "_ts": 1727447593282806,
     "id": "269201155",
     "name": "Unterbrücken",
     "location": {
       "x": 2692,
       "y": 1155
-    }
+    },
+    "last_update": 1727447607699
   },
   {
     "markets": {
@@ -71094,13 +71107,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836279,
+    "_ts": 1727446210413703,
     "id": "271900210",
     "name": "Karlmoki",
     "location": {
       "x": 2719,
       "y": 210
-    }
+    },
+    "last_update": 1727447608216
   },
   {
     "markets": {
@@ -72043,13 +72057,14 @@
         "volume_prev_12": 3
       }
     },
-    "_ts": 1727445606836361,
+    "_ts": 1727446212130113,
     "id": "271900380",
     "name": "Gerivall",
     "location": {
       "x": 2719,
       "y": 380
-    }
+    },
+    "last_update": 1727447608727
   },
   {
     "markets": {
@@ -72919,7 +72934,7 @@
         "volume": 15,
         "volume_prev_12": 145,
         "bid_volume_10": 5,
-        "ask_volume_10": 23
+        "ask_volume_10": 22
       },
       "wax": {
         "price": "0",
@@ -73000,13 +73015,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837842,
+    "_ts": 1727447593282771,
     "id": "276300836",
     "name": "Neuvella",
     "location": {
       "x": 2763,
       "y": 836
-    }
+    },
+    "last_update": 1727447609241
   },
   {
     "markets": {
@@ -73938,13 +73954,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837410,
+    "_ts": 1727446211488493,
     "id": "276600470",
     "name": "Norrman",
     "location": {
       "x": 2766,
       "y": 470
-    }
+    },
+    "last_update": 1727447609758
   },
   {
     "markets": {
@@ -74753,12 +74770,12 @@
         "open_price": "8.666",
         "last_price": "11.388",
         "moving_average": "11.388",
-        "lowest_ask": "8.666",
+        "lowest_ask": "9.207",
         "high_price": "8.666",
         "low_price": "8.666",
         "volume": 0,
         "volume_prev_12": 1,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "thread": {
         "price": "6.376",
@@ -74876,13 +74893,11 @@
         "last_price": "12.944",
         "average_price": "12.944",
         "moving_average": "12.289",
-        "highest_bid": "11.586",
         "lowest_ask": "14.07",
         "high_price": "12.944",
         "low_price": "12.944",
         "volume": 2,
         "volume_prev_12": 38,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "yarn": {
@@ -74891,13 +74906,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837849,
+    "_ts": 1727446211214965,
     "id": "280301044",
     "name": "Kirchrecht",
     "location": {
       "x": 2803,
       "y": 1044
-    }
+    },
+    "last_update": 1727447610292
   },
   {
     "markets": {
@@ -75007,19 +75023,19 @@
         "volume_prev_12": 0
       },
       "carting": {
-        "price": "0.38",
+        "price": "1.1",
         "open_price": "0.38",
-        "last_price": "0.38",
-        "average_price": "0.38",
+        "last_price": "1.1",
+        "average_price": "0.393",
         "moving_average": "0.378",
         "highest_bid": "0.38",
         "lowest_ask": "1.1",
-        "high_price": "0.38",
+        "high_price": "1.1",
         "low_price": "0.38",
-        "volume": 103,
+        "volume": 105,
         "volume_prev_12": 1690,
         "bid_volume_10": 43,
-        "ask_volume_10": 10000000
+        "ask_volume_10": 9999998
       },
       "casks": {
         "price": "1.439",
@@ -75662,18 +75678,19 @@
         "ask_volume_10": 1
       },
       "rope": {
-        "price": "84.687",
+        "price": "85.35",
         "open_price": "72.355",
-        "last_price": "84.687",
+        "last_price": "85.35",
+        "average_price": "85.35",
         "moving_average": "65.952",
         "highest_bid": "72.355",
-        "lowest_ask": "85.35",
-        "high_price": "72.355",
-        "low_price": "72.355",
-        "volume": 0,
+        "lowest_ask": "87.972",
+        "high_price": "85.35",
+        "low_price": "85.35",
+        "volume": 1,
         "volume_prev_12": 9,
         "bid_volume_10": 2,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "sails": {
         "price": "0",
@@ -75887,13 +75904,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445753015465,
+    "_ts": 1727447598873755,
     "id": "280701146",
     "name": "Potsmühle",
     "location": {
       "x": 2807,
       "y": 1146
-    }
+    },
+    "last_update": 1727447610822
   },
   {
     "markets": {
@@ -76821,13 +76839,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606837195,
+    "_ts": 1727446211488441,
     "id": "286500413",
     "name": "Koldhaga",
     "location": {
       "x": 2865,
       "y": 413
-    }
+    },
+    "last_update": 1727447611365
   },
   {
     "markets": {
@@ -77807,13 +77826,14 @@
         "ask_volume_10": 14
       }
     },
-    "_ts": 1727445606837314,
+    "_ts": 1727446922750068,
     "id": "287300643",
     "name": "Stale",
     "location": {
       "x": 2873,
       "y": 643
-    }
+    },
+    "last_update": 1727447611889
   },
   {
     "markets": {
@@ -78507,13 +78527,13 @@
         "last_price": "5.646",
         "moving_average": "5.056",
         "highest_bid": "4.668",
-        "lowest_ask": "7.049",
+        "lowest_ask": "7.68",
         "high_price": "4.668",
         "low_price": "4.668",
         "volume": 0,
         "volume_prev_12": 4,
         "bid_volume_10": 1,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "sculptures": {
         "price": "0",
@@ -78583,16 +78603,14 @@
         "ask_volume_10": 2
       },
       "thread": {
-        "price": "5.597",
+        "price": "5.516",
         "open_price": "5.597",
         "last_price": "5.516",
         "moving_average": "5.516",
-        "highest_bid": "5.597",
         "high_price": "5.597",
         "low_price": "5.597",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "tiles": {
         "price": "9.827",
@@ -78706,13 +78724,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606836522,
+    "_ts": 1727446212850989,
     "id": "287900523",
     "name": "Thorhaga",
     "location": {
       "x": 2879,
       "y": 523
-    }
+    },
+    "last_update": 1727447612404
   },
   {
     "markets": {
@@ -79099,13 +79118,13 @@
         "last_price": "22.575",
         "average_price": "22.575",
         "moving_average": "22.8",
-        "highest_bid": "21.716",
+        "highest_bid": "21.399",
         "lowest_ask": "27.565",
         "high_price": "22.575",
         "low_price": "22.575",
         "volume": 26,
         "volume_prev_12": 286,
-        "bid_volume_10": 4,
+        "bid_volume_10": 3,
         "ask_volume_10": 1
       },
       "glass": {
@@ -79669,13 +79688,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837059,
+    "_ts": 1727446922749990,
     "id": "289400965",
     "name": "Arnborg",
     "location": {
       "x": 2894,
       "y": 965
-    }
+    },
+    "last_update": 1727447612912
   },
   {
     "markets": {
@@ -80610,13 +80630,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836187,
+    "_ts": 1727447593282792,
     "id": "293001097",
     "name": "Großmühle",
     "location": {
       "x": 2930,
       "y": 1097
-    }
+    },
+    "last_update": 1727447613438
   },
   {
     "markets": {
@@ -81557,13 +81578,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837350,
+    "_ts": 1727447593282757,
     "id": "295400862",
     "name": "Karlbro",
     "location": {
       "x": 2954,
       "y": 862
-    }
+    },
+    "last_update": 1727447613973
   },
   {
     "markets": {
@@ -81677,22 +81699,22 @@
         "lowest_ask": "0.406",
         "high_price": "0.406",
         "low_price": "0.406",
-        "volume": 303,
+        "volume": 329,
         "volume_prev_12": 3682,
-        "ask_volume_10": 32
+        "ask_volume_10": 6
       },
       "casks": {
-        "price": "4.016",
+        "price": "4.578",
         "open_price": "4.016",
-        "last_price": "4.016",
-        "average_price": "4.016",
+        "last_price": "4.578",
+        "average_price": "4.128",
         "moving_average": "4.223",
-        "lowest_ask": "4.016",
-        "high_price": "4.016",
+        "lowest_ask": "5.089",
+        "high_price": "4.578",
         "low_price": "4.016",
-        "volume": 3,
+        "volume": 5,
         "volume_prev_12": 88,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "cattle": {
         "price": "91.59",
@@ -81766,9 +81788,9 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "4687.47",
+        "price": "7352.499",
         "open_price": "4687.47",
-        "highest_bid": "4687.47",
+        "highest_bid": "7352.499",
         "high_price": "4687.47",
         "low_price": "4687.47",
         "volume": 0,
@@ -81831,19 +81853,17 @@
         "ask_volume_10": 3
       },
       "cured meat": {
-        "price": "25.987",
+        "price": "26.194",
         "open_price": "25.987",
-        "last_price": "25.987",
-        "average_price": "25.987",
+        "last_price": "26.194",
+        "average_price": "26.012",
         "moving_average": "24.36",
         "highest_bid": "25.987",
-        "lowest_ask": "26.194",
-        "high_price": "25.987",
+        "high_price": "26.194",
         "low_price": "25.987",
-        "volume": 14,
+        "volume": 16,
         "volume_prev_12": 164,
-        "bid_volume_10": 2,
-        "ask_volume_10": 2
+        "bid_volume_10": 2
       },
       "donations": {
         "price": "1",
@@ -81966,10 +81986,10 @@
         "lowest_ask": "23",
         "high_price": "23",
         "low_price": "23",
-        "volume": 104,
+        "volume": 106,
         "volume_prev_12": 1230,
         "bid_volume_10": 1,
-        "ask_volume_10": 18
+        "ask_volume_10": 16
       },
       "glass": {
         "price": "0",
@@ -82121,9 +82141,9 @@
         "lowest_ask": "1.749",
         "high_price": "1.749",
         "low_price": "1.749",
-        "volume": 4716,
+        "volume": 4878,
         "volume_prev_12": 54978,
-        "ask_volume_10": 240
+        "ask_volume_10": 78
       },
       "lead bars": {
         "price": "0",
@@ -82151,16 +82171,17 @@
         "volume_prev_12": 0
       },
       "limestone": {
-        "price": "2.395",
+        "price": "1.496",
         "open_price": "1.496",
-        "last_price": "2.395",
+        "last_price": "1.496",
+        "average_price": "1.496",
         "moving_average": "2.37",
-        "lowest_ask": "1.496",
+        "lowest_ask": "23.082",
         "high_price": "1.496",
         "low_price": "1.496",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 6,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "lodging": {
         "price": "2.101",
@@ -82260,19 +82281,19 @@
         "ask_volume_10": 1
       },
       "nets": {
-        "price": "34.049",
+        "price": "34.706",
         "open_price": "34.049",
-        "last_price": "34.049",
-        "average_price": "34.049",
+        "last_price": "34.706",
+        "average_price": "34.18",
         "moving_average": "33.587",
         "highest_bid": "32.957",
-        "lowest_ask": "34.706",
-        "high_price": "34.049",
+        "lowest_ask": "40.057",
+        "high_price": "34.706",
         "low_price": "34.049",
-        "volume": 4,
+        "volume": 5,
         "volume_prev_12": 50,
         "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "ask_volume_10": 4
       },
       "ox power": {
         "price": "3.694",
@@ -82364,13 +82385,13 @@
         "last_price": "87.544",
         "moving_average": "80.566",
         "highest_bid": "71.813",
-        "lowest_ask": "83.355",
+        "lowest_ask": "99.169",
         "high_price": "71.813",
         "low_price": "71.813",
         "volume": 0,
         "volume_prev_12": 8,
         "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "sails": {
         "price": "0",
@@ -82378,19 +82399,19 @@
         "volume_prev_12": 0
       },
       "salt": {
-        "price": "4.26",
+        "price": "5.515",
         "open_price": "4.26",
-        "last_price": "4.26",
-        "average_price": "4.26",
+        "last_price": "5.515",
+        "average_price": "4.678",
         "moving_average": "5.332",
         "highest_bid": "4.26",
-        "lowest_ask": "5.515",
-        "high_price": "4.26",
+        "lowest_ask": "5.882",
+        "high_price": "5.515",
         "low_price": "4.26",
-        "volume": 2,
+        "volume": 3,
         "volume_prev_12": 21,
         "bid_volume_10": 1,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "sculptures": {
         "price": "0",
@@ -82520,19 +82541,17 @@
         "ask_volume_10": 56
       },
       "tools": {
-        "price": "4.693",
+        "price": "6.635",
         "open_price": "4.693",
-        "last_price": "4.693",
-        "average_price": "4.693",
+        "last_price": "6.635",
+        "average_price": "4.795",
         "moving_average": "4.994",
         "highest_bid": "4.677",
-        "lowest_ask": "4.715",
-        "high_price": "4.693",
+        "high_price": "6.635",
         "low_price": "4.693",
-        "volume": 33,
+        "volume": 46,
         "volume_prev_12": 488,
-        "bid_volume_10": 12,
-        "ask_volume_10": 10
+        "bid_volume_10": 12
       },
       "tumbrel": {
         "price": "1303.54",
@@ -82626,13 +82645,14 @@
         "ask_volume_10": 10
       }
     },
-    "_ts": 1727445606837518,
+    "_ts": 1727446922749976,
     "id": "295900588",
     "name": "Örestad",
     "location": {
       "x": 2959,
       "y": 588
-    }
+    },
+    "last_update": 1727447614501
   },
   {
     "markets": {
@@ -82835,14 +82855,12 @@
         "volume_prev_12": 0
       },
       "cog": {
-        "price": "3105.251",
+        "price": "0",
         "open_price": "3105.251",
-        "highest_bid": "3105.251",
         "high_price": "3105.251",
         "low_price": "3105.251",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "cookware": {
         "price": "19.36",
@@ -83644,13 +83662,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606836372,
+    "_ts": 1727446213665419,
     "id": "296003490",
     "name": "Kärdovo",
     "location": {
       "x": 2960,
       "y": 3490
-    }
+    },
+    "last_update": 1727447615047
   },
   {
     "markets": {
@@ -84175,14 +84194,12 @@
         "bid_volume_10": 1
       },
       "hulk": {
-        "price": "10300.125",
+        "price": "0",
         "open_price": "10300.125",
-        "highest_bid": "10300.125",
         "high_price": "10300.125",
         "low_price": "10300.125",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "iron ore": {
         "price": "3.527",
@@ -84228,14 +84245,12 @@
         "volume_prev_12": 0
       },
       "leather": {
-        "price": "14.578",
+        "price": "0",
         "open_price": "14.578",
-        "highest_bid": "14.578",
         "high_price": "14.578",
         "low_price": "14.578",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "light armor": {
         "price": "0",
@@ -84498,17 +84513,17 @@
         "volume_prev_12": 0
       },
       "snekkja": {
-        "price": "4000",
+        "price": "3938.355",
         "open_price": "4000",
         "last_price": "3938.355",
         "moving_average": "3938.355",
-        "highest_bid": "4000",
+        "highest_bid": "3272.198",
         "lowest_ask": "4153.766",
         "high_price": "4000",
         "low_price": "4000",
         "volume": 0,
         "volume_prev_12": 2,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "spinning wheels": {
@@ -84708,13 +84723,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1727445606836299,
+    "_ts": 1727446922749903,
     "id": "300900749",
     "name": "Esholm",
     "location": {
       "x": 3009,
       "y": 749
-    }
+    },
+    "last_update": 1727447615587
   },
   {
     "markets": {
@@ -85557,13 +85573,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837857,
+    "_ts": 1727446214196418,
     "id": "301703335",
     "name": "Gulnewo",
     "location": {
       "x": 3017,
       "y": 3335
-    }
+    },
+    "last_update": 1727447616125
   },
   {
     "markets": {
@@ -86484,13 +86501,14 @@
         "ask_volume_10": 7
       }
     },
-    "_ts": 1727445606837359,
+    "_ts": 1727446213665389,
     "id": "302403588",
     "name": "Ukanga",
     "location": {
       "x": 3024,
       "y": 3588
-    }
+    },
+    "last_update": 1727447616651
   },
   {
     "markets": {
@@ -87400,13 +87418,14 @@
         "bid_volume_10": 1
       }
     },
-    "_ts": 1727445606836900,
+    "_ts": 1727446212851005,
     "id": "302500488",
     "name": "Stade",
     "location": {
       "x": 3025,
       "y": 488
-    }
+    },
+    "last_update": 1727447617185
   },
   {
     "markets": {
@@ -88402,13 +88421,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837180,
+    "_ts": 1727446542850111,
     "id": "309500565",
     "name": "Esen",
     "location": {
       "x": 3095,
       "y": 565
-    }
+    },
+    "last_update": 1727447617694
   },
   {
     "markets": {
@@ -88908,9 +88928,9 @@
         "lowest_ask": "1.367",
         "high_price": "1.367",
         "low_price": "1.367",
-        "volume": 923,
+        "volume": 1031,
         "volume_prev_12": 12022,
-        "ask_volume_10": 365
+        "ask_volume_10": 257
       },
       "lead bars": {
         "price": "0",
@@ -89338,13 +89358,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727446049748033,
+    "_ts": 1727446275549036,
     "id": "311603677",
     "name": "Varsalu",
     "location": {
       "x": 3116,
       "y": 3677
-    }
+    },
+    "last_update": 1727447618205
   },
   {
     "markets": {
@@ -90005,17 +90026,16 @@
         "volume_prev_12": 0
       },
       "rope": {
-        "price": "197.568",
+        "price": "191.923",
         "open_price": "191.923",
-        "last_price": "197.568",
+        "last_price": "191.923",
+        "average_price": "191.923",
         "moving_average": "197.568",
-        "highest_bid": "191.923",
         "lowest_ask": "265.035",
         "high_price": "191.923",
         "low_price": "191.923",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 3,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "sails": {
@@ -90223,13 +90243,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837658,
+    "_ts": 1727447593282722,
     "id": "313301060",
     "name": "Gerisund",
     "location": {
       "x": 3133,
       "y": 1060
-    }
+    },
+    "last_update": 1727447618727
   },
   {
     "markets": {
@@ -90681,12 +90702,12 @@
         "open_price": "0.686",
         "last_price": "2.648",
         "moving_average": "3.002",
-        "lowest_ask": "0.686",
+        "lowest_ask": "5.86",
         "high_price": "0.686",
         "low_price": "0.686",
         "volume": 0,
         "volume_prev_12": 3,
-        "ask_volume_10": 1
+        "ask_volume_10": 2
       },
       "jewellery": {
         "price": "0",
@@ -91122,13 +91143,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836619,
+    "_ts": 1727446214874915,
     "id": "314203467",
     "name": "Vilva",
     "location": {
       "x": 3142,
       "y": 3467
-    }
+    },
+    "last_update": 1727447619261
   },
   {
     "markets": {
@@ -92073,13 +92095,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606835151,
+    "_ts": 1727446215139099,
     "id": "324403790",
     "name": "Novova",
     "location": {
       "x": 3244,
       "y": 3790
-    }
+    },
+    "last_update": 1727447619787
   },
   {
     "markets": {
@@ -92991,13 +93014,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837707,
+    "_ts": 1727446214049474,
     "id": "325000982",
     "name": "Öremalm",
     "location": {
       "x": 3250,
       "y": 982
-    }
+    },
+    "last_update": 1727447620322
   },
   {
     "markets": {
@@ -93377,13 +93401,11 @@
         "average_price": "21.788",
         "moving_average": "21.889",
         "highest_bid": "21.788",
-        "lowest_ask": "22.628",
         "high_price": "21.788",
         "low_price": "21.788",
         "volume": 25,
         "volume_prev_12": 315,
-        "bid_volume_10": 5,
-        "ask_volume_10": 1
+        "bid_volume_10": 5
       },
       "glass": {
         "price": "0",
@@ -93944,13 +93966,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837863,
+    "_ts": 1727446213944895,
     "id": "327703576",
     "name": "Marijamlinn",
     "location": {
       "x": 3277,
       "y": 3576
-    }
+    },
+    "last_update": 1727447620854
   },
   {
     "markets": {
@@ -94577,18 +94600,16 @@
         "ask_volume_10": 2
       },
       "nets": {
-        "price": "34.626",
+        "price": "34.295",
         "open_price": "34.626",
-        "last_price": "34.626",
-        "average_price": "34.626",
+        "last_price": "34.295",
+        "average_price": "34.46",
         "moving_average": "36.147",
-        "highest_bid": "34.295",
         "lowest_ask": "34.626",
         "high_price": "34.626",
-        "low_price": "34.626",
-        "volume": 1,
+        "low_price": "34.295",
+        "volume": 2,
         "volume_prev_12": 11,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "ox power": {
@@ -94877,13 +94898,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837897,
+    "_ts": 1727446466146333,
     "id": "329503409",
     "name": "Duboviga",
     "location": {
       "x": 3295,
       "y": 3409
-    }
+    },
+    "last_update": 1727447621368
   },
   {
     "markets": {
@@ -95112,18 +95134,16 @@
         "ask_volume_10": 1
       },
       "copper ingots": {
-        "price": "10.045",
+        "price": "9.621",
         "open_price": "10.045",
-        "last_price": "10.045",
-        "average_price": "10.045",
+        "last_price": "9.621",
+        "average_price": "9.985",
         "moving_average": "10.346",
-        "highest_bid": "9.933",
         "lowest_ask": "12.5",
         "high_price": "10.045",
-        "low_price": "10.045",
-        "volume": 7,
+        "low_price": "9.621",
+        "volume": 9,
         "volume_prev_12": 105,
-        "bid_volume_10": 3,
         "ask_volume_10": 1
       },
       "copper ore": {
@@ -95390,9 +95410,11 @@
         "volume_prev_12": 0
       },
       "hulk": {
-        "price": "0",
+        "price": "4304.185",
+        "highest_bid": "4304.185",
         "volume": 0,
-        "volume_prev_12": 0
+        "volume_prev_12": 0,
+        "bid_volume_10": 1
       },
       "iron ore": {
         "price": "3.038",
@@ -95423,9 +95445,9 @@
         "lowest_ask": "1.502",
         "high_price": "1.502",
         "low_price": "1.502",
-        "volume": 2626,
+        "volume": 2776,
         "volume_prev_12": 34160,
-        "ask_volume_10": 804
+        "ask_volume_10": 654
       },
       "lead bars": {
         "price": "0",
@@ -95804,19 +95826,19 @@
         "ask_volume_10": 9
       },
       "tools": {
-        "price": "5.145",
+        "price": "6.935",
         "open_price": "5.145",
-        "last_price": "5.145",
-        "average_price": "5.145",
+        "last_price": "6.935",
+        "average_price": "5.517",
         "moving_average": "5.449",
         "highest_bid": "4.775",
-        "lowest_ask": "5.145",
-        "high_price": "5.145",
+        "lowest_ask": "7.036",
+        "high_price": "6.935",
         "low_price": "5.145",
-        "volume": 15,
+        "volume": 45,
         "volume_prev_12": 330,
         "bid_volume_10": 3,
-        "ask_volume_10": 15
+        "ask_volume_10": 1
       },
       "tumbrel": {
         "price": "2600",
@@ -95898,23 +95920,22 @@
         "last_price": "4.691",
         "average_price": "4.691",
         "moving_average": "4.93",
-        "highest_bid": "4.084",
         "lowest_ask": "4.691",
         "high_price": "4.691",
         "low_price": "4.691",
         "volume": 16,
         "volume_prev_12": 301,
-        "bid_volume_10": 1,
         "ask_volume_10": 9
       }
     },
-    "_ts": 1727446161725759,
+    "_ts": 1727446653001213,
     "id": "336703642",
     "name": "Kamennlinn",
     "location": {
       "x": 3367,
       "y": 3642
-    }
+    },
+    "last_update": 1727447621900
   },
   {
     "markets": {
@@ -96272,13 +96293,13 @@
         "last_price": "20.749",
         "average_price": "20.749",
         "moving_average": "21.063",
-        "highest_bid": "20.499",
+        "highest_bid": "19.248",
         "lowest_ask": "20.749",
         "high_price": "20.749",
         "low_price": "20.749",
         "volume": 12,
         "volume_prev_12": 152,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 1
       },
       "glass": {
@@ -96802,13 +96823,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837272,
+    "_ts": 1727446214511706,
     "id": "343000884",
     "name": "Dramnger",
     "location": {
       "x": 3430,
       "y": 884
-    }
+    },
+    "last_update": 1727447622438
   },
   {
     "markets": {
@@ -97813,13 +97835,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606838017,
+    "_ts": 1727446214701119,
     "id": "344100590",
     "name": "Bergron",
     "location": {
       "x": 3441,
       "y": 590
-    }
+    },
+    "last_update": 1727447622965
   },
   {
     "markets": {
@@ -98100,12 +98123,12 @@
       "dyed cloth": {
         "price": "40",
         "open_price": "40",
-        "highest_bid": "40",
+        "last_price": "40",
+        "average_price": "40",
         "high_price": "40",
         "low_price": "40",
-        "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume": 1,
+        "volume_prev_12": 0
       },
       "firewood": {
         "price": "1.275",
@@ -98147,17 +98170,17 @@
         "ask_volume_10": 2
       },
       "flax plants": {
-        "price": "8.065",
+        "price": "7.737",
         "open_price": "8.065",
-        "last_price": "8.065",
-        "average_price": "8.065",
+        "last_price": "7.737",
+        "average_price": "7.983",
         "moving_average": "2.085",
-        "highest_bid": "8.065",
+        "highest_bid": "7.737",
         "high_price": "8.065",
-        "low_price": "8.065",
-        "volume": 2,
+        "low_price": "7.737",
+        "volume": 4,
         "volume_prev_12": 3,
-        "bid_volume_10": 4
+        "bid_volume_10": 2
       },
       "flour": {
         "price": "50",
@@ -98429,17 +98452,16 @@
         "ask_volume_10": 2
       },
       "nets": {
-        "price": "32.724",
+        "price": "29.462",
         "open_price": "32.724",
-        "last_price": "26.784",
+        "last_price": "29.462",
+        "average_price": "30.277",
         "moving_average": "44.912",
-        "highest_bid": "32.724",
         "lowest_ask": "132.299",
         "high_price": "32.724",
-        "low_price": "32.724",
-        "volume": 0,
+        "low_price": "29.462",
+        "volume": 4,
         "volume_prev_12": 4,
-        "bid_volume_10": 4,
         "ask_volume_10": 2
       },
       "ox power": {
@@ -98500,15 +98522,16 @@
       "rope": {
         "price": "105.86",
         "open_price": "105.86",
-        "last_price": "21.984",
+        "last_price": "105.86",
+        "average_price": "105.86",
         "moving_average": "34.953",
         "highest_bid": "105.86",
         "lowest_ask": "117.041",
         "high_price": "105.86",
         "low_price": "105.86",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 6,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "sails": {
@@ -98731,13 +98754,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1727445895667160,
+    "_ts": 1727446437923963,
     "id": "344803409",
     "name": "Sigulinka",
     "location": {
       "x": 3448,
       "y": 3409
-    }
+    },
+    "last_update": 1727447623504
   },
   {
     "markets": {
@@ -98871,13 +98895,11 @@
         "open_price": "33.098",
         "last_price": "125.995",
         "moving_average": "96.186",
-        "highest_bid": "33.098",
         "lowest_ask": "41.345",
         "high_price": "33.098",
         "low_price": "33.098",
         "volume": 0,
         "volume_prev_12": 9,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "charcoal": {
@@ -99566,13 +99588,13 @@
         "last_price": "6.66",
         "average_price": "6.66",
         "moving_average": "6.659",
-        "highest_bid": "6.059",
+        "highest_bid": "6.057",
         "lowest_ask": "6.66",
         "high_price": "6.66",
         "low_price": "6.66",
         "volume": 10,
         "volume_prev_12": 99,
-        "bid_volume_10": 6,
+        "bid_volume_10": 5,
         "ask_volume_10": 1
       },
       "wax": {
@@ -99642,13 +99664,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837594,
+    "_ts": 1727446802134285,
     "id": "351500748",
     "name": "Jordau",
     "location": {
       "x": 3515,
       "y": 748
-    }
+    },
+    "last_update": 1727447624023
   },
   {
     "markets": {
@@ -100315,7 +100338,7 @@
         "low_price": "29.833",
         "volume": 1,
         "volume_prev_12": 12,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 5
       },
       "ox power": {
@@ -100635,13 +100658,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445750143705,
+    "_ts": 1727446214779569,
     "id": "353801294",
     "name": "Sundsgard",
     "location": {
       "x": 3538,
       "y": 1294
-    }
+    },
+    "last_update": 1727447624558
   },
   {
     "markets": {
@@ -101196,14 +101220,12 @@
         "ask_volume_10": 2
       },
       "looms": {
-        "price": "447.167",
+        "price": "0",
         "open_price": "447.167",
-        "highest_bid": "447.167",
         "high_price": "447.167",
         "low_price": "447.167",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "malt": {
         "price": "0",
@@ -101551,7 +101573,7 @@
         "low_price": "8.092",
         "volume": 8,
         "volume_prev_12": 134,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 11
       },
       "wrought iron": {
@@ -101582,13 +101604,14 @@
         "ask_volume_10": 5
       }
     },
-    "_ts": 1727445606836591,
+    "_ts": 1727446215298266,
     "id": "354603853",
     "name": "Gdanvere",
     "location": {
       "x": 3546,
       "y": 3853
-    }
+    },
+    "last_update": 1727447625084
   },
   {
     "markets": {
@@ -101839,14 +101862,12 @@
         "last_price": "22.814",
         "average_price": "22.814",
         "moving_average": "22.618",
-        "highest_bid": "20.372",
-        "lowest_ask": "22.814",
+        "lowest_ask": "22.864",
         "high_price": "22.814",
         "low_price": "22.814",
         "volume": 3,
         "volume_prev_12": 40,
-        "bid_volume_10": 1,
-        "ask_volume_10": 4
+        "ask_volume_10": 3
       },
       "donations": {
         "price": "1",
@@ -102492,13 +102513,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837787,
+    "_ts": 1727446214701312,
     "id": "358600850",
     "name": "Stavare",
     "location": {
       "x": 3586,
       "y": 850
-    }
+    },
+    "last_update": 1727447625600
   },
   {
     "markets": {
@@ -102746,7 +102768,7 @@
         "volume": 2,
         "volume_prev_12": 23,
         "bid_volume_10": 2,
-        "ask_volume_10": 6
+        "ask_volume_10": 5
       },
       "cured meat": {
         "price": "28.373",
@@ -103403,13 +103425,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1727445606835882,
+    "_ts": 1727446215298324,
     "id": "360803403",
     "name": "Kedeanga",
     "location": {
       "x": 3608,
       "y": 3403
-    }
+    },
+    "last_update": 1727447626113
   },
   {
     "markets": {
@@ -104266,13 +104289,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836543,
+    "_ts": 1727446214641731,
     "id": "363101072",
     "name": "Breiklif",
     "location": {
       "x": 3631,
       "y": 1072
-    }
+    },
+    "last_update": 1727447626644
   },
   {
     "markets": {
@@ -104886,13 +104910,11 @@
         "last_price": "4.465",
         "average_price": "4.465",
         "moving_average": "4.465",
-        "highest_bid": "0.25",
         "lowest_ask": "4.465",
         "high_price": "4.465",
         "low_price": "4.465",
         "volume": 2,
         "volume_prev_12": 20,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "nets": {
@@ -104906,7 +104928,7 @@
         "low_price": "23.139",
         "volume": 0,
         "volume_prev_12": 21,
-        "bid_volume_10": 3,
+        "bid_volume_10": 2,
         "ask_volume_10": 2
       },
       "ox power": {
@@ -105180,13 +105202,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837052,
+    "_ts": 1727446214701357,
     "id": "366600778",
     "name": "Vikidalle",
     "location": {
       "x": 3666,
       "y": 778
-    }
+    },
+    "last_update": 1727447627187
   },
   {
     "markets": {
@@ -106084,13 +106107,14 @@
         "ask_volume_10": 8
       }
     },
-    "_ts": 1727445606837739,
+    "_ts": 1727446214779563,
     "id": "374301313",
     "name": "Jönköjaur",
     "location": {
       "x": 3743,
       "y": 1313
-    }
+    },
+    "last_update": 1727447627718
   },
   {
     "markets": {
@@ -107092,16 +107116,17 @@
         "low_price": "4.779",
         "volume": 9,
         "volume_prev_12": 89,
-        "ask_volume_10": 3
+        "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606837502,
+    "_ts": 1727446215359280,
     "id": "374603342",
     "name": "Bornai",
     "location": {
       "x": 3746,
       "y": 3342
-    }
+    },
+    "last_update": 1727447628254
   },
   {
     "markets": {
@@ -107825,13 +107850,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727446124953381,
+    "_ts": 1727447092453072,
     "id": "381202415",
     "name": "Novozie",
     "location": {
       "x": 3812,
       "y": 2415
-    }
+    },
+    "last_update": 1727447628791
   },
   {
     "markets": {
@@ -108067,13 +108093,11 @@
         "last_price": "24.76",
         "average_price": "24.76",
         "moving_average": "25.106",
-        "highest_bid": "20.642",
         "lowest_ask": "24.76",
         "high_price": "24.76",
         "low_price": "24.76",
         "volume": 1,
         "volume_prev_12": 14,
-        "bid_volume_10": 1,
         "ask_volume_10": 4
       },
       "cured meat": {
@@ -108743,13 +108767,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1727445606835711,
+    "_ts": 1727446215359374,
     "id": "384503815",
     "name": "Varnai",
     "location": {
       "x": 3845,
       "y": 3815
-    }
+    },
+    "last_update": 1727447629316
   },
   {
     "markets": {
@@ -109472,13 +109497,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837909,
+    "_ts": 1727447409209092,
     "id": "389102250",
     "name": "Marclives",
     "location": {
       "x": 3891,
       "y": 2250
-    }
+    },
+    "last_update": 1727447629876
   },
   {
     "markets": {
@@ -110424,13 +110450,14 @@
         "ask_volume_10": 5
       }
     },
-    "_ts": 1727445606837374,
+    "_ts": 1727446215359386,
     "id": "389303488",
     "name": "Liepol",
     "location": {
       "x": 3893,
       "y": 3488
-    }
+    },
+    "last_update": 1727447630378
   },
   {
     "markets": {
@@ -110768,14 +110795,12 @@
         "ask_volume_10": 1
       },
       "flour": {
-        "price": "40.565",
+        "price": "0",
         "open_price": "40.565",
-        "highest_bid": "40.565",
         "high_price": "40.565",
         "low_price": "40.565",
         "volume": 0,
-        "volume_prev_12": 0,
-        "bid_volume_10": 1
+        "volume_prev_12": 0
       },
       "furniture": {
         "price": "10.434",
@@ -111321,13 +111346,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837471,
+    "_ts": 1727446215359391,
     "id": "391003627",
     "name": "Elka",
     "location": {
       "x": 3910,
       "y": 3627
-    }
+    },
+    "last_update": 1727447630899
   },
   {
     "markets": {
@@ -111722,9 +111748,9 @@
         "lowest_ask": "1.721",
         "high_price": "1.721",
         "low_price": "1.721",
-        "volume": 802,
+        "volume": 814,
         "volume_prev_12": 8113,
-        "ask_volume_10": 46
+        "ask_volume_10": 34
       },
       "lead bars": {
         "price": "0",
@@ -112055,13 +112081,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606836396,
+    "_ts": 1727446802159051,
     "id": "397903067",
     "name": "Borinka",
     "location": {
       "x": 3979,
       "y": 3067
-    }
+    },
+    "last_update": 1727447631428
   },
   {
     "markets": {
@@ -112733,19 +112760,17 @@
         "bid_volume_10": 1
       },
       "timber": {
-        "price": "16.125",
+        "price": "25.625",
         "open_price": "16.125",
-        "last_price": "16.125",
-        "average_price": "16.125",
+        "last_price": "25.625",
+        "average_price": "22.078",
         "moving_average": "25.619",
         "highest_bid": "15.585",
-        "lowest_ask": "16.125",
-        "high_price": "16.125",
+        "high_price": "25.625",
         "low_price": "16.125",
-        "volume": 5,
+        "volume": 18,
         "volume_prev_12": 109,
-        "bid_volume_10": 2,
-        "ask_volume_10": 1
+        "bid_volume_10": 2
       },
       "tools": {
         "price": "40",
@@ -112821,12 +112846,13 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1727445606837795,
+    "_ts": 1727446802001458,
     "id": "403702798",
     "name": "Võzie",
     "location": {
       "x": 4037,
       "y": 2798
-    }
+    },
+    "last_update": 1727447631932
   }
 ]
