@@ -65,69 +65,88 @@
         <button id="showAdvancedFilterButton">Advanced Search</button>
       </div>
 
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleRange1" /> Show Town Range</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleRange2" /> Show 1st Outpost
-          Range</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost
-          Range</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleFertility" /> Show Fertility
-          Overlay</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label
-          for="fertilityOpacitySlider"
-          id="fertilityOpacityLabel"
-          style="display: none"
-          >Fertility Overlay Opacity:</label
-        >
-        <input
-          type="range"
-          id="fertilityOpacitySlider"
-          style="display: none"
-          min="0"
-          max="1"
-          step="0.1"
-          value="1"
-        />
+      <button
+        onclick="toggleAccordion('ranges')"
+        class="w3-button"
+        id="accordionBtn"
+      >
+        Town Ranges <i id="rangesIcon" class="fa fa-chevron-down"></i>
+      </button>
+      <div id="rangesDiv" class="sidebar-item w3-hide">
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleRange1" /> Show Town Range</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleRange2" /> Show 1st Outpost
+            Range</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleRange3" /> Show 2nd Outpost
+            Range</label
+          >
+        </div>
       </div>
 
-      <div class="sidebar-item">
-        <label
-          ><input type="checkbox" id="toggleForest" /> Show Forest
-          Overlay</label
-        >
-      </div>
-      <div class="sidebar-item">
-        <label
-          for="forestOpacitySlider"
-          id="forestOpacityLabel"
-          style="display: none"
-          >Forest Overlay Opacity:</label
-        >
-        <input
-          type="range"
-          id="forestOpacitySlider"
-          style="display: none"
-          min="0"
-          max="1"
-          step="0.1"
-          value="1"
-        />
+      <button
+        onclick="toggleAccordion('overlays')"
+        class="w3-button"
+        id="accordionBtn"
+      >
+        Overlays <i id="overlaysIcon" class="fa fa-chevron-down"></i>
+      </button>
+      <div id="overlaysDiv" class="sidebar-item w3-hide">
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleFertility" /> Show Fertility
+            Overlay</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label
+            for="fertilityOpacitySlider"
+            id="fertilityOpacityLabel"
+            style="display: none"
+            >Fertility Overlay Opacity:</label
+          >
+          <input
+            type="range"
+            id="fertilityOpacitySlider"
+            style="display: none"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+
+        <div class="sidebar-item">
+          <label
+            ><input type="checkbox" id="toggleForest" /> Show Forest
+            Overlay</label
+          >
+        </div>
+        <div class="sidebar-item">
+          <label
+            for="forestOpacitySlider"
+            id="forestOpacityLabel"
+            style="display: none"
+            >Forest Overlay Opacity:</label
+          >
+          <input
+            type="range"
+            id="forestOpacitySlider"
+            style="display: none"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
       </div>
 
       <button
@@ -138,7 +157,9 @@
         Market Visualizer <i id="marketIcon" class="fa fa-chevron-down"></i>
       </button>
       <div id="marketDiv" class="sidebar-item w3-hide">
-        <div id="marketLastUpdate" class="sidebar-item"><b>Last Update:</b> N/A</div>
+        <div id="marketLastUpdate" class="sidebar-item">
+          <b>Last Update:</b> N/A
+        </div>
         <div class="sidebar-item">
           <label
             ><input type="checkbox" id="toggleMarket" /> Show Market
@@ -147,17 +168,12 @@
         </div>
         <div class="sidebar-item">
           <label id="labelToggleMarketTooltip"
-            ><input
-              type="checkbox"
-              id="toggleMarketTooltip"
-            />
-            Show All Market Tooltips</label
+            ><input type="checkbox" id="toggleMarketTooltip" /> Show All Market
+            Tooltips</label
           >
         </div>
         <div class="sidebar-item">
-          <label id="marketLabel" for="marketSelect"
-            >Select item:</label
-          >
+          <label id="marketLabel" for="marketSelect">Select item:</label>
           <select id="marketSelect" class="w3-select">
             <!-- Item will be added here dynamically -->
           </select>

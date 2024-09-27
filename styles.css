@@ -87,30 +87,17 @@ body {
 }
 
 /* Add a transition effect for the icon rotation */
-#resourceIcon {
-  transition: transform 0.3s ease;
-}
-
-/* Rotate the icon when the accordion is open */
-.w3-show #resourceIcon {
-  transform: rotate(180deg);
-}
-
-/* Add a transition effect for the icon rotation */
+#rangesIcon,
+#resourceIcon,
+#marketIcon,
 #transportIcon {
   transition: transform 0.3s ease;
 }
 
 /* Rotate the icon when the accordion is open */
-.w3-show #marketIcon {
-  transform: rotate(180deg);
-}
-/* Add a transition effect for the icon rotation */
-#marketIcon {
-  transition: transform 0.3s ease;
-}
-
-/* Rotate the icon when the accordion is open */
+.w3-show #rangesIcon,
+.w3-show #resourceIcon,
+.w3-show #marketIcon,
 .w3-show #transportIcon {
   transform: rotate(180deg);
 }
