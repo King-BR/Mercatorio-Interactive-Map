@@ -8,7 +8,8 @@ async function loadMarketVisualizer(season) {
   marketData = null;
   marketLayer = null;
   lastUpdate = null;
-  document.getElementById("marketLastUpdate").innerHTML = "<b>Last Update:</b> N/A";
+  document.getElementById("marketLastUpdate").innerHTML =
+    "<b>Last Update:</b> N/A";
   if (season !== "s2") return;
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
   marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
@@ -16,7 +17,9 @@ async function loadMarketVisualizer(season) {
   items = [];
 
   lastUpdate = formatTime(marketData[0].last_update);
-  document.getElementById("marketLastUpdate").innerHTML = `<b>Last Update:</b> ${lastUpdate}`;
+  document.getElementById(
+    "marketLastUpdate"
+  ).innerHTML = `<b>Last Update:</b> ${lastUpdate}`;
 
   // Populate items
   marketData.forEach((town) => {
@@ -91,13 +94,17 @@ function createMarketVisualizer(item) {
   });
 
   var filteredTowns = towns.filter(
-    (town) => town.price != undefined && town.price != 0
+    (town) => town != undefined && town.price != undefined && town.price != 0
   );
   var prices = towns
-    .filter((town) => town.price != undefined && town.price != 0)
+    .filter(
+      (town) => town != undefined && town.price != undefined && town.price != 0
+    )
     .map((town) => town.price);
   var volumes = towns
-    .filter((town) => town.price != undefined && town.price != 0)
+    .filter(
+      (town) => town != undefined && town.price != undefined && town.price != 0
+    )
     .map((town) => town.volume);
 
   const pricesFinal = processPrices(prices).map((p) =>
@@ -112,12 +119,6 @@ function createMarketVisualizer(item) {
     var color;
     var markerSize;
 
-    if (
-      ["snekkja", "cog", "hulk", "handcart", "tumbrel"].includes(item) &&
-      !town.capital
-    )
-      return;
-
     if (i === -1) {
       color = [0.18995, 0.07176, 0.23217].map((val) => Math.floor(val * 255));
       markerSize = 3;
@@ -126,7 +127,7 @@ function createMarketVisualizer(item) {
       markerSize = getMarkerSize(volumesFinal, i);
     }
 
-    if (!isNaN(markerSize)) {
+    if (!isNaN(markerSize) && town.markets[item]) {
       // Parse color to rgb
       color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 
