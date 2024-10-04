@@ -173,6 +173,16 @@
           >
         </div>
         <div class="sidebar-item">
+          <label id="marketPriceLabel" for="marketPriceSelect"
+            >Select price type:</label>
+          <select id="marketPriceSelect" class="w3-select">
+            <option value="bid" selected>Buy (Bid)</option>
+            <option value="ask">Sell (Ask)</option>
+            <option value="average">Average</option>
+            <option value="moving">Moving Average</option>
+          </select>
+        </div>
+        <div class="sidebar-item">
           <label id="marketLabel" for="marketSelect">Select item:</label>
           <select id="marketSelect" class="w3-select">
             <!-- Item will be added here dynamically -->
@@ -402,6 +412,57 @@
               Gold
             </label>
           </div>
+          
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="clay"
+              />
+              Clay
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="fertile"
+              />
+              Fertile land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="grazing"
+              />
+              Grazing land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="arid"
+              />
+              Arid land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="water"
+              />
+              Water
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost1FertilityInput"
+                value="forest"
+              />
+              Forest
+            </label>
+          </div>
 
           <h4>Outpost 2 Range</h4>
           <div class="checkbox-row">
@@ -464,6 +525,57 @@
                 min="0"
               />
               Gold
+            </label>
+          </div>
+          
+          <div class="checkbox-row">
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="clay"
+              />
+              Clay
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="fertile"
+              />
+              Fertile land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="grazing"
+              />
+              Grazing land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="arid"
+              />
+              Arid land
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="water"
+              />
+              Water
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                class="filterOutpost2FertilityInput"
+                value="forest"
+              />
+              Forest
             </label>
           </div>
         </div>

@@ -45,13 +45,6 @@ async function loadMarketVisualizer(season) {
   });
 }
 
-// Event listener for market visualizer dropdown
-document
-  .getElementById("marketSelect")
-  .addEventListener("change", (event) =>
-    createMarketVisualizer(event.target.value)
-  );
-
 // Event listener for market visualizer toggle
 document.getElementById("toggleMarket").addEventListener("change", (event) => {
   if (event.target.checked) {
@@ -73,9 +66,23 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
   updateTileGrayscale();
 });
 
+// Event listener for market visualizer dropdown
+document
+  .getElementById("marketSelect")
+  .addEventListener("change", (event) =>
+    createMarketVisualizer(event.target.value)
+  );
+
 // Event listener for market visualizer tooltip toggle
 document
   .getElementById("toggleMarketTooltip")
+  .addEventListener("change", (event) => {
+    createMarketVisualizer(document.getElementById("marketSelect").value);
+  });
+
+// Event listener for market visualizer price select
+document
+  .getElementById("marketPriceSelect")
   .addEventListener("change", (event) => {
     createMarketVisualizer(document.getElementById("marketSelect").value);
   });
@@ -84,13 +91,44 @@ document
 function createMarketVisualizer(item) {
   if (!marketData) return;
   const towns = marketData.map((town) => {
-    if (town.markets[item])
-      return {
-        price:
-          town.markets[item].open_price || town.markets[item].last_price || 0,
+    if (town.markets[item]) {
+      let mdata = {
+        price: 0,
         volume: town.markets[item].volume || 0,
         name: town.name,
       };
+
+      priceOrder = document.getElementById("marketPriceSelect").value;
+
+      switch (priceOrder) {
+        default:
+        case "bid": {
+          mdata.price =
+            town.markets[item].highest_bid ||
+            town.markets[item].last_price ||
+            0;
+          break;
+        }
+        case "ask": {
+          mdata.price =
+            town.markets[item].lowest_ask || town.markets[item].last_price || 0;
+          break;
+        }
+        case "average": {
+          mdata.price = town.markets[item].average_price || 0;
+          break;
+        }
+        case "moving": {
+          mdata.price = town.markets[item].moving_average || 0;
+          break;
+        }
+      }
+
+      if (typeof mdata.price === "string")
+        mdata.price = parseFloat(mdata.price);
+
+      return mdata;
+    }
   });
 
   var filteredTowns = towns.filter(
