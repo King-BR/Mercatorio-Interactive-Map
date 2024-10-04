@@ -54,7 +54,7 @@ applyFilterButton.addEventListener("click", async function () {
     filterValues.outpost2Range.resources
   );
 
-  // Get fertility values similarly
+  // Get fertility values
   const fertilityInputs = document.querySelectorAll(
     ".filterNormalFertilityInput"
   );
@@ -64,8 +64,23 @@ applyFilterButton.addEventListener("click", async function () {
     }
   });
 
-  // Implement similar extraction for outpost ranges if necessary
-  // (The code for outpost1FertilityInput and outpost2FertilityInput should follow the same pattern)
+  const fertilityInputsOutpost1 = document.querySelectorAll(
+    ".filterOutpost1FertilityInput"
+  );
+  fertilityInputsOutpost1.forEach((input) => {
+    if (input.checked) {
+      filterValues.outpost1Range.fertility.push(input.value);
+    }
+  });
+
+  const fertilityInputsOutpost2 = document.querySelectorAll(
+    ".filterOutpost2FertilityInput"
+  );
+  fertilityInputsOutpost2.forEach((input) => {
+    if (input.checked) {
+      filterValues.outpost2Range.fertility.push(input.value);
+    }
+  });
 
   // Filter the towns based on the filter values
   var items = 0;
@@ -84,13 +99,13 @@ applyFilterButton.addEventListener("click", async function () {
 
       let valid = false;
 
-      // Check resources and fertility for normal range
       if (
         filterValues.normalRange.resources.length === 0 &&
         filterValues.normalRange.fertility.length === 0 &&
         filterValues.outpost1Range.resources.length === 0 &&
         filterValues.outpost1Range.fertility.length === 0 &&
-        filterValues.outpost2Range.resources.length === 0
+        filterValues.outpost2Range.resources.length === 0 &&
+        filterValues.outpost2Range.fertility.length === 0
       ) {
         valid = true;
       }
