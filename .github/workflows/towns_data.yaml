@@ -59,6 +59,7 @@ jobs:
           if [ "$SUCCESS" = true ]; then
             # If all requests were successful, move the responses to the final JSON file
             mv api_responses.json assets/s2/townsData.json
+            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s2/townsData.json > assets/s2/ferriesData.json
             echo "All requests were successful. Saved results to assets/s2/townsData.json."
           else
             # If any requests failed, do not save the results
