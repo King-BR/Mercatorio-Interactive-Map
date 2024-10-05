@@ -87,48 +87,65 @@ document
     createMarketVisualizer(document.getElementById("marketSelect").value);
   });
 
+// Event listener for market total volume toggle
+document
+  .getElementById("toggleTotalVolume")
+  .addEventListener("change", (event) => {
+    createMarketVisualizer(document.getElementById("marketSelect").value);
+  });
+
 // Function to create the market visualizer layer
 function createMarketVisualizer(item) {
   if (!marketData) return;
+  let priceOrder = document.getElementById("marketPriceSelect").value;
   const towns = marketData.map((town) => {
+    let mdata = {
+      price: 0,
+      volume: 0,
+      altVolume: 0,
+      name: town.name,
+    };
     if (town.markets[item]) {
-      let mdata = {
-        price: 0,
-        volume: town.markets[item].volume || 0,
-        name: town.name,
-      };
-
-      priceOrder = document.getElementById("marketPriceSelect").value;
-
       switch (priceOrder) {
         default:
         case "bid": {
           mdata.price = town.markets[item].highest_bid || 0;
+          mdata.volume = town.markets[item].bid_volume_10 || 0;
+          mdata.altVolume = town.markets[item].volume || 0;
+          document.getElementById("totalVolumeDiv").style.display = "flex";
           break;
         }
         case "ask": {
           mdata.price = town.markets[item].lowest_ask || 0;
+          mdata.volume = town.markets[item].ask_volume_10 || 0;
+          mdata.altVolume = town.markets[item].volume || 0;
+          document.getElementById("totalVolumeDiv").style.display = "flex";
           break;
         }
         case "last_price": {
           mdata.price = town.markets[item].last_price || 0;
+          mdata.volume = town.markets[item].volume || 0;
+          document.getElementById("totalVolumeDiv").style.display = "none";
           break;
         }
         case "average": {
           mdata.price = town.markets[item].average_price || 0;
+          mdata.volume = town.markets[item].volume || 0;
+          document.getElementById("totalVolumeDiv").style.display = "none";
           break;
         }
         case "moving": {
           mdata.price = town.markets[item].moving_average || 0;
+          mdata.volume = town.markets[item].volume || 0;
+          document.getElementById("totalVolumeDiv").style.display = "none";
           break;
         }
       }
 
       if (typeof mdata.price === "string")
         mdata.price = parseFloat(mdata.price);
-
-      return mdata;
     }
+    return mdata;
   });
 
   var filteredTowns = towns.filter(
@@ -140,11 +157,13 @@ function createMarketVisualizer(item) {
     )
     .map((town) => town.price);
   var volumes = towns.map((town) => town.volume);
+  var altVolumes = towns.map((town) => town.altVolume);
 
   const pricesFinal = processPrices(prices).map((p) =>
     parseFloat(p.toFixed(3))
   );
   const volumesFinal = normalize(volumes);
+  const altVolumesFinal = normalize(altVolumes);
 
   map.removeLayer(marketLayer);
   marketLayer = L.layerGroup();
@@ -152,6 +171,7 @@ function createMarketVisualizer(item) {
     const i = filteredTowns.findIndex((t) => t.name === town.name);
     var color;
     var markerSize;
+    var markerSizeAlt;
 
     if (i === -1) {
       color = [0.18995, 0.07176, 0.23217].map((val) => Math.floor(val * 255));
@@ -160,10 +180,20 @@ function createMarketVisualizer(item) {
     }
 
     markerSize = getMarkerSize(volumesFinal, ti) || 3;
+    markerSizeAlt = getMarkerSize(altVolumesFinal, ti) || 3;
 
-    if (!isNaN(markerSize) && town.markets[item]) {
+    if (!isNaN(markerSize) && !isNaN(markerSizeAlt) && town.markets[item]) {
       // Parse color to rgb
       color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+
+      var altTmp = L.circle(
+        [mapHeight - town.location.y / 4, town.location.x / 4],
+        {
+          radius: markerSizeAlt,
+          color: color,
+          fillColor: color,
+          fillOpacity: 0.4,
+        });
 
       var tmp = L.circle(
         [mapHeight - town.location.y / 4, town.location.x / 4],
@@ -175,7 +205,11 @@ function createMarketVisualizer(item) {
         }
       ).bindTooltip(
         `Town: ${town.name}<br>Price: ${formatPrice(prices[i])}<br>Volume: ${
-          town.markets[item].volume || 0
+          priceOrder === "bid"
+            ? town.markets[item].bid_volume_10 || 0
+            : priceOrder === "ask"
+            ? town.markets[item].ask_volume_10 || 0
+            : town.markets[item].volume
         }`,
         {
           permanent: document.getElementById("toggleMarketTooltip").checked,
@@ -199,7 +233,8 @@ function createMarketVisualizer(item) {
         <b>Bid Volume 10%:</b> ${town.markets[item].bid_volume_10 || 0}<br>
         <b>Ask Volume 10%:</b> ${town.markets[item].ask_volume_10 || 0}
         `);
-
+      
+      if (document.getElementById("toggleTotalVolume").checked) marketLayer.addLayer(altTmp);
       marketLayer.addLayer(tmp);
     }
   });
