@@ -870,15 +870,6 @@
     "landings": null
   },
   {
-    "id": "295400862",
-    "name": "Karlbro",
-    "location": {
-      "x": 2954,
-      "y": 862
-    },
-    "landings": null
-  },
-  {
     "id": "296003490",
     "name": "Kärdovo",
     "location": {
@@ -1109,15 +1100,6 @@
     "location": {
       "x": 3743,
       "y": 1313
-    },
-    "landings": null
-  },
-  {
-    "id": "374603342",
-    "name": "Bornai",
-    "location": {
-      "x": 3746,
-      "y": 3342
     },
     "landings": null
   },
