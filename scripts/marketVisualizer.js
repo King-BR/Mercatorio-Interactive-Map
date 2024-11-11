@@ -170,17 +170,14 @@ function createMarketVisualizer(item) {
   marketData.forEach((town, ti) => {
     const i = filteredTowns.findIndex((t) => t.name === town.name);
     var color;
-    var markerSize;
-    var markerSizeAlt;
+    var markerSize = getMarkerSize(volumesFinal, ti) || 3;
+    var markerSizeAlt = getMarkerSize(altVolumesFinal, ti) || 3;
 
     if (i === -1) {
       color = [0.18995, 0.07176, 0.23217].map((val) => Math.floor(val * 255));
     } else {
       color = getColor(pricesFinal, colormap, i);
     }
-
-    markerSize = getMarkerSize(volumesFinal, ti) || 3;
-    markerSizeAlt = getMarkerSize(altVolumesFinal, ti) || 3;
 
     if (!isNaN(markerSize) && !isNaN(markerSizeAlt) && town.markets[item]) {
       // Parse color to rgb
