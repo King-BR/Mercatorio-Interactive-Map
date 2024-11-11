@@ -214,6 +214,15 @@
     "landings": null
   },
   {
+    "id": "128002187",
+    "name": "Charlelond tradepost",
+    "location": {
+      "x": 1280,
+      "y": 2187
+    },
+    "landings": null
+  },
+  {
     "id": "129000768",
     "name": "Brisburh",
     "location": {
@@ -659,6 +668,15 @@
     "location": {
       "x": 2381,
       "y": 1011
+    },
+    "landings": null
+  },
+  {
+    "id": "238402722",
+    "name": "Strasaux tradepost",
+    "location": {
+      "x": 2384,
+      "y": 2722
     },
     "landings": null
   },
