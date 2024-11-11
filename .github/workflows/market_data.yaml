@@ -38,6 +38,12 @@ jobs:
             name=$(echo $town | jq -r '.name')
             location=$(echo $town | jq -r '.location')
 
+            # Skip towns with "tradepost" in their name
+            if [[ "$name" == *"tradepost"* ]]; then
+              echo "Skipping town ID $id ($name) as it contains 'tradepost'"
+              continue
+            fi
+
             # Extract x and y coordinates from the location
             x=$(echo $location | jq -r '.x')
             y=$(echo $location | jq -r '.y')
