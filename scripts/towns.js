@@ -61,7 +61,12 @@ async function loadTowns(season) {
         altname: `Town ${index + 1}`,
         location: town.location,
       });
-      const townStats = stats[tooltipText] || null;
+      const townStats =
+        stats[
+          tooltipText.includes("tradepost")
+            ? tooltipText.replace(" ", "_")
+            : tooltipText
+        ] || null;
       var townData = null;
 
       if (townsData) townData = townsData.find((t) => t.id === town.id);
