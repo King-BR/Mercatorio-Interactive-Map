@@ -52,7 +52,7 @@ async function loadTowns(season) {
       const markerY = mapHeight - town.location.y / 4;
       const markerX = town.location.x / 4;
 
-      const tooltipText = town.name || `Town ${index + 1}`;
+      const tooltipText = town.name.replace("_", " ") || `Town ${index + 1}`;
       towns.push({
         id: town.id,
         name: tooltipText,
@@ -259,7 +259,7 @@ async function loadTowns(season) {
         }).addTo(map);
       }
 
-      if (selectedTown.name == null || selectedTown.name == town.name) {
+      if (selectedTown.name == null || selectedTown.name == town.name.replace("_", " ")) {
         tradeData.transports.forEach((transport) => {
           // Manual
           if (transport.moves > 0) {
@@ -385,7 +385,7 @@ async function updateRangeCircles(season) {
       }).addTo(map);
     }
 
-    if (selectedTown.name == null || selectedTown.name == town.name) {
+    if (selectedTown.name == null || selectedTown.name == town.name.replace("_", " ")) {
       tradeData.transports.forEach((transport) => {
         // Manual
         if (transport.moves > 0) {

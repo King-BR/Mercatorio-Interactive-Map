@@ -103,7 +103,7 @@ function createMarketVisualizer(item) {
       price: 0,
       volume: 0,
       altVolume: 0,
-      name: town.name,
+      name: town.name.replace("_", " "),
     };
     if (town.markets[item]) {
       switch (priceOrder) {
@@ -168,7 +168,7 @@ function createMarketVisualizer(item) {
   map.removeLayer(marketLayer);
   marketLayer = L.layerGroup();
   marketData.forEach((town, ti) => {
-    const i = filteredTowns.findIndex((t) => t.name === town.name);
+    const i = filteredTowns.findIndex((t) => t.name === town.name.replace("_", " "));
     var color;
     var markerSize = getMarkerSize(volumesFinal, ti) || 3;
     var markerSizeAlt = getMarkerSize(altVolumesFinal, ti) || 3;
@@ -201,7 +201,7 @@ function createMarketVisualizer(item) {
           fillOpacity: 1,
         }
       ).bindTooltip(
-        `Town: ${town.name}<br>Price: ${formatPrice(prices[i])}<br>Volume: ${
+        `Town: ${town.name.replace("_", " ")}<br>Price: ${formatPrice(prices[i])}<br>Volume: ${
           priceOrder === "bid"
             ? town.markets[item].bid_volume_10 || 0
             : priceOrder === "ask"
@@ -212,7 +212,7 @@ function createMarketVisualizer(item) {
           permanent: document.getElementById("toggleMarketTooltip").checked,
         }
       ).bindPopup(`
-        <b>${town.name}</b><br>
+        <b>${town.name.replace("_", " ")}</b><br>
         <b>Open Price:</b> ${formatPrice(town.markets[item].open_price)}<br>
         <b>Last Price:</b> ${formatPrice(town.markets[item].last_price)}<br>
         <b>Average Price:</b> ${formatPrice(

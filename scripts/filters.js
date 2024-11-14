@@ -85,12 +85,12 @@ applyFilterButton.addEventListener("click", async function () {
   // Filter the towns based on the filter values
   var items = 0;
   towns.forEach((town) => {
-    const townStats = stats[town.name];
+    const townStats = stats[town.name.replace("_", " ")];
 
     if (townStats) {
       if (
         (filterValues.capital &&
-          !townsJson.find((t) => t.name === town.name).capital) ||
+          !townsJson.find((t) => t.name === town.name.replace("_", " ")).capital) ||
         (filterValues.landlocked && !townStats.landlocked) ||
         (filterValues.seaAccess && townStats.landlocked)
       ) {
@@ -148,7 +148,7 @@ applyFilterButton.addEventListener("click", async function () {
 
       if (valid) {
         const listItem = document.createElement("li");
-        listItem.textContent = town.name;
+        listItem.textContent = town.name.replace("_", " ");
 
         const listItemButton = document.createElement("button");
         listItemButton.classList.add("w3-button", "w3-hover-light-grey");
@@ -158,7 +158,7 @@ applyFilterButton.addEventListener("click", async function () {
 
         listItemButton.appendChild(icon);
         listItemButton.addEventListener("click", () => {
-          selectedTown.name = town.name;
+          selectedTown.name = town.name.replace("_", " ");
           selectedTown.x = town.location.x;
           selectedTown.y = town.location.y;
           updateRangeCircles(currentSeason);
@@ -168,7 +168,7 @@ applyFilterButton.addEventListener("click", async function () {
           map.eachLayer((layer) => {
             if (
               layer instanceof L.Marker &&
-              layer.getTooltip().getContent() === town.name
+              layer.getTooltip().getContent() === town.name.replace("_", " ")
             ) {
               map.flyTo(layer.getLatLng(), 3);
               layer.openTooltip();
