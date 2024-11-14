@@ -1146,7 +1146,11 @@
     "_ts": 1731590016580584,
     "id": "60903487",
     "name": "Suryes",
-    "last_update": 1731590800753
+    "location": {
+      "x": 609,
+      "y": 3487
+    },
+    "last_update": 1731591379387
   },
   {
     "markets": {
@@ -2311,7 +2315,11 @@
     "_ts": 1731589803349690,
     "id": "63703723",
     "name": "Calille",
-    "last_update": 1731590801433
+    "location": {
+      "x": 637,
+      "y": 3723
+    },
+    "last_update": 1731591380166
   },
   {
     "markets": {
@@ -3434,7 +3442,11 @@
     "_ts": 1731589803349758,
     "id": "65403587",
     "name": "Sottehomme",
-    "last_update": 1731590802020
+    "location": {
+      "x": 654,
+      "y": 3587
+    },
+    "last_update": 1731591380813
   },
   {
     "markets": {
@@ -4526,10 +4538,14 @@
         "ask_volume_10": 14
       }
     },
-    "_ts": 1731590016580805,
+    "_ts": 1731591236532259,
     "id": "68903169",
     "name": "Pareux",
-    "last_update": 1731590802597
+    "location": {
+      "x": 689,
+      "y": 3169
+    },
+    "last_update": 1731591381443
   },
   {
     "markets": {
@@ -5669,10 +5685,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1731590016580526,
+    "_ts": 1731591236532531,
     "id": "79503397",
     "name": "Nanand",
-    "last_update": 1731590803147
+    "location": {
+      "x": 795,
+      "y": 3397
+    },
+    "last_update": 1731591382065
   },
   {
     "markets": {
@@ -6915,7 +6935,11 @@
     "_ts": 1731590401543663,
     "id": "81500435",
     "name": "Nottingding",
-    "last_update": 1731590803719
+    "location": {
+      "x": 815,
+      "y": 435
+    },
+    "last_update": 1731591382695
   },
   {
     "markets": {
@@ -8158,7 +8182,11 @@
     "_ts": 1731589803161497,
     "id": "83300963",
     "name": "Blackley",
-    "last_update": 1731590804296
+    "location": {
+      "x": 833,
+      "y": 963
+    },
+    "last_update": 1731591383330
   },
   {
     "markets": {
@@ -9373,7 +9401,11 @@
     "_ts": 1731589802588353,
     "id": "88000557",
     "name": "Southfield",
-    "last_update": 1731590804869
+    "location": {
+      "x": 880,
+      "y": 557
+    },
+    "last_update": 1731591383963
   },
   {
     "markets": {
@@ -10539,7 +10571,11 @@
     "_ts": 1731589802922438,
     "id": "90200749",
     "name": "Canterstoft",
-    "last_update": 1731590805401
+    "location": {
+      "x": 902,
+      "y": 749
+    },
+    "last_update": 1731591384583
   },
   {
     "markets": {
@@ -10682,9 +10718,9 @@
         "lowest_ask": "0.426",
         "high_price": "0.426",
         "low_price": "0.426",
-        "volume": 158,
+        "volume": 169,
         "volume_prev_12": 1788,
-        "ask_volume_10": 27
+        "ask_volume_10": 16
       },
       "casks": {
         "price": "3.669",
@@ -11145,9 +11181,9 @@
         "lowest_ask": "1.542",
         "high_price": "1.542",
         "low_price": "1.542",
-        "volume": 1834,
+        "volume": 1846,
         "volume_prev_12": 21544,
-        "ask_volume_10": 251
+        "ask_volume_10": 239
       },
       "lead bars": {
         "price": "13.413",
@@ -11194,18 +11230,19 @@
         "volume_prev_12": 0
       },
       "limestone": {
-        "price": "7.82",
+        "price": "10.366",
         "open_price": "7.82",
-        "last_price": "7.662",
+        "last_price": "10.366",
+        "average_price": "9.167",
         "moving_average": "6.062",
         "highest_bid": "7.82",
-        "lowest_ask": "7.968",
-        "high_price": "7.82",
-        "low_price": "7.82",
-        "volume": 0,
+        "lowest_ask": "26",
+        "high_price": "10.366",
+        "low_price": "7.968",
+        "volume": 2,
         "volume_prev_12": 4,
         "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "ask_volume_10": 3
       },
       "lodging": {
         "price": "1.662",
@@ -11673,10 +11710,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1731590016580784,
+    "_ts": 1731591236532559,
     "id": "93403404",
     "name": "Mulavy",
-    "last_update": 1731590805998
+    "location": {
+      "x": 934,
+      "y": 3404
+    },
+    "last_update": 1731591385209
   },
   {
     "markets": {
@@ -12867,7 +12908,11 @@
     "_ts": 1731589804099852,
     "id": "93501170",
     "name": "Kleinly",
-    "last_update": 1731590806576
+    "location": {
+      "x": 935,
+      "y": 1170
+    },
+    "last_update": 1731591385859
   },
   {
     "markets": {
@@ -13923,7 +13968,11 @@
     "_ts": 1731590401480210,
     "id": "94200927",
     "name": "Liverford",
-    "last_update": 1731590807149
+    "location": {
+      "x": 942,
+      "y": 927
+    },
+    "last_update": 1731591386489
   },
   {
     "markets": {
@@ -15042,10 +15091,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1731590016580795,
+    "_ts": 1731591236532540,
     "id": "101303254",
     "name": "Orlebourg",
-    "last_update": 1731590807711
+    "location": {
+      "x": 1013,
+      "y": 3254
+    },
+    "last_update": 1731591387102
   },
   {
     "markets": {
@@ -16240,7 +16293,11 @@
     "_ts": 1731590401366127,
     "id": "102301021",
     "name": "Wiltondee",
-    "last_update": 1731590808287
+    "location": {
+      "x": 1023,
+      "y": 1021
+    },
+    "last_update": 1731591387680
   },
   {
     "markets": {
@@ -17419,10 +17476,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1731589803746420,
+    "_ts": 1731591236532502,
     "id": "105103362",
     "name": "Lauque",
-    "last_update": 1731590808854
+    "location": {
+      "x": 1051,
+      "y": 3362
+    },
+    "last_update": 1731591388315
   },
   {
     "markets": {
@@ -18609,7 +18670,11 @@
     "_ts": 1731589804738952,
     "id": "112900992",
     "name": "Carmarquay",
-    "last_update": 1731590809422
+    "location": {
+      "x": 1129,
+      "y": 992
+    },
+    "last_update": 1731591388939
   },
   {
     "markets": {
@@ -19795,7 +19860,11 @@
     "_ts": 1731589804099876,
     "id": "118000792",
     "name": "Shefquay",
-    "last_update": 1731590810002
+    "location": {
+      "x": 1180,
+      "y": 792
+    },
+    "last_update": 1731591389575
   },
   {
     "markets": {
@@ -21012,7 +21081,11 @@
     "_ts": 1731590016580719,
     "id": "118603125",
     "name": "Veraux",
-    "last_update": 1731590810580
+    "location": {
+      "x": 1186,
+      "y": 3125
+    },
+    "last_update": 1731591390216
   },
   {
     "markets": {
@@ -22273,10 +22346,14 @@
         "ask_volume_10": 5
       }
     },
-    "_ts": 1731589804359659,
+    "_ts": 1731591236532511,
     "id": "120503824",
     "name": "Dunllier",
-    "last_update": 1731590811108
+    "location": {
+      "x": 1205,
+      "y": 3824
+    },
+    "last_update": 1731591390848
   },
   {
     "markets": {
@@ -22729,7 +22806,11 @@
     "_ts": 1731589209012906,
     "id": "128002187",
     "name": "Charlelond_tradepost",
-    "last_update": 1731590811689
+    "location": {
+      "x": 1280,
+      "y": 2187
+    },
+    "last_update": 1731591391431
   },
   {
     "markets": {
@@ -23921,7 +24002,11 @@
     "_ts": 1731589804099757,
     "id": "129000768",
     "name": "Brisburh",
-    "last_update": 1731590812215
+    "location": {
+      "x": 1290,
+      "y": 768
+    },
+    "last_update": 1731591391990
   },
   {
     "markets": {
@@ -25087,7 +25172,11 @@
     "_ts": 1731589804359933,
     "id": "134903866",
     "name": "Rouges",
-    "last_update": 1731590812788
+    "location": {
+      "x": 1349,
+      "y": 3866
+    },
+    "last_update": 1731591392630
   },
   {
     "markets": {
@@ -26341,7 +26430,11 @@
     "_ts": 1731589805308672,
     "id": "136603589",
     "name": "Calmont",
-    "last_update": 1731590813360
+    "location": {
+      "x": 1366,
+      "y": 3589
+    },
+    "last_update": 1731591393269
   },
   {
     "markets": {
@@ -27522,7 +27615,11 @@
     "_ts": 1731589805114336,
     "id": "137403767",
     "name": "Poque",
-    "last_update": 1731590813948
+    "location": {
+      "x": 1374,
+      "y": 3767
+    },
+    "last_update": 1731591393967
   },
   {
     "markets": {
@@ -28737,7 +28834,11 @@
     "_ts": 1731589805944672,
     "id": "142100901",
     "name": "Niederscheid",
-    "last_update": 1731590814518
+    "location": {
+      "x": 1421,
+      "y": 901
+    },
+    "last_update": 1731591394593
   },
   {
     "markets": {
@@ -29692,7 +29793,11 @@
     "_ts": 1731590401759399,
     "id": "147400239",
     "name": "Lonbay",
-    "last_update": 1731590815093
+    "location": {
+      "x": 1474,
+      "y": 239
+    },
+    "last_update": 1731591395216
   },
   {
     "markets": {
@@ -30678,7 +30783,11 @@
     "_ts": 1731589804552506,
     "id": "147401758",
     "name": "Eindkirchen",
-    "last_update": 1731590815611
+    "location": {
+      "x": 1474,
+      "y": 1758
+    },
+    "last_update": 1731591395822
   },
   {
     "markets": {
@@ -31912,7 +32021,11 @@
     "_ts": 1731589806047252,
     "id": "147700992",
     "name": "Frankfels",
-    "last_update": 1731590816182
+    "location": {
+      "x": 1477,
+      "y": 992
+    },
+    "last_update": 1731591396443
   },
   {
     "markets": {
@@ -33074,7 +33187,11 @@
     "_ts": 1731589804359851,
     "id": "148603820",
     "name": "Montans",
-    "last_update": 1731590816769
+    "location": {
+      "x": 1486,
+      "y": 3820
+    },
+    "last_update": 1731591397090
   },
   {
     "markets": {
@@ -34264,7 +34381,11 @@
     "_ts": 1731589806687315,
     "id": "148803492",
     "name": "Surans",
-    "last_update": 1731590817292
+    "location": {
+      "x": 1488,
+      "y": 3492
+    },
+    "last_update": 1731591397721
   },
   {
     "markets": {
@@ -35409,7 +35530,11 @@
     "_ts": 1731589806487713,
     "id": "150201864",
     "name": "Braunden",
-    "last_update": 1731590817865
+    "location": {
+      "x": 1502,
+      "y": 1864
+    },
+    "last_update": 1731591398346
   },
   {
     "markets": {
@@ -36538,7 +36663,11 @@
     "_ts": 1731589805231589,
     "id": "154900809",
     "name": "Münchburg",
-    "last_update": 1731590818436
+    "location": {
+      "x": 1549,
+      "y": 809
+    },
+    "last_update": 1731591398973
   },
   {
     "markets": {
@@ -37657,7 +37786,11 @@
     "_ts": 1731589806992416,
     "id": "161001099",
     "name": "Lichtennieder",
-    "last_update": 1731590819027
+    "location": {
+      "x": 1610,
+      "y": 1099
+    },
+    "last_update": 1731591399600
   },
   {
     "markets": {
@@ -38859,7 +38992,11 @@
     "_ts": 1731589807098362,
     "id": "161300612",
     "name": "Wiltoneem",
-    "last_update": 1731590819616
+    "location": {
+      "x": 1613,
+      "y": 612
+    },
+    "last_update": 1731591400235
   },
   {
     "markets": {
@@ -40088,7 +40225,11 @@
     "_ts": 1731589807730319,
     "id": "163000920",
     "name": "Berwiese",
-    "last_update": 1731590820146
+    "location": {
+      "x": 1630,
+      "y": 920
+    },
+    "last_update": 1731591400866
   },
   {
     "markets": {
@@ -41301,7 +41442,11 @@
     "_ts": 1731589807196359,
     "id": "163203463",
     "name": "Laugnan",
-    "last_update": 1731590820724
+    "location": {
+      "x": 1632,
+      "y": 3463
+    },
+    "last_update": 1731591401490
   },
   {
     "markets": {
@@ -42451,7 +42596,11 @@
     "_ts": 1731589806992410,
     "id": "164500737",
     "name": "Frankaue",
-    "last_update": 1731590821288
+    "location": {
+      "x": 1645,
+      "y": 737
+    },
+    "last_update": 1731591402129
   },
   {
     "markets": {
@@ -43679,7 +43828,11 @@
     "_ts": 1731589806687225,
     "id": "166703806",
     "name": "Etaiqueilles",
-    "last_update": 1731590821861
+    "location": {
+      "x": 1667,
+      "y": 3806
+    },
+    "last_update": 1731591402761
   },
   {
     "markets": {
@@ -44892,7 +45045,11 @@
     "_ts": 1731590242487551,
     "id": "167900398",
     "name": "Kleinkirchen",
-    "last_update": 1731590822439
+    "location": {
+      "x": 1679,
+      "y": 398
+    },
+    "last_update": 1731591403387
   },
   {
     "markets": {
@@ -46066,7 +46223,11 @@
     "_ts": 1731589806047350,
     "id": "169001022",
     "name": "Großdon",
-    "last_update": 1731590823014
+    "location": {
+      "x": 1690,
+      "y": 1022
+    },
+    "last_update": 1731591404018
   },
   {
     "markets": {
@@ -46098,9 +46259,9 @@
         "lowest_ask": "43.706",
         "high_price": "43.38",
         "low_price": "43.38",
-        "volume": 3,
+        "volume": 4,
         "volume_prev_12": 25,
-        "bid_volume_10": 10,
+        "bid_volume_10": 9,
         "ask_volume_10": 1
       },
       "beer": {
@@ -47322,10 +47483,14 @@
         "ask_volume_10": 11
       }
     },
-    "_ts": 1731589806687322,
+    "_ts": 1731591317173559,
     "id": "170603659",
     "name": "Etallyes",
-    "last_update": 1731590823592
+    "location": {
+      "x": 1706,
+      "y": 3659
+    },
+    "last_update": 1731591404595
   },
   {
     "markets": {
@@ -48619,7 +48784,11 @@
     "_ts": 1731589807870337,
     "id": "171301142",
     "name": "Unterhufe",
-    "last_update": 1731590824173
+    "location": {
+      "x": 1713,
+      "y": 1142
+    },
+    "last_update": 1731591405291
   },
   {
     "markets": {
@@ -49810,7 +49979,11 @@
     "_ts": 1731589806417615,
     "id": "175200265",
     "name": "Tatcham",
-    "last_update": 1731590824752
+    "location": {
+      "x": 1752,
+      "y": 265
+    },
+    "last_update": 1731591405869
   },
   {
     "markets": {
@@ -50985,7 +51158,11 @@
     "_ts": 1731589807539403,
     "id": "178403841",
     "name": "Varamiens",
-    "last_update": 1731590825312
+    "location": {
+      "x": 1784,
+      "y": 3841
+    },
+    "last_update": 1731591406506
   },
   {
     "markets": {
@@ -52216,7 +52393,11 @@
     "_ts": 1731589807870302,
     "id": "179601073",
     "name": "Münchaue",
-    "last_update": 1731590825890
+    "location": {
+      "x": 1796,
+      "y": 1073
+    },
+    "last_update": 1731591407109
   },
   {
     "markets": {
@@ -53424,7 +53605,11 @@
     "_ts": 1731589807870082,
     "id": "180500954",
     "name": "Hamfurt",
-    "last_update": 1731590826454
+    "location": {
+      "x": 1805,
+      "y": 954
+    },
+    "last_update": 1731591407768
   },
   {
     "markets": {
@@ -54654,7 +54839,11 @@
     "_ts": 1731589806831821,
     "id": "182403642",
     "name": "Avitot",
-    "last_update": 1731590827049
+    "location": {
+      "x": 1824,
+      "y": 3642
+    },
+    "last_update": 1731591408429
   },
   {
     "markets": {
@@ -55875,7 +56064,11 @@
     "_ts": 1731589806831938,
     "id": "187603748",
     "name": "Dunfort",
-    "last_update": 1731590827631
+    "location": {
+      "x": 1876,
+      "y": 3748
+    },
+    "last_update": 1731591409204
   },
   {
     "markets": {
@@ -57102,10 +57295,14 @@
         "ask_volume_10": 8
       }
     },
-    "_ts": 1731589807282831,
+    "_ts": 1731591317173646,
     "id": "190003520",
     "name": "Bordenes",
-    "last_update": 1731590828237
+    "location": {
+      "x": 1900,
+      "y": 3520
+    },
+    "last_update": 1731591409837
   },
   {
     "markets": {
@@ -58276,7 +58473,11 @@
     "_ts": 1731589807401394,
     "id": "190600320",
     "name": "Salisruhe",
-    "last_update": 1731590828798
+    "location": {
+      "x": 1906,
+      "y": 320
+    },
+    "last_update": 1731591410635
   },
   {
     "markets": {
@@ -59281,7 +59482,11 @@
     "_ts": 1731589806487769,
     "id": "195202174",
     "name": "Bouruen",
-    "last_update": 1731590829374
+    "location": {
+      "x": 1952,
+      "y": 2174
+    },
+    "last_update": 1731591411260
   },
   {
     "markets": {
@@ -59304,17 +59509,18 @@
         "ask_volume_10": 17
       },
       "axes": {
-        "price": "45.436",
+        "price": "44.464",
         "open_price": "45.436",
-        "last_price": "32.981",
+        "last_price": "44.464",
+        "average_price": "44.95",
         "moving_average": "28.53",
-        "highest_bid": "45.436",
+        "highest_bid": "20",
         "lowest_ask": "45.932",
         "high_price": "45.436",
-        "low_price": "45.436",
-        "volume": 0,
+        "low_price": "44.464",
+        "volume": 2,
         "volume_prev_12": 4,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "beer": {
@@ -60534,10 +60740,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1731589807539375,
+    "_ts": 1731591317173702,
     "id": "195903184",
     "name": "Liegues",
-    "last_update": 1731590829934
+    "location": {
+      "x": 1959,
+      "y": 3184
+    },
+    "last_update": 1731591411845
   },
   {
     "markets": {
@@ -60562,12 +60772,13 @@
       "axes": {
         "price": "43.597",
         "open_price": "43.597",
-        "last_price": "42.558",
+        "last_price": "43.597",
+        "average_price": "43.597",
         "moving_average": "42.558",
-        "highest_bid": "43.597",
+        "highest_bid": "37.588",
         "high_price": "43.597",
         "low_price": "43.597",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 0,
         "bid_volume_10": 1
       },
@@ -61760,10 +61971,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1731589807539382,
+    "_ts": 1731591317173691,
     "id": "196303401",
     "name": "Toqueaen",
-    "last_update": 1731590830522
+    "location": {
+      "x": 1963,
+      "y": 3401
+    },
+    "last_update": 1731591412480
   },
   {
     "markets": {
@@ -62920,10 +63135,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1731589807539362,
+    "_ts": 1731591317173453,
     "id": "200003081",
     "name": "Monton",
-    "last_update": 1731590831096
+    "location": {
+      "x": 2000,
+      "y": 3081
+    },
+    "last_update": 1731591413108
   },
   {
     "markets": {
@@ -64057,7 +64276,11 @@
     "_ts": 1731589807620441,
     "id": "201103682",
     "name": "Octeon",
-    "last_update": 1731590831621
+    "location": {
+      "x": 2011,
+      "y": 3682
+    },
+    "last_update": 1731591414531
   },
   {
     "markets": {
@@ -65229,7 +65452,11 @@
     "_ts": 1731589807401399,
     "id": "203900286",
     "name": "Niederroth",
-    "last_update": 1731590832191
+    "location": {
+      "x": 2039,
+      "y": 286
+    },
+    "last_update": 1731591415146
   },
   {
     "markets": {
@@ -66461,7 +66688,11 @@
     "_ts": 1731589807870260,
     "id": "203901166",
     "name": "Altmünde",
-    "last_update": 1731590833438
+    "location": {
+      "x": 2039,
+      "y": 1166
+    },
+    "last_update": 1731591415772
   },
   {
     "markets": {
@@ -67652,7 +67883,11 @@
     "_ts": 1731589808586522,
     "id": "204301021",
     "name": "Neudorf",
-    "last_update": 1731590834087
+    "location": {
+      "x": 2043,
+      "y": 1021
+    },
+    "last_update": 1731591416412
   },
   {
     "markets": {
@@ -68934,10 +69169,14 @@
         "ask_volume_10": 16
       }
     },
-    "_ts": 1731589807539398,
+    "_ts": 1731591317173723,
     "id": "204302988",
     "name": "Touland",
-    "last_update": 1731590834624
+    "location": {
+      "x": 2043,
+      "y": 2988
+    },
+    "last_update": 1731591417045
   },
   {
     "markets": {
@@ -70108,7 +70347,11 @@
     "_ts": 1731589807620391,
     "id": "206603523",
     "name": "Verilles",
-    "last_update": 1731590835202
+    "location": {
+      "x": 2066,
+      "y": 3523
+    },
+    "last_update": 1731591417684
   },
   {
     "markets": {
@@ -71303,7 +71546,11 @@
     "_ts": 1731589810217708,
     "id": "210900198",
     "name": "Luddon",
-    "last_update": 1731590835780
+    "location": {
+      "x": 2109,
+      "y": 198
+    },
+    "last_update": 1731591418308
   },
   {
     "markets": {
@@ -72519,7 +72766,11 @@
     "_ts": 1731589808585120,
     "id": "213601134",
     "name": "Wolfsbergheim",
-    "last_update": 1731590836353
+    "location": {
+      "x": 2136,
+      "y": 1134
+    },
+    "last_update": 1731591418928
   },
   {
     "markets": {
@@ -73677,7 +73928,11 @@
     "_ts": 1731589807539368,
     "id": "214603140",
     "name": "Vacquedalle",
-    "last_update": 1731590836923
+    "location": {
+      "x": 2146,
+      "y": 3140
+    },
+    "last_update": 1731591419555
   },
   {
     "markets": {
@@ -74948,7 +75203,11 @@
     "_ts": 1731589807991025,
     "id": "214603657",
     "name": "Bordefort",
-    "last_update": 1731590837448
+    "location": {
+      "x": 2146,
+      "y": 3657
+    },
+    "last_update": 1731591420140
   },
   {
     "markets": {
@@ -76274,7 +76533,11 @@
     "_ts": 1731590210642141,
     "id": "219301043",
     "name": "Dortruhe",
-    "last_update": 1731590837977
+    "location": {
+      "x": 2193,
+      "y": 1043
+    },
+    "last_update": 1731591420787
   },
   {
     "markets": {
@@ -77506,7 +77769,11 @@
     "_ts": 1731589809553061,
     "id": "228200962",
     "name": "Münchnger",
-    "last_update": 1731590838620
+    "location": {
+      "x": 2282,
+      "y": 962
+    },
+    "last_update": 1731591421430
   },
   {
     "markets": {
@@ -78846,7 +79113,11 @@
     "_ts": 1731589810030585,
     "id": "231203566",
     "name": "Muladjon",
-    "last_update": 1731590839266
+    "location": {
+      "x": 2312,
+      "y": 3566
+    },
+    "last_update": 1731591422073
   },
   {
     "markets": {
@@ -79974,7 +80245,11 @@
     "_ts": 1731589808587592,
     "id": "238101011",
     "name": "Uppvella",
-    "last_update": 1731590839912
+    "location": {
+      "x": 2381,
+      "y": 1011
+    },
+    "last_update": 1731591422725
   },
   {
     "markets": {
@@ -80427,7 +80702,11 @@
     "_ts": 1731589808968550,
     "id": "238402722",
     "name": "Strasaux_tradepost",
-    "last_update": 1731590840436
+    "location": {
+      "x": 2384,
+      "y": 2722
+    },
+    "last_update": 1731591423356
   },
   {
     "markets": {
@@ -81647,7 +81926,11 @@
     "_ts": 1731589811872334,
     "id": "243903571",
     "name": "Angetot",
-    "last_update": 1731590840939
+    "location": {
+      "x": 2439,
+      "y": 3571
+    },
+    "last_update": 1731591423929
   },
   {
     "markets": {
@@ -82911,7 +83194,11 @@
     "_ts": 1731589809929102,
     "id": "245900869",
     "name": "Gävden",
-    "last_update": 1731590841505
+    "location": {
+      "x": 2459,
+      "y": 869
+    },
+    "last_update": 1731591424557
   },
   {
     "markets": {
@@ -83947,7 +84234,11 @@
     "_ts": 1731589808968298,
     "id": "248102079",
     "name": "Verque",
-    "last_update": 1731590842084
+    "location": {
+      "x": 2481,
+      "y": 2079
+    },
+    "last_update": 1731591425135
   },
   {
     "markets": {
@@ -85189,7 +85480,11 @@
     "_ts": 1731589810389057,
     "id": "262300855",
     "name": "Niederruhe",
-    "last_update": 1731590842647
+    "location": {
+      "x": 2623,
+      "y": 855
+    },
+    "last_update": 1731591425753
   },
   {
     "markets": {
@@ -86376,7 +86671,11 @@
     "_ts": 1731589811939367,
     "id": "264100692",
     "name": "Jönkövella",
-    "last_update": 1731590843228
+    "location": {
+      "x": 2641,
+      "y": 692
+    },
+    "last_update": 1731591426392
   },
   {
     "markets": {
@@ -87577,7 +87876,11 @@
     "_ts": 1731589810659733,
     "id": "264600988",
     "name": "Trondde",
-    "last_update": 1731590843789
+    "location": {
+      "x": 2646,
+      "y": 988
+    },
+    "last_update": 1731591427024
   },
   {
     "markets": {
@@ -88782,7 +89085,11 @@
     "_ts": 1731589811695669,
     "id": "266600508",
     "name": "Gerile",
-    "last_update": 1731590844366
+    "location": {
+      "x": 2666,
+      "y": 508
+    },
+    "last_update": 1731591427655
   },
   {
     "markets": {
@@ -90030,7 +90337,11 @@
     "_ts": 1731589812089859,
     "id": "267303592",
     "name": "Daugavalinn",
-    "last_update": 1731590844923
+    "location": {
+      "x": 2673,
+      "y": 3592
+    },
+    "last_update": 1731591428283
   },
   {
     "markets": {
@@ -91232,7 +91543,11 @@
     "_ts": 1731590402079111,
     "id": "269201155",
     "name": "Unterbrücken",
-    "last_update": 1731590845468
+    "location": {
+      "x": 2692,
+      "y": 1155
+    },
+    "last_update": 1731591428871
   },
   {
     "markets": {
@@ -92397,7 +92712,11 @@
     "_ts": 1731589810298596,
     "id": "271900210",
     "name": "Karlmoki",
-    "last_update": 1731590846042
+    "location": {
+      "x": 2719,
+      "y": 210
+    },
+    "last_update": 1731591429442
   },
   {
     "markets": {
@@ -93586,7 +93905,11 @@
     "_ts": 1731589811695698,
     "id": "271900380",
     "name": "Gerivall",
-    "last_update": 1731590846620
+    "location": {
+      "x": 2719,
+      "y": 380
+    },
+    "last_update": 1731591430061
   },
   {
     "markets": {
@@ -94775,7 +95098,11 @@
     "_ts": 1731589811695537,
     "id": "276300836",
     "name": "Neuvella",
-    "last_update": 1731590847202
+    "location": {
+      "x": 2763,
+      "y": 836
+    },
+    "last_update": 1731591430694
   },
   {
     "markets": {
@@ -95945,7 +96272,11 @@
     "_ts": 1731589811392285,
     "id": "276600470",
     "name": "Norrman",
-    "last_update": 1731590847777
+    "location": {
+      "x": 2766,
+      "y": 470
+    },
+    "last_update": 1731591431323
   },
   {
     "markets": {
@@ -97196,7 +97527,11 @@
     "_ts": 1731590210642245,
     "id": "280301044",
     "name": "Kirchrecht",
-    "last_update": 1731590848349
+    "location": {
+      "x": 2803,
+      "y": 1044
+    },
+    "last_update": 1731591431959
   },
   {
     "markets": {
@@ -98440,7 +98775,11 @@
     "_ts": 1731590401141606,
     "id": "280701146",
     "name": "Potsmühle",
-    "last_update": 1731590848965
+    "location": {
+      "x": 2807,
+      "y": 1146
+    },
+    "last_update": 1731591432611
   },
   {
     "markets": {
@@ -99635,7 +99974,11 @@
     "_ts": 1731589811939276,
     "id": "286500413",
     "name": "Koldhaga",
-    "last_update": 1731590849554
+    "location": {
+      "x": 2865,
+      "y": 413
+    },
+    "last_update": 1731591433322
   },
   {
     "markets": {
@@ -100928,7 +101271,11 @@
     "_ts": 1731590210641976,
     "id": "287300643",
     "name": "Stale",
-    "last_update": 1731590850126
+    "location": {
+      "x": 2873,
+      "y": 643
+    },
+    "last_update": 1731591433900
   },
   {
     "markets": {
@@ -102011,7 +102358,11 @@
     "_ts": 1731589812015942,
     "id": "287900523",
     "name": "Thorhaga",
-    "last_update": 1731590850710
+    "location": {
+      "x": 2879,
+      "y": 523
+    },
+    "last_update": 1731591434605
   },
   {
     "markets": {
@@ -103250,7 +103601,11 @@
     "_ts": 1731590210642189,
     "id": "289400965",
     "name": "Arnborg",
-    "last_update": 1731590851265
+    "location": {
+      "x": 2894,
+      "y": 965
+    },
+    "last_update": 1731591435211
   },
   {
     "markets": {
@@ -104473,7 +104828,11 @@
     "_ts": 1731590210642020,
     "id": "293001097",
     "name": "Großmühle",
-    "last_update": 1731590851850
+    "location": {
+      "x": 2930,
+      "y": 1097
+    },
+    "last_update": 1731591435854
   },
   {
     "markets": {
@@ -105718,7 +106077,11 @@
     "_ts": 1731590210642234,
     "id": "295400862",
     "name": "Karlbro",
-    "last_update": 1731590852431
+    "location": {
+      "x": 2954,
+      "y": 862
+    },
+    "last_update": 1731591436482
   },
   {
     "markets": {
@@ -107060,7 +107423,11 @@
     "_ts": 1731590210641749,
     "id": "295900588",
     "name": "Örestad",
-    "last_update": 1731590852962
+    "location": {
+      "x": 2959,
+      "y": 588
+    },
+    "last_update": 1731591437121
   },
   {
     "markets": {
@@ -108371,7 +108738,11 @@
     "_ts": 1731589812280913,
     "id": "296003490",
     "name": "Kärdovo",
-    "last_update": 1731590853545
+    "location": {
+      "x": 2960,
+      "y": 3490
+    },
+    "last_update": 1731591437822
   },
   {
     "markets": {
@@ -109710,7 +110081,11 @@
     "_ts": 1731590210642081,
     "id": "300900749",
     "name": "Esholm",
-    "last_update": 1731590854128
+    "location": {
+      "x": 3009,
+      "y": 749
+    },
+    "last_update": 1731591438465
   },
   {
     "markets": {
@@ -110814,7 +111189,11 @@
     "_ts": 1731589812826414,
     "id": "301703335",
     "name": "Gulnewo",
-    "last_update": 1731590854712
+    "location": {
+      "x": 3017,
+      "y": 3335
+    },
+    "last_update": 1731591439106
   },
   {
     "markets": {
@@ -112004,7 +112383,11 @@
     "_ts": 1731589812280794,
     "id": "302403588",
     "name": "Ukanga",
-    "last_update": 1731590855284
+    "location": {
+      "x": 3024,
+      "y": 3588
+    },
+    "last_update": 1731591439726
   },
   {
     "markets": {
@@ -113214,7 +113597,11 @@
     "_ts": 1731589812015897,
     "id": "302500488",
     "name": "Stade",
-    "last_update": 1731590855856
+    "location": {
+      "x": 3025,
+      "y": 488
+    },
+    "last_update": 1731591440367
   },
   {
     "markets": {
@@ -114435,7 +114822,11 @@
     "_ts": 1731589812015925,
     "id": "309500565",
     "name": "Esen",
-    "last_update": 1731590856433
+    "location": {
+      "x": 3095,
+      "y": 565
+    },
+    "last_update": 1731591440987
   },
   {
     "markets": {
@@ -115620,7 +116011,11 @@
     "_ts": 1731589813038126,
     "id": "311603677",
     "name": "Varsalu",
-    "last_update": 1731590856962
+    "location": {
+      "x": 3116,
+      "y": 3677
+    },
+    "last_update": 1731591441617
   },
   {
     "markets": {
@@ -116658,7 +117053,11 @@
     "_ts": 1731589812359261,
     "id": "313301060",
     "name": "Gerisund",
-    "last_update": 1731590857542
+    "location": {
+      "x": 3133,
+      "y": 1060
+    },
+    "last_update": 1731591442235
   },
   {
     "markets": {
@@ -117813,7 +118212,11 @@
     "_ts": 1731589813038133,
     "id": "314203467",
     "name": "Vilva",
-    "last_update": 1731590858099
+    "location": {
+      "x": 3142,
+      "y": 3467
+    },
+    "last_update": 1731591442868
   },
   {
     "markets": {
@@ -119044,7 +119447,11 @@
     "_ts": 1731589813657443,
     "id": "324403790",
     "name": "Novova",
-    "last_update": 1731590858631
+    "location": {
+      "x": 3244,
+      "y": 3790
+    },
+    "last_update": 1731591443496
   },
   {
     "markets": {
@@ -120191,7 +120598,11 @@
     "_ts": 1731589812699182,
     "id": "325000982",
     "name": "Öremalm",
-    "last_update": 1731590859216
+    "location": {
+      "x": 3250,
+      "y": 982
+    },
+    "last_update": 1731591444142
   },
   {
     "markets": {
@@ -121378,10 +121789,14 @@
         "ask_volume_10": 14
       }
     },
-    "_ts": 1731590850027189,
+    "_ts": 1731591129164744,
     "id": "327703576",
     "name": "Marijamlinn",
-    "last_update": 1731590859790
+    "location": {
+      "x": 3277,
+      "y": 3576
+    },
+    "last_update": 1731591444770
   },
   {
     "markets": {
@@ -122576,7 +122991,11 @@
     "_ts": 1731589813444937,
     "id": "329503409",
     "name": "Duboviga",
-    "last_update": 1731590860362
+    "location": {
+      "x": 3295,
+      "y": 3409
+    },
+    "last_update": 1731591445398
   },
   {
     "markets": {
@@ -122859,18 +123278,16 @@
         "ask_volume_10": 9
       },
       "copper ingots": {
-        "price": "11.171",
+        "price": "11.082",
         "open_price": "11.171",
-        "last_price": "11.171",
-        "average_price": "11.171",
+        "last_price": "11.082",
+        "average_price": "11.162",
         "moving_average": "11.46",
-        "highest_bid": "11.082",
         "lowest_ask": "13.358",
         "high_price": "11.171",
-        "low_price": "11.171",
-        "volume": 10,
+        "low_price": "11.082",
+        "volume": 11,
         "volume_prev_12": 118,
-        "bid_volume_10": 1,
         "ask_volume_10": 3
       },
       "copper ore": {
@@ -123276,13 +123693,14 @@
         "price": "8.619",
         "open_price": "8.619",
         "last_price": "8.619",
+        "average_price": "8.619",
         "moving_average": "8.619",
-        "lowest_ask": "8.619",
+        "lowest_ask": "12.344",
         "high_price": "8.619",
         "low_price": "8.619",
-        "volume": 0,
+        "volume": 1,
         "volume_prev_12": 0,
-        "ask_volume_10": 1
+        "ask_volume_10": 4
       },
       "lead ore": {
         "price": "19.756",
@@ -123508,18 +123926,17 @@
         "ask_volume_10": 5
       },
       "pickaxes": {
-        "price": "14.973",
+        "price": "14.1",
         "open_price": "11.08",
-        "last_price": "14.973",
+        "last_price": "14.1",
+        "average_price": "13.463",
         "moving_average": "14.973",
         "highest_bid": "11.08",
-        "lowest_ask": "12.376",
-        "high_price": "11.08",
-        "low_price": "11.08",
-        "volume": 0,
+        "high_price": "14.1",
+        "low_price": "12.376",
+        "volume": 3,
         "volume_prev_12": 0,
-        "bid_volume_10": 1,
-        "ask_volume_10": 1
+        "bid_volume_10": 1
       },
       "pies": {
         "price": "18.331",
@@ -123867,10 +124284,14 @@
         "ask_volume_10": 16
       }
     },
-    "_ts": 1731590850027385,
+    "_ts": 1731591129164835,
     "id": "336703642",
     "name": "Kamennlinn",
-    "last_update": 1731590860935
+    "location": {
+      "x": 3367,
+      "y": 3642
+    },
+    "last_update": 1731591445964
   },
   {
     "markets": {
@@ -124987,7 +125408,11 @@
     "_ts": 1731589813114036,
     "id": "343000884",
     "name": "Dramnger",
-    "last_update": 1731590861579
+    "location": {
+      "x": 3430,
+      "y": 884
+    },
+    "last_update": 1731591446606
   },
   {
     "markets": {
@@ -126223,7 +126648,11 @@
     "_ts": 1731590210642069,
     "id": "344100590",
     "name": "Bergron",
-    "last_update": 1731590862153
+    "location": {
+      "x": 3441,
+      "y": 590
+    },
+    "last_update": 1731591447236
   },
   {
     "markets": {
@@ -127408,7 +127837,11 @@
     "_ts": 1731589813806581,
     "id": "344803409",
     "name": "Sigulinka",
-    "last_update": 1731590862683
+    "location": {
+      "x": 3448,
+      "y": 3409
+    },
+    "last_update": 1731591447862
   },
   {
     "markets": {
@@ -128538,7 +128971,11 @@
     "_ts": 1731590402154291,
     "id": "351500748",
     "name": "Jordau",
-    "last_update": 1731590863208
+    "location": {
+      "x": 3515,
+      "y": 748
+    },
+    "last_update": 1731591448504
   },
   {
     "markets": {
@@ -129705,7 +130142,11 @@
     "_ts": 1731589813357488,
     "id": "353801294",
     "name": "Sundsgard",
-    "last_update": 1731590863774
+    "location": {
+      "x": 3538,
+      "y": 1294
+    },
+    "last_update": 1731591449127
   },
   {
     "markets": {
@@ -130895,7 +131336,11 @@
     "_ts": 1731589813806426,
     "id": "354603853",
     "name": "Gdanvere",
-    "last_update": 1731590864346
+    "location": {
+      "x": 3546,
+      "y": 3853
+    },
+    "last_update": 1731591449764
   },
   {
     "markets": {
@@ -131974,7 +132419,11 @@
     "_ts": 1731589813302769,
     "id": "358600850",
     "name": "Stavare",
-    "last_update": 1731590864914
+    "location": {
+      "x": 3586,
+      "y": 850
+    },
+    "last_update": 1731591450340
   },
   {
     "markets": {
@@ -133143,7 +133592,11 @@
     "_ts": 1731590130603584,
     "id": "360803403",
     "name": "Kedeanga",
-    "last_update": 1731590865476
+    "location": {
+      "x": 3608,
+      "y": 3403
+    },
+    "last_update": 1731591450909
   },
   {
     "markets": {
@@ -134219,7 +134672,11 @@
     "_ts": 1731589813244668,
     "id": "363101072",
     "name": "Breiklif",
-    "last_update": 1731590866043
+    "location": {
+      "x": 3631,
+      "y": 1072
+    },
+    "last_update": 1731591451540
   },
   {
     "markets": {
@@ -135400,7 +135857,11 @@
     "_ts": 1731589813302780,
     "id": "366600778",
     "name": "Vikidalle",
-    "last_update": 1731590866605
+    "location": {
+      "x": 3666,
+      "y": 778
+    },
+    "last_update": 1731591452147
   },
   {
     "markets": {
@@ -136476,7 +136937,11 @@
     "_ts": 1731589813357462,
     "id": "374301313",
     "name": "Jönköjaur",
-    "last_update": 1731590867175
+    "location": {
+      "x": 3743,
+      "y": 1313
+    },
+    "last_update": 1731591452768
   },
   {
     "markets": {
@@ -137773,10 +138238,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1731590850027399,
+    "_ts": 1731591129164818,
     "id": "374603342",
     "name": "Bornai",
-    "last_update": 1731590867725
+    "location": {
+      "x": 3746,
+      "y": 3342
+    },
+    "last_update": 1731591453376
   },
   {
     "markets": {
@@ -138725,7 +139194,11 @@
     "_ts": 1731590402351448,
     "id": "381202415",
     "name": "Novozie",
-    "last_update": 1731590868311
+    "location": {
+      "x": 3812,
+      "y": 2415
+    },
+    "last_update": 1731591453965
   },
   {
     "markets": {
@@ -139943,7 +140416,11 @@
     "_ts": 1731589813873106,
     "id": "384503815",
     "name": "Varnai",
-    "last_update": 1731590868863
+    "location": {
+      "x": 3845,
+      "y": 3815
+    },
+    "last_update": 1731591454573
   },
   {
     "markets": {
@@ -140938,7 +141415,11 @@
     "_ts": 1731590401991658,
     "id": "389102250",
     "name": "Marclives",
-    "last_update": 1731590869445
+    "location": {
+      "x": 3891,
+      "y": 2250
+    },
+    "last_update": 1731591455190
   },
   {
     "markets": {
@@ -142132,7 +142613,11 @@
     "_ts": 1731590016218589,
     "id": "389303488",
     "name": "Liepol",
-    "last_update": 1731590869973
+    "location": {
+      "x": 3893,
+      "y": 3488
+    },
+    "last_update": 1731591455802
   },
   {
     "markets": {
@@ -143192,7 +143677,11 @@
     "_ts": 1731589813873127,
     "id": "391003627",
     "name": "Elka",
-    "last_update": 1731590870549
+    "location": {
+      "x": 3910,
+      "y": 3627
+    },
+    "last_update": 1731591456429
   },
   {
     "markets": {
@@ -144050,7 +144539,11 @@
     "_ts": 1731590402245840,
     "id": "397903067",
     "name": "Borinka",
-    "last_update": 1731590871074
+    "location": {
+      "x": 3979,
+      "y": 3067
+    },
+    "last_update": 1731591457033
   },
   {
     "markets": {
@@ -144967,6 +145460,10 @@
     "_ts": 1731590401833609,
     "id": "403702798",
     "name": "Võzie",
-    "last_update": 1731590871635
+    "location": {
+      "x": 4037,
+      "y": 2798
+    },
+    "last_update": 1731591457642
   }
 ]
