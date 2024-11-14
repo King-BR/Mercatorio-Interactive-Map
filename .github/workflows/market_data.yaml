@@ -29,8 +29,8 @@ jobs:
           SUCCESS=true
           responses=()
 
-          # Read the towns.json file and extract town IDs, names, and locations
-          TOWNS=$(jq -c '.[] | {id: .id, name: .name, location: .location}' assets/s2/towns.json)
+          # Read the towns.json file and extract town IDs and names
+          TOWNS=$(jq -c '.[] | {id: .id, name: .name}' assets/s2/towns.json)
 
           # Iterate over each town's data
           for town in $TOWNS; do
@@ -49,7 +49,7 @@ jobs:
             # Check if the response was successful (HTTP 200)
             if [[ "$response" == "200" ]]; then
               # If successful, append the response body to the responses array with town details and timestamp
-              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --argjson last_update "$last_update" '. + {id: $id, name: $name, location: $location, last_update: $last_update}')
+              api_response=$(cat response_body.txt | jq --arg id "$id" --arg name "$name" --argjson last_update "$last_update" '. + {id: $id, name: $name, last_update: $last_update}')
               responses+=("$api_response")
               echo "Request for town ID $id ($name) was successful"
             else
