@@ -8,7 +8,7 @@ var townsLayer = null;
 async function loadTowns(season) {
   try {
     towns = []; // Clear existing towns
-    townsLayer = L.layerGroup()
+    townsLayer = L.layerGroup();
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     const tradeData = await fetchFromLocal(
       `assets/${season}/trade_ranges.json`
@@ -40,6 +40,8 @@ async function loadTowns(season) {
 
       const iconUrl = town.capital
         ? "assets/capital_marker.png"
+        : town.name.includes("tradepost")
+        ? "assets/tradepost_marker.png"
         : "assets/town_marker.png";
       const marker = L.icon({
         iconUrl: iconUrl,
@@ -202,7 +204,9 @@ async function loadTowns(season) {
         });
       }
 
-      var tmpmarker = L.marker([markerY, markerX], { icon: marker })
+      var tmpmarker = L.marker([markerY, markerX], {
+        icon: marker,
+      })
         .bindTooltip(tooltipText)
         .bindPopup(statsStr, {
           minWidth: 200, // Minimum width of the popup
@@ -226,10 +230,11 @@ async function loadTowns(season) {
             });
           }
         });
-      
+
       townsLayer.addLayer(tmpmarker);
 
-      if (!document.getElementById("toggleMarket").checked) map.addLayer(townsLayer);
+      if (!document.getElementById("toggleMarket").checked)
+        map.addLayer(townsLayer);
 
       if (document.getElementById("toggleRange1").checked) {
         L.circle([markerY, markerX], {
@@ -259,7 +264,10 @@ async function loadTowns(season) {
         }).addTo(map);
       }
 
-      if (selectedTown.name == null || selectedTown.name == town.name.replace("_", " ")) {
+      if (
+        selectedTown.name == null ||
+        selectedTown.name == town.name.replace("_", " ")
+      ) {
         tradeData.transports.forEach((transport) => {
           // Manual
           if (transport.moves > 0) {
@@ -385,7 +393,10 @@ async function updateRangeCircles(season) {
       }).addTo(map);
     }
 
-    if (selectedTown.name == null || selectedTown.name == town.name.replace("_", " ")) {
+    if (
+      selectedTown.name == null ||
+      selectedTown.name == town.name.replace("_", " ")
+    ) {
       tradeData.transports.forEach((transport) => {
         // Manual
         if (transport.moves > 0) {
