@@ -762,15 +762,6 @@
     ]
   },
   {
-    "id": "269201155",
-    "name": "Unterbrücken",
-    "location": {
-      "x": 2692,
-      "y": 1155
-    },
-    "landings": null
-  },
-  {
     "id": "271900210",
     "name": "Karlmoki",
     "location": {
@@ -1136,15 +1127,6 @@
     "location": {
       "x": 3845,
       "y": 3815
-    },
-    "landings": null
-  },
-  {
-    "id": "389102250",
-    "name": "Marclives",
-    "location": {
-      "x": 3891,
-      "y": 2250
     },
     "landings": null
   },
