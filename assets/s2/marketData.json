@@ -1235,7 +1235,7 @@
       "x": 609,
       "y": 3487
     },
-    "last_update": 1733497224217
+    "last_update": 1733497753387
   },
   {
     "markets": {
@@ -2453,7 +2453,7 @@
       "x": 637,
       "y": 3723
     },
-    "last_update": 1733497224880
+    "last_update": 1733497754167
   },
   {
     "markets": {
@@ -3654,7 +3654,7 @@
       "x": 654,
       "y": 3587
     },
-    "last_update": 1733497225414
+    "last_update": 1733497754714
   },
   {
     "markets": {
@@ -4801,14 +4801,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1733497210726737,
+    "_ts": 1733497558839352,
     "id": "68903169",
     "name": "Pareux",
     "location": {
       "x": 689,
       "y": 3169
     },
-    "last_update": 1733497225931
+    "last_update": 1733497755235
   },
   {
     "markets": {
@@ -6005,7 +6005,7 @@
       "x": 795,
       "y": 3397
     },
-    "last_update": 1733497226454
+    "last_update": 1733497755753
   },
   {
     "markets": {
@@ -7284,7 +7284,7 @@
       "x": 815,
       "y": 435
     },
-    "last_update": 1733497226979
+    "last_update": 1733497756293
   },
   {
     "markets": {
@@ -8597,7 +8597,7 @@
       "x": 833,
       "y": 963
     },
-    "last_update": 1733497227523
+    "last_update": 1733497756875
   },
   {
     "markets": {
@@ -9877,7 +9877,7 @@
       "x": 880,
       "y": 557
     },
-    "last_update": 1733497228094
+    "last_update": 1733497757406
   },
   {
     "markets": {
@@ -11084,7 +11084,7 @@
       "x": 902,
       "y": 749
     },
-    "last_update": 1733497228583
+    "last_update": 1733497757957
   },
   {
     "markets": {
@@ -12290,7 +12290,7 @@
       "x": 934,
       "y": 3404
     },
-    "last_update": 1733497229113
+    "last_update": 1733497758490
   },
   {
     "markets": {
@@ -13538,7 +13538,7 @@
       "x": 935,
       "y": 1170
     },
-    "last_update": 1733497229800
+    "last_update": 1733497759037
   },
   {
     "markets": {
@@ -14651,7 +14651,7 @@
       "x": 942,
       "y": 927
     },
-    "last_update": 1733497230350
+    "last_update": 1733497759619
   },
   {
     "markets": {
@@ -14744,12 +14744,10 @@
         "last_price": "1.812",
         "average_price": "1.812",
         "moving_average": "1.802",
-        "highest_bid": "1.812",
         "high_price": "1.812",
         "low_price": "1.812",
-        "volume": 445,
-        "volume_prev_12": 5049,
-        "bid_volume_10": 4
+        "volume": 449,
+        "volume_prev_12": 5049
       },
       "bricks": {
         "price": "4.399",
@@ -14795,24 +14793,23 @@
         "last_price": "0.3",
         "average_price": "0.3",
         "moving_average": "0.38",
-        "lowest_ask": "0.3",
+        "lowest_ask": "1.1",
         "high_price": "0.3",
         "low_price": "0.3",
         "volume": 27,
         "volume_prev_12": 377,
-        "ask_volume_10": 11
+        "ask_volume_10": 10000000
       },
       "casks": {
-        "price": "4.156",
+        "price": "4.825",
         "open_price": "4.009",
-        "last_price": "4.156",
+        "last_price": "4.825",
+        "average_price": "4.481",
         "moving_average": "4.106",
-        "lowest_ask": "4.009",
-        "high_price": "4.009",
+        "high_price": "4.825",
         "low_price": "4.009",
-        "volume": 0,
-        "volume_prev_12": 13,
-        "ask_volume_10": 2
+        "volume": 4,
+        "volume_prev_12": 13
       },
       "cattle": {
         "price": "60.278",
@@ -14832,13 +14829,11 @@
         "last_price": "0.747",
         "average_price": "0.747",
         "moving_average": "0.741",
-        "highest_bid": "0.747",
         "lowest_ask": "1.018",
         "high_price": "0.747",
         "low_price": "0.747",
-        "volume": 40,
+        "volume": 41,
         "volume_prev_12": 466,
-        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "cheese": {
@@ -14955,18 +14950,18 @@
         "ask_volume_10": 2
       },
       "cured meat": {
-        "price": "18.352",
+        "price": "18.138",
         "open_price": "18.352",
-        "last_price": "18.352",
-        "average_price": "18.352",
+        "last_price": "18.138",
+        "average_price": "18.307",
         "moving_average": "20.29",
-        "highest_bid": "18.351",
+        "highest_bid": "18.138",
         "lowest_ask": "18.548",
         "high_price": "18.352",
-        "low_price": "18.352",
-        "volume": 16,
+        "low_price": "18.138",
+        "volume": 26,
         "volume_prev_12": 188,
-        "bid_volume_10": 14,
+        "bid_volume_10": 4,
         "ask_volume_10": 2
       },
       "donations": {
@@ -15732,13 +15727,11 @@
         "last_price": "4.292",
         "average_price": "4.292",
         "moving_average": "4.378",
-        "highest_bid": "4.292",
         "lowest_ask": "4.354",
         "high_price": "4.292",
         "low_price": "4.292",
-        "volume": 6,
+        "volume": 7,
         "volume_prev_12": 147,
-        "bid_volume_10": 1,
         "ask_volume_10": 17
       },
       "wax": {
@@ -15801,17 +15794,15 @@
         "bid_volume_10": 3
       },
       "wrought iron": {
-        "price": "8.004",
+        "price": "7.922",
         "open_price": "8.004",
-        "last_price": "8.004",
-        "average_price": "8.004",
+        "last_price": "7.922",
+        "average_price": "7.999",
         "moving_average": "8.072",
-        "highest_bid": "7.922",
         "high_price": "8.004",
-        "low_price": "8.004",
-        "volume": 16,
-        "volume_prev_12": 180,
-        "bid_volume_10": 1
+        "low_price": "7.922",
+        "volume": 17,
+        "volume_prev_12": 180
       },
       "yarn": {
         "price": "3.859",
@@ -15827,14 +15818,14 @@
         "bid_volume_10": 3
       }
     },
-    "_ts": 1733497210727222,
+    "_ts": 1733497558839337,
     "id": "101303254",
     "name": "Orlebourg",
     "location": {
       "x": 1013,
       "y": 3254
     },
-    "last_update": 1733497230872
+    "last_update": 1733497760148
   },
   {
     "markets": {
@@ -17089,7 +17080,7 @@
       "x": 1023,
       "y": 1021
     },
-    "last_update": 1733497231393
+    "last_update": 1733497760640
   },
   {
     "markets": {
@@ -18328,7 +18319,7 @@
       "x": 1051,
       "y": 3362
     },
-    "last_update": 1733497231939
+    "last_update": 1733497761151
   },
   {
     "markets": {
@@ -19565,7 +19556,7 @@
       "x": 1129,
       "y": 992
     },
-    "last_update": 1733497232543
+    "last_update": 1733497761711
   },
   {
     "markets": {
@@ -20805,7 +20796,7 @@
       "x": 1180,
       "y": 792
     },
-    "last_update": 1733497233111
+    "last_update": 1733497762271
   },
   {
     "markets": {
@@ -22069,14 +22060,14 @@
         "ask_volume_10": 10
       }
     },
-    "_ts": 1733497210727462,
+    "_ts": 1733497558839280,
     "id": "118603125",
     "name": "Veraux",
     "location": {
       "x": 1186,
       "y": 3125
     },
-    "last_update": 1733497233648
+    "last_update": 1733497762823
   },
   {
     "markets": {
@@ -23407,7 +23398,7 @@
       "x": 1205,
       "y": 3824
     },
-    "last_update": 1733497234141
+    "last_update": 1733497763368
   },
   {
     "markets": {
@@ -23904,7 +23895,7 @@
       "x": 1280,
       "y": 2187
     },
-    "last_update": 1733497234707
+    "last_update": 1733497764026
   },
   {
     "markets": {
@@ -25127,7 +25118,7 @@
       "x": 1290,
       "y": 768
     },
-    "last_update": 1733497235214
+    "last_update": 1733497764533
   },
   {
     "markets": {
@@ -26344,7 +26335,7 @@
       "x": 1349,
       "y": 3866
     },
-    "last_update": 1733497235756
+    "last_update": 1733497765080
   },
   {
     "markets": {
@@ -27622,14 +27613,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1733497210727691,
+    "_ts": 1733497558839199,
     "id": "136603589",
     "name": "Calmont",
     "location": {
       "x": 1366,
       "y": 3589
     },
-    "last_update": 1733497236281
+    "last_update": 1733497765618
   },
   {
     "markets": {
@@ -28856,7 +28847,7 @@
       "x": 1374,
       "y": 3767
     },
-    "last_update": 1733497236859
+    "last_update": 1733497766129
   },
   {
     "markets": {
@@ -30119,7 +30110,7 @@
       "x": 1421,
       "y": 901
     },
-    "last_update": 1733497237390
+    "last_update": 1733497766669
   },
   {
     "markets": {
@@ -31009,7 +31000,7 @@
       "x": 1474,
       "y": 239
     },
-    "last_update": 1733497237935
+    "last_update": 1733497767202
   },
   {
     "markets": {
@@ -32060,7 +32051,7 @@
       "x": 1474,
       "y": 1758
     },
-    "last_update": 1733497238580
+    "last_update": 1733497767727
   },
   {
     "markets": {
@@ -33341,7 +33332,7 @@
       "x": 1477,
       "y": 992
     },
-    "last_update": 1733497239076
+    "last_update": 1733497768267
   },
   {
     "markets": {
@@ -34593,7 +34584,7 @@
       "x": 1486,
       "y": 3820
     },
-    "last_update": 1733497239647
+    "last_update": 1733497768835
   },
   {
     "markets": {
@@ -35853,7 +35844,7 @@
       "x": 1488,
       "y": 3492
     },
-    "last_update": 1733497240184
+    "last_update": 1733497769381
   },
   {
     "markets": {
@@ -37029,7 +37020,7 @@
       "x": 1502,
       "y": 1864
     },
-    "last_update": 1733497240732
+    "last_update": 1733497769928
   },
   {
     "markets": {
@@ -38209,7 +38200,7 @@
       "x": 1549,
       "y": 809
     },
-    "last_update": 1733497241272
+    "last_update": 1733497770446
   },
   {
     "markets": {
@@ -39390,7 +39381,7 @@
       "x": 1610,
       "y": 1099
     },
-    "last_update": 1733497241795
+    "last_update": 1733497771072
   },
   {
     "markets": {
@@ -40665,7 +40656,7 @@
       "x": 1613,
       "y": 612
     },
-    "last_update": 1733497242329
+    "last_update": 1733497771616
   },
   {
     "markets": {
@@ -41957,7 +41948,7 @@
       "x": 1630,
       "y": 920
     },
-    "last_update": 1733497242902
+    "last_update": 1733497772198
   },
   {
     "markets": {
@@ -43214,7 +43205,7 @@
       "x": 1632,
       "y": 3463
     },
-    "last_update": 1733497243420
+    "last_update": 1733497772803
   },
   {
     "markets": {
@@ -44403,7 +44394,7 @@
       "x": 1645,
       "y": 737
     },
-    "last_update": 1733497243959
+    "last_update": 1733497773407
   },
   {
     "markets": {
@@ -45678,7 +45669,7 @@
       "x": 1667,
       "y": 3806
     },
-    "last_update": 1733497244496
+    "last_update": 1733497773996
   },
   {
     "markets": {
@@ -46942,7 +46933,7 @@
       "x": 1679,
       "y": 398
     },
-    "last_update": 1733497245015
+    "last_update": 1733497774583
   },
   {
     "markets": {
@@ -48169,7 +48160,7 @@
       "x": 1690,
       "y": 1022
     },
-    "last_update": 1733497245581
+    "last_update": 1733497775170
   },
   {
     "markets": {
@@ -49475,7 +49466,7 @@
       "x": 1706,
       "y": 3659
     },
-    "last_update": 1733497246101
+    "last_update": 1733497775691
   },
   {
     "markets": {
@@ -50820,7 +50811,7 @@
       "x": 1713,
       "y": 1142
     },
-    "last_update": 1733497246693
+    "last_update": 1733497776236
   },
   {
     "markets": {
@@ -52052,7 +52043,7 @@
       "x": 1752,
       "y": 265
     },
-    "last_update": 1733497247268
+    "last_update": 1733497776780
   },
   {
     "markets": {
@@ -53282,7 +53273,7 @@
       "x": 1784,
       "y": 3841
     },
-    "last_update": 1733497247804
+    "last_update": 1733497777314
   },
   {
     "markets": {
@@ -54582,7 +54573,7 @@
       "x": 1796,
       "y": 1073
     },
-    "last_update": 1733497248334
+    "last_update": 1733497777825
   },
   {
     "markets": {
@@ -55854,7 +55845,7 @@
       "x": 1805,
       "y": 954
     },
-    "last_update": 1733497248820
+    "last_update": 1733497778386
   },
   {
     "markets": {
@@ -57125,7 +57116,7 @@
       "x": 1824,
       "y": 3642
     },
-    "last_update": 1733497249374
+    "last_update": 1733497778969
   },
   {
     "markets": {
@@ -58370,7 +58361,7 @@
       "x": 1876,
       "y": 3748
     },
-    "last_update": 1733497249878
+    "last_update": 1733497779528
   },
   {
     "markets": {
@@ -59633,7 +59624,7 @@
       "x": 1900,
       "y": 3520
     },
-    "last_update": 1733497250414
+    "last_update": 1733497780107
   },
   {
     "markets": {
@@ -60848,7 +60839,7 @@
       "x": 1906,
       "y": 320
     },
-    "last_update": 1733497250948
+    "last_update": 1733497780626
   },
   {
     "markets": {
@@ -61966,7 +61957,7 @@
       "x": 1952,
       "y": 2174
     },
-    "last_update": 1733497251478
+    "last_update": 1733497781172
   },
   {
     "markets": {
@@ -63258,14 +63249,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1733497210728273,
+    "_ts": 1733497396131740,
     "id": "195903184",
     "name": "Liegues",
     "location": {
       "x": 1959,
       "y": 3184
     },
-    "last_update": 1733497252036
+    "last_update": 1733497781710
   },
   {
     "markets": {
@@ -64538,7 +64529,7 @@
       "x": 1963,
       "y": 3401
     },
-    "last_update": 1733497252591
+    "last_update": 1733497782298
   },
   {
     "markets": {
@@ -65715,7 +65706,7 @@
       "x": 2000,
       "y": 3081
     },
-    "last_update": 1733497253164
+    "last_update": 1733497782898
   },
   {
     "markets": {
@@ -66917,7 +66908,7 @@
       "x": 2011,
       "y": 3682
     },
-    "last_update": 1733497253697
+    "last_update": 1733497783457
   },
   {
     "markets": {
@@ -68126,7 +68117,7 @@
       "x": 2039,
       "y": 286
     },
-    "last_update": 1733497254227
+    "last_update": 1733497784000
   },
   {
     "markets": {
@@ -69402,7 +69393,7 @@
       "x": 2039,
       "y": 1166
     },
-    "last_update": 1733497254752
+    "last_update": 1733497784527
   },
   {
     "markets": {
@@ -70655,7 +70646,7 @@
       "x": 2043,
       "y": 1021
     },
-    "last_update": 1733497255271
+    "last_update": 1733497785075
   },
   {
     "markets": {
@@ -71982,14 +71973,14 @@
         "ask_volume_10": 16
       }
     },
-    "_ts": 1733497210727839,
+    "_ts": 1733497396131705,
     "id": "204302988",
     "name": "Touland",
     "location": {
       "x": 2043,
       "y": 2988
     },
-    "last_update": 1733497255821
+    "last_update": 1733497785702
   },
   {
     "markets": {
@@ -73229,7 +73220,7 @@
       "x": 2066,
       "y": 3523
     },
-    "last_update": 1733497256376
+    "last_update": 1733497786280
   },
   {
     "markets": {
@@ -74485,7 +74476,7 @@
       "x": 2109,
       "y": 198
     },
-    "last_update": 1733497256856
+    "last_update": 1733497786820
   },
   {
     "markets": {
@@ -75759,7 +75750,7 @@
       "x": 2136,
       "y": 1134
     },
-    "last_update": 1733497257430
+    "last_update": 1733497787329
   },
   {
     "markets": {
@@ -76685,12 +76676,10 @@
         "last_price": "3.742",
         "average_price": "3.742",
         "moving_average": "3.813",
-        "highest_bid": "3.742",
         "high_price": "3.742",
         "low_price": "3.742",
-        "volume": 41,
-        "volume_prev_12": 483,
-        "bid_volume_10": 2
+        "volume": 43,
+        "volume_prev_12": 483
       },
       "resin": {
         "price": "0.755",
@@ -76998,14 +76987,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1733497210727480,
+    "_ts": 1733497448883002,
     "id": "214603140",
     "name": "Vacquedalle",
     "location": {
       "x": 2146,
       "y": 3140
     },
-    "last_update": 1733497257963
+    "last_update": 1733497787863
   },
   {
     "markets": {
@@ -78343,7 +78332,7 @@
       "x": 2146,
       "y": 3657
     },
-    "last_update": 1733497258533
+    "last_update": 1733497788430
   },
   {
     "markets": {
@@ -79701,7 +79690,7 @@
       "x": 2193,
       "y": 1043
     },
-    "last_update": 1733497259040
+    "last_update": 1733497788979
   },
   {
     "markets": {
@@ -81024,7 +81013,7 @@
       "x": 2282,
       "y": 962
     },
-    "last_update": 1733497259727
+    "last_update": 1733497789480
   },
   {
     "markets": {
@@ -82391,7 +82380,7 @@
       "x": 2312,
       "y": 3566
     },
-    "last_update": 1733497260280
+    "last_update": 1733497790039
   },
   {
     "markets": {
@@ -83589,7 +83578,7 @@
       "x": 2381,
       "y": 1011
     },
-    "last_update": 1733497260833
+    "last_update": 1733497790577
   },
   {
     "markets": {
@@ -84066,7 +84055,7 @@
       "x": 2384,
       "y": 2722
     },
-    "last_update": 1733497261359
+    "last_update": 1733497791127
   },
   {
     "markets": {
@@ -85326,7 +85315,7 @@
       "x": 2439,
       "y": 3571
     },
-    "last_update": 1733497261864
+    "last_update": 1733497791645
   },
   {
     "markets": {
@@ -86646,7 +86635,7 @@
       "x": 2459,
       "y": 869
     },
-    "last_update": 1733497262400
+    "last_update": 1733497792177
   },
   {
     "markets": {
@@ -87742,7 +87731,7 @@
       "x": 2481,
       "y": 2079
     },
-    "last_update": 1733497262969
+    "last_update": 1733497792760
   },
   {
     "markets": {
@@ -89051,7 +89040,7 @@
       "x": 2623,
       "y": 855
     },
-    "last_update": 1733497263489
+    "last_update": 1733497793301
   },
   {
     "markets": {
@@ -90324,7 +90313,7 @@
       "x": 2641,
       "y": 692
     },
-    "last_update": 1733497264027
+    "last_update": 1733497793804
   },
   {
     "markets": {
@@ -91619,7 +91608,7 @@
       "x": 2646,
       "y": 988
     },
-    "last_update": 1733497264568
+    "last_update": 1733497794322
   },
   {
     "markets": {
@@ -92903,7 +92892,7 @@
       "x": 2666,
       "y": 508
     },
-    "last_update": 1733497265110
+    "last_update": 1733497794875
   },
   {
     "markets": {
@@ -94200,7 +94189,7 @@
       "x": 2673,
       "y": 3592
     },
-    "last_update": 1733497265693
+    "last_update": 1733497795431
   },
   {
     "markets": {
@@ -95497,7 +95486,7 @@
       "x": 2692,
       "y": 1155
     },
-    "last_update": 1733497266233
+    "last_update": 1733497795969
   },
   {
     "markets": {
@@ -96746,7 +96735,7 @@
       "x": 2719,
       "y": 210
     },
-    "last_update": 1733497266811
+    "last_update": 1733497796554
   },
   {
     "markets": {
@@ -98004,7 +97993,7 @@
       "x": 2719,
       "y": 380
     },
-    "last_update": 1733497267303
+    "last_update": 1733497797101
   },
   {
     "markets": {
@@ -99279,7 +99268,7 @@
       "x": 2763,
       "y": 836
     },
-    "last_update": 1733497267793
+    "last_update": 1733497797669
   },
   {
     "markets": {
@@ -100516,7 +100505,7 @@
       "x": 2766,
       "y": 470
     },
-    "last_update": 1733497268337
+    "last_update": 1733497798186
   },
   {
     "markets": {
@@ -101846,7 +101835,7 @@
       "x": 2803,
       "y": 1044
     },
-    "last_update": 1733497268845
+    "last_update": 1733497798742
   },
   {
     "markets": {
@@ -103166,7 +103155,7 @@
       "x": 2807,
       "y": 1146
     },
-    "last_update": 1733497269371
+    "last_update": 1733497799248
   },
   {
     "markets": {
@@ -104457,7 +104446,7 @@
       "x": 2865,
       "y": 413
     },
-    "last_update": 1733497269924
+    "last_update": 1733497799809
   },
   {
     "markets": {
@@ -105787,7 +105776,7 @@
       "x": 2873,
       "y": 643
     },
-    "last_update": 1733497270415
+    "last_update": 1733497800401
   },
   {
     "markets": {
@@ -106985,7 +106974,7 @@
       "x": 2879,
       "y": 523
     },
-    "last_update": 1733497271107
+    "last_update": 1733497800938
   },
   {
     "markets": {
@@ -108280,7 +108269,7 @@
       "x": 2894,
       "y": 965
     },
-    "last_update": 1733497271622
+    "last_update": 1733497801445
   },
   {
     "markets": {
@@ -109581,7 +109570,7 @@
       "x": 2930,
       "y": 1097
     },
-    "last_update": 1733497272156
+    "last_update": 1733497801983
   },
   {
     "markets": {
@@ -110881,7 +110870,7 @@
       "x": 2954,
       "y": 862
     },
-    "last_update": 1733497272697
+    "last_update": 1733497802576
   },
   {
     "markets": {
@@ -112272,7 +112261,7 @@
       "x": 2959,
       "y": 588
     },
-    "last_update": 1733497273254
+    "last_update": 1733497803139
   },
   {
     "markets": {
@@ -113630,7 +113619,7 @@
       "x": 2960,
       "y": 3490
     },
-    "last_update": 1733497273812
+    "last_update": 1733497803694
   },
   {
     "markets": {
@@ -115005,7 +114994,7 @@
       "x": 3009,
       "y": 749
     },
-    "last_update": 1733497274367
+    "last_update": 1733497804217
   },
   {
     "markets": {
@@ -116141,14 +116130,14 @@
         "ask_volume_10": 2
       }
     },
-    "_ts": 1733497210725070,
+    "_ts": 1733497565984698,
     "id": "301703335",
     "name": "Gulnewo",
     "location": {
       "x": 3017,
       "y": 3335
     },
-    "last_update": 1733497274912
+    "last_update": 1733497804775
   },
   {
     "markets": {
@@ -117353,7 +117342,7 @@
       "x": 3024,
       "y": 3588
     },
-    "last_update": 1733497275440
+    "last_update": 1733497805320
   },
   {
     "markets": {
@@ -118666,7 +118655,7 @@
       "x": 3025,
       "y": 488
     },
-    "last_update": 1733497275976
+    "last_update": 1733497805852
   },
   {
     "markets": {
@@ -119962,7 +119951,7 @@
       "x": 3095,
       "y": 565
     },
-    "last_update": 1733497276512
+    "last_update": 1733497806369
   },
   {
     "markets": {
@@ -121163,7 +121152,7 @@
       "x": 3116,
       "y": 3677
     },
-    "last_update": 1733497277065
+    "last_update": 1733497806959
   },
   {
     "markets": {
@@ -122258,7 +122247,7 @@
       "x": 3133,
       "y": 1060
     },
-    "last_update": 1733497277591
+    "last_update": 1733497807547
   },
   {
     "markets": {
@@ -123434,7 +123423,7 @@
       "x": 3142,
       "y": 3467
     },
-    "last_update": 1733497278119
+    "last_update": 1733497808107
   },
   {
     "markets": {
@@ -124693,7 +124682,7 @@
       "x": 3244,
       "y": 3790
     },
-    "last_update": 1733497278647
+    "last_update": 1733497808651
   },
   {
     "markets": {
@@ -125881,7 +125870,7 @@
       "x": 3250,
       "y": 982
     },
-    "last_update": 1733497279190
+    "last_update": 1733497809211
   },
   {
     "markets": {
@@ -127102,7 +127091,7 @@
       "x": 3277,
       "y": 3576
     },
-    "last_update": 1733497279727
+    "last_update": 1733497809758
   },
   {
     "markets": {
@@ -128349,7 +128338,7 @@
       "x": 3295,
       "y": 3409
     },
-    "last_update": 1733497280258
+    "last_update": 1733497810286
   },
   {
     "markets": {
@@ -129701,7 +129690,7 @@
       "x": 3367,
       "y": 3642
     },
-    "last_update": 1733497280797
+    "last_update": 1733497811006
   },
   {
     "markets": {
@@ -130913,7 +130902,7 @@
       "x": 3430,
       "y": 884
     },
-    "last_update": 1733497281345
+    "last_update": 1733497811558
   },
   {
     "markets": {
@@ -132213,7 +132202,7 @@
       "x": 3441,
       "y": 590
     },
-    "last_update": 1733497281858
+    "last_update": 1733497812103
   },
   {
     "markets": {
@@ -133452,7 +133441,7 @@
       "x": 3448,
       "y": 3409
     },
-    "last_update": 1733497282431
+    "last_update": 1733497812637
   },
   {
     "markets": {
@@ -134671,7 +134660,7 @@
       "x": 3515,
       "y": 748
     },
-    "last_update": 1733497283004
+    "last_update": 1733497813222
   },
   {
     "markets": {
@@ -135921,7 +135910,7 @@
       "x": 3538,
       "y": 1294
     },
-    "last_update": 1733497283528
+    "last_update": 1733497813769
   },
   {
     "markets": {
@@ -137144,14 +137133,14 @@
         "ask_volume_10": 12
       }
     },
-    "_ts": 1733497210727366,
+    "_ts": 1733497813132167,
     "id": "354603853",
     "name": "Gdanvere",
     "location": {
       "x": 3546,
       "y": 3853
     },
-    "last_update": 1733497284290
+    "last_update": 1733497814312
   },
   {
     "markets": {
@@ -138331,7 +138320,7 @@
       "x": 3586,
       "y": 850
     },
-    "last_update": 1733497284825
+    "last_update": 1733497814865
   },
   {
     "markets": {
@@ -139244,13 +139233,13 @@
         "last_price": "98.838",
         "average_price": "98.838",
         "moving_average": "99.013",
-        "highest_bid": "93.93",
+        "highest_bid": "89.023",
         "lowest_ask": "104.849",
         "high_price": "98.838",
         "low_price": "98.838",
         "volume": 1,
         "volume_prev_12": 17,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 2
       },
       "protection": {
@@ -139564,14 +139553,14 @@
         "ask_volume_10": 6
       }
     },
-    "_ts": 1733497210728336,
+    "_ts": 1733497815317939,
     "id": "360803403",
     "name": "Kedeanga",
     "location": {
       "x": 3608,
       "y": 3403
     },
-    "last_update": 1733497285305
+    "last_update": 1733497815423
   },
   {
     "markets": {
@@ -140719,7 +140708,7 @@
       "x": 3631,
       "y": 1072
     },
-    "last_update": 1733497285843
+    "last_update": 1733497815979
   },
   {
     "markets": {
@@ -141929,13 +141918,11 @@
         "last_price": "11.092",
         "average_price": "11.092",
         "moving_average": "11.604",
-        "highest_bid": "9.97",
         "lowest_ask": "11.092",
         "high_price": "11.092",
         "low_price": "11.092",
         "volume": 20,
         "volume_prev_12": 263,
-        "bid_volume_10": 1,
         "ask_volume_10": 8
       },
       "yarn": {
@@ -141953,14 +141940,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1733497210725558,
+    "_ts": 1733497816599959,
     "id": "366600778",
     "name": "Vikidalle",
     "location": {
       "x": 3666,
       "y": 778
     },
-    "last_update": 1733497286750
+    "last_update": 1733497816510
   },
   {
     "markets": {
@@ -142924,13 +142911,11 @@
         "open_price": "1.181",
         "last_price": "3.318",
         "moving_average": "3.345",
-        "highest_bid": "1.181",
         "lowest_ask": "2.798",
         "high_price": "1.181",
         "low_price": "1.181",
         "volume": 0,
         "volume_prev_12": 3,
-        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "thread": {
@@ -143078,14 +143063,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1733497210727723,
+    "_ts": 1733497816880649,
     "id": "374301313",
     "name": "Jönköjaur",
     "location": {
       "x": 3743,
       "y": 1313
     },
-    "last_update": 1733497287280
+    "last_update": 1733497817040
   },
   {
     "markets": {
@@ -144437,14 +144422,14 @@
         "ask_volume_10": 38
       }
     },
-    "_ts": 1733497210724457,
+    "_ts": 1733497817411752,
     "id": "374603342",
     "name": "Bornai",
     "location": {
       "x": 3746,
       "y": 3342
     },
-    "last_update": 1733497287820
+    "last_update": 1733497817561
   },
   {
     "markets": {
@@ -145096,12 +145081,10 @@
         "last_price": "1.786",
         "average_price": "1.786",
         "moving_average": "1.765",
-        "lowest_ask": "1.786",
         "high_price": "1.786",
         "low_price": "1.786",
         "volume": 3,
-        "volume_prev_12": 33,
-        "ask_volume_10": 1
+        "volume_prev_12": 33
       },
       "medicine": {
         "price": "0",
@@ -145477,14 +145460,14 @@
         "ask_volume_10": 4
       }
     },
-    "_ts": 1733497210727591,
+    "_ts": 1733497817507565,
     "id": "381202415",
     "name": "Novozie",
     "location": {
       "x": 3812,
       "y": 2415
     },
-    "last_update": 1733497288322
+    "last_update": 1733497818156
   },
   {
     "markets": {
@@ -146005,12 +145988,10 @@
         "last_price": "259.828",
         "average_price": "259.828",
         "moving_average": "254.122",
-        "lowest_ask": "300.047",
         "high_price": "259.828",
         "low_price": "259.828",
         "volume": 2,
-        "volume_prev_12": 13,
-        "ask_volume_10": 1
+        "volume_prev_12": 13
       },
       "ham": {
         "price": "73.558",
@@ -146566,7 +146547,7 @@
         "low_price": "7.124",
         "volume": 1,
         "volume_prev_12": 12,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 1
       },
       "thread": {
@@ -146714,18 +146695,18 @@
         "low_price": "4.82",
         "volume": 57,
         "volume_prev_12": 554,
-        "bid_volume_10": 7,
+        "bid_volume_10": 6,
         "ask_volume_10": 7
       }
     },
-    "_ts": 1733497210728679,
+    "_ts": 1733497817411763,
     "id": "384503815",
     "name": "Varnai",
     "location": {
       "x": 3845,
       "y": 3815
     },
-    "last_update": 1733497288848
+    "last_update": 1733497818679
   },
   {
     "markets": {
@@ -147767,14 +147748,14 @@
         "ask_volume_10": 3
       }
     },
-    "_ts": 1733497210724669,
+    "_ts": 1733497817507576,
     "id": "389102250",
     "name": "Marclives",
     "location": {
       "x": 3891,
       "y": 2250
     },
-    "last_update": 1733497289392
+    "last_update": 1733497819245
   },
   {
     "markets": {
@@ -147853,7 +147834,7 @@
         "volume": 0,
         "volume_prev_12": 14,
         "bid_volume_10": 1,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "blades": {
         "price": "28.185",
@@ -148009,13 +147990,11 @@
         "last_price": "9.553",
         "average_price": "9.553",
         "moving_average": "10.339",
-        "highest_bid": "9.022",
         "lowest_ask": "9.553",
         "high_price": "9.553",
         "low_price": "9.553",
         "volume": 34,
         "volume_prev_12": 442,
-        "bid_volume_10": 1,
         "ask_volume_10": 21
       },
       "coats": {
@@ -149011,14 +148990,14 @@
         "ask_volume_10": 7
       }
     },
-    "_ts": 1733497210728600,
+    "_ts": 1733497817411738,
     "id": "389303488",
     "name": "Liepol",
     "location": {
       "x": 3893,
       "y": 3488
     },
-    "last_update": 1733497289899
+    "last_update": 1733497819781
   },
   {
     "markets": {
@@ -149212,13 +149191,13 @@
         "last_price": "5.261",
         "average_price": "5.261",
         "moving_average": "5.16",
-        "highest_bid": "4.927",
+        "highest_bid": "4.914",
         "lowest_ask": "5.261",
         "high_price": "5.261",
         "low_price": "5.261",
         "volume": 3,
         "volume_prev_12": 39,
-        "bid_volume_10": 2,
+        "bid_volume_10": 1,
         "ask_volume_10": 3
       },
       "chisels": {
@@ -149559,7 +149538,7 @@
         "low_price": "11.842",
         "volume": 0,
         "volume_prev_12": 3,
-        "ask_volume_10": 2
+        "ask_volume_10": 1
       },
       "honey": {
         "price": "5.126",
@@ -150150,14 +150129,14 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1733497210728398,
+    "_ts": 1733497817411758,
     "id": "391003627",
     "name": "Elka",
     "location": {
       "x": 3910,
       "y": 3627
     },
-    "last_update": 1733497290441
+    "last_update": 1733497820366
   },
   {
     "markets": {
@@ -151003,14 +150982,14 @@
         "volume_prev_12": 0
       }
     },
-    "_ts": 1733497288120884,
+    "_ts": 1733497817461983,
     "id": "397903067",
     "name": "Borinka",
     "location": {
       "x": 3979,
       "y": 3067
     },
-    "last_update": 1733497290966
+    "last_update": 1733497820908
   },
   {
     "markets": {
@@ -152000,13 +151979,13 @@
         "ask_volume_10": 1
       }
     },
-    "_ts": 1733497210727215,
+    "_ts": 1733497817507581,
     "id": "403702798",
     "name": "Võzie",
     "location": {
       "x": 4037,
       "y": 2798
     },
-    "last_update": 1733497291473
+    "last_update": 1733497821417
   }
 ]
