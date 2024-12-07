@@ -969,24 +969,6 @@
     "landings": null
   },
   {
-    "id": "336703642",
-    "name": "Kamennlinn",
-    "location": {
-      "x": 3367,
-      "y": 3642
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3366,
-          "y": 3623
-        },
-        "distance": 19.414213562373096,
-        "fee": "1.97"
-      }
-    ]
-  },
-  {
     "id": "343000884",
     "name": "Dramnger",
     "location": {
