@@ -277,15 +277,6 @@
     "landings": null
   },
   {
-    "id": "147700992",
-    "name": "Frankfels",
-    "location": {
-      "x": 1477,
-      "y": 992
-    },
-    "landings": null
-  },
-  {
     "id": "148603820",
     "name": "Montans",
     "location": {
@@ -399,15 +390,6 @@
     "location": {
       "x": 1690,
       "y": 1022
-    },
-    "landings": null
-  },
-  {
-    "id": "170603659",
-    "name": "Etallyes",
-    "location": {
-      "x": 1706,
-      "y": 3659
     },
     "landings": null
   },
