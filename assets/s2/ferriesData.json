@@ -277,6 +277,15 @@
     "landings": null
   },
   {
+    "id": "147700992",
+    "name": "Frankfels",
+    "location": {
+      "x": 1477,
+      "y": 992
+    },
+    "landings": null
+  },
+  {
     "id": "148603820",
     "name": "Montans",
     "location": {
@@ -636,15 +645,6 @@
     ]
   },
   {
-    "id": "245900869",
-    "name": "Gävden",
-    "location": {
-      "x": 2459,
-      "y": 869
-    },
-    "landings": null
-  },
-  {
     "id": "248102079",
     "name": "Verque",
     "location": {
@@ -956,15 +956,6 @@
     "location": {
       "x": 3515,
       "y": 748
-    },
-    "landings": null
-  },
-  {
-    "id": "353801294",
-    "name": "Sundsgard",
-    "location": {
-      "x": 3538,
-      "y": 1294
     },
     "landings": null
   },
