@@ -54,15 +54,6 @@
     "landings": null
   },
   {
-    "id": "88000557",
-    "name": "Southfield",
-    "location": {
-      "x": 880,
-      "y": 557
-    },
-    "landings": null
-  },
-  {
     "id": "90200749",
     "name": "Canterstoft",
     "location": {
@@ -77,6 +68,14 @@
         },
         "distance": 2,
         "fee": "1.1"
+      },
+      {
+        "location": {
+          "x": 903,
+          "y": 756
+        },
+        "distance": 7.414213562373095,
+        "fee": "1.37"
       }
     ]
   },
