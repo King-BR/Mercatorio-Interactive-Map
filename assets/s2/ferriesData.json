@@ -384,15 +384,6 @@
     "landings": null
   },
   {
-    "id": "166703806",
-    "name": "Etaiqueilles",
-    "location": {
-      "x": 1667,
-      "y": 3806
-    },
-    "landings": null
-  },
-  {
     "id": "167900398",
     "name": "Kleinkirchen",
     "location": {
@@ -838,15 +829,6 @@
     "location": {
       "x": 3025,
       "y": 488
-    },
-    "landings": null
-  },
-  {
-    "id": "309500565",
-    "name": "Esen",
-    "location": {
-      "x": 3095,
-      "y": 565
     },
     "landings": null
   },
