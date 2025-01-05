@@ -914,24 +914,6 @@
     "landings": null
   },
   {
-    "id": "344100590",
-    "name": "Bergron",
-    "location": {
-      "x": 3441,
-      "y": 590
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3444,
-          "y": 591
-        },
-        "distance": 3.414213562373095,
-        "fee": "1.17"
-      }
-    ]
-  },
-  {
     "id": "344803409",
     "name": "Sigulinka",
     "location": {
