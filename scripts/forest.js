@@ -7,6 +7,7 @@ const forestBounds = [
 
 // Function to create forest overlay
 function createForestOverlay(season) {
+  if (season == "s3") return alert("not ready yet")
   // Initialize the forest overlay layer
   forestOverlay = L.tileLayer(`assets/${season}/forest_tiles/{z}/{x}/{y}.png`, {
     attribution: "Forest Overlay",
