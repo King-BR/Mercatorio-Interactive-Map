@@ -13,6 +13,7 @@ async function loadTowns(season) {
     const tradeData = await fetchFromLocal(
       `assets/${season}/trade_ranges.json`
     );
+    if (season == "s3") season = "s2";
     const resourcePlots = await fetchFromLocal(
       `assets/${season}/resourcePlots.json`
     );
