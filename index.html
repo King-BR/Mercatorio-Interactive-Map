@@ -175,7 +175,8 @@
         </div>
         <div class="sidebar-item">
           <label id="marketPriceLabel" for="marketPriceSelect"
-            >Select price type:</label>
+            >Select price type:</label
+          >
           <select id="marketPriceSelect" class="w3-select">
             <option value="bid" selected>Buy (Bid)</option>
             <option value="ask">Sell (Ask)</option>
@@ -184,9 +185,10 @@
             <option value="moving">Moving Average</option>
           </select>
         </div>
-        <div class="sidebar-item" id="totalVolumeDiv" style="display: none;">
+        <div class="sidebar-item" id="totalVolumeDiv" style="display: none">
           <label id="labelToggleTotalVolume"
-            ><input type="checkbox" id="toggleTotalVolume" /> Show Total Volume</label
+            ><input type="checkbox" id="toggleTotalVolume" /> Show Total
+            Volume</label
           >
         </div>
         <div class="sidebar-item">
@@ -214,6 +216,8 @@
         Transports Ranges <i id="transportIcon" class="fa fa-chevron-down"></i>
       </button>
       <div id="transportDiv" class="sidebar-item w3-hide"></div>
+
+      <div class="compass"></div>
     </div>
 
     <div class="w3-main">
@@ -419,7 +423,7 @@
               Gold
             </label>
           </div>
-          
+
           <div class="checkbox-row">
             <label>
               <input
@@ -534,7 +538,7 @@
               Gold
             </label>
           </div>
-          
+
           <div class="checkbox-row">
             <label>
               <input
@@ -600,7 +604,6 @@
     </div>
 
     <div id="map"></div>
-    <div class="compass"></div>
     <div id="coordinateDisplay">Coordinates: X=0, Y=0 | Section: 0:0</div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
