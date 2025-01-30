@@ -14,7 +14,6 @@ const res_enum = {
 // Function to load resourcePlots and create overlaysResource
 async function loadPlots(season) {
   try {
-    if (season == "s3") season = "s2"
     const resourcePlots = await fetchFromLocal(
       `assets/${season}/resourcePlots.json`
     );
