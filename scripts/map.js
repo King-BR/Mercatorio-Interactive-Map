@@ -20,6 +20,8 @@ const hardBounds = [
 async function initializeMap(season) {
   if (map) map.remove();
 
+  if (season == "s3") season = "s2";
+
   maxZoom = zoomLevels[season];
 
   map = L.map("map", {
