@@ -1,4 +1,4 @@
-var currentSeason = "s2";
+var currentSeason = "s3";
 
 async function init(season) {
   await initializeMap(season);
