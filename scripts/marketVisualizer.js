@@ -11,7 +11,8 @@ async function loadMarketVisualizer(season) {
   document.getElementById("marketLastUpdate").innerHTML =
     "<b>Last Update:</b> N/A";
 
-  if (season !== "s3" || true) return alert(`Market data for ${season} is not available right now`);
+  if (season !== "s3")
+    return alert(`Market data for ${season} is not available right now`);
 
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
   marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
@@ -170,7 +171,9 @@ function createMarketVisualizer(item) {
   map.removeLayer(marketLayer);
   marketLayer = L.layerGroup();
   marketData.forEach((town, ti) => {
-    const i = filteredTowns.findIndex((t) => t.name === town.name.replace("_", " "));
+    const i = filteredTowns.findIndex(
+      (t) => t.name === town.name.replace("_", " ")
+    );
     var color;
     var markerSize = getMarkerSize(volumesFinal, ti) || 3;
     var markerSizeAlt = getMarkerSize(altVolumesFinal, ti) || 3;
@@ -192,7 +195,8 @@ function createMarketVisualizer(item) {
           color: color,
           fillColor: color,
           fillOpacity: 0.4,
-        });
+        }
+      );
 
       var tmp = L.circle(
         [mapHeight - town.location.y / 4, town.location.x / 4],
@@ -203,7 +207,9 @@ function createMarketVisualizer(item) {
           fillOpacity: 1,
         }
       ).bindTooltip(
-        `Town: ${town.name.replace("_", " ")}<br>Price: ${formatPrice(prices[i])}<br>Volume: ${
+        `Town: ${town.name.replace("_", " ")}<br>Price: ${formatPrice(
+          prices[i]
+        )}<br>Volume: ${
           priceOrder === "bid"
             ? town.markets[item].bid_volume_10 || 0
             : priceOrder === "ask"
@@ -232,8 +238,9 @@ function createMarketVisualizer(item) {
         <b>Bid Volume 10%:</b> ${town.markets[item].bid_volume_10 || 0}<br>
         <b>Ask Volume 10%:</b> ${town.markets[item].ask_volume_10 || 0}
         `);
-      
-      if (document.getElementById("toggleTotalVolume").checked) marketLayer.addLayer(altTmp);
+
+      if (document.getElementById("toggleTotalVolume").checked)
+        marketLayer.addLayer(altTmp);
       marketLayer.addLayer(tmp);
     }
   });
