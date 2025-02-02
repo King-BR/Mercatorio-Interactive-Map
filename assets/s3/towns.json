@@ -38,18 +38,11 @@
   {
     "id": "66102485",
     "name": "Angenes",
-<<<<<<< Updated upstream
-    "location": {
-      "x": 661,
-      "y": 2485
-    }
-=======
     "location": { "x": 661, "y": 2485 },
     "region": 2135,
     "capital": false,
     "satisfaction": "0.616",
     "commoners": 58
->>>>>>> Stashed changes
   },
   {
     "id": "68702101",
