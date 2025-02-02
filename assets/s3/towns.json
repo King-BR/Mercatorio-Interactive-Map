@@ -2,649 +2,737 @@
   {
     "id": "59002059",
     "name": "Montaux",
-    "location": {
-      "x": 590,
-      "y": 2059
-    }
+    "location": { "x": 590, "y": 2059 },
+    "region": 2143,
+    "capital": true,
+    "satisfaction": "0.462",
+    "commoners": 133
   },
   {
     "id": "61002690",
     "name": "Octeque",
-    "location": {
-      "x": 610,
-      "y": 2690
-    }
+    "location": { "x": 610, "y": 2690 },
+    "region": 2135,
+    "capital": true,
+    "satisfaction": "0.626",
+    "commoners": 123
   },
   {
     "id": "61401323",
     "name": "Clithbay",
-    "location": {
-      "x": 614,
-      "y": 1323
-    }
+    "location": { "x": 614, "y": 1323 },
+    "region": 2101,
+    "capital": true,
+    "satisfaction": "0.535",
+    "commoners": 140
   },
   {
     "id": "62502197",
     "name": "Cailleand",
-    "location": {
-      "x": 625,
-      "y": 2197
-    }
+    "location": { "x": 625, "y": 2197 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.777",
+    "commoners": 78
   },
   {
     "id": "66102485",
     "name": "Angenes",
+<<<<<<< Updated upstream
     "location": {
       "x": 661,
       "y": 2485
     }
+=======
+    "location": { "x": 661, "y": 2485 },
+    "region": 2135,
+    "capital": false,
+    "satisfaction": "0.616",
+    "commoners": 58
+>>>>>>> Stashed changes
   },
   {
     "id": "68702101",
     "name": "Marbourg",
-    "location": {
-      "x": 687,
-      "y": 2101
-    }
+    "location": { "x": 687, "y": 2101 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.357",
+    "commoners": 54
   },
   {
     "id": "73101342",
     "name": "Kronby",
-    "location": {
-      "x": 731,
-      "y": 1342
-    }
+    "location": { "x": 731, "y": 1342 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.328",
+    "commoners": 52
   },
   {
     "id": "75302916",
     "name": "Auberon",
-    "location": {
-      "x": 753,
-      "y": 2916
-    }
+    "location": { "x": 753, "y": 2916 },
+    "region": 2135,
+    "capital": false,
+    "satisfaction": "0.543",
+    "commoners": 66
   },
   {
     "id": "81002125",
     "name": "Orlecyr",
-    "location": {
-      "x": 810,
-      "y": 2125
-    }
+    "location": { "x": 810, "y": 2125 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.319",
+    "commoners": 64
   },
   {
     "id": "84400798",
     "name": "Wellingster",
-    "location": {
-      "x": 844,
-      "y": 798
-    }
+    "location": { "x": 844, "y": 798 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.545",
+    "commoners": 56
   },
   {
     "id": "84800499",
     "name": "Lavenley",
-    "location": {
-      "x": 848,
-      "y": 499
-    }
+    "location": { "x": 848, "y": 499 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.505",
+    "commoners": 58
   },
   {
     "id": "88701274",
     "name": "Chippingburh",
-    "location": {
-      "x": 887,
-      "y": 1274
-    }
+    "location": { "x": 887, "y": 1274 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.66",
+    "commoners": 68
   },
   {
     "id": "93101180",
     "name": "Utgow",
-    "location": {
-      "x": 931,
-      "y": 1180
-    }
+    "location": { "x": 931, "y": 1180 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.508",
+    "commoners": 68
   },
   {
     "id": "94200752",
     "name": "Bradquay",
-    "location": {
-      "x": 942,
-      "y": 752
-    }
+    "location": { "x": 942, "y": 752 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.432",
+    "commoners": 53
   },
   {
     "id": "94902286",
     "name": "Varamont",
-    "location": {
-      "x": 949,
-      "y": 2286
-    }
+    "location": { "x": 949, "y": 2286 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.356",
+    "commoners": 53
   },
   {
     "id": "102500600",
     "name": "Stratgow",
-    "location": {
-      "x": 1025,
-      "y": 600
-    }
+    "location": { "x": 1025, "y": 600 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.527",
+    "commoners": 57
   },
   {
     "id": "103201025",
     "name": "Mannfels",
-    "location": {
-      "x": 1032,
-      "y": 1025
-    }
+    "location": { "x": 1032, "y": 1025 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.343",
+    "commoners": 53
   },
   {
     "id": "104702002",
     "name": "Grafenfels",
-    "location": {
-      "x": 1047,
-      "y": 2002
-    }
+    "location": { "x": 1047, "y": 2002 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.414",
+    "commoners": 63
   },
   {
     "id": "111703126",
     "name": "Octeilles",
-    "location": {
-      "x": 1117,
-      "y": 3126
-    }
+    "location": { "x": 1117, "y": 3126 },
+    "region": 2135,
+    "capital": false,
+    "satisfaction": "0.332",
+    "commoners": 54
   },
   {
     "id": "112902307",
     "name": "Parilles",
-    "location": {
-      "x": 1129,
-      "y": 2307
-    }
+    "location": { "x": 1129, "y": 2307 },
+    "region": 2143,
+    "capital": false,
+    "satisfaction": "0.496",
+    "commoners": 68
   },
   {
     "id": "113400988",
     "name": "Utegg",
-    "location": {
-      "x": 1134,
-      "y": 988
-    }
+    "location": { "x": 1134, "y": 988 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.619",
+    "commoners": 68
   },
   {
     "id": "114700838",
     "name": "Ryefield",
-    "location": {
-      "x": 1147,
-      "y": 838
-    }
+    "location": { "x": 1147, "y": 838 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.447",
+    "commoners": 69
   },
   {
     "id": "118001529",
     "name": "Kronstadt",
-    "location": {
-      "x": 1180,
-      "y": 1529
-    }
+    "location": { "x": 1180, "y": 1529 },
+    "region": 2133,
+    "capital": true,
+    "satisfaction": "0.487",
+    "commoners": 124
   },
   {
     "id": "127900839",
     "name": "Durcombe",
-    "location": {
-      "x": 1279,
-      "y": 839
-    }
+    "location": { "x": 1279, "y": 839 },
+    "region": 2101,
+    "capital": false,
+    "satisfaction": "0.479",
+    "commoners": 69
   },
   {
     "id": "141300883",
     "name": "Fulburgh",
-    "location": {
-      "x": 1413,
-      "y": 883
-    }
+    "location": { "x": 1413, "y": 883 },
+    "region": 2131,
+    "capital": true,
+    "satisfaction": "0.641",
+    "commoners": 128
   },
   {
     "id": "141301795",
     "name": "Unterscheid",
-    "location": {
-      "x": 1413,
-      "y": 1795
-    }
+    "location": { "x": 1413, "y": 1795 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.615",
+    "commoners": 67
   },
   {
     "id": "143601574",
     "name": "Arnbergheim",
-    "location": {
-      "x": 1436,
-      "y": 1574
-    }
+    "location": { "x": 1436, "y": 1574 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.554",
+    "commoners": 64
   },
   {
     "id": "149801031",
     "name": "Niederhausen",
-    "location": {
-      "x": 1498,
-      "y": 1031
-    }
+    "location": { "x": 1498, "y": 1031 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.546",
+    "commoners": 59
   },
   {
     "id": "151102034",
     "name": "Altheim",
-    "location": {
-      "x": 1511,
-      "y": 2034
-    }
+    "location": { "x": 1511, "y": 2034 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.489",
+    "commoners": 69
   },
   {
     "id": "154200769",
     "name": "Ryedam",
-    "location": {
-      "x": 1542,
-      "y": 769
-    }
+    "location": { "x": 1542, "y": 769 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.354",
+    "commoners": 56
   },
   {
     "id": "155500255",
     "name": "Brighlow",
-    "location": {
-      "x": 1555,
-      "y": 255
-    }
+    "location": { "x": 1555, "y": 255 },
+    "region": 2107,
+    "capital": true,
+    "satisfaction": "0.198",
+    "commoners": 108
   },
   {
     "id": "159301126",
     "name": "Potsstock",
-    "location": {
-      "x": 1593,
-      "y": 1126
-    }
+    "location": { "x": 1593, "y": 1126 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.414",
+    "commoners": 65
   },
   {
     "id": "159801885",
     "name": "Schönmen",
-    "location": {
-      "x": 1598,
-      "y": 1885
-    }
+    "location": { "x": 1598, "y": 1885 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.572",
+    "commoners": 72
   },
   {
     "id": "160300639",
     "name": "Aderburh",
-    "location": {
-      "x": 1603,
-      "y": 639
-    }
+    "location": { "x": 1603, "y": 639 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.338",
+    "commoners": 55
   },
   {
     "id": "160701753",
     "name": "Obermen",
-    "location": {
-      "x": 1607,
-      "y": 1753
-    }
+    "location": { "x": 1607, "y": 1753 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.536",
+    "commoners": 57
   },
   {
     "id": "164502076",
     "name": "Charlenes",
-    "location": {
-      "x": 1645,
-      "y": 2076
-    }
+    "location": { "x": 1645, "y": 2076 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.534",
+    "commoners": 57
   },
   {
     "id": "165400919",
     "name": "Franktun",
-    "location": {
-      "x": 1654,
-      "y": 919
-    }
+    "location": { "x": 1654, "y": 919 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.552",
+    "commoners": 59
   },
   {
     "id": "165500534",
     "name": "Leehead",
-    "location": {
-      "x": 1655,
-      "y": 534
-    }
+    "location": { "x": 1655, "y": 534 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.162",
+    "commoners": 52
   },
   {
     "id": "167700815",
     "name": "Stratbergheim",
-    "location": {
-      "x": 1677,
-      "y": 815
-    }
+    "location": { "x": 1677, "y": 815 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.494",
+    "commoners": 69
   },
   {
     "id": "170100399",
     "name": "Edinbury",
-    "location": {
-      "x": 1701,
-      "y": 399
-    }
+    "location": { "x": 1701, "y": 399 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.681",
+    "commoners": 72
   },
   {
     "id": "171300245",
     "name": "Manend",
-    "location": {
-      "x": 1713,
-      "y": 245
-    }
+    "location": { "x": 1713, "y": 245 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.204",
+    "commoners": 61
   },
   {
     "id": "171401143",
     "name": "Niederfeld",
-    "location": {
-      "x": 1714,
-      "y": 1143
-    }
+    "location": { "x": 1714, "y": 1143 },
+    "region": 2131,
+    "capital": false,
+    "satisfaction": "0.721",
+    "commoners": 72
   },
   {
     "id": "171901674",
     "name": "Badturm",
-    "location": {
-      "x": 1719,
-      "y": 1674
-    }
+    "location": { "x": 1719, "y": 1674 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.383",
+    "commoners": 53
   },
   {
     "id": "176402200",
     "name": "Lieais",
-    "location": {
-      "x": 1764,
-      "y": 2200
-    }
+    "location": { "x": 1764, "y": 2200 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.244",
+    "commoners": 52
   },
   {
     "id": "180200947",
     "name": "Altwerp",
-    "location": {
-      "x": 1802,
-      "y": 947
-    }
+    "location": { "x": 1802, "y": 947 },
+    "region": 2139,
+    "capital": true,
+    "satisfaction": "0.416",
+    "commoners": 117
   },
   {
     "id": "180802055",
     "name": "Dunmer",
-    "location": {
-      "x": 1808,
-      "y": 2055
-    }
+    "location": { "x": 1808, "y": 2055 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.24",
+    "commoners": 52
   },
   {
     "id": "182001768",
     "name": "Grafendam",
-    "location": {
-      "x": 1820,
-      "y": 1768
-    }
+    "location": { "x": 1820, "y": 1768 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.589",
+    "commoners": 58
   },
   {
     "id": "183201950",
     "name": "Kleinroth",
-    "location": {
-      "x": 1832,
-      "y": 1950
-    }
+    "location": { "x": 1832, "y": 1950 },
+    "region": 2133,
+    "capital": false,
+    "satisfaction": "0.464",
+    "commoners": 64
   },
   {
     "id": "183400377",
     "name": "Swinweiler",
-    "location": {
-      "x": 1834,
-      "y": 377
-    }
+    "location": { "x": 1834, "y": 377 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.383",
+    "commoners": 63
   },
   {
     "id": "198100294",
     "name": "Kirchbay",
-    "location": {
-      "x": 1981,
-      "y": 294
-    }
+    "location": { "x": 1981, "y": 294 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.419",
+    "commoners": 65
   },
   {
     "id": "200601900",
     "name": "Breruhe",
-    "location": {
-      "x": 2006,
-      "y": 1900
-    }
+    "location": { "x": 2006, "y": 1900 },
+    "region": 2113,
+    "capital": true,
+    "satisfaction": "0.214",
+    "commoners": 125
   },
   {
     "id": "204701120",
     "name": "Arndorf",
-    "location": {
-      "x": 2047,
-      "y": 1120
-    }
+    "location": { "x": 2047, "y": 1120 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.535",
+    "commoners": 64
   },
   {
     "id": "206201988",
     "name": "Unteraue",
-    "location": {
-      "x": 2062,
-      "y": 1988
-    }
+    "location": { "x": 2062, "y": 1988 },
+    "region": 2113,
+    "capital": false,
+    "satisfaction": "0.269",
+    "commoners": 52
   },
   {
     "id": "209600224",
     "name": "Brisala",
-    "location": {
-      "x": 2096,
-      "y": 224
-    }
+    "location": { "x": 2096, "y": 224 },
+    "region": 2107,
+    "capital": false,
+    "satisfaction": "0.578",
+    "commoners": 69
   },
   {
     "id": "216501900",
     "name": "Großwald",
-    "location": {
-      "x": 2165,
-      "y": 1900
-    }
+    "location": { "x": 2165, "y": 1900 },
+    "region": 2113,
+    "capital": false,
+    "satisfaction": "0.166",
+    "commoners": 52
   },
   {
     "id": "218001215",
     "name": "Kleinhem",
-    "location": {
-      "x": 2180,
-      "y": 1215
-    }
+    "location": { "x": 2180, "y": 1215 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.633",
+    "commoners": 55
   },
   {
     "id": "219901033",
     "name": "Dortdorf",
-    "location": {
-      "x": 2199,
-      "y": 1033
-    }
+    "location": { "x": 2199, "y": 1033 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.279",
+    "commoners": 51
   },
   {
     "id": "226001462",
     "name": "Oberwend",
-    "location": {
-      "x": 2260,
-      "y": 1462
-    }
+    "location": { "x": 2260, "y": 1462 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.548",
+    "commoners": 55
   },
   {
     "id": "228200962",
     "name": "Kirchbaum",
-    "location": {
-      "x": 2282,
-      "y": 962
-    }
+    "location": { "x": 2282, "y": 962 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.449",
+    "commoners": 68
   },
   {
     "id": "229201684",
     "name": "Obernieder",
-    "location": {
-      "x": 2292,
-      "y": 1684
-    }
+    "location": { "x": 2292, "y": 1684 },
+    "region": 2113,
+    "capital": false,
+    "satisfaction": "0.677",
+    "commoners": 76
   },
   {
     "id": "231601325",
     "name": "Potsmünde",
-    "location": {
-      "x": 2316,
-      "y": 1325
-    }
+    "location": { "x": 2316, "y": 1325 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.629",
+    "commoners": 68
   },
   {
     "id": "235401547",
     "name": "Großbeck",
-    "location": {
-      "x": 2354,
-      "y": 1547
-    }
+    "location": { "x": 2354, "y": 1547 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.428",
+    "commoners": 56
   },
   {
     "id": "243001403",
     "name": "Münchfurt",
-    "location": {
-      "x": 2430,
-      "y": 1403
-    }
+    "location": { "x": 2430, "y": 1403 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.553",
+    "commoners": 64
   },
   {
     "id": "245400863",
     "name": "Kronhagen",
-    "location": {
-      "x": 2454,
-      "y": 863
-    }
+    "location": { "x": 2454, "y": 863 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.296",
+    "commoners": 54
   },
   {
     "id": "254401090",
     "name": "Magdewerp",
-    "location": {
-      "x": 2544,
-      "y": 1090
-    }
+    "location": { "x": 2544, "y": 1090 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.137",
+    "commoners": 58
   },
   {
     "id": "259500846",
     "name": "Vikiinge",
-    "location": {
-      "x": 2595,
-      "y": 846
-    }
+    "location": { "x": 2595, "y": 846 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.465",
+    "commoners": 55
   },
   {
     "id": "262900676",
     "name": "Thorburg",
-    "location": {
-      "x": 2629,
-      "y": 676
-    }
+    "location": { "x": 2629, "y": 676 },
+    "region": 2109,
+    "capital": true,
+    "satisfaction": "0.527",
+    "commoners": 126
   },
   {
     "id": "264600477",
     "name": "Götelo",
-    "location": {
-      "x": 2646,
-      "y": 477
-    }
+    "location": { "x": 2646, "y": 477 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.443",
+    "commoners": 55
   },
   {
     "id": "268701099",
     "name": "Beregg",
-    "location": {
-      "x": 2687,
-      "y": 1099
-    }
+    "location": { "x": 2687, "y": 1099 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.341",
+    "commoners": 69
   },
   {
     "id": "270900299",
     "name": "Åbose",
-    "location": {
-      "x": 2709,
-      "y": 299
-    }
+    "location": { "x": 2709, "y": 299 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.382",
+    "commoners": 64
   },
   {
     "id": "275400716",
     "name": "Breide",
-    "location": {
-      "x": 2754,
-      "y": 716
-    }
+    "location": { "x": 2754, "y": 716 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.475",
+    "commoners": 70
   },
   {
     "id": "275500850",
     "name": "Selwald",
-    "location": {
-      "x": 2755,
-      "y": 850
-    }
+    "location": { "x": 2755, "y": 850 },
+    "region": 2139,
+    "capital": false,
+    "satisfaction": "0.6",
+    "commoners": 75
   },
   {
     "id": "278500598",
     "name": "Dramhaga",
-    "location": {
-      "x": 2785,
-      "y": 598
-    }
+    "location": { "x": 2785, "y": 598 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.219",
+    "commoners": 50
   },
   {
     "id": "280701146",
     "name": "Potswerp",
-    "location": {
-      "x": 2807,
-      "y": 1146
-    }
+    "location": { "x": 2807, "y": 1146 },
+    "region": 2099,
+    "capital": true,
+    "satisfaction": "0.44",
+    "commoners": 139
   },
   {
     "id": "281001031",
     "name": "Leihem",
-    "location": {
-      "x": 2810,
-      "y": 1031
-    }
+    "location": { "x": 2810, "y": 1031 },
+    "region": 2099,
+    "capital": false,
+    "satisfaction": "0.575",
+    "commoners": 70
   },
   {
     "id": "289300967",
     "name": "Norrhowen",
-    "location": {
-      "x": 2893,
-      "y": 967
-    }
+    "location": { "x": 2893, "y": 967 },
+    "region": 2099,
+    "capital": false,
+    "satisfaction": "0.474",
+    "commoners": 60
   },
   {
     "id": "293900610",
     "name": "Stastad",
-    "location": {
-      "x": 2939,
-      "y": 610
-    }
+    "location": { "x": 2939, "y": 610 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.621",
+    "commoners": 70
   },
   {
     "id": "295400862",
     "name": "Jorvella",
-    "location": {
-      "x": 2954,
-      "y": 862
-    }
+    "location": { "x": 2954, "y": 862 },
+    "region": 2099,
+    "capital": false,
+    "satisfaction": "0.559",
+    "commoners": 67
   },
   {
     "id": "300900749",
     "name": "Geriman",
-    "location": {
-      "x": 3009,
-      "y": 749
-    }
+    "location": { "x": 3009, "y": 749 },
+    "region": 2099,
+    "capital": false,
+    "satisfaction": "0.33",
+    "commoners": 58
   },
   {
     "id": "307700469",
     "name": "Bergby",
-    "location": {
-      "x": 3077,
-      "y": 469
-    }
+    "location": { "x": 3077, "y": 469 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.328",
+    "commoners": 52
   },
   {
     "id": "318700437",
     "name": "Kirkeby",
-    "location": {
-      "x": 3187,
-      "y": 437
-    }
+    "location": { "x": 3187, "y": 437 },
+    "region": 2109,
+    "capital": false,
+    "satisfaction": "0.186",
+    "commoners": 57
   }
 ]
