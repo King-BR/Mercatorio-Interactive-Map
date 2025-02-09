@@ -14,7 +14,7 @@ function createForestOverlay(season) {
     minZoom: 0,
     maxZoom: zoomLevels[season],
     noWrap: true,
-    errorTileUrl: "assets/error.png",
+    errorTileUrl: "assets/blank-tile.png",
     bounds: forestBounds,
   });
 }
@@ -27,35 +27,29 @@ function updateForestOverlayOpacity(season, event) {
 }
 
 // Toggle forest overlay visibility
-document
-  .getElementById("toggleForest")
-  .addEventListener("change", (event) => {
-    let forestOpacityLabel = document.getElementById(
-      "forestOpacityLabel"
-    );
-    let forestOpacitySlider = document.getElementById(
-      "forestOpacitySlider"
-    );
-    if (event.target.checked) {
-      if (!forestOverlay) createForestOverlay();
-      forestOverlay.addTo(map);
+document.getElementById("toggleForest").addEventListener("change", (event) => {
+  let forestOpacityLabel = document.getElementById("forestOpacityLabel");
+  let forestOpacitySlider = document.getElementById("forestOpacitySlider");
+  if (event.target.checked) {
+    if (!forestOverlay) createForestOverlay();
+    forestOverlay.addTo(map);
 
-      forestOpacityLabel.style.display = "block";
-      forestOpacitySlider.style.display = "block";
+    forestOpacityLabel.style.display = "block";
+    forestOpacitySlider.style.display = "block";
 
-      forestOpacitySlider.removeEventListener("input", function () {
-        updateForestOverlayOpacity(currentSeason, this);
-      });
-      forestOpacitySlider.addEventListener("input", function () {
-        updateForestOverlayOpacity(currentSeason, this);
-      });
-    } else {
-      map.removeLayer(forestOverlay);
-      forestOpacityLabel.style.display = "none";
-      forestOpacitySlider.style.display = "none";
+    forestOpacitySlider.removeEventListener("input", function () {
+      updateForestOverlayOpacity(currentSeason, this);
+    });
+    forestOpacitySlider.addEventListener("input", function () {
+      updateForestOverlayOpacity(currentSeason, this);
+    });
+  } else {
+    map.removeLayer(forestOverlay);
+    forestOpacityLabel.style.display = "none";
+    forestOpacitySlider.style.display = "none";
 
-      forestOpacitySlider.removeEventListener("input", function () {
-        updateForestOverlayOpacity(currentSeason, this);
-      });
-    }
-  });
+    forestOpacitySlider.removeEventListener("input", function () {
+      updateForestOverlayOpacity(currentSeason, this);
+    });
+  }
+});

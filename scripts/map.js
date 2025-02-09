@@ -2,8 +2,9 @@ var map = null;
 var maxZoom = 5;
 var mapData = null;
 var grayscale = false;
+var mapPath;
 
-const zoomLevels = { s1: 5, s2: 5 };
+const zoomLevels = { s1: 5, s2: 5, s3: 5 };
 const mapWidth = 1024;
 const mapHeight = mapWidth;
 const padding = 600;
@@ -20,7 +21,19 @@ const hardBounds = [
 async function initializeMap(season) {
   if (map) map.remove();
 
-  if (season == "s3") season = "s2";
+  switch (season) {
+    case "s1":
+    case "s2":
+    case "s3": {
+      mapPath = "./assets/map/v1/{z}/{x}/{y}.png";
+      break;
+    }
+    default: {
+      mapPath = null;
+      alert("Invalid season");
+      return;
+    }
+  }
 
   maxZoom = zoomLevels[season];
 
@@ -35,12 +48,15 @@ async function initializeMap(season) {
 
   map.setMaxBounds(elasticBounds);
 
-  var tileLayer = L.tileLayer(`./assets/${season}/tiles/{z}/{x}/{y}.png`, {
+  var tileLayer = L.tileLayer(mapPath, {
     tileSize: 256,
     noWrap: true,
     continuousWorld: false,
     errorTileUrl: "assets/error.png",
     bounds: hardBounds,
+    minZoom: 0,
+    maxZoom: maxZoom,
+    zoom: 0,
   }).addTo(map);
 
   map.on("mousemove", (event) => {
