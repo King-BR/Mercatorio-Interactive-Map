@@ -350,6 +350,10 @@ async function loadTowns(season) {
   }
 }
 
+function getTownByName(name) {
+  return towns.find((town) => town.name === name);
+}
+
 // Function to update range circles
 async function updateRangeCircles(season) {
   const tradeData = await fetchFromLocal(`assets/${season}/trade_ranges.json`);
