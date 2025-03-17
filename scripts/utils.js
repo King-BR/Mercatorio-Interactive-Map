@@ -12,6 +12,14 @@ async function fetchFromLocal(path) {
   return response.json();
 }
 
+async function getMarketData() {
+  return (
+    await fetch("http://api.mercatorio-tools.tech/current-marketdata", {
+      mode: "cors",
+    })
+  ).json();
+}
+
 // Format milliseconds to time string (format DD:MM:YY HH:MM:SS)
 function formatTime(milliseconds) {
   const date = new Date(milliseconds);
