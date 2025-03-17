@@ -15,11 +15,11 @@ async function loadMarketVisualizer(season) {
     return alert(`Market data for ${season} is not available right now`);
 
   colormap = await fetchFromLocal("colormap.json"); // Load colormap
-  marketData = await fetchFromLocal(`assets/${season}/marketData.json`); // Load market data
+  marketData = await getMarketData(); // Load market data
   marketLayer = L.layerGroup();
   items = [];
 
-  lastUpdate = formatTime(marketData[0].last_update);
+  lastUpdate = formatTime(marketData[0].ts);
   document.getElementById(
     "marketLastUpdate"
   ).innerHTML = `<b>Last Update:</b> ${lastUpdate}`;
@@ -188,8 +188,10 @@ function createMarketVisualizer(item) {
       // Parse color to rgb
       color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 
+      let townData = getTownByName(town.name);
+
       var altTmp = L.circle(
-        [mapHeight - town.location.y / 4, town.location.x / 4],
+        [mapHeight - townData.location.y / 4, townData.location.x / 4],
         {
           radius: markerSizeAlt,
           color: color,
@@ -199,7 +201,7 @@ function createMarketVisualizer(item) {
       );
 
       var tmp = L.circle(
-        [mapHeight - town.location.y / 4, town.location.x / 4],
+        [mapHeight - townData.location.y / 4, townData.location.x / 4],
         {
           radius: markerSize,
           color: color,
