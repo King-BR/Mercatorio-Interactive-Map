@@ -14,7 +14,7 @@ async function fetchFromLocal(path) {
 
 async function getMarketData() {
   return (
-    await fetch("http://api.mercatorio-tools.tech/current-marketdata", {
+    await fetch("https://api.mercatorio-tools.tech/current-marketdata", {
       mode: "cors",
     })
   ).json();
