@@ -14,12 +14,12 @@ async function fetchFromLocal(path) {
 
 async function getMarketData() {
   return (
-    await fetch("https://api.mercatorio-tools.tech/current-marketdata")
+    await fetch("https://api.mercatorio-tools.tech/tmp/current-marketdata")
   ).json();
 }
 
 async function getHouseholdData() {
-  return (await fetch("http://localhost:3002/tmp/households")).json();
+  return (await fetch("https://api.mercatorio-tools.tech/tmp/households")).json();
 }
 
 // Format milliseconds to time string (format DD:MM:YY HH:MM:SS)
