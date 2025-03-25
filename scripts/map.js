@@ -81,6 +81,10 @@ async function initializeMap(season) {
   });
 }
 
+function getMap() {
+  return map;
+}
+
 // Apply or remove grayscale to the tiles based on the current state
 function updateTileGrayscale() {
   var tiles = document.querySelectorAll(".leaflet-tile");

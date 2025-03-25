@@ -7,7 +7,7 @@ var townsLayer = null;
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
-    towns = []; // Clear existing towns
+    towns = [];
     townsLayer = L.layerGroup();
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     const tradeData = await fetchFromLocal(
@@ -348,6 +348,10 @@ async function loadTowns(season) {
   } catch (error) {
     console.error("Error loading towns:", error);
   }
+}
+
+function getTowns() {
+  return towns;
 }
 
 function getTownByName(name) {

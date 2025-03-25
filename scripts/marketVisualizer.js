@@ -14,7 +14,7 @@ async function loadMarketVisualizer(season) {
   if (season !== "s3")
     return alert(`Market data for ${season} is not available right now`);
 
-  colormap = await fetchFromLocal("colormap.json"); // Load colormap
+  colormap = await fetchFromLocal("assets/colormap.json"); // Load colormap
   marketData = await getMarketData(); // Load market data
   marketLayer = L.layerGroup();
   items = [];

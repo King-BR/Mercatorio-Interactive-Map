@@ -200,6 +200,32 @@
       </div>
 
       <button
+        onclick="toggleAccordion('heatmap')"
+        class="w3-button"
+        id="accordionBtn"
+      >
+        Heatmaps <i id="heatmapIcon" class="fa fa-chevron-down"></i>
+      </button>
+      <div id="heatmapDiv" class="sidebar-item w3-hide">
+        <div class="sidebar-item">
+          <label id="labelToggleHeatmap"
+            ><input type="checkbox" id="toggleHeatmap" /> Show heatmap</label
+          >
+        </div>
+
+        <div class="sidebar-item">
+          <label id="heatmapTypeLabel" for="heatmapTypeSelect"
+            >Select price type:</label
+          >
+          <select id="heatmapTypeSelect" class="w3-select">
+            <option value="players" selected>Players</option>
+            <option value="playersByMainClass">Players by Class</option>
+            <option value="avgPrestige">Average Prestige</option>
+          </select>
+        </div>
+      </div>
+
+      <button
         onclick="toggleAccordion('resource')"
         class="w3-button"
         id="accordionBtn"
@@ -607,11 +633,13 @@
     <div id="coordinateDisplay">Coordinates: X=0, Y=0 | Section: 0:0</div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
     <script src="scripts/utils.js"></script>
     <script src="scripts/ui.js"></script>
     <script src="scripts/map.js"></script>
     <script src="scripts/towns.js"></script>
     <script src="scripts/marketVisualizer.js"></script>
+    <script src="scripts/heatmap.js"></script>
     <script src="scripts/plots.js"></script>
     <script src="scripts/fertility.js"></script>
     <script src="scripts/forest.js"></script>
