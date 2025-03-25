@@ -215,12 +215,27 @@
 
         <div class="sidebar-item">
           <label id="heatmapTypeLabel" for="heatmapTypeSelect"
-            >Select price type:</label
+            >Select heatmap type:</label
           >
           <select id="heatmapTypeSelect" class="w3-select">
             <option value="players" selected>Players</option>
             <option value="playersByMainClass">Players by Class</option>
             <option value="avgPrestige">Average Prestige</option>
+          </select>
+        </div>
+        
+        <div class="sidebar-item" id="heatmapClassDiv" style="display: none">
+          <label id="heatmapClassLabel" for="heatmapClassSelect"
+            >Select class:</label
+          >
+          <select id="heatmapClassSelect" class="w3-select">
+            <option value="nutrition" selected>Nutrition</option>
+            <option value="textile">Textile</option>
+            <option value="crafting">Crafting</option>
+            <option value="forging">Forging</option>
+            <option value="weaponry">Weaponry</option>
+            <option value="maritime">Maritime</option>
+            <option value="mercantile">Mercantile</option>
           </select>
         </div>
       </div>
