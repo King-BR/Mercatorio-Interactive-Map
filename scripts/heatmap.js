@@ -12,6 +12,9 @@ var classes = [
 ];
 
 async function loadHeatmap(type) {
+
+
+
   townsHouseholds = await getHouseholdData();
   heatmapLayer = null;
   heatData = [];
@@ -109,7 +112,7 @@ document
   .getElementById("toggleHeatmap")
   .addEventListener("change", async (event) => {
     if (event.target.checked) {
-      await loadHeatmap(document.getElementById("heatmapTypeSelect").value);
+      await loadHeatmap(document.getElementById("heatmapTypeSelect").value, document.getElementById("seasonSelect").value);
       heatmapLayer.addTo(map);
       grayscale = true;
     } else {

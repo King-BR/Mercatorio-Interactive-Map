@@ -7,8 +7,28 @@ const fertilityBounds = [
 
 // Function to create fertility overlay
 function createFertilityOverlay(season) {
+  let fertilityPath;
+
+  switch (season) {
+    case "s1":
+    case "s2":
+    case "s3": {
+      fertilityPath = "./assets/fertility/v1/{z}/{x}/{y}.png";
+      break;
+    }
+    case "s4": {
+      fertilityPath = "./assets/fertility/v2/{z}/{x}/{y}.png";
+      break;
+    }
+    default: {
+      fertilityPath = null;
+      alert("Invalid season");
+      return;
+    }
+  }
+
   // Initialize the fertility overlay layer
-  fertilityOverlay = L.tileLayer("assets/fertility/tiles/{z}/{x}/{y}.png", {
+  fertilityOverlay = L.tileLayer(fertilityPath, {
     attribution: "Fertility Overlay",
     opacity: 1, // Adjust opacity as needed
     minZoom: 0,

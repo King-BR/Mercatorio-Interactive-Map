@@ -32,7 +32,8 @@
         <select id="seasonSelect" class="w3-select">
           <option value="s1">Season 1</option>
           <option value="s2">Season 2</option>
-          <option value="s3" selected>Season 3</option>
+          <option value="s3">Season 3</option>
+          <option value="s4" selected>Season 4</option>
         </select>
       </div>
 
@@ -223,7 +224,7 @@
             <option value="avgPrestige">Average Prestige</option>
           </select>
         </div>
-        
+
         <div class="sidebar-item" id="heatmapClassDiv" style="display: none">
           <label id="heatmapClassLabel" for="heatmapClassSelect"
             >Select class:</label
@@ -292,21 +293,21 @@
               <input
                 type="number"
                 class="filter-input-small filterNormalResourceInput"
-                data-resource="salt"
-                value="0"
-                min="0"
-              />
-              Salt
-            </label>
-            <label>
-              <input
-                type="number"
-                class="filter-input-small filterNormalResourceInput"
                 data-resource="stone"
                 value="0"
                 min="0"
               />
               Stone
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="salt"
+                value="0"
+                min="0"
+              />
+              Salt
             </label>
             <label>
               <input
@@ -332,6 +333,16 @@
               <input
                 type="number"
                 class="filter-input-small filterNormalResourceInput"
+                data-resource="gold"
+                value="0"
+                min="0"
+              />
+              Gold
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
                 data-resource="lead"
                 value="0"
                 min="0"
@@ -342,11 +353,21 @@
               <input
                 type="number"
                 class="filter-input-small filterNormalResourceInput"
-                data-resource="gold"
+                data-resource="tin"
                 value="0"
                 min="0"
               />
-              Gold
+              Tin
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="silver"
+                value="0"
+                min="0"
+              />
+              Silver
             </label>
           </div>
 

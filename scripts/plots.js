@@ -9,10 +9,18 @@ const res_enum = {
   6: { name: "gold", color: "#FFFF00" },
   7: { name: "lead", color: "#4B4B4B" },
   8: { name: "whales", color: "#001f3f" },
+  9: { name: "tin", color: "#F64BFFFF" },
+  10: { name: "silver", color: "#FF0000FF" }
 };
 
 // Function to load resourcePlots and create overlaysResource
 async function loadPlots(season) {
+
+  if (season == "s4") {
+    alert("Resource plots are not available for this season yet.");
+    return;
+  }
+
   try {
     const resourcePlots = await fetchFromLocal(
       `assets/${season}/resourcePlots.json`
