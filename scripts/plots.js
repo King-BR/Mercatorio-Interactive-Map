@@ -31,8 +31,8 @@ async function loadPlots(season) {
       const resource = res_enum[plot.data.res];
       if (resource) {
         const plotLatLng = L.latLng(
-          mapHeight - plot.realY / 4 - 0.2,
-          plot.realX / 4 + 0.2
+          mapHeight - plot.y / 4 - 0.2,
+          plot.x / 4 + 0.2
         );
 
         const circleMarker = L.circleMarker(plotLatLng, {
