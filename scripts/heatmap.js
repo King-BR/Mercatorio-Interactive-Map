@@ -12,9 +12,8 @@ var classes = [
 ];
 
 async function loadHeatmap(type) {
-
-
-
+  if (season !== "s4" || true)
+    return alert(`Heatmap for ${season} is not available right now`);
   townsHouseholds = await getHouseholdData();
   heatmapLayer = null;
   heatData = [];
@@ -112,7 +111,10 @@ document
   .getElementById("toggleHeatmap")
   .addEventListener("change", async (event) => {
     if (event.target.checked) {
-      await loadHeatmap(document.getElementById("heatmapTypeSelect").value, document.getElementById("seasonSelect").value);
+      await loadHeatmap(
+        document.getElementById("heatmapTypeSelect").value,
+        document.getElementById("seasonSelect").value
+      );
       heatmapLayer.addTo(map);
       grayscale = true;
     } else {
