@@ -9,8 +9,8 @@ const res_enum = {
   6: { name: "gold", color: "#FFFF00" },
   7: { name: "lead", color: "#4B4B4B" },
   8: { name: "whales", color: "#001f3f" },
-  9: { name: "tin", color: "#F64BFFFF" },
-  10: { name: "silver", color: "#FF0000FF" },
+  9: { name: "silver", color: "#FF0000FF" },
+  10: { name: "tin", color: "#F64BFFFF" },
 };
 
 // Function to load resourcePlots and create overlaysResource
