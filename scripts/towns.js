@@ -19,7 +19,7 @@ async function loadTowns(season) {
     const stats = await fetchFromLocal(`assets/${season}/stats.json`);
     const fishingRange = 220;
 
-    if (season != "s1" && season != "s4")
+    if (season != "s1")
       townsData = await fetchFromLocal(`assets/${season}/townsData.json`);
 
     map.eachLayer((layer) => {

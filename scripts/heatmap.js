@@ -12,8 +12,6 @@ var classes = [
 ];
 
 async function loadHeatmap(type) {
-  if (season !== "s4" || true)
-    return alert(`Heatmap for ${season} is not available right now`);
   townsHouseholds = await getHouseholdData();
   heatmapLayer = null;
   heatData = [];

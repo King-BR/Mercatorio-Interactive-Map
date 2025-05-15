@@ -16,13 +16,12 @@ function createFertilityOverlay(season) {
       fertilityPath = "./assets/fertility/v1/{z}/{x}/{y}.png";
       break;
     }
-    /*case "s4": {
+    case "s4": {
       fertilityPath = "./assets/fertility/v2/{z}/{x}/{y}.png";
       break;
-    }*/
+    }
     default: {
       fertilityPath = null;
-      alert("Invalid season");
       return;
     }
   }
@@ -32,7 +31,7 @@ function createFertilityOverlay(season) {
     attribution: "Fertility Overlay",
     opacity: 1, // Adjust opacity as needed
     minZoom: 0,
-    maxZoom: zoomLevels[season],
+    maxZoom: maxZoom,
     noWrap: true,
     errorTileUrl: "assets/error.png",
     bounds: fertilityBounds,

@@ -12,7 +12,7 @@ function createForestOverlay(season) {
     attribution: "Forest Overlay",
     opacity: 1, // Adjust opacity as needed
     minZoom: 0,
-    maxZoom: zoomLevels[season],
+    maxZoom: maxZoom,
     noWrap: true,
     errorTileUrl: "assets/blank-tile.png",
     bounds: forestBounds,

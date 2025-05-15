@@ -4,7 +4,6 @@ var mapData = null;
 var grayscale = false;
 var mapPath;
 
-const zoomLevels = { s1: 5, s2: 5, s3: 5 };
 const mapWidth = 1024;
 const mapHeight = mapWidth;
 const padding = 600;
@@ -38,8 +37,6 @@ async function initializeMap(season) {
       return;
     }
   }
-
-  maxZoom = zoomLevels[season];
 
   map = L.map("map", {
     crs: L.CRS.Simple,

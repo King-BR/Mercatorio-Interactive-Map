@@ -9,7 +9,10 @@ async function fetchFromLocal(path) {
   if (!response.ok) {
     throw new Error(`Failed to fetch ${path}: ${response.statusText}`);
   }
-  return response.json();
+  return response.json().catch((error) => {
+    console.error(`Error parsing JSON from ${path}:`, error);
+    throw error;
+  });
 }
 
 async function getMarketData() {
