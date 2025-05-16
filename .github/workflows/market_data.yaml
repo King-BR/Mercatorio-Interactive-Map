@@ -1,9 +1,9 @@
 name: Auto import towns market data
 
 on:
-  #schedule:
+  schedule:
     # Runs every 1 hour at 5 minutes past the hour (00:05, 01:05, 12:10 UTC, etc...)
-    #- cron: "58 * * * *"
+    - cron: "58 * * * *"
 
   workflow_dispatch: # This enables manual triggering
 
