@@ -30,7 +30,7 @@ jobs:
           responses=()
 
           # Read the towns.json file and extract town IDs, names, and locations
-          TOWNS=$(jq -c '.[] | {id: .id, name: .name, location: .location}' assets/s3/towns.json)
+          TOWNS=$(jq -c '.[] | {id: .id, name: .name, location: .location}' assets/s4/towns.json)
 
           # Iterate over each town's data
           for town in $TOWNS; do
@@ -70,8 +70,8 @@ jobs:
           # Check if all requests were successful
           if [ "$SUCCESS" = true ]; then
             # If all requests were successful, save the responses as a JSON array
-            printf '%s\n' "${responses[@]}" | jq -s '.' > assets/s3/marketData.json
-            echo "All requests were successful. Saved results to assets/s3/marketData.json."
+            printf '%s\n' "${responses[@]}" | jq -s '.' > assets/s4/marketData.json
+            echo "All requests were successful. Saved results to assets/s4/marketData.json."
           else
             # If any requests failed, do not save the results
             echo "Some requests failed. No changes saved."
@@ -84,5 +84,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/s3/marketData.json
-          git commit -m "Updated marketData.json for season 3"
+          git commit -m "Updated marketData.json for season 4"
           git push
