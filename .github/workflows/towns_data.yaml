@@ -30,7 +30,7 @@ jobs:
           echo '[]' > api_responses.json
 
           # Read the towns.json file and extract town IDs
-          TOWN_IDS=$(jq -r '.[] | .id' assets/s3/towns.json)
+          TOWN_IDS=$(jq -r '.[] | .id' assets/s4/towns.json)
 
           # Iterate over each town ID and send an API request with a 0.25s delay
           for town_id in $TOWN_IDS; do
@@ -59,7 +59,7 @@ jobs:
           if [ "$SUCCESS" = true ]; then
             # If all requests were successful, move the responses to the final JSON file
             mv api_responses.json assets/s2/townsData.json
-            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s3/townsData.json > assets/s3/ferriesData.json
+            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s4/townsData.json > assets/s4/ferriesData.json
             echo "All requests were successful. Saved results to assets/s3/townsData.json."
           else
             # If any requests failed, do not save the results
@@ -73,7 +73,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/s3/townsData.json
-          git add assets/s3/ferriesData.json
-          git commit -m "Updated townsData.json for season 3"
+          git add assets/s4/townsData.json
+          git add assets/s4/ferriesData.json
+          git commit -m "Updated townsData.json for season 4"
           git push
