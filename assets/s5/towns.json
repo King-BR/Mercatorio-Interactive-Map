@@ -1,0 +1,650 @@
+[
+  {
+    "id": "23901583",
+    "name": "Clithborough",
+    "location": { "x": 239, "y": 1583 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 1"
+  },
+  {
+    "id": "33201103",
+    "name": "Wintun",
+    "location": { "x": 332, "y": 1103 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 2"
+  },
+  {
+    "id": "38801189",
+    "name": "Brighbury",
+    "location": { "x": 388, "y": 1189 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 3"
+  },
+  {
+    "id": "39700879",
+    "name": "Readfield",
+    "location": { "x": 397, "y": 879 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 4"
+  },
+  {
+    "id": "43801419",
+    "name": "Chippingdon",
+    "location": { "x": 438, "y": 1419 },
+    "region": 2339,
+    "capital": true,
+    "altname": "Town 5"
+  },
+  {
+    "id": "43900971",
+    "name": "Wiltontonne",
+    "location": { "x": 439, "y": 971 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 6"
+  },
+  {
+    "id": "53501549",
+    "name": "Canterbach",
+    "location": { "x": 535, "y": 1549 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 7"
+  },
+  {
+    "id": "54501313",
+    "name": "Bater",
+    "location": { "x": 545, "y": 1313 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 8"
+  },
+  {
+    "id": "63501234",
+    "name": "Fulend",
+    "location": { "x": 635, "y": 1234 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 9"
+  },
+  {
+    "id": "68401359",
+    "name": "Carmarbay",
+    "location": { "x": 684, "y": 1359 },
+    "region": 2339,
+    "capital": false,
+    "altname": "Town 10"
+  },
+  {
+    "id": "85801150",
+    "name": "Suttonend",
+    "location": { "x": 858, "y": 1150 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 11"
+  },
+  {
+    "id": "86700913",
+    "name": "Brisster",
+    "location": { "x": 867, "y": 913 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 12"
+  },
+  {
+    "id": "94200789",
+    "name": "Wiltonham",
+    "location": { "x": 942, "y": 789 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 13"
+  },
+  {
+    "id": "94501270",
+    "name": "Altfurt",
+    "location": { "x": 945, "y": 1270 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 14"
+  },
+  {
+    "id": "95702126",
+    "name": "Gerllier",
+    "location": { "x": 957, "y": 2126 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 15"
+  },
+  {
+    "id": "98101511",
+    "name": "Leiproth",
+    "location": { "x": 981, "y": 1511 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 16"
+  },
+  {
+    "id": "98603102",
+    "name": "Cideges",
+    "location": { "x": 986, "y": 3102 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 17"
+  },
+  {
+    "id": "105701657",
+    "name": "Braunwald",
+    "location": { "x": 1057, "y": 1657 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 18"
+  },
+  {
+    "id": "106502188",
+    "name": "Etallaen",
+    "location": { "x": 1065, "y": 2188 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 19"
+  },
+  {
+    "id": "107801267",
+    "name": "Wendischstadt",
+    "location": { "x": 1078, "y": 1267 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 20"
+  },
+  {
+    "id": "108503193",
+    "name": "Lieron",
+    "location": { "x": 1085, "y": 3193 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 21"
+  },
+  {
+    "id": "109200801",
+    "name": "Oxter",
+    "location": { "x": 1092, "y": 801 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 22"
+  },
+  {
+    "id": "118402933",
+    "name": "Orleville",
+    "location": { "x": 1184, "y": 2933 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 23"
+  },
+  {
+    "id": "120601475",
+    "name": "Neuheim",
+    "location": { "x": 1206, "y": 1475 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 24"
+  },
+  {
+    "id": "122103049",
+    "name": "Cailledalle",
+    "location": { "x": 1221, "y": 3049 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 25"
+  },
+  {
+    "id": "123901616",
+    "name": "Grafenburg",
+    "location": { "x": 1239, "y": 1616 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 26"
+  },
+  {
+    "id": "124500636",
+    "name": "Wellingwich",
+    "location": { "x": 1245, "y": 636 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 27"
+  },
+  {
+    "id": "125401201",
+    "name": "Dreheim",
+    "location": { "x": 1254, "y": 1201 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 28"
+  },
+  {
+    "id": "129401027",
+    "name": "Oberhowen",
+    "location": { "x": 1294, "y": 1027 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 29"
+  },
+  {
+    "id": "130500475",
+    "name": "Ryepool",
+    "location": { "x": 1305, "y": 475 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 30"
+  },
+  {
+    "id": "131001495",
+    "name": "Dortbrücken",
+    "location": { "x": 1310, "y": 1495 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 31"
+  },
+  {
+    "id": "131402837",
+    "name": "Dunque",
+    "location": { "x": 1314, "y": 2837 },
+    "region": 2361,
+    "capital": true,
+    "altname": "Town 32"
+  },
+  {
+    "id": "135700703",
+    "name": "Readnieder",
+    "location": { "x": 1357, "y": 703 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 33"
+  },
+  {
+    "id": "139000551",
+    "name": "Ameford",
+    "location": { "x": 1390, "y": 551 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 34"
+  },
+  {
+    "id": "140000335",
+    "name": "Canterford",
+    "location": { "x": 1400, "y": 335 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 35"
+  },
+  {
+    "id": "142501406",
+    "name": "Drerecht",
+    "location": { "x": 1425, "y": 1406 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 36"
+  },
+  {
+    "id": "144700931",
+    "name": "Paislin",
+    "location": { "x": 1447, "y": 931 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 37"
+  },
+  {
+    "id": "148800242",
+    "name": "Southfield",
+    "location": { "x": 1488, "y": 242 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 38"
+  },
+  {
+    "id": "149901104",
+    "name": "Neuburg",
+    "location": { "x": 1499, "y": 1104 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 39"
+  },
+  {
+    "id": "153800597",
+    "name": "Großfels",
+    "location": { "x": 1538, "y": 597 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 40"
+  },
+  {
+    "id": "153901247",
+    "name": "Uthen",
+    "location": { "x": 1539, "y": 1247 },
+    "region": 2343,
+    "capital": false,
+    "altname": "Town 41"
+  },
+  {
+    "id": "156001378",
+    "name": "Altendam",
+    "location": { "x": 1560, "y": 1378 },
+    "region": 2343,
+    "capital": true,
+    "altname": "Town 42"
+  },
+  {
+    "id": "157900414",
+    "name": "Camham",
+    "location": { "x": 1579, "y": 414 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 43"
+  },
+  {
+    "id": "159602556",
+    "name": "Gallellier",
+    "location": { "x": 1596, "y": 2556 },
+    "region": 2361,
+    "capital": false,
+    "altname": "Town 44"
+  },
+  {
+    "id": "161400764",
+    "name": "Lithach",
+    "location": { "x": 1614, "y": 764 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 45"
+  },
+  {
+    "id": "161900917",
+    "name": "Readfurt",
+    "location": { "x": 1619, "y": 917 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 46"
+  },
+  {
+    "id": "164600493",
+    "name": "Kleinbergheim",
+    "location": { "x": 1646, "y": 493 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 47"
+  },
+  {
+    "id": "164901022",
+    "name": "Dortfels",
+    "location": { "x": 1649, "y": 1022 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 48"
+  },
+  {
+    "id": "167700634",
+    "name": "Stratmunds",
+    "location": { "x": 1677, "y": 634 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 49"
+  },
+  {
+    "id": "168001264",
+    "name": "Wolfsfurt",
+    "location": { "x": 1680, "y": 1264 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 50"
+  },
+  {
+    "id": "171201399",
+    "name": "Rohaven",
+    "location": { "x": 1712, "y": 1399 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 51"
+  },
+  {
+    "id": "171501104",
+    "name": "Roturm",
+    "location": { "x": 1715, "y": 1104 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 52"
+  },
+  {
+    "id": "171800310",
+    "name": "Albmouth",
+    "location": { "x": 1718, "y": 310 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 53"
+  },
+  {
+    "id": "176100697",
+    "name": "Bastead",
+    "location": { "x": 1761, "y": 697 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 54"
+  },
+  {
+    "id": "185200629",
+    "name": "Stratfeld",
+    "location": { "x": 1852, "y": 629 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 55"
+  },
+  {
+    "id": "188300350",
+    "name": "Wendischmühle",
+    "location": { "x": 1883, "y": 350 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 56"
+  },
+  {
+    "id": "190601854",
+    "name": "Mannstock",
+    "location": { "x": 1906, "y": 1854 },
+    "region": 2369,
+    "capital": false,
+    "altname": "Town 57"
+  },
+  {
+    "id": "191202008",
+    "name": "Nürnstadt",
+    "location": { "x": 1912, "y": 2008 },
+    "region": 2369,
+    "capital": false,
+    "altname": "Town 58"
+  },
+  {
+    "id": "192000819",
+    "name": "Kronegg",
+    "location": { "x": 1920, "y": 819 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 59"
+  },
+  {
+    "id": "193200698",
+    "name": "Brismünde",
+    "location": { "x": 1932, "y": 698 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 60"
+  },
+  {
+    "id": "198000311",
+    "name": "Albhufe",
+    "location": { "x": 1980, "y": 311 },
+    "region": 2347,
+    "capital": true,
+    "altname": "Town 61"
+  },
+  {
+    "id": "201501843",
+    "name": "Unterden",
+    "location": { "x": 2015, "y": 1843 },
+    "region": 2369,
+    "capital": true,
+    "altname": "Town 62"
+  },
+  {
+    "id": "205400809",
+    "name": "Karltal",
+    "location": { "x": 2054, "y": 809 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 63"
+  },
+  {
+    "id": "205501206",
+    "name": "Karlhowen",
+    "location": { "x": 2055, "y": 1206 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 64"
+  },
+  {
+    "id": "208600423",
+    "name": "Ashbury",
+    "location": { "x": 2086, "y": 423 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 65"
+  },
+  {
+    "id": "209102084",
+    "name": "Gallearde",
+    "location": { "x": 2091, "y": 2084 },
+    "region": 2369,
+    "capital": false,
+    "altname": "Town 66"
+  },
+  {
+    "id": "211600269",
+    "name": "Moldee",
+    "location": { "x": 2116, "y": 269 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 67"
+  },
+  {
+    "id": "218201868",
+    "name": "Utmund",
+    "location": { "x": 2182, "y": 1868 },
+    "region": 2369,
+    "capital": false,
+    "altname": "Town 68"
+  },
+  {
+    "id": "218500457",
+    "name": "Herthveit",
+    "location": { "x": 2185, "y": 457 },
+    "region": 2347,
+    "capital": false,
+    "altname": "Town 69"
+  },
+  {
+    "id": "219102040",
+    "name": "Hohendorf",
+    "location": { "x": 2191, "y": 2040 },
+    "region": 2369,
+    "capital": false,
+    "altname": "Town 70"
+  },
+  {
+    "id": "229200295",
+    "name": "Blackstorft",
+    "location": { "x": 2292, "y": 295 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 71"
+  },
+  {
+    "id": "239400262",
+    "name": "Trondbro",
+    "location": { "x": 2394, "y": 262 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 72"
+  },
+  {
+    "id": "253100445",
+    "name": "Stocklonde",
+    "location": { "x": 2531, "y": 445 },
+    "region": 2345,
+    "capital": true,
+    "altname": "Town 73"
+  },
+  {
+    "id": "253500583",
+    "name": "Karldalle",
+    "location": { "x": 2535, "y": 583 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 74"
+  },
+  {
+    "id": "264200484",
+    "name": "Sundvella",
+    "location": { "x": 2642, "y": 484 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 75"
+  },
+  {
+    "id": "274800752",
+    "name": "Nesnger",
+    "location": { "x": 2748, "y": 752 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 76"
+  },
+  {
+    "id": "275100641",
+    "name": "Haugeborg",
+    "location": { "x": 2751, "y": 641 },
+    "region": 2345,
+    "capital": false,
+    "altname": "Town 77"
+  },
+  {
+    "id": "290500891",
+    "name": "Sanddau",
+    "location": { "x": 2905, "y": 891 },
+    "region": 2349,
+    "capital": true,
+    "altname": "Town 78"
+  },
+  {
+    "id": "296601006",
+    "name": "Örefels",
+    "location": { "x": 2966, "y": 1006 },
+    "region": 2349,
+    "capital": false,
+    "altname": "Town 79"
+  },
+  {
+    "id": "298700767",
+    "name": "Gunninge",
+    "location": { "x": 2987, "y": 767 },
+    "region": 2349,
+    "capital": false,
+    "altname": "Town 80"
+  },
+  {
+    "id": "304600883",
+    "name": "Tønsstad",
+    "location": { "x": 3046, "y": 883 },
+    "region": 2349,
+    "capital": false,
+    "altname": "Town 81"
+  }
+]

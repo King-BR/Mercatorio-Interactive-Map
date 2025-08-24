@@ -5,27 +5,32 @@
       "moves": 3333,
       "autotrade": 666,
       "fishRange": 220,
-      "fishRadius": 9
+      "fishRadius": 9,
+      "cargo": 200
     },
     {
       "name": "Cog",
       "moves": 4444,
-      "autotrade": 1333
+      "autotrade": 1333,
+      "cargo": 600
     },
     {
       "name": "Hulk",
       "moves": 5925,
-      "autotrade": 2222
+      "autotrade": 2222,
+      "cargo": 1000
     },
     {
       "name": "Handcart",
       "moves": 2314,
-      "autotrade": 444
+      "autotrade": 444,
+      "cargo": 30
     },
     {
       "name": "Tumbrel",
       "moves": 4629,
-      "autotrade": 1333
+      "autotrade": 1333,
+      "cargo": 45
     }
   ],
 
