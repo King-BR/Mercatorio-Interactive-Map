@@ -139,7 +139,7 @@ function createMarketVisualizer(item) {
         }
         case "moving": {
           mdata.price = town.markets[item].moving_average || 0;
-          mdata.volume = town.markets[item].volume || 0;
+          mdata.volume = town.markets[item].volume_prev_12 || 0;
           document.getElementById("totalVolumeDiv").style.display = "none";
           break;
         }
