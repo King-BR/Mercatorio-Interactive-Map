@@ -11,7 +11,7 @@ async function loadMarketVisualizer(season) {
   document.getElementById("marketLastUpdate").innerHTML =
     "<b>Last Update:</b> N/A";
 
-  if (season !== "s5")
+  if (season !== "s")
     return alert(`Market data for ${season} is not available right now`);
 
   colormap = await fetchFromLocal("assets/colormap.json"); // Load colormap

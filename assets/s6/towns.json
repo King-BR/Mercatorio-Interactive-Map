@@ -1,0 +1,706 @@
+[
+  {
+    "id": "167902875",
+    "name": "Lieecal",
+    "location": { "x": 1679, "y": 2875 },
+    "region": 2255,
+    "capital": false,
+    "altname": "Town 1"
+  },
+  {
+    "id": "196603138",
+    "name": "Liemiens",
+    "location": { "x": 1966, "y": 3138 },
+    "region": 2255,
+    "capital": false,
+    "altname": "Town 2"
+  },
+  {
+    "id": "197202556",
+    "name": "Roufort",
+    "location": { "x": 1972, "y": 2556 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 3"
+  },
+  {
+    "id": "203203051",
+    "name": "Laumer",
+    "location": { "x": 2032, "y": 3051 },
+    "region": 2255,
+    "capital": false,
+    "altname": "Town 4"
+  },
+  {
+    "id": "203303262",
+    "name": "Sottetot",
+    "location": { "x": 2033, "y": 3262 },
+    "region": 2255,
+    "capital": true,
+    "altname": "Town 5"
+  },
+  {
+    "id": "206302479",
+    "name": "Etaiqueloup",
+    "location": { "x": 2063, "y": 2479 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 6"
+  },
+  {
+    "id": "206902699",
+    "name": "Sotteans",
+    "location": { "x": 2069, "y": 2699 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 7"
+  },
+  {
+    "id": "208803391",
+    "name": "Bordeilles",
+    "location": { "x": 2088, "y": 3391 },
+    "region": 2255,
+    "capital": false,
+    "altname": "Town 8"
+  },
+  {
+    "id": "215602525",
+    "name": "Etaiqueyes",
+    "location": { "x": 2156, "y": 2525 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 9"
+  },
+  {
+    "id": "215803482",
+    "name": "Charledjon",
+    "location": { "x": 2158, "y": 3482 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 10"
+  },
+  {
+    "id": "218602973",
+    "name": "Lieille",
+    "location": { "x": 2186, "y": 2973 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 11"
+  },
+  {
+    "id": "220202776",
+    "name": "Etaiquelond",
+    "location": { "x": 2202, "y": 2776 },
+    "region": 2281,
+    "capital": true,
+    "altname": "Town 12"
+  },
+  {
+    "id": "224602288",
+    "name": "Gertes",
+    "location": { "x": 2246, "y": 2288 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 13"
+  },
+  {
+    "id": "225503520",
+    "name": "Verhomme",
+    "location": { "x": 2255, "y": 3520 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 14"
+  },
+  {
+    "id": "225802444",
+    "name": "Avitot",
+    "location": { "x": 2258, "y": 2444 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 15"
+  },
+  {
+    "id": "226302663",
+    "name": "Caltot",
+    "location": { "x": 2263, "y": 2663 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 16"
+  },
+  {
+    "id": "230803734",
+    "name": "Strasais",
+    "location": { "x": 2308, "y": 3734 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 17"
+  },
+  {
+    "id": "233002750",
+    "name": "Geraux",
+    "location": { "x": 2330, "y": 2750 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 18"
+  },
+  {
+    "id": "235503588",
+    "name": "Marais",
+    "location": { "x": 2355, "y": 3588 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 19"
+  },
+  {
+    "id": "236702424",
+    "name": "Caillecy",
+    "location": { "x": 2367, "y": 2424 },
+    "region": 2281,
+    "capital": false,
+    "altname": "Town 20"
+  },
+  {
+    "id": "238603860",
+    "name": "Vilpeda",
+    "location": { "x": 2386, "y": 3860 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 21"
+  },
+  {
+    "id": "248303728",
+    "name": "Kraji",
+    "location": { "x": 2483, "y": 3728 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 22"
+  },
+  {
+    "id": "248603604",
+    "name": "Angearde",
+    "location": { "x": 2486, "y": 3604 },
+    "region": 2275,
+    "capital": false,
+    "altname": "Town 23"
+  },
+  {
+    "id": "255501953",
+    "name": "Potsfels",
+    "location": { "x": 2555, "y": 1953 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 24"
+  },
+  {
+    "id": "259003734",
+    "name": "Elwice",
+    "location": { "x": 2590, "y": 3734 },
+    "region": 2275,
+    "capital": true,
+    "altname": "Town 25"
+  },
+  {
+    "id": "268902044",
+    "name": "Mannmen",
+    "location": { "x": 2689, "y": 2044 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 26"
+  },
+  {
+    "id": "284802271",
+    "name": "Reiris",
+    "location": { "x": 2848, "y": 2271 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 27"
+  },
+  {
+    "id": "288803523",
+    "name": "Riwice",
+    "location": { "x": 2888, "y": 3523 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 28"
+  },
+  {
+    "id": "289203379",
+    "name": "Marijamska",
+    "location": { "x": 2892, "y": 3379 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 29"
+  },
+  {
+    "id": "289903716",
+    "name": "Sigulyce",
+    "location": { "x": 2899, "y": 3716 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 30"
+  },
+  {
+    "id": "290602069",
+    "name": "Charleon",
+    "location": { "x": 2906, "y": 2069 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 31"
+  },
+  {
+    "id": "291102181",
+    "name": "Geron",
+    "location": { "x": 2911, "y": 2181 },
+    "region": 2243,
+    "capital": true,
+    "altname": "Town 32"
+  },
+  {
+    "id": "294303267",
+    "name": "Jelnai",
+    "location": { "x": 2943, "y": 3267 },
+    "region": 2227,
+    "capital": true,
+    "altname": "Town 33"
+  },
+  {
+    "id": "297503162",
+    "name": "Octeais",
+    "location": { "x": 2975, "y": 3162 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 34"
+  },
+  {
+    "id": "299603685",
+    "name": "Sigulka",
+    "location": { "x": 2996, "y": 3685 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 35"
+  },
+  {
+    "id": "301701986",
+    "name": "Leihof",
+    "location": { "x": 3017, "y": 1986 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 36"
+  },
+  {
+    "id": "304003314",
+    "name": "Varksne",
+    "location": { "x": 3040, "y": 3314 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 37"
+  },
+  {
+    "id": "308903020",
+    "name": "Vercyr",
+    "location": { "x": 3089, "y": 3020 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 38"
+  },
+  {
+    "id": "309302077",
+    "name": "Strasuen",
+    "location": { "x": 3093, "y": 2077 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 39"
+  },
+  {
+    "id": "309303568",
+    "name": "Rappils",
+    "location": { "x": 3093, "y": 3568 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 40"
+  },
+  {
+    "id": "309501868",
+    "name": "Untermen",
+    "location": { "x": 3095, "y": 1868 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 41"
+  },
+  {
+    "id": "309903749",
+    "name": "Kärdpils",
+    "location": { "x": 3099, "y": 3749 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 42"
+  },
+  {
+    "id": "314903201",
+    "name": "Aluena",
+    "location": { "x": 3149, "y": 3201 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 43"
+  },
+  {
+    "id": "321901032",
+    "name": "Odenen",
+    "location": { "x": 3219, "y": 1032 },
+    "region": 2267,
+    "capital": false,
+    "altname": "Town 44"
+  },
+  {
+    "id": "322503006",
+    "name": "Wisnewo",
+    "location": { "x": 3225, "y": 3006 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 45"
+  },
+  {
+    "id": "324002119",
+    "name": "Rochris",
+    "location": { "x": 3240, "y": 2119 },
+    "region": 2243,
+    "capital": false,
+    "altname": "Town 46"
+  },
+  {
+    "id": "324203807",
+    "name": "Alupaja",
+    "location": { "x": 3242, "y": 3807 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 47"
+  },
+  {
+    "id": "324603148",
+    "name": "Tauinka",
+    "location": { "x": 3246, "y": 3148 },
+    "region": 2227,
+    "capital": false,
+    "altname": "Town 48"
+  },
+  {
+    "id": "326301207",
+    "name": "Fredrikman",
+    "location": { "x": 3263, "y": 1207 },
+    "region": 2267,
+    "capital": true,
+    "altname": "Town 49"
+  },
+  {
+    "id": "326600934",
+    "name": "Breidau",
+    "location": { "x": 3266, "y": 934 },
+    "region": 2267,
+    "capital": false,
+    "altname": "Town 50"
+  },
+  {
+    "id": "327103482",
+    "name": "Kärdska",
+    "location": { "x": 3271, "y": 3482 },
+    "region": 2247,
+    "capital": true,
+    "altname": "Town 51"
+  },
+  {
+    "id": "327401574",
+    "name": "Oberlund",
+    "location": { "x": 3274, "y": 1574 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 52"
+  },
+  {
+    "id": "331403574",
+    "name": "Kuressk",
+    "location": { "x": 3314, "y": 3574 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 53"
+  },
+  {
+    "id": "332801019",
+    "name": "Stamoki",
+    "location": { "x": 3328, "y": 1019 },
+    "region": 2267,
+    "capital": false,
+    "altname": "Town 54"
+  },
+  {
+    "id": "334303264",
+    "name": "Beloska",
+    "location": { "x": 3343, "y": 3264 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 55"
+  },
+  {
+    "id": "339403379",
+    "name": "Gdanska",
+    "location": { "x": 3394, "y": 3379 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 56"
+  },
+  {
+    "id": "342803174",
+    "name": "Riena",
+    "location": { "x": 3428, "y": 3174 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 57"
+  },
+  {
+    "id": "345502129",
+    "name": "Rouges",
+    "location": { "x": 3455, "y": 2129 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 58"
+  },
+  {
+    "id": "346103644",
+    "name": "Võwice",
+    "location": { "x": 3461, "y": 3644 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 59"
+  },
+  {
+    "id": "349501153",
+    "name": "Trondsund",
+    "location": { "x": 3495, "y": 1153 },
+    "region": 2267,
+    "capital": false,
+    "altname": "Town 60"
+  },
+  {
+    "id": "351103065",
+    "name": "Czajovice",
+    "location": { "x": 3511, "y": 3065 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 61"
+  },
+  {
+    "id": "351501304",
+    "name": "Åbovare",
+    "location": { "x": 3515, "y": 1304 },
+    "region": 2245,
+    "capital": false,
+    "altname": "Town 62"
+  },
+  {
+    "id": "351903230",
+    "name": "Panedroje",
+    "location": { "x": 3519, "y": 3230 },
+    "region": 2247,
+    "capital": false,
+    "altname": "Town 63"
+  },
+  {
+    "id": "359500385",
+    "name": "Sundholm",
+    "location": { "x": 3595, "y": 385 },
+    "region": 2211,
+    "capital": false,
+    "altname": "Town 64"
+  },
+  {
+    "id": "361801872",
+    "name": "Kleinhus",
+    "location": { "x": 3618, "y": 1872 },
+    "region": 2221,
+    "capital": true,
+    "altname": "Town 65"
+  },
+  {
+    "id": "361902136",
+    "name": "Geryes",
+    "location": { "x": 3619, "y": 2136 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 66"
+  },
+  {
+    "id": "362101561",
+    "name": "Jönköthveit",
+    "location": { "x": 3621, "y": 1561 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 67"
+  },
+  {
+    "id": "362801112",
+    "name": "Svathveit",
+    "location": { "x": 3628, "y": 1112 },
+    "region": 2245,
+    "capital": false,
+    "altname": "Town 68"
+  },
+  {
+    "id": "364901294",
+    "name": "Bildal",
+    "location": { "x": 3649, "y": 1294 },
+    "region": 2245,
+    "capital": true,
+    "altname": "Town 69"
+  },
+  {
+    "id": "365303065",
+    "name": "Haapzie",
+    "location": { "x": 3653, "y": 3065 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 70"
+  },
+  {
+    "id": "366900908",
+    "name": "Thormalm",
+    "location": { "x": 3669, "y": 908 },
+    "region": 2211,
+    "capital": false,
+    "altname": "Town 71"
+  },
+  {
+    "id": "367101744",
+    "name": "Molhammer",
+    "location": { "x": 3671, "y": 1744 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 72"
+  },
+  {
+    "id": "370601195",
+    "name": "Koldde",
+    "location": { "x": 3706, "y": 1195 },
+    "region": 2245,
+    "capital": false,
+    "altname": "Town 73"
+  },
+  {
+    "id": "371900417",
+    "name": "Borgsund",
+    "location": { "x": 3719, "y": 417 },
+    "region": 2211,
+    "capital": false,
+    "altname": "Town 74"
+  },
+  {
+    "id": "375301433",
+    "name": "Tønslo",
+    "location": { "x": 3753, "y": 1433 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 75"
+  },
+  {
+    "id": "377100866",
+    "name": "Stockman",
+    "location": { "x": 3771, "y": 866 },
+    "region": 2211,
+    "capital": true,
+    "altname": "Town 76"
+  },
+  {
+    "id": "377601684",
+    "name": "Jorholm",
+    "location": { "x": 3776, "y": 1684 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 77"
+  },
+  {
+    "id": "378803512",
+    "name": "Daugavasaare",
+    "location": { "x": 3788, "y": 3512 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 78"
+  },
+  {
+    "id": "380801047",
+    "name": "Stagate",
+    "location": { "x": 3808, "y": 1047 },
+    "region": 2245,
+    "capital": false,
+    "altname": "Town 79"
+  },
+  {
+    "id": "381103118",
+    "name": "Ukpils",
+    "location": { "x": 3811, "y": 3118 },
+    "region": 2259,
+    "capital": true,
+    "altname": "Town 80"
+  },
+  {
+    "id": "382402738",
+    "name": "Czajdzice",
+    "location": { "x": 3824, "y": 2738 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 81"
+  },
+  {
+    "id": "382502584",
+    "name": "Vardona",
+    "location": { "x": 3825, "y": 2584 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 82"
+  },
+  {
+    "id": "382700400",
+    "name": "Lillethveit",
+    "location": { "x": 3827, "y": 400 },
+    "region": 2211,
+    "capital": false,
+    "altname": "Town 83"
+  },
+  {
+    "id": "385300546",
+    "name": "Kirkeen",
+    "location": { "x": 3853, "y": 546 },
+    "region": 2211,
+    "capital": false,
+    "altname": "Town 84"
+  },
+  {
+    "id": "385403431",
+    "name": "Janoza",
+    "location": { "x": 3854, "y": 3431 },
+    "region": 2259,
+    "capital": false,
+    "altname": "Town 85"
+  },
+  {
+    "id": "385901508",
+    "name": "Bergborg",
+    "location": { "x": 3859, "y": 1508 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 86"
+  },
+  {
+    "id": "387101617",
+    "name": "Sandbro",
+    "location": { "x": 3871, "y": 1617 },
+    "region": 2221,
+    "capital": false,
+    "altname": "Town 87"
+  },
+  {
+    "id": "395201148",
+    "name": "Høgbjerg",
+    "location": { "x": 3952, "y": 1148 },
+    "region": 2245,
+    "capital": false,
+    "altname": "Town 88"
+  }
+]
