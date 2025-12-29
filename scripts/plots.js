@@ -21,6 +21,9 @@ async function loadPlots(season) {
     );
     overlaysResource = {};
 
+    if (season == "s6")
+      return alert(`Plots data for ${season} is not available right now`);
+
     clearResourceCheckboxes(); // Clear existing checkboxes
 
     Object.values(res_enum).forEach((resource) => {
