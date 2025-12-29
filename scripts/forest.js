@@ -7,8 +7,6 @@ const forestBounds = [
 
 // Function to create forest overlay
 function createForestOverlay(season) {
-  if (season !== "s")
-    return alert(`Forest data for ${season} is not available right now`);
 
   // Initialize the forest overlay layer
   forestOverlay = L.tileLayer(`assets/${season}/forest_tiles/{z}/{x}/{y}.png`, {

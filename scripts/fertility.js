@@ -8,9 +8,6 @@ const fertilityBounds = [
 // Function to create fertility overlay
 function createFertilityOverlay(season) {
   let fertilityPath;
-  
-  if (season !== "s")
-    return alert(`Fertility data for ${season} is not available right now`);
 
   switch (season) {
     case "s1":

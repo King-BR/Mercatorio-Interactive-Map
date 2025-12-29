@@ -1,1 +1,6074 @@
-[]
+{
+  "Lieecal": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 11,
+        "iron": 159,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 112,
+        "grazing": 6954,
+        "arid": 457,
+        "clay": 322,
+        "forest": 4253,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 13,
+        "salt": 0,
+        "copper": 61,
+        "iron": 39,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 103,
+        "grazing": 9247,
+        "arid": 2776,
+        "clay": 110,
+        "forest": 6749,
+        "water": 0
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 38,
+        "salt": 0,
+        "copper": 35,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2487,
+        "grazing": 10444,
+        "arid": 2802,
+        "clay": 2090,
+        "forest": 11754,
+        "water": 77
+      }
+    }
+  },
+  "Liemiens": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5300,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 78,
+        "forest": 2245,
+        "water": 2467
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7258,
+        "grazing": 1,
+        "arid": 0,
+        "clay": 169,
+        "forest": 2472,
+        "water": 4808
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 11430,
+        "grazing": 9,
+        "arid": 0,
+        "clay": 505,
+        "forest": 4659,
+        "water": 5956
+      }
+    }
+  },
+  "Roufort": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 5,
+        "stone": 1,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3368,
+        "grazing": 1105,
+        "arid": 0,
+        "clay": 1034,
+        "forest": 2408,
+        "water": 2338
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 8,
+        "salt": 0,
+        "copper": 0,
+        "iron": 7,
+        "gold": 0,
+        "lead": 85,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2866,
+        "grazing": 3960,
+        "arid": 150,
+        "clay": 919,
+        "forest": 4170,
+        "water": 4341
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 12,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 9,
+        "gold": 0,
+        "lead": 2,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2797,
+        "grazing": 7569,
+        "arid": 372,
+        "clay": 964,
+        "forest": 6608,
+        "water": 6198
+      }
+    }
+  },
+  "Laumer": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 3,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5015,
+        "grazing": 90,
+        "arid": 0,
+        "clay": 245,
+        "forest": 1717,
+        "water": 2495
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5957,
+        "grazing": 115,
+        "arid": 0,
+        "clay": 932,
+        "forest": 2552,
+        "water": 5232
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 11,
+        "salt": 1,
+        "copper": 0,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8098,
+        "grazing": 1409,
+        "arid": 0,
+        "clay": 790,
+        "forest": 5475,
+        "water": 7603
+      }
+    }
+  },
+  "Sottetot": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 8,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3610,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 552,
+        "water": 4233
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6156,
+        "grazing": 18,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1135,
+        "water": 6058
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8742,
+        "grazing": 1807,
+        "arid": 0,
+        "clay": 25,
+        "forest": 4364,
+        "water": 7326
+      }
+    }
+  },
+  "Etaiqueloup": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 13,
+        "iron": 6,
+        "gold": 0,
+        "lead": 195,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1076,
+        "grazing": 6718,
+        "arid": 42,
+        "clay": 9,
+        "forest": 5058,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 4,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5731,
+        "grazing": 5913,
+        "arid": 0,
+        "clay": 190,
+        "forest": 6328,
+        "water": 402
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 2,
+        "lead": 31,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6015,
+        "grazing": 7775,
+        "arid": 0,
+        "clay": 557,
+        "forest": 7195,
+        "water": 3553
+      }
+    }
+  },
+  "Sotteans": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 5,
+        "iron": 5,
+        "gold": 0,
+        "lead": 6,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 1223,
+        "arid": 6258,
+        "clay": 364,
+        "forest": 5539,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 8,
+        "gold": 0,
+        "lead": 66,
+        "whales": 0,
+        "tin": 3,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 4685,
+        "arid": 5406,
+        "clay": 1992,
+        "forest": 6791,
+        "water": 153
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 9,
+        "salt": 0,
+        "copper": 3,
+        "iron": 13,
+        "gold": 2,
+        "lead": 6,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 318,
+        "grazing": 9960,
+        "arid": 5662,
+        "clay": 1849,
+        "forest": 10159,
+        "water": 111
+      }
+    }
+  },
+  "Bordeilles": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4311,
+        "grazing": 425,
+        "arid": 0,
+        "clay": 9,
+        "forest": 1657,
+        "water": 3100
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 1,
+        "salt": 0,
+        "copper": 3,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4848,
+        "grazing": 2727,
+        "arid": 0,
+        "clay": 4,
+        "forest": 2534,
+        "water": 4657
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 8,
+        "salt": 0,
+        "copper": 1,
+        "iron": 15,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4973,
+        "grazing": 5581,
+        "arid": 586,
+        "clay": 8,
+        "forest": 4313,
+        "water": 6752
+      }
+    }
+  },
+  "Etaiqueyes": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3320,
+        "grazing": 1358,
+        "arid": 0,
+        "clay": 133,
+        "forest": 2244,
+        "water": 3034
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 2,
+        "stone": 11,
+        "salt": 0,
+        "copper": 3,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2815,
+        "grazing": 4075,
+        "arid": 0,
+        "clay": 55,
+        "forest": 3141,
+        "water": 5291
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 69,
+        "stone": 13,
+        "salt": 0,
+        "copper": 13,
+        "iron": 10,
+        "gold": 0,
+        "lead": 148,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3523,
+        "grazing": 8130,
+        "arid": 90,
+        "clay": 12,
+        "forest": 5737,
+        "water": 6145
+      }
+    }
+  },
+  "Charledjon": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4528,
+        "grazing": 387,
+        "arid": 0,
+        "clay": 10,
+        "forest": 1430,
+        "water": 2920
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 3,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4497,
+        "grazing": 3754,
+        "arid": 0,
+        "clay": 10,
+        "forest": 3472,
+        "water": 3975
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 15,
+        "salt": 0,
+        "copper": 3,
+        "iron": 61,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3985,
+        "grazing": 4913,
+        "arid": 1048,
+        "clay": 1102,
+        "forest": 5069,
+        "water": 6852
+      }
+    }
+  },
+  "Lieille": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3548,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 1184,
+        "water": 4295
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 0,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5390,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 5,
+        "forest": 2301,
+        "water": 6841
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6467,
+        "grazing": 191,
+        "arid": 0,
+        "clay": 9,
+        "forest": 3114,
+        "water": 11233
+      }
+    }
+  },
+  "Etaiquelond": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3602,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 921,
+        "forest": 1808,
+        "water": 3322
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5433,
+        "grazing": 1968,
+        "arid": 0,
+        "clay": 664,
+        "forest": 3579,
+        "water": 4171
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 7,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6382,
+        "grazing": 5424,
+        "arid": 331,
+        "clay": 641,
+        "forest": 6344,
+        "water": 5122
+      }
+    }
+  },
+  "Gertes": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 1,
+        "salt": 0,
+        "copper": 2,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3894,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 5,
+        "forest": 688,
+        "water": 3946
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4650,
+        "grazing": 476,
+        "arid": 0,
+        "clay": 4,
+        "forest": 2319,
+        "water": 7106
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 17,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6701,
+        "grazing": 2629,
+        "arid": 0,
+        "clay": 13,
+        "forest": 3742,
+        "water": 8557
+      }
+    }
+  },
+  "Verhomme": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3518,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 984,
+        "forest": 2446,
+        "water": 3343
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2758,
+        "grazing": 730,
+        "arid": 0,
+        "clay": 984,
+        "forest": 2331,
+        "water": 7764
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 15,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 55,
+        "gold": 1,
+        "lead": 2,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3127,
+        "grazing": 3350,
+        "arid": 0,
+        "clay": 695,
+        "forest": 3059,
+        "water": 10728
+      }
+    }
+  },
+  "Avitot": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 111,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3414,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 605,
+        "water": 4430
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 0,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2882,
+        "grazing": 1,
+        "arid": 0,
+        "clay": 1,
+        "forest": 979,
+        "water": 9352
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 41,
+        "stone": 3,
+        "salt": 0,
+        "copper": 2,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4744,
+        "grazing": 307,
+        "arid": 0,
+        "clay": 7,
+        "forest": 1544,
+        "water": 12842
+      }
+    }
+  },
+  "Caltot": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6713,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1809,
+        "water": 1128
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 23,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6532,
+        "grazing": 1592,
+        "arid": 0,
+        "clay": 12,
+        "forest": 3255,
+        "water": 4100
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7225,
+        "grazing": 3272,
+        "arid": 0,
+        "clay": 9,
+        "forest": 4998,
+        "water": 7394
+      }
+    }
+  },
+  "Strasais": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 40,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1116,
+        "grazing": 5817,
+        "arid": 904,
+        "clay": 8,
+        "forest": 3715,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 19,
+        "iron": 18,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3947,
+        "grazing": 5582,
+        "arid": 2688,
+        "clay": 19,
+        "forest": 6799,
+        "water": 0
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 14,
+        "salt": 0,
+        "copper": 1,
+        "iron": 9,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7540,
+        "grazing": 5915,
+        "arid": 3814,
+        "clay": 631,
+        "forest": 9022,
+        "water": 0
+      }
+    }
+  },
+  "Geraux": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3725,
+        "grazing": 25,
+        "arid": 0,
+        "clay": 5,
+        "forest": 1491,
+        "water": 4090
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3970,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 5,
+        "forest": 1281,
+        "water": 8261
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4690,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 3,
+        "forest": 1060,
+        "water": 13207
+      }
+    }
+  },
+  "Marais": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 9,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3477,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 21,
+        "forest": 580,
+        "water": 4347
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 0,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6611,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 227,
+        "forest": 2954,
+        "water": 5398
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 4,
+        "salt": 0,
+        "copper": 3,
+        "iron": 4,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8745,
+        "grazing": 1997,
+        "arid": 0,
+        "clay": 640,
+        "forest": 6053,
+        "water": 6518
+      }
+    }
+  },
+  "Caillecy": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 5,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1219,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 35,
+        "water": 6625
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 23,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 136,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 7,
+        "water": 12100
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 49,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1522,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 153,
+        "water": 16378
+      }
+    }
+  },
+  "Vilpeda": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5433,
+        "grazing": 39,
+        "arid": 0,
+        "clay": 8,
+        "forest": 1059,
+        "water": 2365
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6773,
+        "grazing": 2070,
+        "arid": 0,
+        "clay": 612,
+        "forest": 3071,
+        "water": 2781
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 10,
+        "salt": 0,
+        "copper": 1,
+        "iron": 9,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7154,
+        "grazing": 3867,
+        "arid": 0,
+        "clay": 1351,
+        "forest": 4700,
+        "water": 5528
+      }
+    }
+  },
+  "Kraji": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4757,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 4,
+        "forest": 869,
+        "water": 3084
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 15,
+        "salt": 0,
+        "copper": 0,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7156,
+        "grazing": 523,
+        "arid": 0,
+        "clay": 13,
+        "forest": 3043,
+        "water": 4544
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 8,
+        "salt": 152,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 9736,
+        "grazing": 1656,
+        "arid": 0,
+        "clay": 9,
+        "forest": 4376,
+        "water": 6499
+      }
+    }
+  },
+  "Angearde": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4348,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1383,
+        "water": 3491
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6531,
+        "grazing": 25,
+        "arid": 0,
+        "clay": 7,
+        "forest": 2355,
+        "water": 5673
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 16,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7899,
+        "grazing": 387,
+        "arid": 0,
+        "clay": 9,
+        "forest": 3211,
+        "water": 9605
+      }
+    }
+  },
+  "Potsfels": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 30,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4038,
+        "grazing": 424,
+        "arid": 0,
+        "clay": 1395,
+        "forest": 2096,
+        "water": 1988
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 5,
+        "salt": 0,
+        "copper": 3,
+        "iron": 9,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5278,
+        "grazing": 873,
+        "arid": 0,
+        "clay": 1784,
+        "forest": 3977,
+        "water": 4301
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6540,
+        "grazing": 3222,
+        "arid": 0,
+        "clay": 18,
+        "forest": 4355,
+        "water": 8120
+      }
+    }
+  },
+  "Elwice": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 1,
+        "salt": 178,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2820,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 1116,
+        "water": 5023
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 11,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2996,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1178,
+        "water": 9234
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 15,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3588,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 646,
+        "water": 14306
+      }
+    }
+  },
+  "Mannmen": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2345,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1134,
+        "forest": 228,
+        "water": 4366
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 25,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3626,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 710,
+        "forest": 699,
+        "water": 7900
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 22,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4736,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1446,
+        "forest": 1176,
+        "water": 11718
+      }
+    }
+  },
+  "Reiris": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 9,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1758,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 279,
+        "water": 6086
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 15,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2061,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 142,
+        "water": 10173
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 22,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1066,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 37,
+        "water": 16833
+      }
+    }
+  },
+  "Riwice": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2916,
+        "grazing": 21,
+        "arid": 0,
+        "clay": 1,
+        "forest": 668,
+        "water": 4907
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 22,
+        "salt": 0,
+        "copper": 1,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3581,
+        "grazing": 743,
+        "arid": 0,
+        "clay": 32,
+        "forest": 2202,
+        "water": 7880
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4726,
+        "grazing": 1917,
+        "arid": 0,
+        "clay": 223,
+        "forest": 3134,
+        "water": 11034
+      }
+    }
+  },
+  "Marijamska": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 10,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2433,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 989,
+        "water": 5412
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3950,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 268,
+        "forest": 1905,
+        "water": 8018
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 12,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7461,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 114,
+        "forest": 3680,
+        "water": 10325
+      }
+    }
+  },
+  "Sigulyce": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 377,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 76,
+        "water": 7468
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 24,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 517,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 27,
+        "water": 11719
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 18,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2271,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 3,
+        "forest": 258,
+        "water": 15626
+      }
+    }
+  },
+  "Charleon": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 7,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3258,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 668,
+        "forest": 434,
+        "water": 3919
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5771,
+        "grazing": 51,
+        "arid": 0,
+        "clay": 1136,
+        "forest": 1674,
+        "water": 5278
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 9,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7840,
+        "grazing": 13,
+        "arid": 0,
+        "clay": 1659,
+        "forest": 3567,
+        "water": 8388
+      }
+    }
+  },
+  "Geron": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 10,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1144,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 39,
+        "water": 6701
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 304,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 13,
+        "water": 11931
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 14,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3555,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 163,
+        "water": 14344
+      }
+    }
+  },
+  "Jelnai": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3541,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1113,
+        "forest": 1327,
+        "water": 3191
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 12,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5020,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1000,
+        "forest": 2509,
+        "water": 6216
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 12,
+        "stone": 13,
+        "salt": 0,
+        "copper": 2,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7123,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 994,
+        "forest": 2950,
+        "water": 9783
+      }
+    }
+  },
+  "Octeais": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4711,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 5,
+        "forest": 383,
+        "water": 3129
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 13,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7605,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 116,
+        "forest": 823,
+        "water": 4515
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 12,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6778,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1742,
+        "forest": 1173,
+        "water": 9380
+      }
+    }
+  },
+  "Sigulka": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3904,
+        "grazing": 533,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1510,
+        "water": 3404
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 17,
+        "stone": 1,
+        "salt": 0,
+        "copper": 3,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3574,
+        "grazing": 3335,
+        "arid": 0,
+        "clay": 3,
+        "forest": 2818,
+        "water": 5324
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 41,
+        "stone": 21,
+        "salt": 0,
+        "copper": 0,
+        "iron": 8,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3341,
+        "grazing": 4321,
+        "arid": 1314,
+        "clay": 4,
+        "forest": 4812,
+        "water": 8920
+      }
+    }
+  },
+  "Leihof": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 89,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4985,
+        "grazing": 408,
+        "arid": 0,
+        "clay": 2310,
+        "forest": 4145,
+        "water": 142
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 6,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6489,
+        "grazing": 2905,
+        "arid": 0,
+        "clay": 2683,
+        "forest": 6848,
+        "water": 159
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 13,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 9642,
+        "grazing": 4071,
+        "arid": 837,
+        "clay": 3123,
+        "forest": 7454,
+        "water": 227
+      }
+    }
+  },
+  "Varksne": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4087,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2568,
+        "forest": 2772,
+        "water": 1190
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 10,
+        "salt": 0,
+        "copper": 1,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 10123,
+        "grazing": 134,
+        "arid": 0,
+        "clay": 1730,
+        "forest": 6825,
+        "water": 249
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 16,
+        "salt": 0,
+        "copper": 2,
+        "iron": 12,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 12669,
+        "grazing": 2181,
+        "arid": 0,
+        "clay": 2543,
+        "forest": 8448,
+        "water": 507
+      }
+    }
+  },
+  "Vercyr": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3103,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 826,
+        "water": 4736
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4502,
+        "grazing": 7,
+        "arid": 0,
+        "clay": 2,
+        "forest": 1388,
+        "water": 7725
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 7,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 0,
+        "lead": 22,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7286,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1325,
+        "water": 10610
+      }
+    }
+  },
+  "Strasuen": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5640,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1094,
+        "water": 2199
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7552,
+        "grazing": 956,
+        "arid": 0,
+        "clay": 13,
+        "forest": 3518,
+        "water": 3715
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 6,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8100,
+        "grazing": 3107,
+        "arid": 0,
+        "clay": 183,
+        "forest": 5273,
+        "water": 6510
+      }
+    }
+  },
+  "Rappils": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 70,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 1232,
+        "arid": 6604,
+        "clay": 9,
+        "forest": 5584,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 13,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 142,
+        "grazing": 9767,
+        "arid": 2313,
+        "clay": 14,
+        "forest": 7975,
+        "water": 0
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 10,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3221,
+        "grazing": 14023,
+        "arid": 414,
+        "clay": 242,
+        "forest": 8920,
+        "water": 0
+      }
+    }
+  },
+  "Untermen": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 73,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 1175,
+        "arid": 6545,
+        "clay": 125,
+        "forest": 3070,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 3,
+        "iron": 38,
+        "gold": 5,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 2281,
+        "arid": 8396,
+        "clay": 1478,
+        "forest": 8120,
+        "water": 81
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 10,
+        "salt": 1,
+        "copper": 2,
+        "iron": 42,
+        "gold": 59,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 810,
+        "grazing": 4751,
+        "arid": 11124,
+        "clay": 1150,
+        "forest": 11461,
+        "water": 65
+      }
+    }
+  },
+  "Kärdpils": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 141,
+        "stone": 30,
+        "salt": 0,
+        "copper": 4,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4645,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 646,
+        "water": 3198
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5165,
+        "grazing": 1976,
+        "arid": 0,
+        "clay": 6,
+        "forest": 2815,
+        "water": 5089
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 6,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5400,
+        "grazing": 3547,
+        "arid": 0,
+        "clay": 7,
+        "forest": 2994,
+        "water": 8946
+      }
+    }
+  },
+  "Aluena": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 28,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5436,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 571,
+        "forest": 822,
+        "water": 1838
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 9,
+        "salt": 0,
+        "copper": 3,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 10368,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1210,
+        "forest": 2224,
+        "water": 658
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 4,
+        "salt": 0,
+        "copper": 2,
+        "iron": 12,
+        "gold": 0,
+        "lead": 2,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 16035,
+        "grazing": 122,
+        "arid": 0,
+        "clay": 954,
+        "forest": 3950,
+        "water": 789
+      }
+    }
+  },
+  "Odenen": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 1,
+        "whales": 1,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1335,
+        "grazing": 1487,
+        "arid": 0,
+        "clay": 3284,
+        "forest": 3605,
+        "water": 1739
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 6,
+        "salt": 0,
+        "copper": 2,
+        "iron": 16,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3128,
+        "grazing": 3831,
+        "arid": 114,
+        "clay": 4579,
+        "forest": 6895,
+        "water": 584
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 10,
+        "salt": 0,
+        "copper": 2,
+        "iron": 10,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 1,
+        "silver": 1
+      },
+      "fertility": {
+        "fertile": 4292,
+        "grazing": 4234,
+        "arid": 1272,
+        "clay": 7460,
+        "forest": 9964,
+        "water": 642
+      }
+    }
+  },
+  "Wisnewo": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3662,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 3,
+        "forest": 950,
+        "water": 4180
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 6,
+        "salt": 0,
+        "copper": 4,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5613,
+        "grazing": 61,
+        "arid": 0,
+        "clay": 4,
+        "forest": 2171,
+        "water": 6558
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 24,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6927,
+        "grazing": 6,
+        "arid": 0,
+        "clay": 9,
+        "forest": 2058,
+        "water": 10958
+      }
+    }
+  },
+  "Rochris": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3245,
+        "grazing": 396,
+        "arid": 0,
+        "clay": 5,
+        "forest": 883,
+        "water": 4199
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4006,
+        "grazing": 2335,
+        "arid": 0,
+        "clay": 10,
+        "forest": 2681,
+        "water": 5885
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 16,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 7,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4429,
+        "grazing": 4473,
+        "arid": 316,
+        "clay": 8,
+        "forest": 4644,
+        "water": 8674
+      }
+    }
+  },
+  "Alupaja": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3335,
+        "grazing": 131,
+        "arid": 0,
+        "clay": 940,
+        "forest": 1313,
+        "water": 3439
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 10,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5797,
+        "grazing": 1064,
+        "arid": 0,
+        "clay": 693,
+        "forest": 2973,
+        "water": 4682
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 14,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8209,
+        "grazing": 3556,
+        "arid": 0,
+        "clay": 118,
+        "forest": 5197,
+        "water": 6017
+      }
+    }
+  },
+  "Tauinka": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5345,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 10,
+        "forest": 370,
+        "water": 2490
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 6,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8738,
+        "grazing": 21,
+        "arid": 0,
+        "clay": 34,
+        "forest": 1773,
+        "water": 3443
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 5,
+        "salt": 0,
+        "copper": 6,
+        "iron": 4,
+        "gold": 0,
+        "lead": 23,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 11328,
+        "grazing": 241,
+        "arid": 0,
+        "clay": 61,
+        "forest": 3080,
+        "water": 6270
+      }
+    }
+  },
+  "Fredrikman": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3646,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1076,
+        "forest": 1529,
+        "water": 3123
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 3,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 32,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4788,
+        "grazing": 1302,
+        "arid": 0,
+        "clay": 1736,
+        "forest": 2976,
+        "water": 4410
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 11,
+        "salt": 0,
+        "copper": 3,
+        "iron": 12,
+        "gold": 0,
+        "lead": 0,
+        "whales": 49,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6540,
+        "grazing": 4303,
+        "arid": 56,
+        "clay": 1195,
+        "forest": 5426,
+        "water": 5806
+      }
+    }
+  },
+  "Breidau": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 19,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1639,
+        "grazing": 330,
+        "arid": 0,
+        "clay": 3760,
+        "forest": 2498,
+        "water": 2116
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 2,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1604,
+        "grazing": 3500,
+        "arid": 0,
+        "clay": 5913,
+        "forest": 6348,
+        "water": 1219
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 72,
+        "stone": 8,
+        "salt": 0,
+        "copper": 1,
+        "iron": 14,
+        "gold": 0,
+        "lead": 1,
+        "whales": 1,
+        "tin": 0,
+        "silver": 1
+      },
+      "fertility": {
+        "fertile": 2559,
+        "grazing": 5364,
+        "arid": 44,
+        "clay": 9550,
+        "forest": 10474,
+        "water": 383
+      }
+    }
+  },
+  "Kärdska": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 1,
+        "salt": 0,
+        "copper": 3,
+        "iron": 4,
+        "gold": 2,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3045,
+        "grazing": 837,
+        "arid": 0,
+        "clay": 3591,
+        "forest": 1647,
+        "water": 372
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 5,
+        "salt": 0,
+        "copper": 2,
+        "iron": 8,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2414,
+        "grazing": 2974,
+        "arid": 726,
+        "clay": 5873,
+        "forest": 3616,
+        "water": 249
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 8,
+        "salt": 0,
+        "copper": 0,
+        "iron": 17,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4258,
+        "grazing": 3772,
+        "arid": 2118,
+        "clay": 7248,
+        "forest": 5512,
+        "water": 504
+      }
+    }
+  },
+  "Oberlund": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 0,
+        "salt": 0,
+        "copper": 2,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 226,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2671,
+        "grazing": 301,
+        "arid": 0,
+        "clay": 874,
+        "forest": 1334,
+        "water": 3999
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 1,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 150,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2706,
+        "grazing": 2256,
+        "arid": 0,
+        "clay": 821,
+        "forest": 3390,
+        "water": 6453
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 32,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 115,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3877,
+        "grazing": 5231,
+        "arid": 0,
+        "clay": 714,
+        "forest": 5923,
+        "water": 8078
+      }
+    }
+  },
+  "Kuressk": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3369,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 4079,
+        "forest": 1104,
+        "water": 397
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 12,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5415,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6535,
+        "forest": 1437,
+        "water": 286
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 5,
+        "salt": 2,
+        "copper": 1,
+        "iron": 14,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7109,
+        "grazing": 553,
+        "arid": 0,
+        "clay": 9841,
+        "forest": 2744,
+        "water": 397
+      }
+    }
+  },
+  "Stamoki": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 114,
+        "gold": 24,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 1
+      },
+      "fertility": {
+        "fertile": 67,
+        "grazing": 4177,
+        "arid": 2338,
+        "clay": 1183,
+        "forest": 5534,
+        "water": 80
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 50,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1210,
+        "grazing": 4207,
+        "arid": 5212,
+        "clay": 1535,
+        "forest": 9471,
+        "water": 72
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 10,
+        "salt": 0,
+        "copper": 2,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2396,
+        "grazing": 6183,
+        "arid": 5730,
+        "clay": 3301,
+        "forest": 12673,
+        "water": 290
+      }
+    }
+  },
+  "Beloska": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3793,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1553,
+        "forest": 635,
+        "water": 2499
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7720,
+        "grazing": 672,
+        "arid": 0,
+        "clay": 1060,
+        "forest": 2270,
+        "water": 2784
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 1,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 9649,
+        "grazing": 3072,
+        "arid": 0,
+        "clay": 1460,
+        "forest": 4584,
+        "water": 3719
+      }
+    }
+  },
+  "Gdanska": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3132,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 4117,
+        "forest": 1127,
+        "water": 596
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 2,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 7,
+        "gold": 0,
+        "lead": 2,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4921,
+        "grazing": 381,
+        "arid": 0,
+        "clay": 5295,
+        "forest": 1849,
+        "water": 1639
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 2,
+        "stone": 5,
+        "salt": 0,
+        "copper": 5,
+        "iron": 9,
+        "gold": 1,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8613,
+        "grazing": 1875,
+        "arid": 0,
+        "clay": 6136,
+        "forest": 4666,
+        "water": 1276
+      }
+    }
+  },
+  "Riena": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 5,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2731,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1638,
+        "forest": 351,
+        "water": 3476
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 5,
+        "salt": 0,
+        "copper": 4,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5084,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1660,
+        "forest": 1406,
+        "water": 5492
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 12,
+        "stone": 16,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4830,
+        "grazing": 1915,
+        "arid": 0,
+        "clay": 1978,
+        "forest": 3538,
+        "water": 9177
+      }
+    }
+  },
+  "Rouges": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 5,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4036,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 7,
+        "forest": 503,
+        "water": 3802
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 6,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 6,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4418,
+        "grazing": 1770,
+        "arid": 0,
+        "clay": 8,
+        "forest": 2996,
+        "water": 6040
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 7,
+        "salt": 30,
+        "copper": 2,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4060,
+        "grazing": 4951,
+        "arid": 29,
+        "clay": 9,
+        "forest": 4919,
+        "water": 8851
+      }
+    }
+  },
+  "Võwice": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 1,
+        "salt": 2,
+        "copper": 0,
+        "iron": 2,
+        "gold": 1,
+        "lead": 3,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1861,
+        "grazing": 111,
+        "arid": 0,
+        "clay": 4203,
+        "forest": 1585,
+        "water": 1670
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 6,
+        "salt": 586,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5139,
+        "grazing": 1613,
+        "arid": 0,
+        "clay": 4679,
+        "forest": 3767,
+        "water": 805
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 133,
+        "copper": 1,
+        "iron": 15,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7750,
+        "grazing": 3459,
+        "arid": 675,
+        "clay": 5639,
+        "forest": 6511,
+        "water": 377
+      }
+    }
+  },
+  "Trondsund": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 52,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 770,
+        "grazing": 4185,
+        "arid": 929,
+        "clay": 1805,
+        "forest": 4723,
+        "water": 156
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 8,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2295,
+        "grazing": 4401,
+        "arid": 3927,
+        "clay": 1526,
+        "forest": 8291,
+        "water": 87
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 9,
+        "salt": 0,
+        "copper": 1,
+        "iron": 8,
+        "gold": 2,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3578,
+        "grazing": 4721,
+        "arid": 7638,
+        "clay": 1532,
+        "forest": 11247,
+        "water": 431
+      }
+    }
+  },
+  "Czajovice": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 11,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2963,
+        "grazing": 86,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1174,
+        "water": 4792
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 3,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 1,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2271,
+        "grazing": 2934,
+        "arid": 181,
+        "clay": 7,
+        "forest": 2341,
+        "water": 6843
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 5,
+        "salt": 0,
+        "copper": 2,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3121,
+        "grazing": 4363,
+        "arid": 19,
+        "clay": 171,
+        "forest": 3921,
+        "water": 10226
+      }
+    }
+  },
+  "Åbovare": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 12,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3131,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 1218,
+        "water": 4713
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 41,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3490,
+        "grazing": 746,
+        "arid": 0,
+        "clay": 24,
+        "forest": 1625,
+        "water": 7976
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 17,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 1,
+        "whales": 5,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2666,
+        "grazing": 3253,
+        "arid": 260,
+        "clay": 830,
+        "forest": 2647,
+        "water": 10891
+      }
+    }
+  },
+  "Panedroje": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 17,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2797,
+        "grazing": 1404,
+        "arid": 0,
+        "clay": 3391,
+        "forest": 4289,
+        "water": 253
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2882,
+        "grazing": 5037,
+        "arid": 0,
+        "clay": 3829,
+        "forest": 5300,
+        "water": 488
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 14,
+        "salt": 0,
+        "copper": 5,
+        "iron": 8,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 29,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5470,
+        "grazing": 9566,
+        "arid": 81,
+        "clay": 2373,
+        "forest": 8412,
+        "water": 410
+      }
+    }
+  },
+  "Sundholm": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 3,
+        "salt": 0,
+        "copper": 2,
+        "iron": 2,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 142,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 171,
+        "grazing": 5270,
+        "arid": 56,
+        "clay": 2231,
+        "forest": 5046,
+        "water": 117
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 119,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 175,
+        "grazing": 7340,
+        "arid": 1681,
+        "clay": 2888,
+        "forest": 8400,
+        "water": 152
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 10,
+        "salt": 0,
+        "copper": 13,
+        "iron": 22,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 158,
+        "grazing": 9514,
+        "arid": 3639,
+        "clay": 3847,
+        "forest": 11503,
+        "water": 742
+      }
+    }
+  },
+  "Kleinhus": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5382,
+        "grazing": 11,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1476,
+        "water": 2448
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 7,
+        "stone": 2,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5490,
+        "grazing": 1739,
+        "arid": 0,
+        "clay": 9,
+        "forest": 3939,
+        "water": 4998
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 8,
+        "salt": 0,
+        "copper": 1,
+        "iron": 10,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3400,
+        "grazing": 6446,
+        "arid": 0,
+        "clay": 8,
+        "forest": 5486,
+        "water": 8046
+      }
+    }
+  },
+  "Geryes": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 13,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 343,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 42,
+        "water": 7502
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 1,
+        "salt": 30,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1995,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 276,
+        "water": 10239
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 1,
+        "whales": 77,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4307,
+        "grazing": 109,
+        "arid": 0,
+        "clay": 5,
+        "forest": 1292,
+        "water": 13479
+      }
+    }
+  },
+  "Jönköthveit": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 5,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4228,
+        "grazing": 72,
+        "arid": 0,
+        "clay": 6,
+        "forest": 2161,
+        "water": 3539
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 3,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5339,
+        "grazing": 1944,
+        "arid": 0,
+        "clay": 8,
+        "forest": 3285,
+        "water": 4945
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 96,
+        "stone": 6,
+        "salt": 1,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7162,
+        "grazing": 4330,
+        "arid": 0,
+        "clay": 118,
+        "forest": 5526,
+        "water": 6290
+      }
+    }
+  },
+  "Svathveit": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 0,
+        "salt": 0,
+        "copper": 14,
+        "iron": 23,
+        "gold": 26,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 516,
+        "arid": 7320,
+        "clay": 9,
+        "forest": 6494,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 11,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 95,
+        "grazing": 3713,
+        "arid": 8418,
+        "clay": 10,
+        "forest": 8160,
+        "water": 0
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 13,
+        "gold": 5,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1190,
+        "grazing": 6922,
+        "arid": 9758,
+        "clay": 30,
+        "forest": 12474,
+        "water": 0
+      }
+    }
+  },
+  "Bildal": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3382,
+        "grazing": 739,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1655,
+        "water": 3718
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 18,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2151,
+        "grazing": 2680,
+        "arid": 0,
+        "clay": 6,
+        "forest": 2491,
+        "water": 7399
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 10,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 61,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3115,
+        "grazing": 2522,
+        "arid": 1332,
+        "clay": 7,
+        "forest": 3448,
+        "water": 10924
+      }
+    }
+  },
+  "Haapzie": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2858,
+        "grazing": 756,
+        "arid": 0,
+        "clay": 2,
+        "forest": 1747,
+        "water": 4229
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 2,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2717,
+        "grazing": 2489,
+        "arid": 200,
+        "clay": 7,
+        "forest": 2814,
+        "water": 6823
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 32,
+        "stone": 2,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4292,
+        "grazing": 3282,
+        "arid": 0,
+        "clay": 10,
+        "forest": 4071,
+        "water": 10316
+      }
+    }
+  },
+  "Thormalm": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 31,
+        "salt": 0,
+        "copper": 0,
+        "iron": 8,
+        "gold": 50,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 0,
+        "grazing": 2554,
+        "arid": 5286,
+        "clay": 5,
+        "forest": 5538,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 4,
+        "salt": 1,
+        "copper": 1,
+        "iron": 8,
+        "gold": 5,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 160,
+        "grazing": 4759,
+        "arid": 7195,
+        "clay": 122,
+        "forest": 8109,
+        "water": 0
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 0,
+        "stone": 7,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 16,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2540,
+        "grazing": 4420,
+        "arid": 9041,
+        "clay": 1422,
+        "forest": 11256,
+        "water": 477
+      }
+    }
+  },
+  "Molhammer": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 7,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3666,
+        "grazing": 52,
+        "arid": 0,
+        "clay": 4,
+        "forest": 1711,
+        "water": 4123
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 24,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5334,
+        "grazing": 1802,
+        "arid": 0,
+        "clay": 8,
+        "forest": 4181,
+        "water": 5092
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 5,
+        "gold": 1,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 8528,
+        "grazing": 2259,
+        "arid": 0,
+        "clay": 13,
+        "forest": 6519,
+        "water": 7100
+      }
+    }
+  },
+  "Koldde": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3239,
+        "grazing": 2096,
+        "arid": 0,
+        "clay": 12,
+        "forest": 2846,
+        "water": 2498
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 17,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3169,
+        "grazing": 5230,
+        "arid": 881,
+        "clay": 13,
+        "forest": 5769,
+        "water": 2943
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 8,
+        "salt": 0,
+        "copper": 16,
+        "iron": 10,
+        "gold": 0,
+        "lead": 0,
+        "whales": 1,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5068,
+        "grazing": 5085,
+        "arid": 3881,
+        "clay": 21,
+        "forest": 7821,
+        "water": 3845
+      }
+    }
+  },
+  "Borgsund": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 1
+      },
+      "fertility": {
+        "fertile": 246,
+        "grazing": 1978,
+        "arid": 0,
+        "clay": 5359,
+        "forest": 4590,
+        "water": 262
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 21,
+        "gold": 1,
+        "lead": 1,
+        "whales": 0,
+        "tin": 11,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 165,
+        "grazing": 9548,
+        "arid": 442,
+        "clay": 1905,
+        "forest": 8196,
+        "water": 176
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 10,
+        "salt": 2,
+        "copper": 17,
+        "iron": 87,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 232,
+        "grazing": 10227,
+        "arid": 3995,
+        "clay": 3223,
+        "forest": 12620,
+        "water": 223
+      }
+    }
+  },
+  "Tønslo": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 4,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2865,
+        "grazing": 1483,
+        "arid": 0,
+        "clay": 5,
+        "forest": 2338,
+        "water": 3492
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 55,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4294,
+        "grazing": 2225,
+        "arid": 0,
+        "clay": 2,
+        "forest": 3431,
+        "water": 5715
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 9,
+        "stone": 11,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 0,
+        "lead": 1,
+        "whales": 44,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6723,
+        "grazing": 1776,
+        "arid": 0,
+        "clay": 10,
+        "forest": 3750,
+        "water": 9391
+      }
+    }
+  },
+  "Stockman": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 1,
+        "stone": 1,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2990,
+        "grazing": 742,
+        "arid": 0,
+        "clay": 1286,
+        "forest": 2405,
+        "water": 2827
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 3,
+        "salt": 1,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3210,
+        "grazing": 3671,
+        "arid": 300,
+        "clay": 787,
+        "forest": 4736,
+        "water": 4268
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 34,
+        "salt": 0,
+        "copper": 0,
+        "iron": 13,
+        "gold": 1,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5067,
+        "grazing": 4428,
+        "arid": 1996,
+        "clay": 273,
+        "forest": 7085,
+        "water": 6136
+      }
+    }
+  },
+  "Jorholm": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 10,
+        "stone": 0,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3580,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1764,
+        "water": 4259
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 33,
+        "stone": 14,
+        "salt": 13,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4573,
+        "grazing": 585,
+        "arid": 0,
+        "clay": 6,
+        "forest": 2744,
+        "water": 7072
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 18,
+        "salt": 14,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4710,
+        "grazing": 3044,
+        "arid": 0,
+        "clay": 6,
+        "forest": 4561,
+        "water": 10140
+      }
+    }
+  },
+  "Daugavasaare": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 3,
+        "salt": 0,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2709,
+        "grazing": 1646,
+        "arid": 0,
+        "clay": 6,
+        "forest": 1818,
+        "water": 3484
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2960,
+        "grazing": 2908,
+        "arid": 1706,
+        "clay": 12,
+        "forest": 4710,
+        "water": 4650
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 9,
+        "salt": 0,
+        "copper": 2,
+        "iron": 11,
+        "gold": 6,
+        "lead": 2,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4317,
+        "grazing": 4363,
+        "arid": 3722,
+        "clay": 12,
+        "forest": 6290,
+        "water": 5486
+      }
+    }
+  },
+  "Stagate": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 2,
+        "stone": 0,
+        "salt": 339,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4282,
+        "grazing": 1442,
+        "arid": 0,
+        "clay": 6,
+        "forest": 2528,
+        "water": 2115
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 3,
+        "stone": 3,
+        "salt": 173,
+        "copper": 1,
+        "iron": 11,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4817,
+        "grazing": 3798,
+        "arid": 0,
+        "clay": 6,
+        "forest": 5396,
+        "water": 3615
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 5,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3862,
+        "grazing": 7033,
+        "arid": 207,
+        "clay": 16,
+        "forest": 6934,
+        "water": 6782
+      }
+    }
+  },
+  "Ukpils": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 91,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2726,
+        "grazing": 346,
+        "arid": 0,
+        "clay": 23,
+        "forest": 1522,
+        "water": 4750
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 33,
+        "stone": 4,
+        "salt": 0,
+        "copper": 0,
+        "iron": 6,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3387,
+        "grazing": 2623,
+        "arid": 177,
+        "clay": 29,
+        "forest": 2993,
+        "water": 6020
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 20,
+        "stone": 4,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4347,
+        "grazing": 2909,
+        "arid": 2000,
+        "clay": 11,
+        "forest": 5561,
+        "water": 8633
+      }
+    }
+  },
+  "Czajdzice": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 10,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1189,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 36,
+        "water": 6656
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 17,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 0,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 711,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 26,
+        "water": 11524
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 18,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 693,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 19,
+        "water": 17206
+      }
+    }
+  },
+  "Vardona": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 12,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 1286,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 139,
+        "water": 6558
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 13,
+        "stone": 0,
+        "salt": 0,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 445,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 0,
+        "forest": 19,
+        "water": 11791
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 16,
+        "stone": 0,
+        "salt": 0,
+        "copper": 2,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2028,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 193,
+        "water": 15871
+      }
+    }
+  },
+  "Lillethveit": {
+    "landlocked": true,
+    "normalRange": {
+      "resources": {
+        "fish": 0,
+        "stone": 0,
+        "salt": 0,
+        "copper": 13,
+        "iron": 69,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 76,
+        "grazing": 3637,
+        "arid": 4122,
+        "clay": 10,
+        "forest": 6579,
+        "water": 0
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 7,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 8
+      },
+      "fertility": {
+        "fertile": 1633,
+        "grazing": 3723,
+        "arid": 4423,
+        "clay": 2321,
+        "forest": 8884,
+        "water": 136
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 2,
+        "stone": 10,
+        "salt": 2,
+        "copper": 9,
+        "iron": 26,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 1
+      },
+      "fertility": {
+        "fertile": 1133,
+        "grazing": 6704,
+        "arid": 3588,
+        "clay": 6081,
+        "forest": 11658,
+        "water": 394
+      }
+    }
+  },
+  "Kirkeen": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 3,
+        "stone": 5,
+        "salt": 0,
+        "copper": 0,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 35,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4504,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1702,
+        "forest": 3376,
+        "water": 1639
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 1,
+        "stone": 4,
+        "salt": 0,
+        "copper": 2,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7393,
+        "grazing": 374,
+        "arid": 0,
+        "clay": 2651,
+        "forest": 6059,
+        "water": 1818
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 22,
+        "stone": 3,
+        "salt": 2,
+        "copper": 2,
+        "iron": 4,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6707,
+        "grazing": 4785,
+        "arid": 0,
+        "clay": 2363,
+        "forest": 8575,
+        "water": 4045
+      }
+    }
+  },
+  "Janoza": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 5,
+        "salt": 0,
+        "copper": 3,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4121,
+        "grazing": 1204,
+        "arid": 0,
+        "clay": 5,
+        "forest": 2210,
+        "water": 2515
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 5,
+        "stone": 0,
+        "salt": 0,
+        "copper": 1,
+        "iron": 8,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3660,
+        "grazing": 2612,
+        "arid": 121,
+        "clay": 668,
+        "forest": 3620,
+        "water": 5175
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 12,
+        "salt": 0,
+        "copper": 22,
+        "iron": 5,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 12
+      },
+      "fertility": {
+        "fertile": 4229,
+        "grazing": 2173,
+        "arid": 2706,
+        "clay": 696,
+        "forest": 5611,
+        "water": 8096
+      }
+    }
+  },
+  "Bergborg": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 6,
+        "stone": 1,
+        "salt": 0,
+        "copper": 1,
+        "iron": 4,
+        "gold": 0,
+        "lead": 1,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4394,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 3,
+        "forest": 1628,
+        "water": 3448
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 4,
+        "stone": 5,
+        "salt": 0,
+        "copper": 1,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 6519,
+        "grazing": 28,
+        "arid": 0,
+        "clay": 7,
+        "forest": 2445,
+        "water": 5682
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 37,
+        "salt": 5,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 7734,
+        "grazing": 1628,
+        "arid": 0,
+        "clay": 3,
+        "forest": 4377,
+        "water": 8535
+      }
+    }
+  },
+  "Sandbro": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 35,
+        "salt": 0,
+        "copper": 0,
+        "iron": 1,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 3026,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 718,
+        "water": 4818
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 8,
+        "stone": 6,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4368,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 2,
+        "forest": 1763,
+        "water": 7866
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 17,
+        "stone": 9,
+        "salt": 13,
+        "copper": 2,
+        "iron": 7,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 5877,
+        "grazing": 378,
+        "arid": 0,
+        "clay": 6,
+        "forest": 3282,
+        "water": 11639
+      }
+    }
+  },
+  "Høgbjerg": {
+    "landlocked": false,
+    "normalRange": {
+      "resources": {
+        "fish": 4,
+        "stone": 37,
+        "salt": 0,
+        "copper": 0,
+        "iron": 3,
+        "gold": 0,
+        "lead": 0,
+        "whales": 3,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2630,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 707,
+        "water": 5214
+      }
+    },
+    "outpost1Range": {
+      "resources": {
+        "fish": 11,
+        "stone": 3,
+        "salt": 0,
+        "copper": 0,
+        "iron": 0,
+        "gold": 1,
+        "lead": 0,
+        "whales": 1,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 2176,
+        "grazing": 0,
+        "arid": 0,
+        "clay": 1,
+        "forest": 465,
+        "water": 10059
+      }
+    },
+    "outpost2Range": {
+      "resources": {
+        "fish": 64,
+        "stone": 1,
+        "salt": 8,
+        "copper": 0,
+        "iron": 2,
+        "gold": 0,
+        "lead": 0,
+        "whales": 0,
+        "tin": 0,
+        "silver": 0
+      },
+      "fertility": {
+        "fertile": 4281,
+        "grazing": 267,
+        "arid": 0,
+        "clay": 3,
+        "forest": 1542,
+        "water": 13349
+      }
+    }
+  }
+}
