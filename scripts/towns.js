@@ -88,7 +88,7 @@ async function loadTowns(season) {
             <i class="fa fa-thumbtack"></i>
           </button>
         </div>`;
-        statsStr += `<p>${location} | ${section}</p>`;
+        statsStr += `<p>${location} | ${section} | Region ID: ${town.region}</p>`;
 
         if (townData) {
         }
