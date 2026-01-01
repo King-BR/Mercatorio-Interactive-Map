@@ -17,7 +17,7 @@ async function loadHeatmap(type) {
   heatData = [];
   let max = 0;
 
-  if (season !== "s")
+  if (season !== "s6")
     return alert(`Heatmap data for ${season} is not available right now`);
 
   switch (type) {
