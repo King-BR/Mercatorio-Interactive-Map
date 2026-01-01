@@ -1,9 +1,9 @@
 name: Auto import towns data
 
 on:
-  # schedule:
+  schedule:
     # Runs every 12 hours at 30 minutes past the hour (00:05, 12:05 UTC)
-    # - cron: "30 0,12 * * *"
+    - cron: "30 0,12 * * *"
 
   workflow_dispatch: # This enables manual triggering
 
@@ -30,7 +30,7 @@ jobs:
           echo '[]' > api_responses.json
 
           # Read the towns.json file and extract town IDs
-          TOWN_IDS=$(jq -r '.[] | .id' assets/s5/towns.json)
+          TOWN_IDS=$(jq -r '.[] | .id' assets/s6/towns.json)
 
           # Iterate over each town ID and send an API request with a 0.25s delay
           for town_id in $TOWN_IDS; do
@@ -58,9 +58,9 @@ jobs:
           # Check if all requests were successful
           if [ "$SUCCESS" = true ]; then
             # If all requests were successful, move the responses to the final JSON file
-            mv api_responses.json assets/s2/townsData.json
-            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s5/townsData.json > assets/s5/ferriesData.json
-            echo "All requests were successful. Saved results to assets/s5/townsData.json."
+            mv api_responses.json assets/s6/townsData.json
+            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s6/townsData.json > assets/s6/ferriesData.json
+            echo "All requests were successful. Saved results to assets/s6/townsData.json."
           else
             # If any requests failed, do not save the results
             echo "Some requests failed. No changes saved."
@@ -73,7 +73,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/s5/townsData.json
-          git add assets/s5/ferriesData.json
-          git commit -m "Updated townsData.json for season 5"
+          git add assets/s6/townsData.json
+          git add assets/s6/ferriesData.json
+          git commit -m "Updated townsData.json for season 6"
           git push
