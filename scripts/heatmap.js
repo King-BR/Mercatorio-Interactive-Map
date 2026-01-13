@@ -11,7 +11,7 @@ var classes = [
   "mercantile",
 ];
 
-async function loadHeatmap(type) {
+async function loadHeatmap(type, season = "s6") {
   townsHouseholds = await getHouseholdData();
   heatmapLayer = null;
   heatData = [];
@@ -139,7 +139,8 @@ document
         document.getElementById("heatmapClassDiv").style.display = "none";
       }
 
-      await loadHeatmap(event.target.value);
+      await loadHeatmap(event.target.value,
+        document.getElementById("seasonSelect").value);
       heatmapLayer.addTo(map);
     }
   });
@@ -155,7 +156,8 @@ document
       map.removeLayer(heatmapLayer);
       heatmapLayer = null;
 
-      await loadHeatmap("playersByMainClass");
+      await loadHeatmap("playersByMainClass",
+        document.getElementById("seasonSelect").value);
       heatmapLayer.addTo(map);
     }
   });
