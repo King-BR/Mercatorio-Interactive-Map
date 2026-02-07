@@ -144,24 +144,6 @@
     "landings": null
   },
   {
-    "id": "226302663",
-    "name": "Caltot",
-    "location": {
-      "x": 2263,
-      "y": 2663
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 2265,
-          "y": 2652
-        },
-        "distance": 12.414213562373096,
-        "fee": "1.62"
-      }
-    ]
-  },
-  {
     "id": "230803734",
     "name": "Strasais",
     "location": {
