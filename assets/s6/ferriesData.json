@@ -108,15 +108,6 @@
     "landings": null
   },
   {
-    "id": "224602288",
-    "name": "Gertes",
-    "location": {
-      "x": 2246,
-      "y": 2288
-    },
-    "landings": null
-  },
-  {
     "id": "225503520",
     "name": "Verhomme",
     "location": {
@@ -661,15 +652,6 @@
     "location": {
       "x": 3621,
       "y": 1561
-    },
-    "landings": null
-  },
-  {
-    "id": "362801112",
-    "name": "Svathveit",
-    "location": {
-      "x": 3628,
-      "y": 1112
     },
     "landings": null
   },
