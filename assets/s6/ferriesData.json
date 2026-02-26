@@ -423,24 +423,6 @@
     "landings": null
   },
   {
-    "id": "326301207",
-    "name": "Fredrikman",
-    "location": {
-      "x": 3263,
-      "y": 1207
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3255,
-          "y": 1211
-        },
-        "distance": 9.65685424949238,
-        "fee": "1.482"
-      }
-    ]
-  },
-  {
     "id": "326600934",
     "name": "Breidau",
     "location": {
@@ -448,24 +430,6 @@
       "y": 934
     },
     "landings": null
-  },
-  {
-    "id": "327103482",
-    "name": "Kärdska",
-    "location": {
-      "x": 3271,
-      "y": 3482
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3273,
-          "y": 3486
-        },
-        "distance": 4.82842712474619,
-        "fee": "1.241"
-      }
-    ]
   },
   {
     "id": "327401574",
@@ -643,15 +607,6 @@
     "location": {
       "x": 3653,
       "y": 3065
-    },
-    "landings": null
-  },
-  {
-    "id": "366900908",
-    "name": "Thormalm",
-    "location": {
-      "x": 3669,
-      "y": 908
     },
     "landings": null
   },
