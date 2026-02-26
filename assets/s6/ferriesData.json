@@ -333,24 +333,6 @@
     ]
   },
   {
-    "id": "309302077",
-    "name": "Strasuen",
-    "location": {
-      "x": 3093,
-      "y": 2077
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3092,
-          "y": 2079
-        },
-        "distance": 3,
-        "fee": "1.15"
-      }
-    ]
-  },
-  {
     "id": "309303568",
     "name": "Rappils",
     "location": {
@@ -652,15 +634,6 @@
     "location": {
       "x": 3621,
       "y": 1561
-    },
-    "landings": null
-  },
-  {
-    "id": "362801112",
-    "name": "Svathveit",
-    "location": {
-      "x": 3628,
-      "y": 1112
     },
     "landings": null
   },
