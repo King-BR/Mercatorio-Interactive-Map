@@ -414,24 +414,6 @@
     "landings": null
   },
   {
-    "id": "326301207",
-    "name": "Fredrikman",
-    "location": {
-      "x": 3263,
-      "y": 1207
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3255,
-          "y": 1211
-        },
-        "distance": 9.65685424949238,
-        "fee": "1.482"
-      }
-    ]
-  },
-  {
     "id": "326600934",
     "name": "Breidau",
     "location": {
@@ -627,24 +609,6 @@
       "y": 1744
     },
     "landings": null
-  },
-  {
-    "id": "371900417",
-    "name": "Borgsund",
-    "location": {
-      "x": 3719,
-      "y": 417
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3722,
-          "y": 417
-        },
-        "distance": 3,
-        "fee": "1.15"
-      }
-    ]
   },
   {
     "id": "375301433",
