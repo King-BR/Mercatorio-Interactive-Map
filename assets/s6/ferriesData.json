@@ -494,24 +494,6 @@
     "landings": null
   },
   {
-    "id": "346103644",
-    "name": "Võwice",
-    "location": {
-      "x": 3461,
-      "y": 3644
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3464,
-          "y": 3639
-        },
-        "distance": 6.242640687119285,
-        "fee": "1.312"
-      }
-    ]
-  },
-  {
     "id": "349501153",
     "name": "Trondsund",
     "location": {
