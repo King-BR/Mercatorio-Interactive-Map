@@ -36,15 +36,6 @@
     ]
   },
   {
-    "id": "206302479",
-    "name": "Etaiqueloup",
-    "location": {
-      "x": 2063,
-      "y": 2479
-    },
-    "landings": null
-  },
-  {
     "id": "206902699",
     "name": "Sotteans",
     "location": {
@@ -338,15 +329,6 @@
     "location": {
       "x": 3240,
       "y": 2119
-    },
-    "landings": null
-  },
-  {
-    "id": "324203807",
-    "name": "Alupaja",
-    "location": {
-      "x": 3242,
-      "y": 3807
     },
     "landings": null
   },
