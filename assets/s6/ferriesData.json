@@ -333,24 +333,6 @@
     "landings": null
   },
   {
-    "id": "331403574",
-    "name": "Kuressk",
-    "location": {
-      "x": 3314,
-      "y": 3574
-    },
-    "landings": [
-      {
-        "location": {
-          "x": 3314,
-          "y": 3570
-        },
-        "distance": 4,
-        "fee": "1.2"
-      }
-    ]
-  },
-  {
     "id": "334303264",
     "name": "Beloska",
     "location": {
