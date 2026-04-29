@@ -21,7 +21,8 @@ function createFertilityOverlay(season) {
       fertilityPath = "./assets/fertility/v2/{z}/{x}/{y}.png";
       break;
     }
-    case "s6": {
+    case "s6":
+    case "s7": {
       fertilityPath = "./assets/fertility/v3/{z}/{x}/{y}.png";
       break;
     }

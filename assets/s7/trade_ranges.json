@@ -1,0 +1,55 @@
+{
+  "transports": [
+    {
+      "name": "Snekkja",
+      "moves": 3000,
+      "autotrade": 800,
+      "fishRange": 220,
+      "fishRadius": 9,
+      "cargo": 250
+    },
+    {
+      "name": "Cog",
+      "moves": 4000,
+      "autotrade": 1400,
+      "cargo": 800
+    },
+    {
+      "name": "Hulk",
+      "moves": 5600,
+      "autotrade": 2400,
+      "cargo": 1400
+    },
+    {
+      "name": "Handcart",
+      "moves": 2000,
+      "autotrade": 500,
+      "cargo": 40
+    },
+    {
+      "name": "Tumbrel",
+      "moves": 4000,
+      "autotrade": 1200,
+      "cargo": 80
+    }
+  ],
+
+  "move_rule": {
+    "formula": "{l} * {c} + {p}",
+    "l": {
+      "straight": 1,
+      "diagonal": 1.414
+    },
+    "c": {
+      "noForest": 1,
+      "oneForest": 1.5,
+      "twoForest": 2
+    },
+    "p": {
+      "<25": 0,
+      "<75": 2,
+      "<125": 5,
+      ">=125": 20
+    }
+  }
+}

@@ -11,13 +11,13 @@ var classes = [
   "mercantile",
 ];
 
-async function loadHeatmap(type, season = "s6") {
+async function loadHeatmap(type, season = "s7") {
   townsHouseholds = await getHouseholdData();
   heatmapLayer = null;
   heatData = [];
   let max = 0;
 
-  if (season !== "s6")
+  if (season !== "s7" || true)
     return alert(`Heatmap data for ${season} is not available right now`);
 
   switch (type) {

@@ -32,7 +32,8 @@ async function initializeMap(season) {
       mapPath = "./assets/map/v2/{z}/{x}/{y}.png";
       break;
     }
-    case "s6": {
+    case "s6":
+    case "s7": {
       mapPath = "./assets/map/v3/{z}/{x}/{y}.png";
       break;
     }
