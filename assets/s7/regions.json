@@ -1,0 +1,164 @@
+[
+  {
+    "id": 2207,
+    "name": "Pruhalt",
+    "center": { "x": 1831, "y": 747 },
+    "salary": "1.374",
+    "culture": {
+      "nutrition": "100",
+      "textile": "100",
+      "crafting": "1",
+      "forging": "5.283",
+      "weaponry": "24.024",
+      "maritime": "100",
+      "mercantile": "53.997"
+    },
+    "leadership": [
+      { "class": "weaponry", "strength": "0", "establishment": "0" },
+      { "class": "textile", "strength": "22.608", "establishment": "0" },
+      { "class": "nutrition", "strength": "19.459", "establishment": "0" },
+      { "class": "mercantile", "strength": "0", "establishment": "0" },
+      { "class": "maritime", "strength": "33.443", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2209,
+    "name": "Hooschweig",
+    "center": { "x": 1919, "y": 981 },
+    "salary": "1.509",
+    "culture": {
+      "nutrition": "66.916",
+      "textile": "1",
+      "crafting": "66.933",
+      "forging": "72.922",
+      "weaponry": "1",
+      "maritime": "33.446",
+      "mercantile": "80.83"
+    },
+    "leadership": [
+      { "class": "weaponry", "strength": "0", "establishment": "0" },
+      { "class": "mercantile", "strength": "0", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2213,
+    "name": "Westlia",
+    "center": { "x": 1422, "y": 521 },
+    "salary": "1.469",
+    "culture": {
+      "nutrition": "80.541",
+      "textile": "44.823",
+      "crafting": "95.083",
+      "forging": "42.838",
+      "weaponry": "43.441",
+      "maritime": "66.557",
+      "mercantile": "15.428"
+    },
+    "leadership": [
+      { "class": "mercantile", "strength": "0", "establishment": "0" },
+      { "class": "weaponry", "strength": "0", "establishment": "0" },
+      { "class": "textile", "strength": "0", "establishment": "0" },
+      { "class": "forging", "strength": "0", "establishment": "0" },
+      { "class": "maritime", "strength": "0", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2223,
+    "name": "Drumburry",
+    "center": { "x": 101, "y": 361 },
+    "salary": "1.472",
+    "culture": {
+      "nutrition": "53.046",
+      "textile": "57.541",
+      "crafting": "100",
+      "forging": "84.841",
+      "weaponry": "50.129",
+      "maritime": "53.54",
+      "mercantile": "1"
+    },
+    "leadership": [
+      { "class": "maritime", "strength": "0", "establishment": "0" },
+      { "class": "crafting", "strength": "4.917", "establishment": "0" },
+      { "class": "weaponry", "strength": "0", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2237,
+    "name": "Naany",
+    "center": { "x": 949, "y": 2515 },
+    "salary": "1.18",
+    "culture": {
+      "nutrition": "33.039",
+      "textile": "51.985",
+      "crafting": "79.676",
+      "forging": "1",
+      "weaponry": "49.076",
+      "maritime": "6.625",
+      "mercantile": "62.053"
+    },
+    "leadership": [
+      { "class": "mercantile", "strength": "0", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2239,
+    "name": "Wolden",
+    "center": { "x": 1818, "y": 1279 },
+    "salary": "1.264",
+    "culture": {
+      "nutrition": "29.515",
+      "textile": "77.392",
+      "crafting": "33.176",
+      "forging": "25.067",
+      "weaponry": "37.063",
+      "maritime": "27.082",
+      "mercantile": "73.857"
+    },
+    "leadership": [
+      { "class": "weaponry", "strength": "0", "establishment": "0" },
+      { "class": "forging", "strength": "0", "establishment": "0" },
+      { "class": "mercantile", "strength": "0", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2253,
+    "name": "Pomeland",
+    "center": { "x": 2505, "y": 1213 },
+    "salary": "1.459",
+    "culture": {
+      "nutrition": "1",
+      "textile": "39.445",
+      "crafting": "12.204",
+      "forging": "100",
+      "weaponry": "70.359",
+      "maritime": "1",
+      "mercantile": "100"
+    },
+    "leadership": [
+      { "class": "crafting", "strength": "0", "establishment": "0" },
+      { "class": "nutrition", "strength": "0", "establishment": "0" },
+      { "class": "forging", "strength": "15.159", "establishment": "0" },
+      { "class": "mercantile", "strength": "19.17", "establishment": "0" }
+    ]
+  },
+  {
+    "id": 2265,
+    "name": "Foge",
+    "center": { "x": 693, "y": 2371 },
+    "salary": "1.103",
+    "culture": {
+      "nutrition": "56.294",
+      "textile": "53.117",
+      "crafting": "87.858",
+      "forging": "44.925",
+      "weaponry": "100",
+      "maritime": "1",
+      "mercantile": "21.951"
+    },
+    "leadership": [
+      { "class": "forging", "strength": "0", "establishment": "0" },
+      { "class": "nutrition", "strength": "0", "establishment": "0" },
+      { "class": "weaponry", "strength": "29.641", "establishment": "0" }
+    ]
+  }
+]

@@ -3,6 +3,7 @@ var overlaysTransport = {};
 var selectedTown = {};
 var townsData = null;
 var townsLayer = null;
+var regions = null;
 
 // Function to load towns and add markers
 async function loadTowns(season) {
@@ -11,16 +12,31 @@ async function loadTowns(season) {
     townsLayer = L.layerGroup();
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     const tradeData = await fetchFromLocal(
-      `assets/${season}/trade_ranges.json`
+      `assets/${season}/trade_ranges.json`,
     );
     const resourcePlots = await fetchFromLocal(
-      `assets/${season}/resourcePlots.json`
+      `assets/${season}/resourcePlots.json`,
     );
     const stats = await fetchFromLocal(`assets/${season}/stats.json`);
     const fishingRange = 220;
 
-    if (season != "s1")
+    try {
+      regions = await fetchFromLocal(`assets/${season}/regions.json`);
+    } catch (error) {
+      console.warn(
+        `Could not load regions data for season ${season} as the file is missing (ignore if trying to load from before season 7):`,
+        error,
+      );
+    }
+
+    try {
       townsData = await fetchFromLocal(`assets/${season}/townsData.json`);
+    } catch (error) {
+      console.warn(
+        `Could not load townsData for season ${season} as the file is missing (ignore if trying to load from season 1):`,
+        error,
+      );
+    }
 
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker || layer instanceof L.Circle) {
@@ -41,8 +57,8 @@ async function loadTowns(season) {
       const iconUrl = town.capital
         ? "assets/capital_marker.png"
         : town.name.includes("tradepost")
-        ? "assets/tradepost_marker.png"
-        : "assets/town_marker.png";
+          ? "assets/tradepost_marker.png"
+          : "assets/town_marker.png";
       const marker = L.icon({
         iconUrl: iconUrl,
         iconSize: [25, 25],
@@ -87,8 +103,8 @@ async function loadTowns(season) {
           <button id="pinButton" style="background: none; border: none; cursor: pointer; margin-left: 10px;">
             <i class="fa fa-thumbtack"></i>
           </button>
-        </div>`;
-        statsStr += `<p>${location} | ${section} | Region ID: ${town.region}</p>`;
+          </div>`;
+        statsStr += `<h7>${location} | ${section} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name}` : "Region ID: " + town.region}</h7><br><br>`;
 
         if (townData) {
         }
@@ -99,16 +115,16 @@ async function loadTowns(season) {
             plot.data.res === 1 &&
             Math.sqrt(
               Math.pow(plot.realX - town.location.x, 2) +
-                Math.pow(plot.realY - town.location.y, 2)
-            ) <= fishingRange
+                Math.pow(plot.realY - town.location.y, 2),
+            ) <= fishingRange,
         );
         const whalePlots = resourcePlots.filter(
           (plot) =>
             plot.data.res === 8 &&
             Math.sqrt(
               Math.pow(plot.realX - town.location.x, 2) +
-                Math.pow(plot.realY - town.location.y, 2)
-            ) <= fishingRange
+                Math.pow(plot.realY - town.location.y, 2),
+            ) <= fishingRange,
         );
 
         if (!townStats.landlocked) {
@@ -146,18 +162,18 @@ async function loadTowns(season) {
         Object.keys(townStats).forEach((range) => {
           if (range.includes("Range")) {
             var resources = Object.entries(townStats[range].resources).filter(
-              ([, value]) => value > 0
+              ([, value]) => value > 0,
             );
 
             resources = resources.filter(
-              ([key]) => !["fish", "whales"].includes(key)
+              ([key]) => !["fish", "whales"].includes(key),
             );
 
             const fertility = Object.entries(townStats[range].fertility)
               .filter(([key, value]) => value > 0)
               .sort(
                 (a, b) =>
-                  fertilityOrder.indexOf(a[0]) - fertilityOrder.indexOf(b[0])
+                  fertilityOrder.indexOf(a[0]) - fertilityOrder.indexOf(b[0]),
               ); // Sort fertility based on the defined order
 
             // Only show the range title if there's something to display
@@ -284,7 +300,7 @@ async function loadTowns(season) {
               opacity: 1,
             });
             overlaysTransport[`${transport.name} manual`].addLayer(
-              manualMarker
+              manualMarker,
             );
           }
           // Autotrade
@@ -297,7 +313,7 @@ async function loadTowns(season) {
               opacity: 1,
             });
             overlaysTransport[`${transport.name} autotrade`].addLayer(
-              autoMarker
+              autoMarker,
             );
           }
 
@@ -311,7 +327,7 @@ async function loadTowns(season) {
               opacity: 1,
             });
             overlaysTransport[`${transport.name} fishing`].addLayer(
-              fishingMarker
+              fishingMarker,
             );
           }
         });
@@ -444,7 +460,7 @@ async function updateRangeCircles(season) {
             opacity: 1,
           });
           overlaysTransport[`${transport.name} fishing`].addLayer(
-            fishingMarker
+            fishingMarker,
           );
         }
       });
