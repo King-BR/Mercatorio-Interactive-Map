@@ -2,10 +2,10 @@ name: Auto import towns data
 
 on:
   schedule:
-    # Runs every 12 hours at 30 minutes past the hour (00:05, 12:05 UTC)
+    # Runs every 12 hours at 30 minutes past the hour
     - cron: "30 0,12 * * *"
 
-  workflow_dispatch: # This enables manual triggering
+  workflow_dispatch:
 
 jobs:
   api-request:
@@ -20,60 +20,111 @@ jobs:
       - name: Set up repository
         uses: actions/checkout@v3
 
-      - name: Install jq (for JSON processing)
-        run: sudo apt-get install jq
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Read towns.json, send API requests with 0.20s delay, and save results only if all succeed
+      - name: Read towns.json, send API requests, and save results
         run: |
-          # Initialize variables
-          SUCCESS=true
-          echo '[]' > api_responses.json
+          set -e
 
-          # Read the towns.json file and extract town IDs
+          SUCCESS=true
+
+          # Directory for individual API responses
+          mkdir -p api_responses
+
+          # Read town IDs from towns.json
           TOWN_IDS=$(jq -r '.[] | .id' assets/s7/towns.json)
 
-          # Iterate over each town ID and send an API request with a 0.25s delay
+          # Count towns for logging
+          TOTAL_TOWNS=$(echo "$TOWN_IDS" | wc -w)
+          CURRENT_TOWN=0
+
           for town_id in $TOWN_IDS; do
-            # Construct the API endpoint dynamically
+            CURRENT_TOWN=$((CURRENT_TOWN + 1))
+
+            echo "[$CURRENT_TOWN/$TOTAL_TOWNS] Requesting town ID $town_id..."
+
             endpoint="https://play.mercatorio.io/api/towns/${town_id}"
 
-            # Send the API request and capture the response status
-            response=$(curl -s -w "%{http_code}" -o response_body.txt -X GET "$endpoint" -H "X-Merc-User: $MERC_USER" -H "Authorization: $AUTH_TOKEN")
+            # Save response directly to a file.
+            # This avoids putting potentially large JSON data
+            # into a shell command argument.
+            response=$(curl -s \
+              -w "%{http_code}" \
+              -o "api_responses/${town_id}.json" \
+              -X GET \
+              "$endpoint" \
+              -H "X-Merc-User: $MERC_USER" \
+              -H "Authorization: $AUTH_TOKEN")
 
-            # Check if the response was successful (HTTP 200)
+            # Check HTTP status
             if [[ "$response" == "200" ]]; then
-              # If successful, append the response body to the JSON file
-              jq ". += [$(cat response_body.txt)]" api_responses.json > tmp.json && mv tmp.json api_responses.json
               echo "Request for town ID $town_id was successful"
+
+              # Make sure the response is valid JSON
+              if ! jq empty "api_responses/${town_id}.json" 2>/dev/null; then
+                echo "Invalid JSON returned for town ID $town_id"
+                rm -f "api_responses/${town_id}.json"
+                SUCCESS=false
+              fi
             else
-              # If any request fails, log the failure and mark the run as failed
               echo "Request for town ID $town_id failed with status $response"
+
+              # Remove failed response
+              rm -f "api_responses/${town_id}.json"
+
               SUCCESS=false
             fi
 
-            # Wait for 0.20 seconds before the next request
+            # Wait 0.20 seconds before the next request
             sleep 0.20
           done
 
-          # Check if all requests were successful
+          # Only generate the final files if every request succeeded
           if [ "$SUCCESS" = true ]; then
-            # If all requests were successful, move the responses to the final JSON file
-            mv api_responses.json assets/s7/townsData.json
-            jq 'map({id: .id, name: .name, location: .location, landings: .landings})' assets/s7/townsData.json > assets/s7/ferriesData.json
-            echo "All requests were successful. Saved results to assets/s7/townsData.json."
+            echo "All requests were successful."
+            echo "Combining API responses..."
+
+            # Combine all individual JSON objects into one array
+            jq -s '.' api_responses/*.json > assets/s7/townsData.json
+
+            # Generate ferriesData.json from townsData.json
+            jq 'map({
+              id: .id,
+              name: .name,
+              location: .location,
+              landings: .landings
+            })' \
+              assets/s7/townsData.json \
+              > assets/s7/ferriesData.json
+
+            echo "Successfully generated:"
+            echo "  assets/s7/townsData.json"
+            echo "  assets/s7/ferriesData.json"
+
+            # Clean up temporary responses
+            rm -rf api_responses
+
           else
-            # If any requests failed, do not save the results
-            echo "Some requests failed. No changes saved."
-            rm api_responses.json
+            echo "Some requests failed."
+            echo "No changes will be saved."
+
+            # Clean up temporary responses
+            rm -rf api_responses
+
             exit 1
           fi
 
-      - name: Commit and push the JSON file if all requests succeeded
-        if: always() # This runs only if the previous step succeeded
+      - name: Commit and push the JSON files
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
           git add assets/s7/townsData.json
           git add assets/s7/ferriesData.json
-          git commit -m "Updated townsData.json for season 7"
+
+          # Don't fail if there are no changes
+          git diff --cached --quiet || \
+            git commit -m "Updated townsData.json for season 7"
+
           git push
