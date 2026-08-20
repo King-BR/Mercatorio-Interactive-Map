@@ -477,13 +477,14 @@ async function updateRangeCircles(season) {
 // Example function to be called when the button is clicked
 function pinButtonClicked(tmarker) {
   selectedTown.name = tmarker.getTooltip().getContent();
-  selectedTown.id = towns.find((town) => town.name.toLowerCase() === selectedTown.name.toLowerCase()).id;
+  selectedTown.id = towns.find(
+    (town) => town.name.toLowerCase() === selectedTown.name.toLowerCase(),
+  ).id;
   selectedTown.x = tmarker.getLatLng().lng * 4;
   selectedTown.y = tmarker.getLatLng().lat * 4;
   selectedTown.marker = tmarker;
   updateSelectedTownDisplay();
   updateRangeCircles(currentSeason);
-  updatePathlines(currentSeason);
 }
 
 // Function to update the display of the selected town
@@ -504,7 +505,6 @@ function clearSelectedTown() {
   selectedTown = {};
   updateSelectedTownDisplay(); // Clear the selected town display
   updateRangeCircles(currentSeason); // Update the range circles
-  updatePathlines(currentSeason); // Update the path lines
 }
 
 // Add event listener to the clear selection button
