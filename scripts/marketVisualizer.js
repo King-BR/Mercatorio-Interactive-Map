@@ -100,7 +100,7 @@ document
 function createMarketVisualizer(item) {
   if (!marketData) return;
   let priceOrder = document.getElementById("marketPriceSelect").value;
-  const towns = marketData.map((town) => {
+  const townsMarket = marketData.map((town) => {
     let mdata = {
       price: 0,
       volume: 0,
@@ -150,16 +150,16 @@ function createMarketVisualizer(item) {
     return mdata;
   });
 
-  var filteredTowns = towns.filter(
+  var filteredTowns = townsMarket.filter(
     (town) => town != undefined && town.price != undefined && town.price != 0,
   );
-  var prices = towns
+  var prices = townsMarket
     .filter(
       (town) => town != undefined && town.price != undefined && town.price != 0,
     )
     .map((town) => town.price);
-  var volumes = towns.map((town) => town.volume);
-  var altVolumes = towns.map((town) => town.altVolume);
+  var volumes = townsMarket.map((town) => town.volume);
+  var altVolumes = townsMarket.map((town) => town.altVolume);
 
   const pricesFinal = processPrices(prices).map((p) =>
     parseFloat(p.toFixed(3)),
@@ -187,7 +187,10 @@ function createMarketVisualizer(item) {
       // Parse color to rgb
       color = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
 
-      let townData = getTownByName(town.name);
+      let townData = towns.find(
+        (t) =>
+          t.name.toLowerCase() === town.name.replace("_", " ").toLowerCase(),
+      );
 
       if (!townData) return;
 

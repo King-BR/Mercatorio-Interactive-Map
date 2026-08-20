@@ -28,6 +28,9 @@ async function loadHeatmap(type, season = "s7") {
         );
         if (players.length > max) max = players.length;
         let town = towns.find((t) => t.id == townID);
+
+        if (!town) continue; // Skip if town is not found
+        
         heatData.push([
           mapHeight - town.location.y / 4,
           town.location.x / 4,
