@@ -3,6 +3,7 @@
  */
 var paths = [];
 var pathLines = [];
+var ferryLines = [];
 var transports = [];
 var selectedTransports = [];
 var selectedTownPathfinding = null;
@@ -283,15 +284,62 @@ async function updatePathlines(season) {
   );
 
   townPaths.forEach((pathData) => {
-    const line = L.polyline(
-      pathData.path.map((point) => [mapHeight - point[1] / 4, point[0] / 4]),
-      {
-        color: pathData.color,
-        weight: pathData.bigPath ? 8 : pathData.autoTradeRoute ? 2 : 6,
-      },
-    );
+    if (pathData.totalMoneyCost != null && pathData.totalMoneyCost > 0) {
+      const ferrySections = [];
+      const normalSections = [];
+      var normalSectionIndex = 0;
 
-    pathLines.push(line);
+      pathData.path.forEach((point, index) => {
+        if (point[2] && point[2] === "ferry") {
+          ferrySections.push([pathData.path[index - 1], point]);
+          normalSectionIndex++;
+        } else {
+          if (!normalSections[normalSectionIndex]) {
+            normalSections[normalSectionIndex] = [];
+            if (pathData.path[index - 1])
+              normalSections[normalSectionIndex].push(pathData.path[index - 1]);
+          }
+
+          normalSections[normalSectionIndex].push(point);
+        }
+      });
+
+      if (normalSections.length > 0) {
+        normalSections.forEach((section) => {
+          const line = L.polyline(
+            section.map((point) => [mapHeight - point[1] / 4, point[0] / 4]),
+            {
+              color: pathData.color,
+              weight: pathData.bigPath ? 8 : pathData.autoTradeRoute ? 2 : 6,
+            },
+          );
+          pathLines.push(line);
+        });
+      }
+
+      if (ferrySections.length > 0) {
+        ferrySections.forEach((section) => {
+          const line = L.polyline(
+            section.map((point) => [mapHeight - point[1] / 4, point[0] / 4]),
+            {
+              color: "#FF00FF", // Magenta for ferry sections
+              weight: 4,
+            },
+          );
+          pathLines.push(line);
+        });
+      }
+    } else {
+      const line = L.polyline(
+        pathData.path.map((point) => [mapHeight - point[1] / 4, point[0] / 4]),
+        {
+          color: pathData.color,
+          weight: pathData.bigPath ? 8 : pathData.autoTradeRoute ? 2 : 6,
+        },
+      );
+
+      pathLines.push(line);
+    }
   });
 
   pathLines.forEach((line) => {
