@@ -314,6 +314,27 @@ function updateDestinationSelectOptions() {
     // Add "All towns" option
     townSelectDest.options.add(new Option("All towns", "all"));
 
+    /**
+     * @type {Array<{id:string,name:string,location:{x:number,y:number}}>}
+     */
+    var tmpTowns = towns;
+
+    // sort by distance from selected origin town, closest first
+    const originTown = towns.find((t) => t.id === selectedOrigin);
+    if (originTown) {
+      tmpTowns.sort((a, b) => {
+        const distanceA = Math.sqrt(
+          Math.pow(a.location.x - originTown.location.x, 2) +
+            Math.pow(a.location.y - originTown.location.y, 2),
+        );
+        const distanceB = Math.sqrt(
+          Math.pow(b.location.x - originTown.location.x, 2) +
+            Math.pow(b.location.y - originTown.location.y, 2),
+        );
+        return distanceA - distanceB;
+      });
+    }
+
     // Add options for towns that have paths from the selected origin
     towns.forEach((town) => {
       if (
