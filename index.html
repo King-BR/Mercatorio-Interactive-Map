@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,9 +34,10 @@
           <option value="s2">Season 2</option>
           <option value="s3">Season 3</option>
           <option value="s4">Season 4</option>
-          <option value="s5" >Season 5</option>
+          <option value="s5">Season 5</option>
           <option value="s6">Season 6</option>
           <option value="s7" selected>Season 7</option>
+          <option value="s8" disabled>Season 8</option>
         </select>
       </div>
 
@@ -254,13 +255,29 @@
       <div id="resourceDiv" class="sidebar-item w3-hide"></div>
 
       <button
+        onclick="toggleAccordion('pathfinding')"
+        class="w3-button"
+        id="pathfindingAccordionBtn"
+      >
+        Trade Routes
+        <i id="pathfindingIcon" class="fa fa-chevron-down"></i>
+      </button>
+
+      <div id="pathfindingDiv" class="sidebar-item w3-hide"></div>
+
+      <button
         onclick="toggleAccordion('transport')"
         class="w3-button"
         id="accordionBtn"
       >
-        Transports Ranges <i id="transportIcon" class="fa fa-chevron-down"></i>
+        Legacy Transport Ranges
+        <i id="transportIcon" class="fa fa-chevron-down"></i>
       </button>
+
       <div id="transportDiv" class="sidebar-item w3-hide"></div>
+
+      <br />
+      <br />
 
       <div class="sidebar-item compass"></div>
     </div>
@@ -717,6 +734,7 @@
     <script src="scripts/ui.js"></script>
     <script src="scripts/map.js"></script>
     <script src="scripts/towns.js"></script>
+    <script src="scripts/pathfinding.js"></script>
     <script src="scripts/marketVisualizer.js"></script>
     <script src="scripts/heatmap.js"></script>
     <script src="scripts/plots.js"></script>

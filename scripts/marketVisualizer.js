@@ -20,9 +20,8 @@ async function loadMarketVisualizer(season) {
   items = [];
 
   lastUpdate = formatTime(marketData[0].ts);
-  document.getElementById(
-    "marketLastUpdate"
-  ).innerHTML = `<b>Last Update:</b> ${lastUpdate}`;
+  document.getElementById("marketLastUpdate").innerHTML =
+    `<b>Last Update:</b> ${lastUpdate}`;
 
   // Populate items
   marketData.forEach((town) => {
@@ -73,7 +72,7 @@ document.getElementById("toggleMarket").addEventListener("change", (event) => {
 document
   .getElementById("marketSelect")
   .addEventListener("change", (event) =>
-    createMarketVisualizer(event.target.value)
+    createMarketVisualizer(event.target.value),
   );
 
 // Event listener for market visualizer tooltip toggle
@@ -152,18 +151,18 @@ function createMarketVisualizer(item) {
   });
 
   var filteredTowns = towns.filter(
-    (town) => town != undefined && town.price != undefined && town.price != 0
+    (town) => town != undefined && town.price != undefined && town.price != 0,
   );
   var prices = towns
     .filter(
-      (town) => town != undefined && town.price != undefined && town.price != 0
+      (town) => town != undefined && town.price != undefined && town.price != 0,
     )
     .map((town) => town.price);
   var volumes = towns.map((town) => town.volume);
   var altVolumes = towns.map((town) => town.altVolume);
 
   const pricesFinal = processPrices(prices).map((p) =>
-    parseFloat(p.toFixed(3))
+    parseFloat(p.toFixed(3)),
   );
   const volumesFinal = normalize(volumes);
   const altVolumesFinal = normalize(altVolumes);
@@ -172,7 +171,7 @@ function createMarketVisualizer(item) {
   marketLayer = L.layerGroup();
   marketData.forEach((town, ti) => {
     const i = filteredTowns.findIndex(
-      (t) => t.name === town.name.replace("_", " ")
+      (t) => t.name === town.name.replace("_", " "),
     );
     var color;
     var markerSize = getMarkerSize(volumesFinal, ti) || 3;
@@ -190,6 +189,8 @@ function createMarketVisualizer(item) {
 
       let townData = getTownByName(town.name);
 
+      if (!townData) return;
+
       var altTmp = L.circle(
         [mapHeight - townData.location.y / 4, townData.location.x / 4],
         {
@@ -197,7 +198,7 @@ function createMarketVisualizer(item) {
           color: color,
           fillColor: color,
           fillOpacity: 0.4,
-        }
+        },
       );
 
       var tmp = L.circle(
@@ -207,29 +208,29 @@ function createMarketVisualizer(item) {
           color: color,
           fillColor: color,
           fillOpacity: 1,
-        }
+        },
       ).bindTooltip(
         `Town: ${town.name.replace("_", " ")}<br>Price: ${formatPrice(
-          prices[i]
+          prices[i],
         )}<br>Volume: ${
           priceOrder === "bid"
             ? town.markets[item].bid_volume_10 || 0
             : priceOrder === "ask"
-            ? town.markets[item].ask_volume_10 || 0
-            : town.markets[item].volume
+              ? town.markets[item].ask_volume_10 || 0
+              : town.markets[item].volume
         }`,
         {
           permanent: document.getElementById("toggleMarketTooltip").checked,
-        }
+        },
       ).bindPopup(`
         <b>${town.name.replace("_", " ")}</b><br>
         <b>Open Price:</b> ${formatPrice(town.markets[item].open_price)}<br>
         <b>Last Price:</b> ${formatPrice(town.markets[item].last_price)}<br>
         <b>Average Price:</b> ${formatPrice(
-          town.markets[item].average_price
+          town.markets[item].average_price,
         )}<br>
         <b>Moving Average:</b> ${formatPrice(
-          town.markets[item].moving_average
+          town.markets[item].moving_average,
         )}<br>
         <b>Highest Bid:</b> ${formatPrice(town.markets[item].highest_bid)}<br>
         <b>Lowest Ask:</b> ${formatPrice(town.markets[item].lowest_ask)}<br>

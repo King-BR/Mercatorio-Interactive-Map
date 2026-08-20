@@ -1,7 +1,5 @@
-var towns = [];
 var overlaysTransport = {};
 var selectedTown = {};
-var townsData = null;
 var townsLayer = null;
 var regions = null;
 
@@ -100,11 +98,11 @@ async function loadTowns(season) {
         statsStr += `
         <div style="display: flex; align-items: center;">
           <h3 style="margin: 0;">${townName}</h3>
-          <button id="pinButton" style="background: none; border: none; cursor: pointer; margin-left: 10px;">
+          <button id="pinButton" class="pin-button" style="background: none; border: none; cursor: pointer; margin-left: 10px;">
             <i class="fa fa-thumbtack"></i>
           </button>
           </div>`;
-        statsStr += `<h7>${location} | ${section} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name}` : "Region ID: " + town.region}</h7><br><br>`;
+        statsStr += `<h7>${location} | ${section}</h7><br><h7>Town ID: ${town.id} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name} (${town.region})` : "Region ID: " + town.region}</h7><br><br>`;
 
         if (townData) {
         }
@@ -479,11 +477,13 @@ async function updateRangeCircles(season) {
 // Example function to be called when the button is clicked
 function pinButtonClicked(tmarker) {
   selectedTown.name = tmarker.getTooltip().getContent();
+  selectedTown.id = towns.find((town) => town.name.toLowerCase() === selectedTown.name.toLowerCase()).id;
   selectedTown.x = tmarker.getLatLng().lng * 4;
   selectedTown.y = tmarker.getLatLng().lat * 4;
   selectedTown.marker = tmarker;
   updateSelectedTownDisplay();
   updateRangeCircles(currentSeason);
+  updatePathlines(currentSeason);
 }
 
 // Function to update the display of the selected town
@@ -504,6 +504,7 @@ function clearSelectedTown() {
   selectedTown = {};
   updateSelectedTownDisplay(); // Clear the selected town display
   updateRangeCircles(currentSeason); // Update the range circles
+  updatePathlines(currentSeason); // Update the path lines
 }
 
 // Add event listener to the clear selection button

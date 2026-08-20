@@ -2,6 +2,7 @@
   "transports": [
     {
       "name": "Snekkja",
+      "waterOnly": true,
       "moves": 3000,
       "autotrade": 800,
       "fishRange": 220,
@@ -10,12 +11,14 @@
     },
     {
       "name": "Cog",
+      "waterOnly": true,
       "moves": 4000,
       "autotrade": 1400,
       "cargo": 800
     },
     {
       "name": "Hulk",
+      "waterOnly": true,
       "moves": 5600,
       "autotrade": 2400,
       "cargo": 1400

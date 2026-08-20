@@ -75,16 +75,15 @@ async function initializeMap(season) {
     const section = `${sectionX}:${sectionY}`;
 
     if (x >= 0 && x <= 4096 && y >= 0 && y <= 4096) {
-      document.getElementById(
-        "coordinateDisplay"
-      ).textContent = `Coordinates: X=${Math.round(x)}, Y=${Math.round(
-        y
-      )} | Section: ${section}`;
+      document.getElementById("coordinateDisplay").textContent =
+        `Coordinates: X=${Math.round(x)}, Y=${Math.round(
+          y,
+        )} | Section: ${section}`;
     }
   });
 
   tileLayer.on("tileload", function () {
-    if (grayscale) updateTileGrayscale();
+    updateTileGrayscale();
   });
 }
 

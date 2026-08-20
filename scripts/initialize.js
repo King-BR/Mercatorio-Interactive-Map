@@ -1,11 +1,36 @@
 var currentSeason = "s7";
+var towns = [];
+var townsData = null;
+var debug = false;
 
 async function init(season) {
+  debug =
+    window.location.host.includes("localhost") ||
+    window.location.host.includes("127.0.0.1") ||
+    window.location.search.includes("debug=true");
+
+  if (debug) console.log(`Debug mode is ON.`);
+
+  if (debug) console.log(`Initializing map for season ${season}.`);
   await initializeMap(season);
+
+  if (debug) console.log(`Loading towns for season ${season}.`);
   await loadTowns(season);
+
+  if (debug) console.log(`Loading paths for season ${season}.`);
+  await loadPaths(season);
+
+  if (debug) console.log(`Loading plots for season ${season}.`);
   await loadPlots(season);
+
+  if (debug) console.log(`Loading market visualizer for season ${season}.`);
   await loadMarketVisualizer(season);
+
+  if (debug) console.log(`Loading fertility overlay for season ${season}.`);
   createFertilityOverlay(season);
+
+  if (debug)
+    console.log(`Loading forest overlay checkboxes for season ${season}.`);
   createForestOverlay(season);
 
   document
@@ -21,6 +46,17 @@ async function init(season) {
   if (document.getElementById("toggleFertility").checked) {
     fertilityOverlay.addTo(map);
   }
+
+  document.getElementById("pathfindingAccordionBtn").style.display = [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+  ].includes(season)
+    ? "none"
+    : "block";
 }
 
 // Event listeners for season change
