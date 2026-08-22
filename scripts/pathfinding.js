@@ -9,6 +9,37 @@ var selectedTransports = [];
 var selectedTownPathfinding = null;
 var selectedTownPathfindingDest = null;
 
+var pathTypeFilters = [
+  /*
+  {
+    id: "landPath",
+    label: "Land Path",
+    filter: (path) => path.isWaterPath === undefined || !path.isWaterPath,
+  },
+  {
+    id: "waterPath",
+    label: "Water Path",
+    filter: (path) => path.isWaterPath !== undefined && path.isWaterPath,
+  },
+  */
+  {
+    id: "bigPath",
+    label: "Big Manual Path",
+    filter: (path) => path.bigPath,
+  },
+  {
+    id: "smallPath",
+    label: "Small Manual Path",
+    filter: (path) => !path.bigPath && !path.autoTradeRoute,
+  },
+  {
+    id: "autoTradeRoute",
+    label: "Auto Trade Route",
+    filter: (path) => path.autoTradeRoute,
+  },
+  { id: "useFerry", label: "Use Ferry", filter: (path) => path.useFerry },
+];
+
 async function createPathfindingCheckboxes(season) {
   // create checkboxes for each transport type, being possible to select multiple transports at once
   var pathfindingCheckboxes = document.getElementById("pathfindingDiv");
@@ -84,6 +115,9 @@ async function createPathfindingCheckboxes(season) {
   pathfindingCheckboxes.appendChild(townSelectDestLabel);
   pathfindingCheckboxes.appendChild(townSelectDest);
   pathfindingCheckboxes.appendChild(document.createElement("br"));
+  pathfindingCheckboxes.appendChild(document.createElement("br"));
+
+  // Add transport type checkboxes
   pathfindingCheckboxes.appendChild(
     document.createTextNode("Select transport types:"),
   );
@@ -111,6 +145,30 @@ async function createPathfindingCheckboxes(season) {
     label.appendChild(checkbox);
     label.htmlFor = `pathfindingCheckbox_${transport.type}`;
     label.appendChild(document.createTextNode(transport.name));
+    pathfindingCheckboxes.appendChild(label);
+  });
+
+  pathfindingCheckboxes.appendChild(document.createElement("br"));
+
+  // Add path type checkboxes (manual path, auto trade route, useFerry)
+  pathfindingCheckboxes.appendChild(
+    document.createTextNode("Path type filters:"),
+  );
+
+  pathTypeFilters.forEach((filter) => {
+    var checkbox = document.createElement("input");
+    var label = document.createElement("label");
+
+    checkbox.type = "checkbox";
+    checkbox.id = `pathfindingCheckbox_PathType_${filter.id}`;
+    checkbox.checked = true; // default to checked
+    checkbox.addEventListener("change", () => {
+      updatePathlines(season);
+    });
+
+    label.appendChild(checkbox);
+    label.htmlFor = `pathfindingCheckbox_PathType_${filter.id}`;
+    label.appendChild(document.createTextNode(filter.label));
     pathfindingCheckboxes.appendChild(label);
   });
 }
@@ -222,6 +280,7 @@ async function updatePathlines(season) {
       `Filtered down to ${townPaths.length} paths after transport filtering.`,
     );
 
+  // Categorize paths as bigPath or autoTradeRoute based on the selected transports and their movement costs
   townPaths = townPaths.map((pathData) => {
     pathData.bigPath = false;
     pathData.autoTradeRoute = false;
@@ -277,6 +336,24 @@ async function updatePathlines(season) {
 
     return pathData;
   });
+
+  // Filter paths based on the path type checkboxes
+  townPaths = townPaths.filter((pathData) => {
+    return pathTypeFilters.every((filter) => {
+      const checkbox = document.getElementById(
+        `pathfindingCheckbox_PathType_${filter.id}`,
+      );
+      if (checkbox && !checkbox.checked) {
+        return filter.filter(pathData) === false;
+      }
+      return true;
+    });
+  });
+
+  if (debug)
+    console.log(
+      `Filtered down to ${townPaths.length} paths after path type filtering.`,
+    );
 
   // sort paths by totalMovementCost, with null values at the end, decreasing order (highest cost first)
   townPaths = townPaths.sort(
