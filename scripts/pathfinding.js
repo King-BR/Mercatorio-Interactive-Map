@@ -109,7 +109,8 @@ async function createPathfindingCheckboxes(season) {
   townSelect.options.add(new Option("All towns", "all"));
 
   towns.forEach((town) => {
-    townSelect.options.add(new Option(town.name, town.id));
+    if (paths.some((path) => path.from === town.id))
+      townSelect.options.add(new Option(town.name, town.id));
   });
 
   townSelect.addEventListener("change", () => {
@@ -236,7 +237,7 @@ async function loadPaths(season) {
 
   if (season === "s8")
     alert(
-      "Trade routes for season 8 are still being generated and are not yet available. Please check back later.",
+      `Trade routes for season 8 are still being generated and are incomplete. Please check back later for the full pathfinding data.`,
     );
 
   paths = [];
