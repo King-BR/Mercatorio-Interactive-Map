@@ -26,6 +26,10 @@ function createFertilityOverlay(season) {
       fertilityPath = "./assets/fertility/v3/{z}/{x}/{y}.png";
       break;
     }
+    case "s8": {
+      fertilityPath = "./assets/fertility/v4/{z}/{x}/{y}.png";
+      break;
+    }
     default: {
       fertilityPath = null;
       return;
@@ -56,10 +60,10 @@ document
   .getElementById("toggleFertility")
   .addEventListener("change", (event) => {
     let fertilityOpacityLabel = document.getElementById(
-      "fertilityOpacityLabel"
+      "fertilityOpacityLabel",
     );
     let fertilityOpacitySlider = document.getElementById(
-      "fertilityOpacitySlider"
+      "fertilityOpacitySlider",
     );
     if (event.target.checked) {
       if (!fertilityOverlay) createFertilityOverlay();

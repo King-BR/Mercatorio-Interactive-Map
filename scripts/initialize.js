@@ -1,4 +1,4 @@
-var currentSeason = "s7";
+var currentSeason = "s8";
 var towns = [];
 var townsData = null;
 var debug = false;

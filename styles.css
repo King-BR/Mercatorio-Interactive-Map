@@ -6,6 +6,18 @@ body {
   font-family: Arial, sans-serif;
 }
 
+a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: red;
+  text-decoration: none;
+}
+
 .w3-sidebar {
   z-index: 1500;
   height: 100vh;
@@ -45,7 +57,7 @@ body {
   left: 10px;
   width: 100px;
   height: 100px;
-  background: url('assets/compass_rose.png') no-repeat center;
+  background: url("assets/compass_rose.png") no-repeat center;
   background-size: contain;
   pointer-events: none;
 }
@@ -103,7 +115,8 @@ body {
   align-items: center; /* Vertically center */
 }
 
-#showAdvancedFilterButton {
+#showAdvancedFilterButton,
+#pathfindingPopupButton {
   background-color: #e3e3e3;
   color: black;
   padding: 5px 30px;
@@ -113,7 +126,8 @@ body {
 }
 
 /* Hover effect */
-#showAdvancedFilterButton:hover {
+#showAdvancedFilterButton:hover,
+#pathfindingPopupButton:hover {
   background-color: #323232;
   color: white;
   border-color: #000000;
@@ -186,12 +200,16 @@ body {
   margin-bottom: 10px;
 }
 
+.popup-section {
+  border-left: 1px solid #6f6f6f;
+  padding-left: 20px;
+}
+
 /* Town list container with scrollable feature */
 #townsListContainer {
   flex: 1;
   max-height: 500px; /* Set max height for scrolling */
   overflow-y: auto; /* Scrollable */
-  border-left: 1px solid #ccc;
   padding-left: 20px;
 }
 

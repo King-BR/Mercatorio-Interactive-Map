@@ -1,13 +1,52 @@
-/*
- * @type {Array<{totalMovementCost:number|null,totalMoneyCost:number|null,path:Array<{type:"water"|"land"|"ferry",x:number,y:number}>,from:string,to:string}>}
- */
 var paths = [];
+var townPaths = [];
 var pathLines = [];
 var ferryLines = [];
 var transports = [];
 var selectedTransports = [];
 var selectedTownPathfinding = null;
 var selectedTownPathfindingDest = null;
+
+/*
+ * Deploy transport POST "base_transport_url"
+ * payload:
+ * {
+ *  autoset_inventory: true,
+ *  location: { x: 0, y: 0 },
+ *  name: "string",
+ *  operation_target: "0",
+ *  owner_id: "string",
+ *  type: "string"
+ * }
+ *
+ * Travel with transport POST "travel_url"
+ * payload:
+ * {
+ *  end_town_id: ${townID}, // only included if there is a town on the destination tile
+ *  location: { x: 2466, y: 878 }, // destination tile, limit around 130-140 steps, needs more testing/confirmation
+ *  use_ferry: true, // only included if path used ferry, when used it needs to be a separate request with only the ferry tiles and no movement cost, path is [ferry boarding tile, ...ferry path, ferry unboarding tile]
+ *  path: [
+ *    { // starting tile
+ *      x: 2467,
+ *      y: 879
+ *    },
+ *    { // each step needs movement cost included (c), except the starting tile
+ *      x: 2466,
+ *      y: 878,
+ *      c: 1.41421
+ *    }
+ *    // etc...
+ *  ]
+ * }
+ */
+var base_url = "https://play.mercatorio.io/api";
+var base_transport_url = `${base_url}/transports`;
+var travel_url = `${base_transport_url}/{transportID}/travel`;
+var player_url = `${base_url}/player`;
+
+var playerData = null;
+var selectedTransportID = null;
+var selectedTransportType = null;
 
 var pathTypeFilters = [
   /*
@@ -171,12 +210,34 @@ async function createPathfindingCheckboxes(season) {
     label.appendChild(document.createTextNode(filter.label));
     pathfindingCheckboxes.appendChild(label);
   });
+
+  // Add button to open popup for pathfinding use in-game
+  var pathfindingPopupButton = document.createElement("button");
+  var pathfindingPopupButtonDiv = document.createElement("div");
+  pathfindingPopupButton.textContent = "Use Pathfinding In-Game";
+  pathfindingPopupButton.id = "pathfindingPopupButton";
+  pathfindingPopupButton.addEventListener("click", () => {
+    pathfindingPopup.style.display = "flex";
+  });
+
+  pathfindingPopupButtonDiv.classList.add("sidebar-item", "button-container");
+
+  pathfindingPopupButtonDiv.appendChild(pathfindingPopupButton);
+  pathfindingCheckboxes.appendChild(pathfindingPopupButtonDiv);
+
+  // populate pathfinding popup
+  populatePathfindingPopup(season);
 }
 
 async function loadPaths(season) {
   if (["s1", "s2", "s3", "s4", "s5", "s6"].includes(season)) {
     return alert(`Trade Routes is only available for seasons 7 and later.`);
   }
+
+  if (season === "s8")
+    alert(
+      "Trade routes for season 8 are still being generated and are not yet available. Please check back later.",
+    );
 
   paths = [];
   transports = [];
@@ -213,15 +274,13 @@ async function updatePathlines(season) {
   });
 
   pathLines = []; // Clear the pathLines array
-  var townPaths = [];
+  townPaths = [];
 
   if (debug)
     console.log(
       `Updating pathlines for season ${season} with selected transports:`,
       selectedTransports,
     );
-
-  if (!document.getElementById("pathfindingCheckbox_master")?.checked) return;
 
   if (selectedTownPathfinding && selectedTownPathfindingDest) {
     townPaths = paths.filter((path) => {
@@ -360,6 +419,9 @@ async function updatePathlines(season) {
     (a, b) => b.totalMovementCost - a.totalMovementCost,
   );
 
+  if (!document.getElementById("pathfindingCheckbox_master")?.checked) return;
+
+  // Create polylines for each path and add them to the map
   townPaths.forEach((pathData) => {
     if (pathData.totalMoneyCost != null && pathData.totalMoneyCost > 0) {
       const ferrySections = [];
@@ -509,4 +571,78 @@ function clearPathfindingSelect(type) {
   }
 
   updatePathlines(currentSeason);
+}
+
+function populatePathfindingPopup(season) {
+  playerData = null;
+  selectedTransportID = null;
+  selectedTransportType = null;
+
+  const pathfindingPopupForm = document.getElementById("pathfindingPopupForm");
+  pathfindingPopupForm.innerHTML = "";
+
+  const pathfindingPopupPaths = document.getElementById(
+    "pathfindingPopupPaths",
+  );
+  pathfindingPopupPaths.innerHTML = "";
+
+  const keyLabel = document.createElement("label");
+  keyLabel.htmlFor = "pathfindingPopupKeyInput";
+  keyLabel.appendChild(document.createTextNode("API Key:"));
+
+  const keyInput = document.createElement("input");
+  keyInput.type = "text";
+  keyInput.id = "pathfindingPopupKeyInput";
+  keyInput.placeholder = "Enter your API key here";
+
+  keyLabel.appendChild(keyInput);
+  pathfindingPopupForm.appendChild(keyLabel);
+
+  const mercUserLabel = document.createElement("label");
+  mercUserLabel.htmlFor = "pathfindingPopupMercUserInput";
+  mercUserLabel.appendChild(document.createTextNode("X-Merc-User:"));
+
+  const mercUserInput = document.createElement("input");
+  mercUserInput.type = "text";
+  mercUserInput.id = "pathfindingPopupMercUserInput";
+  mercUserInput.placeholder = "Enter your X-Merc-User here";
+
+  mercUserLabel.appendChild(mercUserInput);
+  pathfindingPopupForm.appendChild(mercUserLabel);
+
+  pathfindingPopupForm.appendChild(document.createElement("br"));
+  pathfindingPopupForm.appendChild(document.createElement("br"));
+
+  const connectButton = document.createElement("button");
+  connectButton.textContent = "Connect";
+  connectButton.classList.add("w3-button", "w3-green", "w3-round");
+  connectButton.addEventListener("click", async () => {
+    var apiKey =
+      keyInput.value
+        .trim()
+        .replace(/Bearer\s+/i, "")
+        .replace(/Authorization:\s+/i, "") || null;
+    var mercUser =
+      mercUserInput.value.trim().replace(/X-Merc-User:\s+/i, "") || null;
+
+    if (!apiKey || !mercUser) {
+      alert("Please enter both API key and MercUser.");
+      return;
+    }
+
+    try {
+      playerData = await RESTRequest(player_url, {
+        method: "GET",
+        apiKey: apiKey,
+        mercUser: mercUser,
+      });
+    } catch (error) {
+      console.error("Error connecting:", error);
+      alert(
+        `Failed to connect. Please check your API key and X-Merc-User.\n\nMessage: ${error.message}\nError: ${JSON.stringify(error, null, 2)}`,
+      );
+      return;
+    }
+  });
+  pathfindingPopupForm.appendChild(connectButton);
 }

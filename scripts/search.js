@@ -7,9 +7,8 @@ document.getElementById("searchBar").addEventListener("input", (event) => {
   if (query) {
     const filteredTowns = towns.filter(
       (town) =>
-        (town.name.replace("_", " ") || town.altname) &&
-        (town.name.replace("_", " ").toLowerCase().includes(query) ||
-          town.altname.toLowerCase().includes(query))
+        town.name?.replace("_", " ").toLowerCase().includes(query) ||
+        town.altname?.toLowerCase().includes(query),
     );
 
     filteredTowns.forEach((town) => {
@@ -18,7 +17,10 @@ document.getElementById("searchBar").addEventListener("input", (event) => {
       suggestionItem.className = "w3-bar-item w3-button";
       suggestionItem.textContent = town.name.replace("_", " ");
       suggestionItem.addEventListener("click", () => {
-        document.getElementById("searchBar").value = town.name.replace("_", " ");
+        document.getElementById("searchBar").value = town.name.replace(
+          "_",
+          " ",
+        );
 
         // Open the town marker tooltip if it exists
         map.eachLayer((layer) => {

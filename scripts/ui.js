@@ -41,6 +41,11 @@ const showPopupButton = document.getElementById("showAdvancedFilterButton");
 const closePopupButton = document.getElementById("closeAdvancedFilterButton");
 const applyFilterButton = document.getElementById("applyFilterButton");
 
+const pathfindingPopup = document.getElementById("pathfindingPopup");
+const closePathfindingPopupButton = document.getElementById(
+  "closePathfindingPopupButton",
+);
+
 // Show the popup when the button is clicked
 showPopupButton.addEventListener("click", function () {
   popup.style.display = "flex";
@@ -55,5 +60,20 @@ closePopupButton.addEventListener("click", function () {
 window.addEventListener("click", function (event) {
   if (event.target.matches("#map") && popup.style.display == "flex") {
     popup.style.display = "none";
+  }
+});
+
+// Hide the popup when the close button is clicked
+closePathfindingPopupButton.addEventListener("click", function () {
+  pathfindingPopup.style.display = "none";
+});
+
+// Optionally close the popup when clicking outside of the content
+window.addEventListener("click", function (event) {
+  if (
+    event.target.matches("#map") &&
+    pathfindingPopup.style.display == "flex"
+  ) {
+    pathfindingPopup.style.display = "none";
   }
 });

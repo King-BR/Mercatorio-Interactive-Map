@@ -15,6 +15,20 @@ async function fetchFromLocal(path) {
   });
 }
 
+async function getPathData(season, pathID) {
+  return (
+    await fetch(`https://api.mercatorio-tools.tech/${season}/paths/${pathID}`)
+  ).json();
+}
+
+async function getFerryData(season, ferryID) {
+  return (
+    await fetch(
+      `https://api.mercatorio-tools.tech/${season}/ferries/${ferryID}`,
+    )
+  ).json();
+}
+
 async function getMarketData() {
   return (
     await fetch("https://api.mercatorio-tools.tech/tmp/marketdata")
@@ -31,4 +45,31 @@ async function getHouseholdData() {
 function formatTime(milliseconds) {
   const date = new Date(milliseconds);
   return date.toUTCString();
+}
+
+async function RESTRequest(
+  url,
+  { method = "GET", body = null, apiKey = null, mercUser = null },
+) {
+  const options = {
+    method: method,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "X-Merc-User": mercUser,
+    },
+  };
+
+  if (body) options.body = JSON.stringify(body);
+
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to ${method} ${url}: ${response.status} ${response.statusText}`,
+    );
+  }
+  return response.json().catch((error) => {
+    console.error(`Error parsing JSON from ${url}:`, error);
+    throw error;
+  });
 }

@@ -1,0 +1,272 @@
+[
+  {
+    "id": 2171,
+    "name": "Champagne",
+    "center": {
+      "x": 1995,
+      "y": 2975
+    },
+    "size": 641092
+  },
+  {
+    "id": 2173,
+    "name": "Flevoouse",
+    "center": {
+      "x": 3591,
+      "y": 2533
+    },
+    "size": 685807
+  },
+  {
+    "id": 2175,
+    "name": "Oresund",
+    "center": {
+      "x": 2751,
+      "y": 259
+    },
+    "size": 208099
+  },
+  {
+    "id": 2177,
+    "name": "Schlesgen",
+    "center": {
+      "x": 2407,
+      "y": 1277
+    },
+    "size": 566632
+  },
+  {
+    "id": 2179,
+    "name": "Badenburg",
+    "center": {
+      "x": 1798,
+      "y": 1249
+    },
+    "size": 761586
+  },
+  {
+    "id": 2181,
+    "name": "Jüschau",
+    "center": {
+      "x": 1980,
+      "y": 1625
+    },
+    "size": 860686
+  },
+  {
+    "id": 2183,
+    "name": "Alpaine",
+    "center": {
+      "x": 1982,
+      "y": 3439
+    },
+    "size": 550256
+  },
+  {
+    "id": 2185,
+    "name": "Järvasze",
+    "center": {
+      "x": 2815,
+      "y": 3371
+    },
+    "size": 569079
+  },
+  {
+    "id": 2187,
+    "name": "Picarsel",
+    "center": {
+      "x": 737,
+      "y": 2597
+    },
+    "size": 541451
+  },
+  {
+    "id": 2189,
+    "name": "Hainmois",
+    "center": {
+      "x": 2116,
+      "y": 4011
+    },
+    "size": 215139
+  },
+  {
+    "id": 2191,
+    "name": "Gallowys",
+    "center": {
+      "x": 266,
+      "y": 1201
+    },
+    "size": 1291885
+  },
+  {
+    "id": 2193,
+    "name": "Läänežys",
+    "center": {
+      "x": 2853,
+      "y": 3919
+    },
+    "size": 483453
+  },
+  {
+    "id": 2195,
+    "name": "Malopois",
+    "center": {
+      "x": 4077,
+      "y": 2555
+    },
+    "size": 143801
+  },
+  {
+    "id": 2197,
+    "name": "Papenschweig",
+    "center": {
+      "x": 2862,
+      "y": 1327
+    },
+    "size": 458668
+  },
+  {
+    "id": 2199,
+    "name": "Ostbjerg",
+    "center": {
+      "x": 3801,
+      "y": 1745
+    },
+    "size": 605678
+  },
+  {
+    "id": 2201,
+    "name": "Kurliai",
+    "center": {
+      "x": 3655,
+      "y": 3061
+    },
+    "size": 551294
+  },
+  {
+    "id": 2203,
+    "name": "Picarany",
+    "center": {
+      "x": 980,
+      "y": 2137
+    },
+    "size": 508247
+  },
+  {
+    "id": 2205,
+    "name": "Gotstrup",
+    "center": {
+      "x": 3420,
+      "y": 299
+    },
+    "size": 220033
+  },
+  {
+    "id": 2207,
+    "name": "Nordbro",
+    "center": {
+      "x": 3059,
+      "y": 141
+    },
+    "size": 108731
+  },
+  {
+    "id": 2209,
+    "name": "Roussois",
+    "center": {
+      "x": 89,
+      "y": 3003
+    },
+    "size": 563544
+  },
+  {
+    "id": 2211,
+    "name": "Hallsjö",
+    "center": {
+      "x": 3456,
+      "y": 1327
+    },
+    "size": 617017
+  },
+  {
+    "id": 2213,
+    "name": "Läänepois",
+    "center": {
+      "x": 3667,
+      "y": 3859
+    },
+    "size": 342523
+  },
+  {
+    "id": 2215,
+    "name": "Luxemnye",
+    "center": {
+      "x": 1367,
+      "y": 3163
+    },
+    "size": 629114
+  },
+  {
+    "id": 2217,
+    "name": "Kronosjö",
+    "center": {
+      "x": 3665,
+      "y": 121
+    },
+    "size": 190665
+  },
+  {
+    "id": 2219,
+    "name": "Jönborg",
+    "center": {
+      "x": 3731,
+      "y": 479
+    },
+    "size": 303698
+  },
+  {
+    "id": 2221,
+    "name": "Dauphouse",
+    "center": {
+      "x": 1077,
+      "y": 2533
+    },
+    "size": 378885
+  },
+  {
+    "id": 2223,
+    "name": "Bourbonmois",
+    "center": {
+      "x": 794,
+      "y": 3797
+    },
+    "size": 774293
+  },
+  {
+    "id": 2225,
+    "name": "Bayeort",
+    "center": {
+      "x": 1200,
+      "y": 1493
+    },
+    "size": 648961
+  },
+  {
+    "id": 2227,
+    "name": "Gripswig",
+    "center": {
+      "x": 2663,
+      "y": 821
+    },
+    "size": 585997
+  },
+  {
+    "id": 2229,
+    "name": "Nybjerg",
+    "center": {
+      "x": 2395,
+      "y": 515
+    },
+    "size": 927383
+  }
+]

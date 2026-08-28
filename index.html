@@ -36,8 +36,8 @@
           <option value="s4">Season 4</option>
           <option value="s5">Season 5</option>
           <option value="s6">Season 6</option>
-          <option value="s7" selected>Season 7</option>
-          <option value="s8" disabled>Season 8</option>
+          <option value="s7">Season 7</option>
+          <option value="s8" selected>Season 8</option>
         </select>
       </div>
 
@@ -389,6 +389,16 @@
               />
               Silver
             </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterNormalResourceInput"
+                data-resource="waterpower"
+                value="0"
+                min="0"
+              />
+              Waterpower
+            </label>
           </div>
 
           <div class="checkbox-row">
@@ -523,6 +533,16 @@
                 min="0"
               />
               Silver
+            </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost1ResourceInput"
+                data-resource="waterpower"
+                value="0"
+                min="0"
+              />
+              Waterpower
             </label>
           </div>
 
@@ -659,6 +679,16 @@
               />
               Silver
             </label>
+            <label>
+              <input
+                type="number"
+                class="filter-input-small filterOutpost2ResourceInput"
+                data-resource="waterpower"
+                value="0"
+                min="0"
+              />
+              Waterpower
+            </label>
           </div>
 
           <div class="checkbox-row">
@@ -714,7 +744,7 @@
         </div>
 
         <!-- Scrollable towns list section -->
-        <div>
+        <div class="popup-section">
           <h3>Filtered Towns</h3>
           <div id="townsListContainer">
             <ul id="townsList">
@@ -722,6 +752,63 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="pathfindingPopup" class="popup-container" style="display: none">
+      <span id="closePathfindingPopupButton" class="popup-close">&times;</span>
+      <div id="pathfindingPopupContent" class="popup-content">
+        <div id="pathfindingPopupInstructions">
+          <h3>Pathfinding In-Game</h3>
+          <p>
+            To use the auto pathfinding feature in-game, please follow the steps
+            below, but first be warned that this feature is still experimental
+            and will also mark your game account as being computer assisted
+            in-game,
+            <strong
+              >currently there is no downside/penalty/limitation for
+              this</strong
+            >
+            but Rune (the game developer) has stated that this may change in the
+            future if third party tools become more widely used, so use this
+            feature at your own risk. If you are not comfortable with this,
+            please do not use this feature.
+          </p>
+          <ol>
+            <li>
+              Open the
+              <a href="https://play.mercatorio.io/settings/api" target="_blank"
+                >API access page</a
+              >
+            </li>
+            <li>
+              Generate a new
+              <strong>write access API key</strong> or use an existing one with
+              write access.
+            </li>
+            <li>
+              Copy the <strong>API key</strong> and
+              <strong>X-Merc-User</strong> and paste them into the respective
+              fields below.
+            </li>
+            <li>
+              Click the "Connect to Game" button to establish a connection and
+              retrieve necessary data. (NOTHING WILL BE SAVED SERVER SIDE,
+              EVERYTHING REMAINS LOCAL)
+            </li>
+            <li>
+              Choose whether you want to deploy a new convoy/transport or use an
+              existing one. (IF USING AN EXISTING ONE, IT NEEDS TO BE IN YOUR
+              STARTING TOWN)
+            </li>
+            <li>Choose your desired path.</li>
+            <li>
+              Click the "Send Path to Game" button to send the path to the game.
+            </li>
+          </ol>
+        </div>
+        <div id="pathfindingPopupForm" class="popup-section"></div>
+        <div id="pathfindingPopupPaths" class="popup-section"></div>
       </div>
     </div>
 
