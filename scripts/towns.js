@@ -81,9 +81,6 @@ async function loadTowns(season) {
             ? tooltipText.replace(" ", "_")
             : tooltipText
         ] || null;
-      var townData = null;
-
-      if (townsData) townData = townsData.find((t) => t.id === town.id);
 
       let statsStr = "";
 
@@ -102,10 +99,7 @@ async function loadTowns(season) {
             <i class="fa fa-thumbtack"></i>
           </button>
           </div>`;
-        statsStr += `<h7>${location} | ${section}</h7><br><h7>Town ID: ${town.id} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name} (${town.region})` : "Region ID: " + town.region}</h7><br><br>`;
-
-        if (townData) {
-        }
+        statsStr += `<h7>${location} | ${section}</h7><br><h7>Town ID: ${town.id} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name} (${town.region})` : "Region ID: " + town.region}</h7><br><h7>Climate: ${townStats.climate || "unknown"}</h7><br><br>`;
 
         // Fish/Whales resourcePlots at 220 or less of distance
         const fishPlots = resourcePlots.filter(

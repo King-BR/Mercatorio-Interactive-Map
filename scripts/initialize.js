@@ -1,6 +1,5 @@
 var currentSeason = "s8";
 var towns = [];
-var townsData = null;
 var debug = false;
 
 async function init(season) {
