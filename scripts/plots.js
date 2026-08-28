@@ -75,7 +75,7 @@ async function loadPlots(season) {
       label.style.padding = "5px";
       label.style.borderRadius = "5px";
       label.style.border = "1px solid black";
-      label.style.color = ["gold", "salt", "stone"].includes(resource)
+      label.style.color = ["gold", "salt", "stone", "waterpower"].includes(resource)
         ? "black"
         : "white";
 
