@@ -77,20 +77,34 @@ async function initializeMap(season) {
     zoom: 0,
   }).addTo(map);
 
-  map.on("mousemove", (event) => {
-    const latLng = event.latlng;
-    const x = latLng.lng * 4;
-    const y = (mapHeight - latLng.lat) * 4;
-    const sectionX = Math.floor(x / 32) * 32;
-    const sectionY = Math.floor(y / 32) * 32;
-    const section = `${sectionX}:${sectionY}`;
+  const coordinateDisplay = document.getElementById("coordinateDisplay");
+  let mouseMovePending = false;
+  let lastMouseEvent = null;
 
-    if (x >= 0 && x <= 4096 && y >= 0 && y <= 4096) {
-      document.getElementById("coordinateDisplay").textContent =
-        `Coordinates: X=${Math.round(x)}, Y=${Math.round(
+  map.on("mousemove", (event) => {
+    lastMouseEvent = event;
+
+    if (mouseMovePending) return;
+
+    mouseMovePending = true;
+
+    requestAnimationFrame(() => {
+      mouseMovePending = false;
+
+      const event = lastMouseEvent;
+      const latLng = event.latlng;
+      const x = latLng.lng * 4;
+      const y = (mapHeight - latLng.lat) * 4;
+      const sectionX = Math.floor(x / 32) * 32;
+      const sectionY = Math.floor(y / 32) * 32;
+      const section = `${sectionX}:${sectionY}`;
+
+      if (x >= 0 && x <= 4096 && y >= 0 && y <= 4096) {
+        coordinateDisplay.textContent = `Coordinates: X=${Math.round(x)}, Y=${Math.round(
           y,
         )} | Section: ${section}`;
-    }
+      }
+    });
   });
 
   tileLayer.on("tileload", function (event) {
