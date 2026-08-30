@@ -2,12 +2,42 @@ var overlaysTransport = {};
 var selectedTown = {};
 var townsLayer = null;
 var regions = null;
+var regionsById = new Map();
+
+const townIcons = {
+  capital: L.icon({
+    iconUrl: "assets/capital_marker.png",
+    iconSize: [25, 25],
+    iconAnchor: [12.5, 25],
+    tooltipAnchor: [12.5, -12.5],
+    popupAnchor: [0, -20],
+  }),
+
+  tradepost: L.icon({
+    iconUrl: "assets/tradepost_marker.png",
+    iconSize: [25, 25],
+    iconAnchor: [12.5, 25],
+    tooltipAnchor: [12.5, -12.5],
+    popupAnchor: [0, -20],
+  }),
+
+  town: L.icon({
+    iconUrl: "assets/town_marker.png",
+    iconSize: [25, 25],
+    iconAnchor: [12.5, 25],
+    tooltipAnchor: [12.5, -12.5],
+    popupAnchor: [0, -20],
+  }),
+};
 
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
     towns = [];
     townsLayer = L.layerGroup();
+    regions = null;
+    regionsById.clear();
+
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
     const tradeData = await fetchFromLocal(
       `assets/${season}/trade_ranges.json`,
@@ -20,6 +50,9 @@ async function loadTowns(season) {
 
     try {
       regions = await fetchFromLocal(`assets/${season}/regions.json`);
+      regions.forEach((region) => {
+        regionsById.set(region.id, region);
+      });
     } catch (error) {
       console.warn(
         `Could not load regions data for season ${season} as the file is missing (ignore if trying to load from before season 7):`,
@@ -49,21 +82,14 @@ async function loadTowns(season) {
         overlaysTransport[`${transport.name} fishing`] = L.layerGroup();
     });
 
-    townsJson.forEach((town, index) => {
-      clearTradeCheckboxes(); // Clear existing checkboxes
+    clearTradeCheckboxes(); // Clear existing checkboxes
 
-      const iconUrl = town.capital
-        ? "assets/capital_marker.png"
+    townsJson.forEach((town, index) => {
+      const icon = town.capital
+        ? townIcons.capital
         : town.name.includes("tradepost")
-          ? "assets/tradepost_marker.png"
-          : "assets/town_marker.png";
-      const marker = L.icon({
-        iconUrl: iconUrl,
-        iconSize: [25, 25],
-        iconAnchor: [12.5, 25],
-        tooltipAnchor: [12.5, -12.5],
-        popupAnchor: [0, -20],
-      });
+          ? townIcons.tradepost
+          : townIcons.town;
 
       const markerY = mapHeight - town.location.y / 4;
       const markerX = town.location.x / 4;
@@ -99,7 +125,7 @@ async function loadTowns(season) {
             <i class="fa fa-thumbtack"></i>
           </button>
           </div>`;
-        statsStr += `<h7>${location} | ${section}</h7><br><h7>Town ID: ${town.id} | ${regions && regions.find((r) => r.id === town.region) ? `Region: ${regions.find((r) => r.id === town.region).name} (${town.region})` : "Region ID: " + town.region}</h7><br><h7>Climate: ${townStats.climate || "unknown"}</h7><br><br>`;
+        statsStr += `<h7>${location} | ${section}</h7><br><h7>Town ID: ${town.id} | ${regions && regionsById.has(town.region) ? `Region: ${regionsById.get(town.region).name} (${town.region})` : "Region ID: " + town.region}</h7><br><h7>Climate: ${townStats.climate || "unknown"}</h7><br><br>`;
 
         // Fish/Whales resourcePlots at 220 or less of distance
         const fishPlots = resourcePlots.filter(
@@ -218,7 +244,7 @@ async function loadTowns(season) {
       }
 
       var tmpmarker = L.marker([markerY, markerX], {
-        icon: marker,
+        icon: icon,
       })
         .bindTooltip(tooltipText)
         .bindPopup(statsStr, {
