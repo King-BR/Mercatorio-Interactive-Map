@@ -460,7 +460,7 @@ async function updateRangeCircles(season) {
   });
 }
 
-// Example function to be called when the button is clicked
+// Pin selected town to the sidebar and update the selectedTown object
 function pinButtonClicked(tmarker) {
   selectedTown.name = tmarker.getTooltip().getContent();
   selectedTown.id = towns.find(
