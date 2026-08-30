@@ -40,10 +40,10 @@ function createFertilityOverlay(season) {
   fertilityOverlay = L.tileLayer(fertilityPath, {
     attribution: "Fertility Overlay",
     opacity: 1, // Adjust opacity as needed
-    keepBuffer: isMobile ? 1 : 2, // Adjust buffer based on device type
-    updateWhenIdle: isMobile, // Update tiles only when idle on mobile
-    updateWhenZooming: !isMobile, // Update tiles while zooming on desktop
-    updateInterval: isMobile ? 300 : 100, // Adjust update interval based on device type
+    keepBuffer: deviceInfo.isMobile ? 1 : 2, // Adjust buffer based on device type
+    updateWhenIdle: deviceInfo.isMobile, // Update tiles only when idle on mobile
+    updateWhenZooming: !deviceInfo.isMobile, // Update tiles while zooming on desktop
+    updateInterval: deviceInfo.isMobile ? 300 : 100, // Adjust update interval based on device type
     minZoom: 0,
     maxZoom: maxZoom,
     noWrap: true,
@@ -70,7 +70,7 @@ document
       "fertilityOpacitySlider",
     );
     if (event.target.checked) {
-      if (!fertilityOverlay) createFertilityOverlay();
+      if (!fertilityOverlay) createFertilityOverlay(currentSeason);
       fertilityOverlay.addTo(map);
 
       fertilityOpacityLabel.style.display = "block";

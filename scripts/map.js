@@ -54,10 +54,10 @@ async function initializeMap(season) {
     zoom: 0,
     center: [mapHeight / 2, mapWidth / 2],
     maxBoundsViscosity: 1.0,
-    preferCanvas: isMobile,
-    zoomAnimation: !isMobile,
-    fadeAnimation: !isMobile,
-    markerZoomAnimation: !isMobile,
+    preferCanvas: true,
+    zoomAnimation: !deviceInfo.isMobile,
+    fadeAnimation: !deviceInfo.isMobile,
+    markerZoomAnimation: !deviceInfo.isMobile,
   }).fitBounds(hardBounds);
 
   map.setMaxBounds(elasticBounds);
@@ -66,10 +66,10 @@ async function initializeMap(season) {
     tileSize: 256,
     noWrap: true,
     continuousWorld: false,
-    keepBuffer: isMobile ? 1 : 2, // Adjust buffer based on device type
-    updateWhenIdle: isMobile, // Update tiles only when idle on mobile
-    updateWhenZooming: !isMobile, // Update tiles while zooming on desktop
-    updateInterval: isMobile ? 300 : 100, // Adjust update interval based on device type
+    keepBuffer: deviceInfo.isMobile ? 1 : 2, // Adjust buffer based on device type
+    updateWhenIdle: deviceInfo.isMobile, // Update tiles only when idle on mobile
+    updateWhenZooming: !deviceInfo.isMobile, // Update tiles while zooming on desktop
+    updateInterval: deviceInfo.isMobile ? 300 : 100, // Adjust update interval based on device type
     errorTileUrl: "assets/error.png",
     bounds: hardBounds,
     minZoom: 0,
@@ -98,7 +98,8 @@ async function initializeMap(season) {
   });
 
   if (debug) {
-    map.on("zoomend", function () {
+    map.on("moveend zoomend", function () {
+      debugDeviceInfo();
       debugLeafletMap(map);
     });
   }

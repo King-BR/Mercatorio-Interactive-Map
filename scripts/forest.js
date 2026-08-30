@@ -11,10 +11,10 @@ function createForestOverlay(season) {
   forestOverlay = L.tileLayer(`assets/${season}/forest_tiles/{z}/{x}/{y}.png`, {
     attribution: "Forest Overlay",
     opacity: 1, // Adjust opacity as needed
-    keepBuffer: isMobile ? 1 : 2, // Adjust buffer based on device type
-    updateWhenIdle: isMobile, // Update tiles only when idle on mobile
-    updateWhenZooming: !isMobile, // Update tiles while zooming on desktop
-    updateInterval: isMobile ? 300 : 100, // Adjust update interval based on device type
+    keepBuffer: deviceInfo.isMobile ? 1 : 2, // Adjust buffer based on device type
+    updateWhenIdle: deviceInfo.isMobile, // Update tiles only when idle on mobile
+    updateWhenZooming: !deviceInfo.isMobile, // Update tiles while zooming on desktop
+    updateInterval: deviceInfo.isMobile ? 300 : 100, // Adjust update interval based on device type
     minZoom: 0,
     maxZoom: maxZoom,
     noWrap: true,
@@ -35,7 +35,7 @@ document.getElementById("toggleForest").addEventListener("change", (event) => {
   let forestOpacityLabel = document.getElementById("forestOpacityLabel");
   let forestOpacitySlider = document.getElementById("forestOpacitySlider");
   if (event.target.checked) {
-    if (!forestOverlay) createForestOverlay();
+    if (!forestOverlay) createForestOverlay(currentSeason);
     forestOverlay.addTo(map);
 
     forestOpacityLabel.style.display = "block";
