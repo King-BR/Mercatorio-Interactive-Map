@@ -7,11 +7,14 @@ const forestBounds = [
 
 // Function to create forest overlay
 function createForestOverlay(season) {
-
   // Initialize the forest overlay layer
   forestOverlay = L.tileLayer(`assets/${season}/forest_tiles/{z}/{x}/{y}.png`, {
     attribution: "Forest Overlay",
     opacity: 1, // Adjust opacity as needed
+    keepBuffer: isMobile ? 1 : 2, // Adjust buffer based on device type
+    updateWhenIdle: isMobile, // Update tiles only when idle on mobile
+    updateWhenZooming: !isMobile, // Update tiles while zooming on desktop
+    updateInterval: isMobile ? 300 : 100, // Adjust update interval based on device type
     minZoom: 0,
     maxZoom: maxZoom,
     noWrap: true,

@@ -422,8 +422,12 @@ async function updatePathlines(season) {
 
   if (!document.getElementById("pathfindingCheckbox_master")?.checked) return;
 
+  if (debug) var pathPointsCount = 0;
+
   // Create polylines for each path and add them to the map
   townPaths.forEach((pathData) => {
+    if (debug) pathPointsCount += pathData.path.length;
+
     if (pathData.totalMoneyCost != null && pathData.totalMoneyCost > 0) {
       const ferrySections = [];
       const normalSections = [];
@@ -481,6 +485,11 @@ async function updatePathlines(season) {
       pathLines.push(line);
     }
   });
+
+  if (debug) {
+    console.log(`Total path points: ${pathPointsCount}`);
+    debugPolylines(pathLines);
+  }
 
   pathLines.forEach((line) => {
     line.addTo(map);
@@ -646,4 +655,26 @@ function populatePathfindingPopup(season) {
     }
   });
   pathfindingPopupForm.appendChild(connectButton);
+}
+
+function debugPolylines(pathLines) {
+  const result = [];
+
+  pathLines.forEach((line) => {
+    const latlngs = line.getLatLngs();
+    const points = latlngs.length;
+    const color = line.options.color;
+    const weight = line.options.weight;
+
+    result.push({ points, color, weight });
+  });
+
+  result.sort((a, b) => b.points - a.points);
+
+  console.table(result);
+
+  console.log(
+    "Total:",
+    result.reduce((sum, p) => sum + p.points, 0),
+  );
 }

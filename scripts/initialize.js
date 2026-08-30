@@ -1,12 +1,27 @@
 var currentSeason = "s8";
+var map = null;
 var towns = [];
 var debug = false;
+var isMobile = false;
 
 async function init(season) {
   debug =
     window.location.host.includes("localhost") ||
     window.location.host.includes("127.0.0.1") ||
     window.location.search.includes("debug=true");
+
+  isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (debug) {
+    console.table({
+      mobile: isMobile,
+      userAgent: navigator.userAgent,
+      deviceMemory: navigator.deviceMemory,
+      cores: navigator.hardwareConcurrency,
+      screen: `${screen.width}x${screen.height}`,
+      pixelRatio: window.devicePixelRatio,
+    });
+  }
 
   if (debug) console.log(`Debug mode is ON.`);
 
@@ -31,6 +46,8 @@ async function init(season) {
   if (debug)
     console.log(`Loading forest overlay checkboxes for season ${season}.`);
   createForestOverlay(season);
+
+  if (debug) debugLeafletMap(map);
 
   document
     .getElementById("toggleRange1")
@@ -68,3 +85,40 @@ document.getElementById("seasonSelect").addEventListener("change", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   init(currentSeason);
 });
+
+// Debugging function to log map layers and their types
+function debugLeafletMap(map) {
+  let layers = 0;
+  let markers = 0;
+  let polylines = 0;
+  let polygons = 0;
+  let circles = 0;
+
+  map.eachLayer((layer) => {
+    layers++;
+
+    if (layer instanceof L.Marker) {
+      markers++;
+    }
+
+    if (layer instanceof L.Polyline) {
+      polylines++;
+    }
+
+    if (layer instanceof L.Polygon) {
+      polygons++;
+    }
+
+    if (layer instanceof L.Circle) {
+      circles++;
+    }
+  });
+
+  console.table({
+    layers,
+    markers,
+    polylines,
+    polygons,
+    circles,
+  });
+}
