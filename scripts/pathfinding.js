@@ -3,6 +3,7 @@ var townPaths = [];
 var pathLines = [];
 var ferryLines = [];
 var transports = [];
+var transportsByName = new Map();
 var selectedTransports = [];
 var selectedTownPathfinding = null;
 var selectedTownPathfindingDest = null;
@@ -242,6 +243,7 @@ async function loadPaths(season) {
 
   paths = [];
   transports = [];
+  transportsByName.clear();
   selectedTransports = [];
 
   paths = await fetchFromLocal(`assets/${season}/paths.json`).catch(
@@ -253,6 +255,13 @@ async function loadPaths(season) {
       console.error,
     )
   )?.transports;
+
+  transports.forEach((transport) => {
+    transportsByName.set(
+      `${transport.name.toLowerCase()}|${transport.waterOnly || false}`,
+      transport,
+    );
+  });
 
   if (!paths || paths.length === 0)
     return alert(`No pathfinding data found for season ${season}.`);
@@ -313,9 +322,7 @@ async function updatePathlines(season) {
     if (
       path.isWaterPath &&
       selectedTransports.some((transportName) => {
-        const transport = transports.find(
-          (t) => t.name.toLowerCase() === transportName && t.waterOnly,
-        );
+        const transport = transportsByName.get(`${transportName}|true`);
         return transport != null;
       })
     )
@@ -324,9 +331,7 @@ async function updatePathlines(season) {
     if (
       !path.isWaterPath &&
       selectedTransports.some((transportName) => {
-        const transport = transports.find(
-          (t) => t.name.toLowerCase() === transportName && !t.waterOnly,
-        );
+        const transport = transportsByName.get(`${transportName}|false`);
         return transport != null;
       })
     )
@@ -351,13 +356,11 @@ async function updatePathlines(season) {
     // check if the path's totalMovementCost is less than or equal to the maximum moves of compatible selected transports
     if (
       pathData.totalMovementCost != null &&
-      pathData.totalMovementCost >=
+      pathData.totalMovementCost >
         Math.max(
           ...selectedTransports.map((transportName) => {
-            const transport = transports.find(
-              (t) =>
-                t.name.toLowerCase() === transportName &&
-                pathData.isWaterPath === t.waterOnly,
+            const transport = transportsByName.get(
+              `${transportName}|${pathData.isWaterPath || false}`,
             );
             return transport ? transport.moves : 0;
           }),
@@ -372,10 +375,8 @@ async function updatePathlines(season) {
       pathData.totalMovementCost <=
         Math.max(
           ...selectedTransports.map((transportName) => {
-            const transport = transports.find(
-              (t) =>
-                t.name.toLowerCase() === transportName &&
-                pathData.isWaterPath === t.waterOnly,
+            const transport = transportsByName.get(
+              `${transportName}|${pathData.isWaterPath || false}`,
             );
             return transport ? transport.autotrade : 0;
           }),
@@ -385,6 +386,7 @@ async function updatePathlines(season) {
     }
 
     var pathColor = pathData.isWaterPath ? "#0000FF" : "#1EFF00"; // Default color, green for land trade routes, blue for water trade routes
+
     // Red for big paths, yellow for small paths (reachable in 1 turn but not able to autotrade)
     pathColor = pathData.bigPath
       ? "#FF0000"
