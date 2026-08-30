@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function debugLeafletMap(map) {
   let layers = 0;
   let markers = 0;
+  let circleMarkers = 0;
   let polylines = 0;
   let polygons = 0;
   let circles = 0;
@@ -124,6 +125,10 @@ function debugLeafletMap(map) {
 
     if (layer instanceof L.Marker) {
       markers++;
+    }
+
+    if (layer instanceof L.CircleMarker) {
+      circleMarkers++;
     }
 
     if (layer instanceof L.Polyline) {
@@ -142,6 +147,7 @@ function debugLeafletMap(map) {
   console.table({
     layers,
     markers,
+    circleMarkers,
     polylines,
     polygons,
     circles,
@@ -154,12 +160,18 @@ function debugDeviceInfo() {
 
   // Update memory properties if performance.memory is available
   if (performance.memory) {
-    deviceInfo.memory.usedJSHeapSize =
-      Math.round(performance.memory.usedJSHeapSize / 1048576) + " MB"; // Convert to MB
-    deviceInfo.memory.totalJSHeapSize =
-      Math.round(performance.memory.totalJSHeapSize / 1048576) + " MB"; // Convert to MB
-    deviceInfo.memory.jsHeapSizeLimit =
-      Math.round(performance.memory.jsHeapSizeLimit / 1048576) + " MB"; // Convert to MB
+    deviceInfo.memory.GB = navigator.deviceMemory
+      ? navigator.deviceMemory + " GB"
+      : "N/A";
+    deviceInfo.memory.usedJSHeapSize = performance.memory?.usedJSHeapSize
+      ? Math.round(performance.memory.usedJSHeapSize / 1048576) + " MB"
+      : "N/A"; // Convert to MB
+    deviceInfo.memory.totalJSHeapSize = performance.memory?.totalJSHeapSize
+      ? Math.round(performance.memory.totalJSHeapSize / 1048576) + " MB"
+      : "N/A"; // Convert to MB
+    deviceInfo.memory.jsHeapSizeLimit = performance.memory?.jsHeapSizeLimit
+      ? Math.round(performance.memory.jsHeapSizeLimit / 1048576) + " MB"
+      : "N/A"; // Convert to MB
   }
 
   // Update viewport dimensions

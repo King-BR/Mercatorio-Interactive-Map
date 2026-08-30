@@ -51,7 +51,6 @@ var visibleResourceMarkers = {};
 // ============================================================
 // SPATIAL INDEX
 // ============================================================
-
 function getResourceCell(x, y) {
   return {
     x: Math.floor(x / RESOURCE_GRID_SIZE),
@@ -97,7 +96,6 @@ function getResourcesInViewport() {
    * lat = mapHeight - y / 4 - 0.2
    * lng = x / 4 + 0.2
    */
-
   const minX = Math.floor((bounds.getWest() - 0.2) * 4);
   const maxX = Math.ceil((bounds.getEast() - 0.2) * 4);
 
@@ -224,7 +222,6 @@ function updateVisibleResources() {
     // --------------------------------------------------------
     // REMOVE markers that have left the viewport
     // --------------------------------------------------------
-
     for (const [plot, marker] of markerMap) {
       if (!visibleSet.has(plot)) {
         overlaysResource[resourceName].removeLayer(marker);
@@ -235,7 +232,6 @@ function updateVisibleResources() {
     // --------------------------------------------------------
     // CREATE only new markers
     // --------------------------------------------------------
-
     for (const plot of plots) {
       if (markerMap.has(plot)) {
         continue;
@@ -296,7 +292,6 @@ async function loadPlots(season) {
     // ========================================================
     // CREATE THE LAYER GROUPS
     // ========================================================
-
     Object.values(res_enum).forEach((resource) => {
       overlaysResource[resource.name] = L.layerGroup();
 
@@ -306,7 +301,6 @@ async function loadPlots(season) {
     // ========================================================
     // CREATE SPATIAL INDEX
     // ========================================================
-
     buildResourceSpatialIndex();
 
     // ========================================================
