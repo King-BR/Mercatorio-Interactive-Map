@@ -8,43 +8,9 @@ var selectedTransports = [];
 var selectedTownPathfinding = null;
 var selectedTownPathfindingDest = null;
 
-/*
- * Deploy transport POST "base_transport_url"
- * payload:
- * {
- *  autoset_inventory: true,
- *  location: { x: 0, y: 0 },
- *  name: "string",
- *  operation_target: "0",
- *  owner_id: "string",
- *  type: "string"
- * }
- *
- * Travel with transport POST "travel_url"
- * payload:
- * {
- *  end_town_id: ${townID}, // only included if there is a town on the destination tile
- *  location: { x: 2466, y: 878 }, // destination tile, limit around 130-140 steps, needs more testing/confirmation
- *  use_ferry: true, // only included if path used ferry, when used it needs to be a separate request with only the ferry tiles and no movement cost, path is [ferry boarding tile, ...ferry path, ferry unboarding tile]
- *  path: [
- *    { // starting tile
- *      x: 2467,
- *      y: 879
- *    },
- *    { // each step needs movement cost included (c), except the starting tile
- *      x: 2466,
- *      y: 878,
- *      c: 1.41421
- *    }
- *    // etc...
- *  ]
- * }
+/**
+ * @type {{id: string, name: string, transports: Object}}
  */
-var base_url = "https://play.mercatorio.io/api";
-var base_transport_url = `${base_url}/transports`;
-var travel_url = `${base_transport_url}/{transportID}/travel`;
-var player_url = `${base_url}/player`;
-
 var playerData = null;
 var selectedTransportID = null;
 var selectedTransportType = null;
@@ -235,11 +201,6 @@ async function loadPaths(season) {
   if (["s1", "s2", "s3", "s4", "s5", "s6"].includes(season)) {
     return alert(`Trade Routes is only available for seasons 7 and later.`);
   }
-
-  if (season === "s8")
-    alert(
-      `Trade routes for season 8 are still being generated and are incomplete. Please check back later for the full pathfinding data.`,
-    );
 
   paths = [];
   transports = [];
@@ -598,6 +559,10 @@ function populatePathfindingPopup(season) {
   );
   pathfindingPopupPaths.innerHTML = "";
 
+  // check if there is a saved key and mercUser in localStorage and populate the inputs with them
+  const savedKey = localStorage.getItem("apiKey");
+  const savedMercUser = localStorage.getItem("mercUser");
+
   const keyLabel = document.createElement("label");
   keyLabel.htmlFor = "pathfindingPopupKeyInput";
   keyLabel.appendChild(document.createTextNode("API Key:"));
@@ -607,8 +572,12 @@ function populatePathfindingPopup(season) {
   keyInput.id = "pathfindingPopupKeyInput";
   keyInput.placeholder = "Enter your API key here";
 
+  if (savedKey != null) keyInput.value = savedKey;
+
   keyLabel.appendChild(keyInput);
   pathfindingPopupForm.appendChild(keyLabel);
+
+  pathfindingPopupForm.appendChild(document.createElement("br"));
 
   const mercUserLabel = document.createElement("label");
   mercUserLabel.htmlFor = "pathfindingPopupMercUserInput";
@@ -618,6 +587,8 @@ function populatePathfindingPopup(season) {
   mercUserInput.type = "text";
   mercUserInput.id = "pathfindingPopupMercUserInput";
   mercUserInput.placeholder = "Enter your X-Merc-User here";
+
+  if (savedMercUser != null) mercUserInput.value = savedMercUser;
 
   mercUserLabel.appendChild(mercUserInput);
   pathfindingPopupForm.appendChild(mercUserLabel);
@@ -629,6 +600,16 @@ function populatePathfindingPopup(season) {
   connectButton.textContent = "Connect";
   connectButton.classList.add("w3-button", "w3-green", "w3-round");
   connectButton.addEventListener("click", async () => {
+    alert(
+      "Work in progress: Connecting to the game server and fetching player data is not yet implemented.",
+    );
+  });
+
+  // Create save key/email locally button
+  const saveKeyButton = document.createElement("button");
+  saveKeyButton.textContent = "Save Key/User Locally";
+  saveKeyButton.classList.add("w3-button", "w3-blue", "w3-round");
+  saveKeyButton.addEventListener("click", () => {
     var apiKey =
       keyInput.value
         .trim()
@@ -636,27 +617,42 @@ function populatePathfindingPopup(season) {
         .replace(/Authorization:\s+/i, "") || null;
     var mercUser =
       mercUserInput.value.trim().replace(/X-Merc-User:\s+/i, "") || null;
+    localStorage.setItem("apiKey", apiKey);
+    localStorage.setItem("mercUser", mercUser);
 
     if (!apiKey || !mercUser) {
-      alert("Please enter both API key and MercUser.");
+      alert("Please enter both API key and MercUser before saving.");
       return;
     }
 
-    try {
-      playerData = await RESTRequest(player_url, {
-        method: "GET",
-        apiKey: apiKey,
-        mercUser: mercUser,
-      });
-    } catch (error) {
-      console.error("Error connecting:", error);
-      alert(
-        `Failed to connect. Please check your API key and X-Merc-User.\n\nMessage: ${error.message}\nError: ${JSON.stringify(error, null, 2)}`,
-      );
-      return;
-    }
+    // change button text to "Saved!" for 2 seconds, then change back to "Save Key/User Locally"
+    saveKeyButton.textContent = "Saved!";
+    setTimeout(() => {
+      saveKeyButton.textContent = "Save Key/User Locally";
+    }, 2000);
   });
+
+  // create delete saved key/email button
+  const deleteKeyButton = document.createElement("button");
+  deleteKeyButton.textContent = "Delete Saved Key/User";
+  deleteKeyButton.classList.add("w3-button", "w3-red", "w3-round");
+  deleteKeyButton.addEventListener("click", () => {
+    localStorage.removeItem("apiKey");
+    localStorage.removeItem("mercUser");
+
+    // change button text to "Deleted!" for 2 seconds, then change back to "Delete Saved Key/User"
+    deleteKeyButton.textContent = "Deleted!";
+    setTimeout(() => {
+      deleteKeyButton.textContent = "Delete Saved Key/User";
+    }, 2000);
+  });
+
   pathfindingPopupForm.appendChild(connectButton);
+  pathfindingPopupForm.appendChild(saveKeyButton);
+  pathfindingPopupForm.appendChild(deleteKeyButton);
+
+  pathfindingPopupForm.appendChild(document.createElement("br"));
+  pathfindingPopupForm.appendChild(document.createElement("br"));
 }
 
 function debugPolylines(pathLines) {
