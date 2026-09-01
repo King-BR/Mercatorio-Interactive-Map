@@ -33,7 +33,7 @@ jobs:
           mkdir -p api_responses
 
           # Read town IDs from towns.json
-          TOWN_IDS=$(jq -r '.[] | .id' assets/s7/towns.json)
+          TOWN_IDS=$(jq -r '.[] | .id' assets/s8/towns.json)
 
           # Count towns for logging
           TOTAL_TOWNS=$(echo "$TOWN_IDS" | wc -w)
@@ -86,7 +86,7 @@ jobs:
             echo "Combining API responses..."
 
             # Combine all individual JSON objects into one array
-            jq -s '.' api_responses/*.json > assets/s7/townsData.json
+            jq -s '.' api_responses/*.json > assets/s8/townsData.json
 
             # Generate ferriesData.json from townsData.json
             jq 'map({
@@ -95,12 +95,12 @@ jobs:
               location: .location,
               landings: .landings
             })' \
-              assets/s7/townsData.json \
-              > assets/s7/ferriesData.json
+              assets/s8/townsData.json \
+              > assets/s8/ferriesData.json
 
             echo "Successfully generated:"
-            echo "  assets/s7/townsData.json"
-            echo "  assets/s7/ferriesData.json"
+            echo "  assets/s8/townsData.json"
+            echo "  assets/s8/ferriesData.json"
 
             # Clean up temporary responses
             rm -rf api_responses
@@ -120,11 +120,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add assets/s7/townsData.json
-          git add assets/s7/ferriesData.json
+          git add assets/s8/townsData.json
+          git add assets/s8/ferriesData.json
 
           # Don't fail if there are no changes
           git diff --cached --quiet || \
-            git commit -m "Updated townsData.json for season 7"
+            git commit -m "Updated townsData.json for season 8"
 
           git push

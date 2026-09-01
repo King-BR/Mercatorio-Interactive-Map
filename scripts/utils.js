@@ -31,13 +31,13 @@ async function getFerryData(season, ferryID) {
 
 async function getMarketData() {
   return (
-    await fetch("https://api.mercatorio-tools.tech/tmp/marketdata")
+    await fetch("https://api.mercatorio-tools.tech/data/marketdata")
   ).json();
 }
 
 async function getHouseholdData() {
   return (
-    await fetch("https://api.mercatorio-tools.tech/tmp/households")
+    await fetch("https://api.mercatorio-tools.tech/data/households")
   ).json();
 }
 
@@ -73,3 +73,7 @@ async function RESTRequest(
     throw error;
   });
 }
+
+async function getUserData(apiKey, mercUser) {}
+
+async function executePath(apiKey, mercUser, transportID, pathID) {}
