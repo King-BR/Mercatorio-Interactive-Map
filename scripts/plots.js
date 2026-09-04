@@ -1,19 +1,5 @@
 var overlaysResource = {};
 
-const res_enum = {
-  1: { name: "fish", color: "#1f77b4" },
-  2: { name: "stone", color: "#00FFF7FF" },
-  3: { name: "salt", color: "#FFFFFF" },
-  4: { name: "copper", color: "#ff6347" },
-  5: { name: "iron", color: "#9467bd" },
-  6: { name: "gold", color: "#FFFF00" },
-  7: { name: "lead", color: "#4B4B4B" },
-  8: { name: "whales", color: "#001f3f" },
-  9: { name: "silver", color: "#FF0000FF" },
-  10: { name: "tin", color: "#F64BFFFF" },
-  11: { name: "waterpower", color: "#6AFF9C" },
-};
-
 // ============================================================
 // CONFIG
 // ============================================================

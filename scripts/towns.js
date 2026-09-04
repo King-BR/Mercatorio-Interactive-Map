@@ -30,6 +30,9 @@ const townIcons = {
   }),
 };
 
+// Occupied resource plots.
+var occupiedResourcePlots = [];
+
 // Function to load towns and add markers
 async function loadTowns(season) {
   try {
@@ -37,8 +40,10 @@ async function loadTowns(season) {
     townsLayer = L.layerGroup();
     regions = null;
     regionsById.clear();
+    occupiedResourcePlots = [];
 
     const townsJson = await fetchFromLocal(`assets/${season}/towns.json`);
+    var townsData = null;
     const tradeData = await fetchFromLocal(
       `assets/${season}/trade_ranges.json`,
     );
@@ -62,6 +67,28 @@ async function loadTowns(season) {
 
     try {
       townsData = await fetchFromLocal(`assets/${season}/townsData.json`);
+
+      if (townsData && townsData.length > 0) {
+        townsData.forEach((town) => {
+          var tmpdata = {
+            id: town.id,
+            name: town.name,
+          };
+
+          Object.entries(town.domain).forEach(([key, value]) => {
+            if (!tmpdata.occupiedPlots) tmpdata.occupiedPlots = {};
+
+            if (value.owner_id != undefined && value.resource != undefined) {
+              if (!tmpdata.occupiedPlots[res_enum[value.resource].name])
+                tmpdata.occupiedPlots[res_enum[value.resource].name] = 0;
+              tmpdata.occupiedPlots[res_enum[value.resource].name] += 1;
+              return;
+            }
+          });
+
+          occupiedResourcePlots.push(tmpdata);
+        });
+      }
     } catch (error) {
       console.warn(
         `Could not load townsData for season ${season} as the file is missing (ignore if trying to load from season 1):`,
@@ -164,7 +191,7 @@ async function loadTowns(season) {
           statsStr += `<h7><b>Landlocked</b></h7><br><br>`;
         }
 
-        //statsStr += `<h6><b>Land resourcePlots:</b></h6>`
+        statsStr += `Resource plots are show in the following format (available/total)<br><br>`;
 
         // Define the desired order for fertility categories
         const fertilityOrder = [
@@ -218,10 +245,17 @@ async function loadTowns(season) {
               // Resources column
               if (resources.length) {
                 statsStr += `<div style="flex: 1; padding-right: 10px;"><b>Resources:</b><br>`;
+
+                var occupiedPlotsData = occupiedResourcePlots
+                  .map((element) => {
+                    if (element.id === town.id) return element;
+                  })
+                  .filter((element) => element !== undefined)[0];
+
                 resources.forEach(([res, amount]) => {
                   statsStr += `${
                     res.charAt(0).toUpperCase() + res.slice(1)
-                  }: ${amount}<br>`;
+                  }: ${range === "normalRange" && occupiedPlotsData.occupiedPlots && occupiedPlotsData.occupiedPlots[res] ? `${amount - occupiedPlotsData.occupiedPlots[res]}/` : ""}${amount}<br>`;
                 });
                 statsStr += `</div>`;
               }
