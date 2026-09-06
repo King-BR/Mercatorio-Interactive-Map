@@ -73,12 +73,24 @@ async function createPathfindingCheckboxes(season) {
   townSelect.id = "pathfindingTownSelect";
   townSelect.classList.add("w3-select");
 
-  townSelect.options.add(new Option("All towns", "all"));
+  townSelect.options.add(new Option("All towns", "all", true));
+
+  /**
+   * @type {Option[]}
+   */
+  var townOptions = [];
 
   towns.forEach((town) => {
     if (paths.some((path) => path.from === town.id))
-      townSelect.options.add(new Option(town.name, town.id));
+      townOptions.push(new Option(town.name, town.id));
   });
+
+  // sort alphabetically by option text
+  townOptions.sort((a, b) => a.text.localeCompare(b.text));
+
+  if (debug) console.log("Towns options found: ", townOptions.length);
+
+  townOptions.forEach((option) => townSelect.options.add(option));
 
   townSelect.addEventListener("change", () => {
     selectedTownPathfinding =
