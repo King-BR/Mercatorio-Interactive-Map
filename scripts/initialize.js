@@ -61,26 +61,26 @@ async function init(season) {
 
   if (debug) console.log(`Debug mode is ON.`);
 
-  if (debug) console.log(`Initializing map for season ${season}.`);
+  if (debug) console.log(`\n\nInitializing map for season ${season}.`);
   await initializeMap(season);
 
-  if (debug) console.log(`Loading towns for season ${season}.`);
+  if (debug) console.log(`\n\nLoading towns for season ${season}.`);
   await loadTowns(season);
 
-  if (debug) console.log(`Loading paths for season ${season}.`);
+  if (debug) console.log(`\n\nLoading paths for season ${season}.`);
   await loadPaths(season);
 
-  if (debug) console.log(`Loading plots for season ${season}.`);
+  if (debug) console.log(`\n\nLoading plots for season ${season}.`);
   await loadPlots(season);
 
-  if (debug) console.log(`Loading market visualizer for season ${season}.`);
+  if (debug) console.log(`\n\nLoading market visualizer for season ${season}.`);
   await loadMarketVisualizer(season);
 
-  if (debug) console.log(`Loading fertility overlay for season ${season}.`);
+  if (debug) console.log(`\n\nLoading fertility overlay for season ${season}.`);
   createFertilityOverlay(season);
 
   if (debug)
-    console.log(`Loading forest overlay checkboxes for season ${season}.`);
+    console.log(`\n\nLoading forest overlay checkboxes for season ${season}.`);
   createForestOverlay(season);
 
   if (debug) {
