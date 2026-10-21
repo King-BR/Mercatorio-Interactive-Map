@@ -255,7 +255,7 @@ async function loadTowns(season) {
                 resources.forEach(([res, amount]) => {
                   statsStr += `${
                     res.charAt(0).toUpperCase() + res.slice(1)
-                  }: ${range === "normalRange" && occupiedPlotsData.occupiedPlots && occupiedPlotsData.occupiedPlots[res] ? `${amount - occupiedPlotsData.occupiedPlots[res]}/` : ""}${amount}<br>`;
+                  }: ${range === "normalRange" && occupiedPlotsData && occupiedPlotsData.occupiedPlots && occupiedPlotsData.occupiedPlots[res] ? `${amount - occupiedPlotsData.occupiedPlots[res]}/` : ""}${amount}<br>`;
                 });
                 statsStr += `</div>`;
               }
