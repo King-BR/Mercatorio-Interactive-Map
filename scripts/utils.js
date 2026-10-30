@@ -30,9 +30,14 @@ async function getFerryData(season, ferryID) {
 }
 
 async function getMarketData() {
-  return (
-    await fetch("https://api.mercatorio-tools.tech/data/marketdata")
-  ).json();
+  try {
+    return (
+      await fetch("https://api.mercatorio-tools.tech/data/marketdata")
+    ).json();
+  } catch (error) {
+    console.error(`Error fetching market data, fallback to local: `, error);
+    return await fetchFromLocal("assets/s8/marketData.json");
+  }
 }
 
 async function getHouseholdData() {

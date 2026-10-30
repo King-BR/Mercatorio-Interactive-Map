@@ -91,7 +91,7 @@ async function loadTowns(season) {
       }
     } catch (error) {
       console.warn(
-        `Could not load townsData for season ${season} as the file is missing (ignore if trying to load from season 1):`,
+        `Could not load townsData for season ${season} (ignore if trying to load from season 1):`,
         error,
       );
     }
